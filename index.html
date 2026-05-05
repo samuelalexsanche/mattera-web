@@ -20,6 +20,7 @@ ul{list-style:none}
   --bg:#06141B;--bg-warm:#11212D;--bg-dark:#000000;
   --ink:#9BA8AB;--ink-2:#4A5C6A;--ink-3:rgba(155,168,171,.45);
   --accent:#CCD0CF;--accent-soft:rgba(204,208,207,.12);
+  --accent-orange:#FCA311;--accent-orange-soft:rgba(252,163,17,.12);
   --line:#9BA8AB;--line-soft:rgba(155,168,171,.15);
   --serif:"Fraunces","Georgia",serif;
   --display:"Inter","system-ui",sans-serif;
@@ -33,7 +34,7 @@ ul{list-style:none}
 nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:1.75rem 2rem;position:relative;z-index:100}
 .nav-logo{display:flex;align-items:center;gap:.65rem}
 .nav-logo img{height:28px;width:auto}
-.nav-logo-word{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.03em;color:var(--ink)}
+.nav-logo-word{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.03em;color:var(--accent-orange)}
 .nav-links{display:flex;align-items:center;gap:2.25rem}
 .nav-links a{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--ink-2);letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
@@ -53,12 +54,12 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .hero-ghost{position:absolute;right:-10%;top:50%;width:min(900px,90vw);pointer-events:none;opacity:.05;transform:translateY(-50%) rotate(-8deg);color:var(--accent)}
 .hero-eyebrow{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase;margin-bottom:2rem}
 .hero-headline{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(42px,7vw,108px);line-height:1.05;letter-spacing:-.02em;color:var(--ink);max-width:16ch;position:relative;z-index:1}
-.hero-number{color:var(--accent);font-style:normal;font-weight:600}
+.hero-number{color:var(--accent-orange);font-style:normal;font-weight:600}
 .hero-sub{margin-top:2.25rem;font-size:clamp(.95rem,1.4vw,1.15rem);color:var(--ink-2);line-height:1.75;max-width:50ch;position:relative;z-index:1}
 .hero-ctas{margin-top:2.75rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:1}
 .hero-microline{margin-top:3.5rem;font-family:var(--mono);font-size:.68rem;color:var(--ink-3);letter-spacing:.08em;position:relative;z-index:1}
 .hero-microline::before{content:'';display:inline-block;width:20px;height:1.5px;background:var(--ink-3);vertical-align:middle;margin-right:.65rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent);color:#fff;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.75rem;position:relative;overflow:hidden;transition:transform .2s var(--ease)}
+.btn-primary{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent-orange);color:#fff;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.75rem;position:relative;overflow:hidden;transition:transform .2s var(--ease)}
 .btn-primary::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);transform:translateX(-101%);transition:transform .25s var(--ease)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-primary:hover::before{transform:translateX(0)}
@@ -81,19 +82,19 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .servicio-card:nth-child(3n-1){padding:2.5rem 2rem}
 .servicio-card:nth-child(4),.servicio-card:nth-child(5),.servicio-card:nth-child(6){border-bottom:none}
 .servicio-card:hover{background:var(--accent-soft)}
-.servicio-num{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:1.25rem}
-.servicio-icon{width:36px;height:36px;margin-bottom:1.25rem;color:var(--accent)}
+.servicio-num{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;color:var(--accent-orange);text-transform:uppercase;margin-bottom:1.25rem}
+.servicio-icon{width:36px;height:36px;margin-bottom:1.25rem;color:var(--accent-orange)}
 .servicio-title{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.02em;margin-bottom:.75rem;color:var(--ink)}
 .servicio-desc{font-size:.875rem;line-height:1.72;color:var(--ink-2)}
-.servicio-tag{display:inline-block;margin-top:1.25rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px}
+.servicio-tag{display:inline-block;margin-top:1.25rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-orange);border-bottom:1px solid var(--accent-orange);padding-bottom:1px}
 .calc-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem}
 .calc-inputs{display:flex;flex-direction:column;gap:2.25rem}
 .calc-field label{display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.65rem}
 .calc-field .val-display{font-family:var(--display);font-weight:800;font-size:1.65rem;letter-spacing:-.04em;color:var(--ink);margin-bottom:.5rem}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:var(--line-soft);outline:none;cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;background:var(--accent);border-radius:50%;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;background:var(--accent-orange);border-radius:50%;cursor:pointer}
 input[type=number]{width:100%;padding:.65rem 0;border:none;border-bottom:1.5px solid var(--line-soft);background:transparent;font-family:var(--display);font-weight:700;font-size:1.4rem;letter-spacing:-.03em;color:var(--ink);transition:border-color .2s}
-input[type=number]:focus{border-color:var(--accent);outline:none}
+input[type=number]:focus{border-color:var(--accent-orange);outline:none}
 input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .calc-results{border-left:1.5px solid var(--line-soft);padding-left:4rem;display:flex;flex-direction:column;gap:1.25rem}
 .calc-result-row{display:flex;flex-direction:column;gap:.2rem}
