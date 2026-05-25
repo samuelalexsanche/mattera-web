@@ -176,6 +176,19 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .faq-btn[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
 .faq-answer{font-size:.875rem;line-height:1.75;color:var(--ink-2);max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s}
 .faq-answer.open{max-height:220px;padding-bottom:1.4rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1.5px solid var(--line-soft);margin-top:3rem}
+.blog-card{padding:2rem 2rem 2rem 0;border-right:1.5px solid var(--line-soft);border-bottom:1.5px solid var(--line-soft);transition:background .25s;display:flex;flex-direction:column;gap:.75rem}
+.blog-card:nth-child(3n){border-right:none;padding-right:0;padding-left:2rem}
+.blog-card:nth-child(3n-1){padding:2rem 2rem}
+.blog-card:nth-child(7),.blog-card:nth-child(8),.blog-card:nth-child(9){border-bottom:none}
+.blog-card:hover{background:var(--accent-soft)}
+.blog-meta{display:flex;align-items:center;gap:.65rem}
+.blog-cat{font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-orange);border:1px solid var(--accent-orange);padding:.2rem .5rem}
+.blog-time{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--ink-3)}
+.blog-card-title{font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:-.02em;color:var(--ink);line-height:1.35;flex:1}
+.blog-card-desc{font-size:.83rem;line-height:1.7;color:var(--ink-2)}
+.blog-link{font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-orange);border-bottom:1px solid var(--accent-orange);padding-bottom:1px;align-self:flex-start;transition:opacity .2s}
+.blog-link:hover{opacity:.7}
 .cta-final{padding:var(--s-section) 2rem;max-width:var(--max-w);margin:0 auto;text-align:center}
 .cta-final-line{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(30px,5vw,80px);line-height:1.1;letter-spacing:-.02em;max-width:22ch;margin:0 auto 2.75rem;color:var(--ink)}
 .cta-final-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
@@ -595,6 +608,68 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Tengo que pagar cada mes?<span class="faq-icon" aria-hidden="true">+</span></button>
       <div class="faq-answer" role="region"><p>No. Pagas una sola vez por el desarrollo. Si después quieres actualizaciones o soporte extra, eso sí tiene costo mensual — pero es opcional. Decides tú.</p></div>
     </div>
+  </div>
+</section>
+<hr class="divider">
+<!-- BLOG -->
+<section class="section" id="blog" aria-labelledby="blog-title">
+  <p class="section-eyebrow reveal">10 — BLOG</p>
+  <h2 class="section-title reveal reveal-delay-1" id="blog-title">Recursos para <br>hacer crecer tu negocio.</h2>
+  <div class="blog-grid reveal reveal-delay-2">
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Guía Práctica</span><span class="blog-time">8 min</span></div>
+      <h3 class="blog-card-title">5 Señales de que tu Negocio Necesita Automatización</h3>
+      <p class="blog-card-desc">¿Estás repitiendo las mismas tareas manualmente? Estas señales indican que es momento de dar el siguiente paso.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Análisis</span><span class="blog-time">10 min</span></div>
+      <h3 class="blog-card-title">Automatización vs. Contratar Personal</h3>
+      <p class="blog-card-desc">Una comparación honesta de costos, tiempos y resultados para ayudarte a tomar la mejor decisión para tu empresa.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Lista Práctica</span><span class="blog-time">7 min</span></div>
+      <h3 class="blog-card-title">10 Tareas que Puedes Automatizar Hoy</h3>
+      <p class="blog-card-desc">Desde responder mensajes hasta generar reportes: tareas concretas que puedes delegar a la tecnología desde este momento.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Análisis Financiero</span><span class="blog-time">9 min</span></div>
+      <h3 class="blog-card-title">El Verdadero Costo de NO Automatizar</h3>
+      <p class="blog-card-desc">Tiempo perdido, errores humanos y clientes perdidos. Calculamos cuánto le está costando a tu negocio no usar tecnología.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Caso de Éxito</span><span class="blog-time">6 min</span></div>
+      <h3 class="blog-card-title">Caso: Cómo un Chatbot Aumentó las Ventas</h3>
+      <p class="blog-card-desc">Un negocio real, números reales. Así implementamos un asistente con IA que transformó la atención al cliente.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Guía Comparativa</span><span class="blog-time">8 min</span></div>
+      <h3 class="blog-card-title">Chatbot Básico vs. Chatbot con IA</h3>
+      <p class="blog-card-desc">No todos los chatbots son iguales. Te explicamos las diferencias clave para que elijas la solución correcta para tu negocio.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Mercado y Tendencias</span><span class="blog-time">7 min</span></div>
+      <h3 class="blog-card-title">Por qué tus Competidores Ya Usan IA</h3>
+      <p class="blog-card-desc">El mercado está cambiando más rápido de lo que crees. Descubre cómo la inteligencia artificial está redefiniendo los negocios en México.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Guía Financiera</span><span class="blog-time">10 min</span></div>
+      <h3 class="blog-card-title">Guía: ¿Cuánto Cuesta Automatizar?</h3>
+      <p class="blog-card-desc">Precios reales, rangos de inversión y qué factores influyen en el costo de implementar tecnología en tu empresa.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
+    <article class="blog-card">
+      <div class="blog-meta"><span class="blog-cat">Guía Práctica</span><span class="blog-time">8 min</span></div>
+      <h3 class="blog-card-title">Pasos para Empezar con Automatización</h3>
+      <p class="blog-card-desc">Una hoja de ruta clara para negocios que quieren implementar tecnología sin perderse en el proceso.</p>
+      <a href="https://matterasystems.com" target="_blank" rel="noopener noreferrer" class="blog-link">Leer artículo →</a>
+    </article>
   </div>
 </section>
 <hr class="divider">
