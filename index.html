@@ -198,6 +198,9 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .cta-final-line{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(30px,5vw,80px);line-height:1.1;letter-spacing:-.02em;max-width:22ch;margin:0 auto 2.75rem;color:var(--ink)}
 .cta-final-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
 .cta-microcopy{margin-top:1.25rem;font-family:var(--mono);font-size:.65rem;color:var(--ink-3);letter-spacing:.07em}
+.lang-toggle{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--line-soft);padding:.45rem .85rem;color:var(--ink-2);background:none;cursor:pointer;transition:color .2s,border-color .2s;margin-right:.5rem}
+.lang-toggle:hover{color:var(--ink);border-color:var(--ink)}
+.lang-toggle.active-en{color:var(--accent-orange);border-color:var(--accent-orange)}
 footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 .footer-inner{max-width:var(--max-w);margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;padding-bottom:3.5rem;border-bottom:1.5px solid rgba(245,245,240,.1)}
@@ -259,14 +262,14 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 </style>
 </head>
 <body>
-<a href="#main" class="skip-link">Saltar al contenido</a>
+<a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
   <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
-  <a href="#servicios" onclick="closeMobileNav()">Servicios</a>
-  <a href="#calculadora" onclick="closeMobileNav()">Cálculo</a>
-  <a href="#casos" onclick="closeMobileNav()">Casos</a>
-  <a href="#como-funciona" onclick="closeMobileNav()">Proceso</a>
-  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+  <a href="#servicios" onclick="closeMobileNav()" data-i18n="nav.services">Servicios</a>
+  <a href="#calculadora" onclick="closeMobileNav()" data-i18n="nav.calc">Cálculo</a>
+  <a href="#casos" onclick="closeMobileNav()" data-i18n="nav.cases">Casos</a>
+  <a href="#como-funciona" onclick="closeMobileNav()" data-i18n="nav.process">Proceso</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)" data-i18n="mob.agendar">→ Agendar</a>
 </div>
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Caso de estudio">
@@ -280,12 +283,13 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
       <span class="nav-logo-word">Mattera</span>
     </a>
     <div class="nav-links" role="list">
-      <a href="#servicios">Servicios</a>
-      <a href="#calculadora">Cálculo</a>
-      <a href="#casos">Casos</a>
-      <a href="#como-funciona">Proceso</a>
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#calculadora" data-i18n="nav.calc">Cálculo</a>
+      <a href="#casos" data-i18n="nav.cases">Casos</a>
+      <a href="#como-funciona" data-i18n="nav.process">Proceso</a>
     </div>
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button id="lang-toggle" class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
     <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
       <span></span><span></span><span></span>
     </button>
@@ -298,22 +302,22 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
     <path d="M 30 110 L 80 30 L 130 110 L 180 30 L 230 110 L 280 30"/>
     <path d="M 30 210 L 80 130 L 130 210 L 180 130 L 230 210 L 280 130"/>
   </svg>
-  <p class="hero-eyebrow reveal">01 — MATTERA SYSTEMS</p>
+  <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">01 — MATTERA SYSTEMS</p>
   <h1 class="hero-headline reveal reveal-delay-1" id="hero-headline">
     Agencia Digital con <span class="hero-number">Inteligencia Artificial</span> en Guadalajara
   </h1>
-  <p class="hero-sub reveal reveal-delay-2">Creamos sitios web, chatbots con IA y software a la medida para negocios en México que quieren escalar con tecnología real.</p>
+  <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Creamos sitios web, chatbots con IA y software a la medida para negocios en México que quieren escalar con tecnología real.</p>
   <div class="hero-ctas reveal reveal-delay-3">
-    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Hablar con nosotros →</span></a>
-    <a href="#servicios" class="btn-ghost">Ver servicios</a>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span data-i18n="hero.cta1">Hablar con nosotros →</span></a>
+    <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
   </div>
-  <p class="hero-microline reveal reveal-delay-4">Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días</p>
+  <p class="hero-microline reveal reveal-delay-4" data-i18n="hero.micro">Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días</p>
 </section>
 <hr class="divider">
 <!-- SERVICIOS -->
 <section class="section" id="servicios" aria-labelledby="servicios-title">
-  <p class="section-eyebrow reveal">02 — SERVICIOS</p>
-  <h2 class="section-title reveal reveal-delay-1" id="servicios-title">Todo lo que necesitas <br>para hacer crecer tu negocio.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s2.eyebrow">02 — SERVICIOS</p>
+  <h2 class="section-title reveal reveal-delay-1" id="servicios-title" data-i18n="s2.title">Todo lo que necesitas <br>para hacer crecer tu negocio.</h2>
   <div class="servicios-grid">
     <div class="servicio-card reveal reveal-delay-1">
       <div class="servicio-num">01</div>
@@ -366,8 +370,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- POR QUÉ MATTERA -->
 <section class="section" id="por-que-mattera" aria-labelledby="por-que-mattera-title">
-  <p class="section-eyebrow reveal">03 — ¿POR QUÉ MATTERA?</p>
-  <h2 class="section-title reveal reveal-delay-1" id="por-que-mattera-title">Tu socio en tecnología, <br>no solo un proveedor.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s3.eyebrow">03 — ¿POR QUÉ MATTERA?</p>
+  <h2 class="section-title reveal reveal-delay-1" id="por-que-mattera-title" data-i18n="s3.title">Tu socio en tecnología, <br>no solo un proveedor.</h2>
   <div class="why-grid" style="margin-top:3rem">
     <div class="why-block reveal reveal-delay-1">
       <svg class="why-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 4l2.5 7.5H28l-6.5 4.5 2.5 7.5L18 19l-6 4.5 2.5-7.5L8 11.5h7.5z"/><path d="M18 24v8M12 32h12"/></svg>
@@ -403,8 +407,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- CALCULADORA -->
 <section class="section" id="calculadora" aria-labelledby="calc-title">
-  <p class="section-eyebrow reveal">04 — CALCULADORA DE AHORRO</p>
-  <h2 class="section-title reveal reveal-delay-1" id="calc-title">Ingresa tus números. <br>Nosotros hacemos el corte.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s4.eyebrow">04 — CALCULADORA DE AHORRO</p>
+  <h2 class="section-title reveal reveal-delay-1" id="calc-title" data-i18n="s4.title">Ingresa tus números. <br>Nosotros hacemos el corte.</h2>
   <div class="calc-wrapper">
     <div class="calc-inputs reveal reveal-delay-2">
       <div class="calc-field">
@@ -468,8 +472,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- POR QUÉ ES POSIBLE -->
 <section class="section" id="por-que" aria-labelledby="why-title">
-  <p class="section-eyebrow reveal">05 — TECNOLOGÍA</p>
-  <h2 class="section-title reveal reveal-delay-1" id="why-title">Los números no son humo. <br>Esta es la infraestructura.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s5.eyebrow">05 — TECNOLOGÍA</p>
+  <h2 class="section-title reveal reveal-delay-1" id="why-title" data-i18n="s5.title">Los números no son humo. <br>Esta es la infraestructura.</h2>
   <div class="why-grid">
     <div class="why-block reveal reveal-delay-1">
       <svg class="why-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="10" width="30" height="20" rx="1.5"/><path d="M3 16h30M12 10V7M24 10V7M9 22h4M17 22h4M25 22h4"/></svg>
@@ -492,8 +496,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <!-- CASOS -->
 <!-- CÓMO FUNCIONA -->
 <section class="section" id="como-funciona" aria-labelledby="como-title">
-  <p class="section-eyebrow reveal">06 — PROCESO</p>
-  <h2 class="section-title reveal reveal-delay-1" id="como-title">De cero a operando <br>en 14 días.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s6.eyebrow">06 — PROCESO</p>
+  <h2 class="section-title reveal reveal-delay-1" id="como-title" data-i18n="s6.title">De cero a operando <br>en 14 días.</h2>
   <div class="timeline reveal reveal-delay-2" role="list">
     <div class="timeline-node" role="listitem">
       <div class="timeline-dot" aria-hidden="true"></div>
@@ -540,9 +544,9 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <!-- STACK TECH -->
 <section class="section-dark" id="stack" aria-labelledby="stack-title">
   <div class="inner">
-    <p class="section-eyebrow reveal">07 — HERRAMIENTAS</p>
-    <h2 class="section-title reveal reveal-delay-1" id="stack-title">Usamos las mejores <br>herramientas del mercado.</h2>
-    <p class="section-sub reveal reveal-delay-2">No estás atrapado con una empresa. Trabajamos con las plataformas más confiables y populares para que siempre tengas opciones.</p>
+    <p class="section-eyebrow reveal" data-i18n="s7.eyebrow">07 — HERRAMIENTAS</p>
+    <h2 class="section-title reveal reveal-delay-1" id="stack-title" data-i18n="s7.title">Usamos las mejores <br>herramientas del mercado.</h2>
+    <p class="section-sub reveal reveal-delay-2" data-i18n="s7.sub">No estás atrapado con una empresa. Trabajamos con las plataformas más confiables y populares para que siempre tengas opciones.</p>
     <div class="stack-grid reveal reveal-delay-3" role="list">
       <span class="stack-item hl">OpenAI</span><span class="stack-item hl">Anthropic</span><span class="stack-item hl">Google Gemini</span>
       <span class="stack-item">WhatsApp Cloud</span><span class="stack-item">Make</span><span class="stack-item">Zapier</span>
@@ -555,14 +559,14 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <!-- PRECIO -->
 <section class="precio-section" id="agenda" aria-labelledby="precio-title">
   <div class="precio-inner">
-    <p class="section-eyebrow reveal">08 — INVERSIÓN</p>
-    <h2 class="section-title reveal reveal-delay-1" id="precio-title">Precio claro. <br>Sin sorpresas.</h2>
+    <p class="section-eyebrow reveal" data-i18n="s8.eyebrow">08 — INVERSIÓN</p>
+    <h2 class="section-title reveal reveal-delay-1" id="precio-title" data-i18n="s8.title">Precio claro. <br>Sin sorpresas.</h2>
     <div class="precio-wrapper">
       <div class="reveal reveal-delay-2">
-        <div class="precio-label">Inversión de desarrollo desde</div>
+        <div class="precio-label" data-i18n="s8.label">Inversión de desarrollo desde</div>
         <div class="precio-big">$10,000</div>
-        <div class="precio-currency">MXN · pago único por el desarrollo</div>
-        <p class="precio-note">El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.</p>
+        <div class="precio-currency" data-i18n="s8.currency">MXN · pago único por el desarrollo</div>
+        <p class="precio-note" data-i18n="s8.note">El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.</p>
         <div class="precio-conditions">
           <span>Sin mensualidades forzadas</span>
           <span>Entrega en 14 días calendario</span>
@@ -570,7 +574,7 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
         </div>
       </div>
       <div class="precio-includes reveal reveal-delay-3">
-        <h3>¿Qué incluye cualquier proyecto?</h3>
+        <h3 data-i18n="s8.includes.title">¿Qué incluye cualquier proyecto?</h3>
         <ul class="includes-list">
           <li>Diagnóstico inicial y mapeo de flujos (gratuito)</li>
           <li>Diseño de arquitectura del agente o sistema</li>
@@ -592,8 +596,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 </section>
 <!-- FAQ -->
 <section class="section" id="faq" aria-labelledby="faq-title">
-  <p class="section-eyebrow reveal">09 — FAQ</p>
-  <h2 class="section-title reveal reveal-delay-1" id="faq-title">Preguntas directas. <br>Respuestas honestas.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — FAQ</p>
+  <h2 class="section-title reveal reveal-delay-1" id="faq-title" data-i18n="s9.title">Preguntas directas. <br>Respuestas honestas.</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo toma arreglarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
@@ -617,8 +621,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- BLOG -->
 <section class="section" id="blog" aria-labelledby="blog-title">
-  <p class="section-eyebrow reveal">10 — BLOG</p>
-  <h2 class="section-title reveal reveal-delay-1" id="blog-title">Recursos para <br>hacer crecer tu negocio.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s10.eyebrow">10 — BLOG</p>
+  <h2 class="section-title reveal reveal-delay-1" id="blog-title" data-i18n="s10.title">Recursos para <br>hacer crecer tu negocio.</h2>
   <div class="blog-grid reveal reveal-delay-2">
     <article class="blog-card" onclick="openBlog('b1')" tabindex="0" onkeydown="if(event.key==='Enter')openBlog('b1')" role="button" aria-label="Leer: 5 Señales de que tu Negocio Necesita Automatización">
       <div class="blog-meta"><span class="blog-cat">Guía Práctica</span><span class="blog-time">8 min</span></div>
@@ -679,12 +683,12 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- CTA FINAL -->
 <section class="cta-final" aria-labelledby="cta-final-text">
-  <p class="cta-final-line reveal" id="cta-final-text">"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"</p>
+  <p class="cta-final-line reveal" id="cta-final-text" data-i18n="cta.quote">"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-outline"><span>WhatsApp directo →</span></a>
   </div>
-  <p class="cta-microcopy reveal reveal-delay-2">Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747</p>
+  <p class="cta-microcopy reveal reveal-delay-2" data-i18n="cta.micro">Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747</p>
 </section>
 <!-- BLOG DRAWER -->
 <div class="drawer-overlay" id="blogOverlay" onclick="closeBlog()"></div>
@@ -701,8 +705,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
           <img src="mattera-logo-transparent.png" alt="Mattera Systems">
           <span class="footer-logo-word">Mattera</span>
         </div>
-        <p class="footer-tagline">Infraestructura de IA para empresas que toman decisiones con datos, no con corazonadas.</p>
-        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Infraestructura de IA para empresas que toman decisiones con datos, no con corazonadas.</p>
+        <p class="footer-addr" data-i18n="footer.addr">Guadalajara, Jalisco, México</p>
       </div>
       <div class="footer-col">
         <h4>Servicios</h4>
@@ -723,8 +727,8 @@ footer{background:var(--bg-dark);color:#F5F5F0;padding:5rem 2rem 2rem}
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
-      <span class="footer-build">v2.0 &nbsp;·&nbsp; construido con IA &nbsp;·&nbsp; 2026</span>
+      <span class="footer-copy" data-i18n="footer.copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <span class="footer-build" data-i18n="footer.build">v2.0 &nbsp;·&nbsp; construido con IA &nbsp;·&nbsp; 2026</span>
     </div>
   </div>
 </footer>
@@ -991,6 +995,134 @@ function closeMobileNav(){
   document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }
+</script>
+<script>
+// ── i18n SYSTEM ──────────────────────────────────────────────
+const T = {
+  es: {
+    'skip':'Saltar al contenido',
+    'nav.services':'Servicios','nav.calc':'Cálculo','nav.cases':'Casos','nav.process':'Proceso',
+    'nav.cta':'Agendar diagnóstico →','mob.agendar':'→ Agendar',
+    'hero.eyebrow':'01 — MATTERA SYSTEMS',
+    'hero.sub':'Creamos sitios web, chatbots con IA y software a la medida para negocios en México que quieren escalar con tecnología real.',
+    'hero.cta1':'Hablar con nosotros →','hero.cta2':'Ver servicios',
+    'hero.micro':'Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días',
+    's2.eyebrow':'02 — SERVICIOS',
+    's2.title':'Todo lo que necesitas <br>para hacer crecer tu negocio.',
+    's3.eyebrow':'03 — ¿POR QUÉ MATTERA?',
+    's3.title':'Tu socio en tecnología, <br>no solo un proveedor.',
+    's4.eyebrow':'04 — CALCULADORA DE AHORRO',
+    's4.title':'Ingresa tus números. <br>Nosotros hacemos el corte.',
+    's5.eyebrow':'05 — TECNOLOGÍA',
+    's5.title':'Los números no son humo. <br>Esta es la infraestructura.',
+    's6.eyebrow':'06 — PROCESO',
+    's6.title':'De cero a operando <br>en 14 días.',
+    's7.eyebrow':'07 — HERRAMIENTAS',
+    's7.title':'Usamos las mejores <br>herramientas del mercado.',
+    's7.sub':'No estás atrapado con una empresa. Trabajamos con las plataformas más confiables y populares para que siempre tengas opciones.',
+    's8.eyebrow':'08 — INVERSIÓN',
+    's8.title':'Precio claro. <br>Sin sorpresas.',
+    's8.label':'Inversión de desarrollo desde',
+    's8.currency':'MXN · pago único por el desarrollo',
+    's8.note':'El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.',
+    's8.includes.title':'¿Qué incluye cualquier proyecto?',
+    's9.eyebrow':'09 — FAQ',
+    's9.title':'Preguntas directas. <br>Respuestas honestas.',
+    's10.eyebrow':'10 — BLOG',
+    's10.title':'Recursos para <br>hacer crecer tu negocio.',
+    'cta.quote':'"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"',
+    'cta.micro':'Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747',
+    'footer.tagline':'Infraestructura de IA para empresas que toman decisiones con datos, no con corazonadas.',
+    'footer.addr':'Guadalajara, Jalisco, México',
+    'footer.copy':'© 2026 Mattera Systems. Todos los derechos reservados.',
+    'footer.build':'v2.0 &nbsp;·&nbsp; construido con IA &nbsp;·&nbsp; 2026',
+  },
+  en: {
+    'skip':'Skip to content',
+    'nav.services':'Services','nav.calc':'Calculator','nav.cases':'Cases','nav.process':'Process',
+    'nav.cta':'Book a call →','mob.agendar':'→ Book now',
+    'hero.eyebrow':'01 — MATTERA SYSTEMS',
+    'hero.sub':'We build websites, AI chatbots, and custom software for businesses in Mexico ready to scale with real technology.',
+    'hero.cta1':'Talk to us →','hero.cta2':'See services',
+    'hero.micro':'Based in Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Delivered in 14 days',
+    's2.eyebrow':'02 — SERVICES',
+    's2.title':'Everything you need <br>to grow your business.',
+    's3.eyebrow':'03 — WHY MATTERA?',
+    's3.title':'Your technology partner, <br>not just a vendor.',
+    's4.eyebrow':'04 — SAVINGS CALCULATOR',
+    's4.title':'Enter your numbers. <br>We do the math.',
+    's5.eyebrow':'05 — TECHNOLOGY',
+    's5.title':'The numbers are real. <br>Here\'s the infrastructure.',
+    's6.eyebrow':'06 — PROCESS',
+    's6.title':'From zero to live <br>in 14 days.',
+    's7.eyebrow':'07 — TOOLS',
+    's7.title':'We use the best <br>tools on the market.',
+    's7.sub':'You\'re not locked into one company. We work with the most reliable and popular platforms so you always have options.',
+    's8.eyebrow':'08 — INVESTMENT',
+    's8.title':'Clear pricing. <br>No surprises.',
+    's8.label':'Development investment starting at',
+    's8.currency':'MXN · one-time development fee',
+    's8.note':'Final price depends on scope: integrations, agent complexity, and platforms. We give you an exact quote in the free consultation — no commitment.',
+    's8.includes.title':'What\'s included in every project?',
+    's9.eyebrow':'09 — FAQ',
+    's9.title':'Straight questions. <br>Honest answers.',
+    's10.eyebrow':'10 — BLOG',
+    's10.title':'Resources to <br>grow your business.',
+    'cta.quote':'"By the first month you\'ve already paid back your investment. Shall we start?"',
+    'cta.micro':'No commitment &nbsp;·&nbsp; Response in under 1 hour &nbsp;·&nbsp; +52 33 2787 4747',
+    'footer.tagline':'AI infrastructure for businesses that make decisions with data, not gut feelings.',
+    'footer.addr':'Guadalajara, Jalisco, Mexico',
+    'footer.copy':'© 2026 Mattera Systems. All rights reserved.',
+    'footer.build':'v2.0 &nbsp;·&nbsp; built with AI &nbsp;·&nbsp; 2026',
+  }
+};
+
+function applyLang(lang) {
+  document.documentElement.lang = lang === 'en' ? 'en' : 'es-MX';
+  const dict = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  // toggle button label
+  const btn = document.getElementById('lang-toggle');
+  if (btn) {
+    btn.textContent = lang === 'en' ? 'ES' : 'EN';
+    btn.classList.toggle('active-en', lang === 'en');
+  }
+  localStorage.setItem('ms-lang', lang);
+  // update html title
+  document.title = lang === 'en'
+    ? 'Mattera Systems — AI Digital Agency in Guadalajara'
+    : 'Mattera Systems — Agencia Digital IA en Guadalajara';
+  // update meta description
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.content = lang === 'en'
+    ? 'Mattera Systems — AI Digital Agency in Guadalajara. Websites, AI chatbots, management systems and more for Mexican businesses. From $10,000 MXN.'
+    : 'Mattera Systems — Agencia Digital IA en Guadalajara. Sitios web, chatbots con IA, sistemas de gestión y más para empresas mexicanas. Desde $10,000 MXN.';
+}
+
+function toggleLang() {
+  const current = localStorage.getItem('ms-lang') || 'es';
+  applyLang(current === 'es' ? 'en' : 'es');
+}
+
+function detectLang() {
+  const saved = localStorage.getItem('ms-lang');
+  if (saved) return saved;
+  // timezone detection: Mexico timezones → ES
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+  const mxZones = ['America/Mexico_City','America/Monterrey','America/Merida','America/Chihuahua','America/Mazatlan','America/Hermosillo','America/Tijuana','America/Cancun','America/Bahia_Banderas'];
+  if (mxZones.includes(tz)) return 'es';
+  // browser language fallback
+  const lang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+  return lang.startsWith('es') ? 'es' : 'en';
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang(detectLang());
+});
 </script>
 </body>
 </html>
