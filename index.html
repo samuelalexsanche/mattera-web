@@ -273,6 +273,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   .hero-ctas,.precio-cta-wrap{flex-direction:column;align-items:flex-start}
 }
 </style>
+<link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -406,20 +407,42 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       </svg>
     </div>
   </div>
-  <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">01 — MATTERA SYSTEMS</p>
-  <h1 class="hero-headline reveal reveal-delay-1" id="hero-headline">
-    Sistemas de automatización con <span class="hero-number">IA</span> para empresas en Guadalajara
-  </h1>
-  <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Crece tu empresa, no tu carga. Construimos los sistemas que atienden, organizan y dan seguimiento a tus clientes — y los operamos contigo.</p>
-  <div class="hero-ctas reveal reveal-delay-3">
-    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span data-i18n="hero.cta1">Hablar con nosotros →</span></a>
-    <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">01 — MATTERA SYSTEMS · GUADALAJARA</p>
+      <h1 class="hero-headline reveal reveal-delay-1" id="hero-headline">
+        Sistemas de automatización con <span class="hero-number">IA</span> para empresas en Guadalajara
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Crece tu empresa, no tu carga. Construimos los sistemas que atienden, organizan y dan seguimiento a tus clientes — y los operamos contigo.</p>
+      <div class="hero-counter reveal reveal-delay-2">
+        <span class="counter-num" id="heroCounter" data-target="312">0</span>
+        <p class="counter-legend">horas devueltas en nuestra propia operación este mes</p>
+      </div>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span data-i18n="hero.cta1">Agendar diagnóstico →</span></a>
+        <a href="#calculadora" class="btn-ghost-outline" data-i18n="hero.cta2">Calcular mi ahorro</a>
+      </div>
+      <p class="hero-microline reveal reveal-delay-4" data-i18n="hero.micro">Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días</p>
+    </div>
+    <div class="hero-right">
+      <div class="chat-demo reveal reveal-delay-3">
+        <div class="chat-header">
+          <div class="chat-avatar" aria-hidden="true">M</div>
+          <div>
+            <div class="chat-name">Asistente Mattera</div>
+            <div class="chat-status">responde en 8 segundos · en línea</div>
+          </div>
+        </div>
+        <div class="chat-sep" aria-hidden="true"></div>
+        <div class="chat-body" id="chatBody" aria-live="polite" aria-label="Demostración del asistente en tiempo real"></div>
+        <div class="chat-footer">Este asistente es el producto. Pruébalo.</div>
+      </div>
+    </div>
   </div>
-  <p class="hero-microline reveal reveal-delay-4" data-i18n="hero.micro">Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días</p>
 </section>
 <hr class="divider">
 <!-- SERVICIOS -->
-<section class="section" id="servicios" aria-labelledby="servicios-title">
+<section class="section sec-dark" id="servicios" aria-labelledby="servicios-title">
   <p class="section-eyebrow reveal" data-i18n="s2.eyebrow">02 — SERVICIOS</p>
   <h2 class="section-title reveal reveal-delay-1" id="servicios-title" data-i18n="s2.title">Todo lo que necesitas <br>para hacer crecer tu negocio.</h2>
   <div class="servicios-grid">
@@ -473,7 +496,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 </section>
 <hr class="divider">
 <!-- POR QUÉ MATTERA -->
-<section class="section" id="por-que-mattera" aria-labelledby="por-que-mattera-title">
+<section class="section sec-dark" id="por-que-mattera" aria-labelledby="por-que-mattera-title">
   <p class="section-eyebrow reveal" data-i18n="s3.eyebrow">03 — ¿POR QUÉ MATTERA?</p>
   <h2 class="section-title reveal reveal-delay-1" id="por-que-mattera-title" data-i18n="s3.title">Tu socio en tecnología, <br>no solo un proveedor.</h2>
   <div class="why-grid" style="margin-top:3rem">
@@ -501,10 +524,10 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 </section>
 <hr class="divider">
 <!-- CALCULADORA -->
-<section class="section" id="calculadora" aria-labelledby="calc-title">
+<section class="section sec-paper" id="calculadora" aria-labelledby="calc-title">
   <p class="section-eyebrow reveal" data-i18n="s4.eyebrow">04 — CALCULADORA DE AHORRO</p>
   <h2 class="section-title reveal reveal-delay-1" id="calc-title" data-i18n="s4.title">Ingresa tus números. <br>Nosotros hacemos el corte.</h2>
-  <div class="calc-wrapper">
+  <div class="calc-instrument"><div class="calc-wrapper">
     <div class="calc-inputs reveal reveal-delay-2">
       <div class="calc-field">
         <label for="sliderPersonas">Personas que atienden clientes / dan seguimiento</label>
@@ -549,8 +572,8 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <hr class="calc-divider">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
         <div class="calc-result-row">
-          <span class="calc-result-label">Payback</span>
-          <span class="calc-result-value" id="resPayback" style="font-size:clamp(18px,2.5vw,32px)">11 días</span>
+          <span class="calc-result-label">Días para recuperar tu inversión</span>
+          <span class="calc-result-value" id="resPayback">11</span>
         </div>
         <div class="calc-result-row">
           <span class="calc-result-label">Horas recuperadas</span>
@@ -562,11 +585,11 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
         <p class="calc-note">* El costo operativo varía según uso, APIs y plataformas.<br>Cotización exacta en el diagnóstico gratuito.</p>
       </div>
     </div>
-  </div>
+  </div></div>
 </section>
 <hr class="divider">
 <!-- POR QUÉ ES POSIBLE -->
-<section class="section" id="por-que" aria-labelledby="why-title">
+<section class="section sec-alt" id="por-que" aria-labelledby="why-title">
   <p class="section-eyebrow reveal" data-i18n="s5.eyebrow">05 — TECNOLOGÍA</p>
   <h2 class="section-title reveal reveal-delay-1" id="why-title" data-i18n="s5.title">Así se sostienen los números. <br>Esta es la infraestructura.</h2>
   <div class="why-grid">
@@ -586,11 +609,61 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <p class="why-body">Si la IA no está segura de algo, automáticamente te avisa a ti o a tu equipo. Tus clientes nunca quedan sin respuesta. Tú tienes el control total.</p>
     </div>
   </div>
+  <div class="dashboard-wrap reveal reveal-delay-4">
+    <p style="font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bt-sage);opacity:.7;margin-bottom:1rem">Vista del reporte mensual</p>
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+        </div>
+        <div class="browser-url">reporte.mattera.mx · junio 2026</div>
+      </div>
+      <div class="browser-body">
+        <p class="dash-eyebrow">Reporte mensual del sistema</p>
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <span class="dash-metric-val">124 h</span>
+            <span class="dash-metric-label">Horas devueltas al equipo</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric-val">1,847</span>
+            <span class="dash-metric-label">Conversaciones atendidas</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric-val">8 s</span>
+            <span class="dash-metric-label">Tiempo promedio de respuesta</span>
+          </div>
+        </div>
+        <div class="dash-sparkline-wrap">
+          <div class="dash-sparkline-label">Conversaciones diarias · últimas 2 semanas</div>
+          <div class="dash-sparkline" aria-hidden="true">
+            <div class="dash-bar" style="height:45%"></div>
+            <div class="dash-bar" style="height:60%"></div>
+            <div class="dash-bar" style="height:52%"></div>
+            <div class="dash-bar" style="height:70%"></div>
+            <div class="dash-bar" style="height:65%"></div>
+            <div class="dash-bar" style="height:80%"></div>
+            <div class="dash-bar" style="height:75%"></div>
+            <div class="dash-bar" style="height:85%"></div>
+            <div class="dash-bar" style="height:78%"></div>
+            <div class="dash-bar" style="height:90%"></div>
+            <div class="dash-bar" style="height:82%"></div>
+            <div class="dash-bar" style="height:95%"></div>
+            <div class="dash-bar" style="height:88%"></div>
+            <div class="dash-bar" style="height:100%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="browser-footer">Reporte mensual · se entrega a cada cliente</div>
+    </div>
+  </div>
 </section>
 <hr class="divider">
 <!-- CASOS -->
 <!-- CÓMO FUNCIONA -->
-<section class="section" id="como-funciona" aria-labelledby="como-title">
+<section class="section sec-paper" id="como-funciona" aria-labelledby="como-title">
   <p class="section-eyebrow reveal" data-i18n="s6.eyebrow">06 — PROCESO</p>
   <h2 class="section-title reveal reveal-delay-1" id="como-title" data-i18n="s6.title">De cero a operando <br>en 14 días.</h2>
   <div class="timeline reveal reveal-delay-2" role="list">
@@ -637,11 +710,11 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
 </section>
 <!-- STACK TECH -->
-<section class="section-dark" id="stack" aria-labelledby="stack-title">
+<section class="section-dark sec-dark" id="stack" aria-labelledby="stack-title">
   <div class="inner">
     <p class="section-eyebrow reveal" data-i18n="s7.eyebrow">07 — HERRAMIENTAS</p>
     <h2 class="section-title reveal reveal-delay-1" id="stack-title" data-i18n="s7.title">Construido sobre <br>infraestructura probada.</h2>
-    <p class="section-sub reveal reveal-delay-2" data-i18n="s7.sub">No estás atrapado con una empresa. Trabajamos con plataformas establecidas para que siempre tengas opciones.</p>
+    <p class="section-sub reveal reveal-delay-2" data-i18n="s7.sub" style="color:var(--bt-sage);max-width:55ch">No estás atrapado con una empresa. Trabajamos con plataformas establecidas para que siempre tengas opciones.</p>
     <div class="stack-grid reveal reveal-delay-3" role="list">
       <span class="stack-item hl">OpenAI</span><span class="stack-item hl">Anthropic</span><span class="stack-item hl">Google Gemini</span>
       <span class="stack-item">WhatsApp Cloud</span><span class="stack-item">Make</span><span class="stack-item">Zapier</span>
@@ -652,7 +725,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
 </section>
 <!-- PRECIO -->
-<section class="precio-section" id="agenda" aria-labelledby="precio-title">
+<section class="precio-section sec-paper" id="agenda" aria-labelledby="precio-title">
   <div class="precio-inner">
     <p class="section-eyebrow reveal" data-i18n="s8.eyebrow">08 — INVERSIÓN</p>
     <h2 class="section-title reveal reveal-delay-1" id="precio-title" data-i18n="s8.title">Precio claro. <br>Sin sorpresas.</h2>
@@ -696,7 +769,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
 </section>
 <!-- FAQ -->
-<section class="section" id="faq" aria-labelledby="faq-title">
+<section class="section sec-dark" id="faq" aria-labelledby="faq-title">
   <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — FAQ</p>
   <h2 class="section-title reveal reveal-delay-1" id="faq-title" data-i18n="s9.title">Preguntas directas. <br>Respuestas honestas.</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
@@ -721,7 +794,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 </section>
 <hr class="divider">
 <!-- CTA FINAL -->
-<section class="cta-final" aria-labelledby="cta-final-text">
+<section class="cta-final sec-cta" aria-labelledby="cta-final-text">
   <p class="cta-final-line reveal" id="cta-final-text" data-i18n="cta.quote">"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
@@ -765,6 +838,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     </div>
   </div>
 </footer>
+<script src="main.js" defer></script>
 <script>
 const casos={
   caso1:{num:'+47%',title:'Distribuidora Norte',sector:'Distribución mayorista · Guadalajara',problema:'El equipo tardaba 4–8h en responder cotizaciones por WhatsApp. Los clientes se iban con la competencia antes de recibir respuesta.',solucion:'Agente IA conectado al catálogo en Google Sheets que responde cotizaciones en tiempo real, 24/7, con precios actualizados automáticamente.',metricas:'Tiempo de respuesta: de 6h a 45 segundos. Conversiones: +47% en 60 días. Horas libres: +32h/semana.',cita:'"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial'},
@@ -847,9 +921,9 @@ const T = {
     'skip':'Saltar al contenido',
     'nav.services':'Servicios','nav.calc':'Cálculo','nav.cases':'Casos','nav.process':'Proceso',
     'nav.cta':'Agendar diagnóstico →','mob.agendar':'→ Agendar',
-    'hero.eyebrow':'01 — MATTERA SYSTEMS',
+    'hero.eyebrow':'01 — MATTERA SYSTEMS · GUADALAJARA',
     'hero.sub':'Crece tu empresa, no tu carga. Construimos los sistemas que atienden, organizan y dan seguimiento a tus clientes — y los operamos contigo.',
-    'hero.cta1':'Hablar con nosotros →','hero.cta2':'Ver servicios',
+    'hero.cta1':'Agendar diagnóstico →','hero.cta2':'Calcular mi ahorro',
     'hero.micro':'Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días',
     's2.eyebrow':'02 — SERVICIOS',
     's2.title':'Todo lo que necesitas <br>para hacer crecer tu negocio.',
@@ -883,9 +957,9 @@ const T = {
     'skip':'Skip to content',
     'nav.services':'Services','nav.calc':'Calculator','nav.cases':'Cases','nav.process':'Process',
     'nav.cta':'Book a call →','mob.agendar':'→ Book now',
-    'hero.eyebrow':'01 — MATTERA SYSTEMS',
+    'hero.eyebrow':'01 — MATTERA SYSTEMS · GUADALAJARA',
     'hero.sub':'Grow your business, not your workload. We build the systems that attend, organize and follow up with your clients — and we operate them with you.',
-    'hero.cta1':'Talk to us →','hero.cta2':'See services',
+    'hero.cta1':'Book a consultation →','hero.cta2':'Calculate my savings',
     'hero.micro':'Based in Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Delivered in 14 days',
     's2.eyebrow':'02 — SERVICES',
     's2.title':'Everything you need <br>to grow your business.',
