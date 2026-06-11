@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0C211B">
-<meta name="description" content="Mattera Systems — Agentes IA para empresas mexicanas. Chatbots, automatizaciones, CRM y más. Desde $10,000 MXN. Guadalajara.">
-<title>Mattera Systems — Infraestructura IA para tu empresa</title>
+<meta name="description" content="Mattera Systems — Automatización con IA para empresas en Guadalajara. Sitios web, chatbots, sistemas a la medida. Desde $10,000 MXN. Factura mexicana.">
+<title>Mattera Systems — Automatización con IA para Empresas en Guadalajara</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -208,6 +208,28 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .lang-toggle{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--line-soft);padding:.45rem .85rem;color:var(--ink-2);background:none;cursor:pointer;transition:color .2s,border-color .2s;margin-right:.5rem}
 .lang-toggle:hover{color:var(--ink);border-color:var(--ink)}
 .lang-toggle.active-en{color:var(--ink);border-color:var(--ink)}
+
+.comparativa-wrap{margin-top:4rem;border-top:1.5px solid var(--line-soft);padding-top:3rem}
+.comparativa-label{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.5rem}
+.comparativa-table{display:grid;border:1.5px solid var(--line-soft)}
+.comparativa-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-bottom:1.5px solid var(--line-soft)}
+.comparativa-row-last{border-bottom:none}
+.comparativa-row>div{padding:.85rem 1rem;font-size:.83rem;color:var(--ink-2);line-height:1.5}
+.comparativa-header>div{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:.75rem 1rem;border-bottom:1.5px solid var(--line-soft)}
+.comparativa-rowlabel{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)!important;background:rgba(143,168,156,.06)}
+.comparativa-col-mattera{color:var(--ink)!important;font-weight:600;border-left:1.5px solid var(--line-soft)}
+.comparativa-header .comparativa-col-mattera{color:var(--accent-orange)!important;border-left:1.5px solid var(--line-soft)}
+.comparativa-note{margin-top:1.5rem;font-size:.83rem;line-height:1.75;color:var(--ink-2);max-width:65ch;font-style:italic}
+@media(max-width:768px){
+  .comparativa-row{grid-template-columns:1.2fr 1fr 1fr}
+  .comparativa-row>div:nth-child(3){display:none}
+  .comparativa-header>div:nth-child(3){display:none}
+}
+@media(max-width:480px){
+  .comparativa-row{grid-template-columns:1fr 1fr}
+  .comparativa-row>div:nth-child(2){display:none}
+  .comparativa-header>div:nth-child(2){display:none}
+}
 footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 .footer-inner{max-width:var(--max-w);margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;padding-bottom:3.5rem;border-bottom:1.5px solid var(--line-soft)}
@@ -267,6 +289,52 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   .hero-ctas,.precio-cta-wrap{flex-direction:column;align-items:flex-start}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://matterasystems.com/#organization",
+      "name": "Mattera Systems",
+      "description": "Agencia de automatización con IA para empresas en Guadalajara. Chatbots, sistemas de gestión, sitios web y software a la medida.",
+      "url": "https://matterasystems.com",
+      "telephone": "+523327874747",
+      "email": "matterasystems@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guadalajara",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "areaServed": ["Guadalajara", "Zapopan", "Monterrey", "CDMX", "México"],
+      "priceRange": "$$",
+      "currenciesAccepted": "MXN",
+      "paymentAccepted": "Transferencia bancaria, tarjeta",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": ["https://wa.me/523327874747"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://matterasystems.com/#service-chatbot",
+      "name": "Chatbot con IA para WhatsApp y Web",
+      "provider": {"@id": "https://matterasystems.com/#organization"},
+      "description": "Asistentes de inteligencia artificial para WhatsApp y sitios web. Respuestas automáticas 24/7, calificación de leads y seguimiento de clientes.",
+      "areaServed": "México",
+      "offers": {"@type": "Offer","priceCurrency": "MXN","price": "10000","priceSpecification": {"@type": "UnitPriceSpecification","price": "10000","priceCurrency": "MXN","unitText": "desarrollo único"}}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question","name": "¿Cuánto tiempo toma implementarlo?","acceptedAnswer": {"@type": "Answer","text": "14 días calendario. Proyectos complejos pueden tomar 21 días, siempre te lo decimos antes."}},
+        {"@type": "Question","name": "¿Mi equipo necesita saber de informática?","acceptedAnswer": {"@type": "Answer","text": "No. Tu equipo usa WhatsApp o la web como siempre. Mattera se encarga de todo lo técnico."}},
+        {"@type": "Question","name": "¿Cuánto cuesta automatizar con IA en México?","acceptedAnswer": {"@type": "Answer","text": "El desarrollo parte desde $10,000 MXN (pago único). La operación mensual opcional parte desde $1,500 MXN. Cotización exacta en el diagnóstico gratuito."}},
+        {"@type": "Question","name": "¿Tengo que pagar cada mes?","acceptedAnswer": {"@type": "Answer","text": "El desarrollo se paga una sola vez. La operación continua (APIs, hosting, soporte) tiene costo mensual opcional desde $1,500 MXN."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
@@ -311,9 +379,9 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </svg>
   <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">01 — MATTERA SYSTEMS</p>
   <h1 class="hero-headline reveal reveal-delay-1" id="hero-headline">
-    Agencia Digital con <span class="hero-number">Inteligencia Artificial</span> en Guadalajara
+    Sistemas de automatización con <span class="hero-number">IA</span> para empresas en Guadalajara
   </h1>
-  <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Creamos sitios web, chatbots con IA y software a la medida para negocios en México que quieren escalar con tecnología real.</p>
+  <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Creamos sitios web, chatbots con IA y software a la medida para negocios en México. Las herramientas se abandonan — los sistemas implementados se quedan.</p>
   <div class="hero-ctas reveal reveal-delay-3">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span data-i18n="hero.cta1">Hablar con nosotros →</span></a>
     <a href="#servicios" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
@@ -396,19 +464,48 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <p class="why-body">Te acompañamos y optimizamos constantemente después de la implementación. No desaparecemos cuando entregamos el proyecto.</p>
     </div>
   </div>
-  <div class="why-stats reveal reveal-delay-4" style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--line-soft);margin-top:4rem;text-align:center">
-    <div style="padding:2.5rem 1rem;border-right:1.5px solid var(--line-soft)">
-      <div style="font-family:var(--display);font-weight:800;font-size:clamp(36px,5vw,64px);letter-spacing:-.04em;color:var(--ink);line-height:1">50+</div>
-      <div style="font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:.5rem">Negocios atendidos</div>
+  <!-- COMPARATIVA + MATTERA OPERA MATTERA -->
+  <div class="comparativa-wrap reveal reveal-delay-4">
+    <p class="comparativa-label">¿Cuál es la diferencia real?</p>
+    <div class="comparativa-table" role="table" aria-label="Comparativa contratar vs DIY vs Mattera">
+      <div class="comparativa-row comparativa-header" role="row">
+        <div role="columnheader"></div>
+        <div role="columnheader">Contratar personal</div>
+        <div role="columnheader">DIY (ManyChat / Vambe)</div>
+        <div role="columnheader" class="comparativa-col-mattera">Sistema Mattera</div>
+      </div>
+      <div class="comparativa-row" role="row">
+        <div class="comparativa-rowlabel" role="rowheader">Costo mensual</div>
+        <div>$12,000–22,000 MXN/mes</div>
+        <div>$1,500–3,000 MXN/mes</div>
+        <div class="comparativa-col-mattera">Desde $1,500 MXN/mes</div>
+      </div>
+      <div class="comparativa-row" role="row">
+        <div class="comparativa-rowlabel" role="rowheader">Horario</div>
+        <div>8 h/día, 5 días</div>
+        <div>24/7 (si no falla)</div>
+        <div class="comparativa-col-mattera">24/7 supervisado</div>
+      </div>
+      <div class="comparativa-row" role="row">
+        <div class="comparativa-rowlabel" role="rowheader">Quién lo configura</div>
+        <div>Tú (y tarda semanas)</div>
+        <div>Tú (y lo abandonas)</div>
+        <div class="comparativa-col-mattera">Nosotros, en 14 días</div>
+      </div>
+      <div class="comparativa-row" role="row">
+        <div class="comparativa-rowlabel" role="rowheader">Mejoras y soporte</div>
+        <div>Capacitación constante</div>
+        <div>Por tu cuenta</div>
+        <div class="comparativa-col-mattera">Incluido</div>
+      </div>
+      <div class="comparativa-row comparativa-row-last" role="row">
+        <div class="comparativa-rowlabel" role="rowheader">Escala con tu negocio</div>
+        <div>Contratas más personas</div>
+        <div>Pagas más por usuario</div>
+        <div class="comparativa-col-mattera">Sin costo adicional</div>
+      </div>
     </div>
-    <div style="padding:2.5rem 1rem;border-right:1.5px solid var(--line-soft)">
-      <div style="font-family:var(--display);font-weight:800;font-size:clamp(36px,5vw,64px);letter-spacing:-.04em;color:var(--ink);line-height:1">95%</div>
-      <div style="font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:.5rem">Satisfacción de clientes</div>
-    </div>
-    <div style="padding:2.5rem 1rem">
-      <div style="font-family:var(--display);font-weight:800;font-size:clamp(36px,5vw,64px);letter-spacing:-.04em;color:var(--ink);line-height:1">3+</div>
-      <div style="font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:.5rem">Años de experiencia</div>
-    </div>
+    <p class="comparativa-note">Una persona resuelve 8 horas al día. Un sistema, 24. El 81% del mercado todavía no le compra a nadie — la pregunta correcta no es "¿Mattera o la competencia?" sino "¿seguir manual o automatizar?"</p>
   </div>
 </section>
 <hr class="divider">
@@ -552,8 +649,8 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <section class="section-dark" id="stack" aria-labelledby="stack-title">
   <div class="inner">
     <p class="section-eyebrow reveal" data-i18n="s7.eyebrow">07 — HERRAMIENTAS</p>
-    <h2 class="section-title reveal reveal-delay-1" id="stack-title" data-i18n="s7.title">Usamos las mejores <br>herramientas del mercado.</h2>
-    <p class="section-sub reveal reveal-delay-2" data-i18n="s7.sub">No estás atrapado con una empresa. Trabajamos con las plataformas más confiables y populares para que siempre tengas opciones.</p>
+    <h2 class="section-title reveal reveal-delay-1" id="stack-title" data-i18n="s7.title">Las herramientas con las que <br>construimos y operamos.</h2>
+    <p class="section-sub reveal reveal-delay-2" data-i18n="s7.sub">Mismas herramientas con las que operamos Mattera — sin lock-in. Si el día de mañana cambias de proveedor, el sistema sigue siendo tuyo.</p>
     <div class="stack-grid reveal reveal-delay-3" role="list">
       <span class="stack-item hl">OpenAI</span><span class="stack-item hl">Anthropic</span><span class="stack-item hl">Google Gemini</span>
       <span class="stack-item">WhatsApp Cloud</span><span class="stack-item">Make</span><span class="stack-item">Zapier</span>
@@ -570,12 +667,12 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     <h2 class="section-title reveal reveal-delay-1" id="precio-title" data-i18n="s8.title">Precio claro. <br>Sin sorpresas.</h2>
     <div class="precio-wrapper">
       <div class="reveal reveal-delay-2">
-        <div class="precio-label" data-i18n="s8.label">Inversión de desarrollo desde</div>
+        <div class="precio-label" data-i18n="s8.label">Desarrollo desde</div>
         <div class="precio-big">$10,000</div>
-        <div class="precio-currency" data-i18n="s8.currency">MXN · pago único por el desarrollo</div>
+        <div class="precio-currency" data-i18n="s8.currency">MXN · pago único + operación mensual opcional</div>
         <p class="precio-note" data-i18n="s8.note">El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.</p>
         <div class="precio-conditions">
-          <span>Sin mensualidades forzadas</span>
+          <span>Operación mensual opcional desde $1,500 MXN</span>
           <span>Entrega en 14 días calendario</span>
           <span>NDA disponible · cumplimos LFPDPPP</span>
         </div>
@@ -589,6 +686,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <li>Integraciones con las herramientas que ya usas</li>
           <li>Dashboard de métricas y conversaciones</li>
           <li>Capacitación a tu equipo + soporte post-entrega</li>
+          <li>Si el sistema no devuelve horas en los primeros 30 días, lo reconfiguramos sin costo</li>
         </ul>
       </div>
       <div class="precio-cta-wrap reveal reveal-delay-4">
@@ -607,7 +705,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <h2 class="section-title reveal reveal-delay-1" id="faq-title" data-i18n="s9.title">Preguntas directas. <br>Respuestas honestas.</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
-      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo toma arreglarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo toma implementarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
       <div class="faq-answer" role="region"><p>14 días. Si necesitas cosas más complejas, puede ser 21 días, pero te lo decimos desde el principio. Sin sorpresas.</p></div>
     </div>
     <div class="faq-item">
@@ -621,7 +719,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Tengo que pagar cada mes?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>No. Pagas una sola vez por el desarrollo. Si después quieres actualizaciones o soporte extra, eso sí tiene costo mensual — pero es opcional. Decides tú.</p></div>
+      <div class="faq-answer" role="region"><p>El sistema tiene dos partes: el <strong>desarrollo</strong> (pago único desde $10,000 MXN) y la <strong>operación continua</strong> (mensual opcional desde $1,500 MXN). El mensual cubre APIs, hosting y soporte. Muchos clientes ya lo tenían en su presupuesto de nómina — y les sale más barato.</p></div>
     </div>
   </div>
 </section>
@@ -629,7 +727,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <!-- BLOG -->
 <section class="section blog-section" id="blog" aria-labelledby="blog-title">
   <p class="section-eyebrow reveal" data-i18n="s10.eyebrow">10 — BLOG</p>
-  <h2 class="section-title reveal reveal-delay-1" id="blog-title" data-i18n="s10.title">Recursos para <br>hacer crecer tu negocio.</h2>
+  <h2 class="section-title reveal reveal-delay-1" id="blog-title" data-i18n="s10.title">Guías para decidir <br>si automatizar es para ti.</h2>
   <div class="blog-grid reveal reveal-delay-2">
     <article class="blog-card" onclick="openBlog('b1')" tabindex="0" onkeydown="if(event.key==='Enter')openBlog('b1')" role="button" aria-label="Leer: 5 Señales de que tu Negocio Necesita Automatización">
       <div class="blog-meta"><span class="blog-cat">Guía Práctica</span><span class="blog-time">8 min</span></div>
@@ -712,7 +810,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <img src="mattera-logo-transparent.png" alt="Mattera Systems">
           <span class="footer-logo-word">Mattera</span>
         </div>
-        <p class="footer-tagline" data-i18n="footer.tagline">Infraestructura de IA para empresas que toman decisiones con datos, no con corazonadas.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Construimos sistemas de automatización que operamos junto contigo. Guadalajara, México, factura local.</p>
         <p class="footer-addr" data-i18n="footer.addr">Guadalajara, Jalisco, México</p>
       </div>
       <div class="footer-col">
@@ -1011,7 +1109,7 @@ const T = {
     'nav.services':'Servicios','nav.calc':'Cálculo','nav.cases':'Casos','nav.process':'Proceso',
     'nav.cta':'Agendar diagnóstico →','mob.agendar':'→ Agendar',
     'hero.eyebrow':'01 — MATTERA SYSTEMS',
-    'hero.sub':'Creamos sitios web, chatbots con IA y software a la medida para negocios en México que quieren escalar con tecnología real.',
+    'hero.sub':'Creamos sitios web, chatbots con IA y software a la medida para negocios en México. Las herramientas se abandonan — los sistemas implementados se quedan.',
     'hero.cta1':'Hablar con nosotros →','hero.cta2':'Ver servicios',
     'hero.micro':'Hecho en Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Entrega en 14 días',
     's2.eyebrow':'02 — SERVICIOS',
@@ -1025,21 +1123,21 @@ const T = {
     's6.eyebrow':'06 — PROCESO',
     's6.title':'De cero a operando <br>en 14 días.',
     's7.eyebrow':'07 — HERRAMIENTAS',
-    's7.title':'Usamos las mejores <br>herramientas del mercado.',
-    's7.sub':'No estás atrapado con una empresa. Trabajamos con las plataformas más confiables y populares para que siempre tengas opciones.',
+    's7.title':'Las herramientas con las que <br>construimos y operamos.',
+    's7.sub':'Mismas herramientas con las que operamos Mattera — sin lock-in. Si cambias de proveedor, el sistema sigue siendo tuyo.',
     's8.eyebrow':'08 — INVERSIÓN',
     's8.title':'Precio claro. <br>Sin sorpresas.',
     's8.label':'Inversión de desarrollo desde',
-    's8.currency':'MXN · pago único por el desarrollo',
+    's8.currency':'MXN · pago único + operación mensual opcional',
     's8.note':'El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.',
     's8.includes.title':'¿Qué incluye cualquier proyecto?',
     's9.eyebrow':'09 — FAQ',
     's9.title':'Preguntas directas. <br>Respuestas honestas.',
     's10.eyebrow':'10 — BLOG',
-    's10.title':'Recursos para <br>hacer crecer tu negocio.',
+    's10.title':'Guías para decidir <br>si automatizar es para ti.',
     'cta.quote':'"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"',
     'cta.micro':'Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747',
-    'footer.tagline':'Infraestructura de IA para empresas que toman decisiones con datos, no con corazonadas.',
+    'footer.tagline':'Construimos sistemas de automatización que operamos junto contigo. Guadalajara, México, factura local.',
     'footer.addr':'Guadalajara, Jalisco, México',
     'footer.copy':'© 2026 Mattera Systems. Todos los derechos reservados.',
     'footer.build':'v2.0 &nbsp;·&nbsp; construido con IA &nbsp;·&nbsp; 2026',
@@ -1049,7 +1147,7 @@ const T = {
     'nav.services':'Services','nav.calc':'Calculator','nav.cases':'Cases','nav.process':'Process',
     'nav.cta':'Book a call →','mob.agendar':'→ Book now',
     'hero.eyebrow':'01 — MATTERA SYSTEMS',
-    'hero.sub':'We build websites, AI chatbots, and custom software for businesses in Mexico ready to scale with real technology.',
+    'hero.sub':'We build websites, AI chatbots, and custom software for businesses in Mexico. Tools get abandoned — implemented systems stay.',
     'hero.cta1':'Talk to us →','hero.cta2':'See services',
     'hero.micro':'Based in Guadalajara &nbsp;·&nbsp; LFPDPPP &nbsp;·&nbsp; Delivered in 14 days',
     's2.eyebrow':'02 — SERVICES',
@@ -1063,21 +1161,21 @@ const T = {
     's6.eyebrow':'06 — PROCESS',
     's6.title':'From zero to live <br>in 14 days.',
     's7.eyebrow':'07 — TOOLS',
-    's7.title':'We use the best <br>tools on the market.',
+    's7.title':'The tools we use to <br>build and operate.',
     's7.sub':'You\'re not locked into one company. We work with the most reliable and popular platforms so you always have options.',
     's8.eyebrow':'08 — INVESTMENT',
     's8.title':'Clear pricing. <br>No surprises.',
     's8.label':'Development investment starting at',
-    's8.currency':'MXN · one-time development fee',
+    's8.currency':'MXN · one-time dev + optional monthly operation',
     's8.note':'Final price depends on scope: integrations, agent complexity, and platforms. We give you an exact quote in the free consultation — no commitment.',
     's8.includes.title':'What\'s included in every project?',
     's9.eyebrow':'09 — FAQ',
     's9.title':'Straight questions. <br>Honest answers.',
     's10.eyebrow':'10 — BLOG',
-    's10.title':'Resources to <br>grow your business.',
+    's10.title':'Guides to decide <br>if automation is right for you.',
     'cta.quote':'"By the first month you\'ve already paid back your investment. Shall we start?"',
     'cta.micro':'No commitment &nbsp;·&nbsp; Response in under 1 hour &nbsp;·&nbsp; +52 33 2787 4747',
-    'footer.tagline':'AI infrastructure for businesses that make decisions with data, not gut feelings.',
+    'footer.tagline':'We build automation systems and operate them alongside you. Guadalajara, Mexico, local invoice.',
     'footer.addr':'Guadalajara, Jalisco, Mexico',
     'footer.copy':'© 2026 Mattera Systems. All rights reserved.',
     'footer.build':'v2.0 &nbsp;·&nbsp; built with AI &nbsp;·&nbsp; 2026',
