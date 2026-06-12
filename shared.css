@@ -559,6 +559,105 @@
 .sec-dark .historia-hito-title { color: var(--ink); }
 .sec-dark .historia-hito-text { color: var(--ink-2); }
 
+/* ─── ASÍ OPERA EL SISTEMA ──────────────────────────────────────── */
+.industria-hero-ctas {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .75rem;
+  flex-direction: column; align-items: flex-start;
+}
+.industria-hero-ctas .btn-primary,
+.industria-hero-ctas .btn-outline { flex-shrink: 0; }
+.industria-hero-ctas > p { width: 100%; }
+
+.flujo-steps { margin-top: 3rem; }
+.flujo-step {
+  display: grid; grid-template-columns: 3.5rem 1fr;
+  gap: 0; padding: 1.75rem 0;
+  border-top: 1.5px solid var(--line-soft);
+}
+.flujo-step:first-child { border-top: none; padding-top: 0; }
+.flujo-step:last-child { padding-bottom: 0; }
+.flujo-num {
+  font-family: var(--mono); font-size: .62rem;
+  letter-spacing: .1em; color: var(--ink-3);
+  padding-top: .15rem;
+}
+.flujo-body { display: flex; flex-direction: column; gap: .45rem; }
+.flujo-titulo {
+  font-family: var(--display); font-weight: 700;
+  font-size: .95rem; letter-spacing: -.02em; color: var(--ink);
+}
+.flujo-desc { font-size: .875rem; line-height: 1.72; color: var(--ink-2); }
+.flujo-entregable {
+  font-family: var(--mono); font-size: .6rem;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(252,163,17,.22);
+  padding: .22rem .65rem; display: inline-block;
+  align-self: flex-start; margin-top: .2rem;
+}
+
+/* Mattera opera Mattera */
+.mop-block {
+  margin-top: 2.75rem;
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  background: rgba(252,163,17,.04);
+}
+.mop-label {
+  font-family: var(--mono); font-size: .6rem;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); display: block; margin-bottom: .55rem;
+}
+.mop-text {
+  font-size: .875rem; line-height: 1.78;
+  color: var(--ink-2); font-style: italic;
+}
+
+/* Hub industrias */
+.industrias-hub-hero {
+  min-height: 40svh; display: flex; flex-direction: column; justify-content: flex-end;
+}
+.industrias-hub-sub {
+  font-size: clamp(.95rem,1.3vw,1.1rem); color: var(--ink-2);
+  line-height: 1.7; max-width: 52ch; margin-top: .75rem;
+}
+.industrias-cards {
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem; margin-top: 3rem;
+}
+.industria-card {
+  padding: 2rem; background: var(--bg-warm);
+  border: 1.5px solid var(--line-soft);
+  display: flex; flex-direction: column; gap: .65rem;
+  text-decoration: none; color: inherit;
+  transition: border-color .22s, transform .22s;
+}
+.industria-card:hover { border-color: rgba(181,186,163,.45); transform: translateY(-4px); }
+.industria-card-tag {
+  font-family: var(--mono); font-size: .6rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-3); border: 1px solid var(--line-soft);
+  padding: .2rem .6rem; display: inline-block; align-self: flex-start;
+}
+.industria-card-titulo {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 1.2rem; line-height: 1.25; color: var(--ink);
+}
+.industria-card-desc { font-size: .875rem; line-height: 1.7; color: var(--ink-2); flex: 1; }
+.industria-card-link {
+  font-family: var(--mono); font-size: .63rem;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-2); margin-top: .35rem;
+  transition: color .2s;
+}
+.industria-card:hover .industria-card-link { color: var(--ink); }
+.hub-cierre {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: clamp(1.1rem,2vw,1.4rem); line-height: 1.5;
+  color: var(--ink-2); max-width: 54ch;
+  margin-top: 3rem; padding-top: 2.5rem;
+  border-top: 1.5px solid var(--line-soft);
+}
+
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
