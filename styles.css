@@ -18,15 +18,15 @@
 
 /* ─── DESIGN TOKENS (complementan :root) ────────────────────── */
 :root {
-  --bt-dark:    #0C211B;
-  --bt-alt:     #143229;
+  --bt-dark:    #1E2318;
+  --bt-alt:     #2B3122;
   --bt-ink:     #F2EFE6;
-  --bt-sage:    #8FA89C;
-  --bt-paper:   #F0F1E7;
-  --bt-p-ink:   #0C211B;
-  --bt-p-sec:   #5E6B60;
-  --bt-border:  #2A463C;
-  --bt-bpaper:  #DCDFD2;
+  --bt-sage:    #A8AC97;
+  --bt-paper:   #EFEFE3;
+  --bt-p-ink:   #1E2318;
+  --bt-p-sec:   #686D5C;
+  --bt-border:  #333829;
+  --bt-bpaper:  #D8D9CC;
   --bt-orange:  #FCA311;
 }
 
@@ -49,7 +49,7 @@
 .sec-paper .why-block-title, .sec-paper .timeline-title { color: var(--bt-p-ink) !important; }
 .sec-paper .why-block:hover, .sec-paper .timeline-node:hover {
   border-color: var(--bt-p-sec) !important;
-  box-shadow: 0 8px 24px rgba(12,33,27,.12) !important;
+  box-shadow: 0 8px 24px rgba(30,35,24,.12) !important;
   transform: translateY(-4px) !important;
 }
 .sec-paper .why-icon             { color: var(--bt-p-ink) !important; }
@@ -69,7 +69,7 @@
 .sec-paper .calc-field .val-display { color: var(--bt-p-ink) !important; }
 .sec-paper input[type=number]    { color: var(--bt-p-ink) !important; border-bottom-color: var(--bt-bpaper) !important; }
 .sec-paper .comparativa-table, .sec-paper .comparativa-row { border-color: var(--bt-bpaper) !important; }
-.sec-paper .comparativa-rowlabel { color: var(--bt-p-sec) !important; background: rgba(12,33,27,.03) !important; }
+.sec-paper .comparativa-rowlabel { color: var(--bt-p-sec) !important; background: rgba(30,35,24,.03) !important; }
 .sec-paper .comparativa-col-mattera { color: var(--bt-p-ink) !important; }
 .sec-paper .comparativa-header .comparativa-col-mattera { color: var(--bt-orange) !important; }
 .sec-paper .comparativa-note    { color: var(--bt-p-sec) !important; }
@@ -96,7 +96,7 @@
   width: 20px !important; height: 20px !important;
   background: var(--bt-p-ink) !important;
   border: 3px solid #FFFFFF !important;
-  box-shadow: 0 0 0 1px rgba(12,33,27,.2);
+  box-shadow: 0 0 0 1px rgba(30,35,24,.2);
 }
 .sec-paper input[type=range]::-moz-range-thumb {
   width: 20px; height: 20px;
@@ -130,8 +130,8 @@
 .hero,
 .sec-cta {
   background-image:
-    linear-gradient(rgba(143,168,156,.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(143,168,156,.045) 1px, transparent 1px) !important;
+    linear-gradient(rgba(168,172,151,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168,172,151,.045) 1px, transparent 1px) !important;
   background-size: 64px 64px !important;
 }
 
@@ -351,7 +351,7 @@
 }
 .timeline-node.tl-node-visible { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* Timeline node circles: 12px, #0C211B */
+/* Timeline node circles: 12px, #1E2318 */
 .timeline-dot {
   width: 12px !important; height: 12px !important;
   background: var(--bt-dark) !important;
@@ -407,7 +407,7 @@
 }
 .browser-url {
   font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
-  flex: 1; background: rgba(12,33,27,.4); padding: 3px 10px;
+  flex: 1; background: rgba(30,35,24,.4); padding: 3px 10px;
   border-radius: 3px; letter-spacing: .5px;
 }
 .browser-body { background: var(--bt-dark); padding: 20px; }
@@ -426,10 +426,10 @@
 .dash-sparkline-wrap { background: var(--bt-alt); border: 1px solid var(--bt-border); padding: 16px; margin-bottom: 10px; }
 .dash-sparkline-label { font-family: var(--mono); font-size: 11px; color: var(--bt-sage); letter-spacing: .5px; margin-bottom: 10px; }
 .dash-sparkline { height: 36px; display: flex; align-items: flex-end; gap: 3px; }
-.dash-bar { flex: 1; background: rgba(143,168,156,.2); border-radius: 2px 2px 0 0; transition: background 200ms; }
-.dash-bar:nth-child(5) { background: rgba(143,168,156,.5); }
-.dash-bar:last-child { background: rgba(143,168,156,.75); }
-.dash-bar:hover { background: rgba(143,168,156,.9) !important; }
+.dash-bar { flex: 1; background: rgba(168,172,151,.2); border-radius: 2px 2px 0 0; transition: background 200ms; }
+.dash-bar:nth-child(5) { background: rgba(168,172,151,.5); }
+.dash-bar:last-child { background: rgba(168,172,151,.75); }
+.dash-bar:hover { background: rgba(168,172,151,.9) !important; }
 .browser-footer {
   font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
   padding: 10px 16px; background: var(--bt-alt);
