@@ -658,6 +658,30 @@
   border-top: 1.5px solid var(--line-soft);
 }
 
+/* ─── INDUSTRIAS STRIP (home) ───────────────────────────────── */
+.industrias-strip-sub {
+  max-width: 54ch; color: var(--ink-2);
+  font-size: clamp(.95rem,1.5vw,1.05rem); margin-top: 1.25rem;
+}
+.industrias-strip-pills {
+  display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.5rem;
+}
+.industria-pill {
+  font-family: var(--mono); font-size: .72rem;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink); border: 1px solid var(--line-soft);
+  padding: .6rem 1.25rem; border-radius: 999px;
+  transition: background .2s, border-color .2s;
+}
+.industria-pill:hover { background: var(--accent-soft); border-color: var(--accent); }
+.industrias-strip-more {
+  display: inline-block; margin-top: 2rem;
+  font-family: var(--mono); font-size: .72rem;
+  letter-spacing: .08em; color: var(--accent-orange);
+  transition: opacity .2s;
+}
+.industrias-strip-more:hover { opacity: .75; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
