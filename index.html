@@ -221,7 +221,7 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 }
 footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 .footer-inner{max-width:var(--max-w);margin:0 auto}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:4rem;padding-bottom:3.5rem;border-bottom:1.5px solid var(--line-soft)}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1.5px solid var(--line-soft)}
 .footer-logo-wrap{display:flex;align-items:center;gap:.85rem;margin-bottom:.85rem}
 .footer-logo-wrap img{height:30px}
 .footer-logo-word{font-family:var(--serif);font-style:italic;font-size:1.85rem;color:var(--ink);letter-spacing:-.02em}
@@ -274,6 +274,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 }
 </style>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -343,11 +344,18 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
   <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
-  <a href="#servicios" onclick="closeMobileNav()" data-i18n="nav.services">Servicios</a>
-  <a href="#calculadora" onclick="closeMobileNav()" data-i18n="nav.calc">Cálculo</a>
-  <a href="#casos" onclick="closeMobileNav()" data-i18n="nav.cases">Casos</a>
-  <a href="#como-funciona" onclick="closeMobileNav()" data-i18n="nav.process">Proceso</a>
-  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)" data-i18n="mob.agendar">→ Agendar</a>
+  <a href="#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="blog/" onclick="closeMobileNav()">Blog</a>
+  <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
 </div>
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
 <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Caso de estudio">
@@ -361,10 +369,21 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <span class="nav-logo-word">Mattera</span>
     </a>
     <div class="nav-links" role="list">
-      <a href="#servicios" data-i18n="nav.services">Servicios</a>
-      <a href="#calculadora" data-i18n="nav.calc">Cálculo</a>
-      <a href="#casos" data-i18n="nav.cases">Casos</a>
-      <a href="#como-funciona" data-i18n="nav.process">Proceso</a>
+      <a href="#servicios">Servicios</a>
+      <div class="nav-dropdown" id="navIndustrias">
+        <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="#calculadora">Cálculo</a>
+      <a href="blog/">Blog</a>
+      <a href="nosotros.html">Nosotros</a>
     </div>
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
     <button id="lang-toggle" class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
@@ -892,6 +911,16 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
         <a href="#servicios">Integraciones y automatizaciones</a>
         <a href="#servicios">Reportes y analytics</a>
         <a href="#servicios">Páginas web</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog/">Blog</a>
+        <a href="#como-funciona">Proceso</a>
+        <a href="industrias/clinicas.html">Clínicas</a>
+        <a href="industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="industrias/restaurantes.html">Restaurantes</a>
+        <a href="industrias/distribuidoras.html">Distribuidoras</a>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>

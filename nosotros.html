@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | Mattera Systems</title>
+<meta name="description" content="Mattera Systems: quiénes somos, cómo empezamos y por qué construimos sistemas que hacen el trabajo repetitivo para que las personas hagan lo que solo ellas pueden hacer.">
+<link rel="canonical" href="https://samuelalexsanche.github.io/mattera-web/nosotros.html">
+<meta property="og:title" content="Nosotros | Mattera Systems">
+<meta property="og:description" content="Quiénes somos, cómo empezamos y por qué construimos sistemas que hacen el trabajo repetitivo.">
+<meta property="og:url" content="https://samuelalexsanche.github.io/mattera-web/nosotros.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://samuelalexsanche.github.io/mattera-web/mattera-logo-transparent.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="blog/" onclick="closeMobileNav()">Blog</a>
+  <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="/" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="/#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="/#calculadora">Cálculo</a>
+      <a href="blog/">Blog</a>
+      <a href="nosotros.html" aria-current="page">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO MANIFIESTO -->
+<div class="nosotros-hero-wrap">
+  <div class="nosotros-hero">
+    <p class="section-eyebrow reveal">Nosotros</p>
+    <h1 class="nosotros-h1 reveal reveal-delay-1">Construimos sistemas que hacen el trabajo repetitivo <em>para que las personas hagan lo que solo ellas pueden hacer.</em></h1>
+    <p class="nosotros-sub reveal reveal-delay-2">No creemos que la IA reemplaza a los equipos. Creemos que los equipos atrapados en trabajo mecánico no pueden operar a su nivel real. Mattera existe para resolver eso.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- HISTORIA / TIMELINE -->
+<section class="section sec-dark" aria-labelledby="historia-title">
+  <p class="section-eyebrow reveal">Historia</p>
+  <h2 class="section-title reveal reveal-delay-1" id="historia-title">Cómo llegamos aquí.</h2>
+  <div class="historia-timeline reveal reveal-delay-2">
+    <div class="historia-hito">
+      <div class="historia-hito-dot" aria-hidden="true"></div>
+      <h3 class="historia-hito-title">El primer problema real</h3>
+      <p class="historia-hito-text">Vimos de cerca cómo una empresa con buen producto y buen equipo perdía clientes porque nadie tenía tiempo de contestar a tiempo. No era un problema de personas — era un problema de sistemas. Ahí empezó la pregunta.</p>
+    </div>
+    <div class="historia-hito">
+      <div class="historia-hito-dot" aria-hidden="true"></div>
+      <h3 class="historia-hito-title">Los primeros sistemas</h3>
+      <p class="historia-hito-text">Construimos los primeros prototipos para empresas pequeñas de Guadalajara: un chatbot para una clínica, un flujo de seguimiento para una inmobiliaria. Los números cambiaron. Decidimos que esto era lo que queríamos construir.</p>
+    </div>
+    <div class="historia-hito">
+      <span class="historia-hito-year">2025</span>
+      <div class="historia-hito-dot" aria-hidden="true"></div>
+      <h3 class="historia-hito-title">Mattera Systems</h3>
+      <p class="historia-hito-text">Formalizamos la operación, definimos el proceso de 14 días y establecimos los principios que guían cada implementación. Dejamos de hacer proyectos de una vez y empezamos a construir sistemas que duran.</p>
+    </div>
+    <div class="historia-hito">
+      <span class="historia-hito-year">2026</span>
+      <div class="historia-hito-dot" aria-hidden="true"></div>
+      <h3 class="historia-hito-title">Hoy</h3>
+      <p class="historia-hito-text">Seguimos siendo un equipo pequeño, intencionalmente. Cada implementación tiene nuestra atención directa. Crecemos cuando tenemos la capacidad de hacerlo bien — no antes.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRINCIPIOS -->
+<section class="section sec-alt" aria-labelledby="principios-title">
+  <p class="section-eyebrow reveal">Principios</p>
+  <h2 class="section-title reveal reveal-delay-1" id="principios-title">Cómo tomamos decisiones.</h2>
+  <div class="principios-grid">
+    <div class="principio-card reveal reveal-delay-1">
+      <span class="principio-num">01</span>
+      <h3 class="principio-title">Números reales antes de cualquier propuesta</h3>
+      <p class="principio-desc">No cotizamos sin entender la operación. El diagnóstico existe porque sin él cualquier número es especulación. La propuesta llega con el retorno estimado calculado — no prometido.</p>
+    </div>
+    <div class="principio-card reveal reveal-delay-2">
+      <span class="principio-num">02</span>
+      <h3 class="principio-title">Sin proyectos que no puedemos entregar bien</h3>
+      <p class="principio-desc">Declinamos proyectos cuando el alcance no coincide con lo que hacemos bien. Preferimos no trabajar juntos a entregar algo que no va a funcionar. La confianza vale más que el contrato.</p>
+    </div>
+    <div class="principio-card reveal reveal-delay-3">
+      <span class="principio-num">03</span>
+      <h3 class="principio-title">El sistema tiene que poder vivir sin nosotros</h3>
+      <p class="principio-desc">Documentamos todo, entrenamos al equipo y dejamos los sistemas en un estado en que el cliente no dependa de nosotros para operar. El objetivo es que no nos necesiten — y que vuelvan porque quieren.</p>
+    </div>
+    <div class="principio-card reveal reveal-delay-4">
+      <span class="principio-num">04</span>
+      <h3 class="principio-title">Honestidad sobre lo que la IA puede y no puede hacer</h3>
+      <p class="principio-desc">La IA hace muy bien el trabajo repetitivo y muy mal el trabajo que requiere contexto humano. Diseñamos sistemas que saben cuándo escalar. Nunca vendemos capacidades que no existen todavía.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- QUIÉN ESTÁ DETRÁS -->
+<section class="section sec-dark" aria-labelledby="equipo-title">
+  <p class="section-eyebrow reveal">El equipo</p>
+  <h2 class="section-title reveal reveal-delay-1" id="equipo-title">Quién está detrás.</h2>
+  <div class="equipo-wrap reveal reveal-delay-2">
+    <div class="equipo-card">
+      <div class="equipo-avatar" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="32" fill="#2B3122"/><circle cx="32" cy="26" r="10" stroke="#A8AC97" stroke-width="1.5"/><path d="M12 54c0-11 9-20 20-20s20 9 20 20" stroke="#A8AC97" stroke-width="1.5"/></svg>
+      </div>
+      <div class="equipo-info">
+        <h3 class="equipo-nombre">Samuel Alex Sanche</h3>
+        <p class="equipo-rol">Fundador · Mattera Systems</p>
+        <p class="equipo-bio">Construye sistemas de IA para operaciones desde Guadalajara. Cree que la tecnología más útil es la que no se nota — la que simplemente hace que las cosas funcionen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- NÚMEROS -->
+<section class="section sec-paper" aria-labelledby="numeros-title">
+  <p class="section-eyebrow reveal">En números</p>
+  <h2 class="section-title reveal reveal-delay-1" id="numeros-title">Lo que hemos construido hasta ahora.</h2>
+  <div class="numeros-grid reveal reveal-delay-2">
+    <div class="numero-card">
+      <span class="numero-val">14</span>
+      <span class="numero-label">días de implementación</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">24/7</span>
+      <span class="numero-label">disponibilidad del sistema</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">4</span>
+      <span class="numero-label">industrias con solución específica</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">$0</span>
+      <span class="numero-label">costo del diagnóstico inicial</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA FINAL -->
+<section class="cta-final sec-cta" aria-labelledby="cta-nosotros">
+  <p class="cta-final-line reveal" id="cta-nosotros">Si lo que leíste aquí resuena, la conversación vale 30 minutos.</p>
+  <div class="cta-final-btns reveal reveal-delay-1">
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+  <p class="cta-microcopy reveal reveal-delay-2">Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="/#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="/#servicios">Agentes IA personalizados</a>
+        <a href="/#servicios">CRMs a medida</a>
+        <a href="/#servicios">Integraciones y automatizaciones</a>
+        <a href="/#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog/">Blog</a>
+        <a href="/#como-funciona">Proceso</a>
+        <a href="industrias/clinicas.html">Clínicas</a>
+        <a href="industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="industrias/restaurantes.html">Restaurantes</a>
+        <a href="industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="/#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>

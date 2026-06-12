@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Mattera Systems</title>
+<meta name="description" content="Artículos sobre automatización, IA aplicada y eficiencia operativa para empresas mexicanas. Sin humo — solo lo que funciona.">
+<link rel="canonical" href="https://samuelalexsanche.github.io/mattera-web/blog/">
+<meta property="og:title" content="Blog | Mattera Systems">
+<meta property="og:description" content="Artículos sobre automatización, IA aplicada y eficiencia operativa para empresas mexicanas.">
+<meta property="og:url" content="https://samuelalexsanche.github.io/mattera-web/blog/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://samuelalexsanche.github.io/mattera-web/mattera-logo-transparent.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="index.html" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="../industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="../industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="../industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="../industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="index.html" aria-current="page">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- BLOG HERO -->
+<section class="section sec-dark blog-hub-hero" aria-labelledby="blog-hub-title">
+  <p class="section-eyebrow reveal">Blog</p>
+  <h1 class="section-title reveal reveal-delay-1" id="blog-hub-title">Lo que aprendemos <br><em>lo escribimos.</em></h1>
+  <p class="blog-hub-sub reveal reveal-delay-2">Automatización, IA aplicada y eficiencia operativa para empresas mexicanas. Sin humo — solo lo que funciona.</p>
+</section>
+
+<hr class="divider">
+
+<!-- GRID DE ARTÍCULOS -->
+<section class="section sec-paper" aria-label="Artículos">
+  <div class="blog-grid">
+    <article class="blog-card reveal">
+      <div class="blog-card-meta">
+        <span class="blog-card-cat">Operaciones</span>
+        <time datetime="2026-06-01">Jun 2026</time>
+      </div>
+      <h2 class="blog-card-title"><a href="automatizacion-vs-contratar-personal.html">Automatización vs. contratar personal: cuándo cada opción tiene sentido</a></h2>
+      <p class="blog-card-excerpt">Contratar es la respuesta obvia cuando el trabajo crece. Automatizar es la respuesta correcta cuando el trabajo que crece es repetitivo. Aquí la diferencia en números.</p>
+      <a href="automatizacion-vs-contratar-personal.html" class="blog-card-link" aria-label="Leer artículo completo: Automatización vs. contratar personal">Leer artículo →</a>
+    </article>
+
+    <!-- Tarjetas placeholder para artículos futuros -->
+    <article class="blog-card blog-card-placeholder reveal reveal-delay-1" aria-label="Próximo artículo">
+      <div class="blog-card-meta">
+        <span class="blog-card-cat">IA Aplicada</span>
+        <span>Próximamente</span>
+      </div>
+      <h2 class="blog-card-title" style="color:var(--ink-3)">Cómo funciona un chatbot de IA en la práctica: lo que nadie explica</h2>
+      <p class="blog-card-excerpt" style="color:var(--ink-3)">Más allá de los demos: qué pasa en producción, cómo se entrena con tu operación y qué tipo de preguntas no puede responder (todavía).</p>
+    </article>
+
+    <article class="blog-card blog-card-placeholder reveal reveal-delay-2" aria-label="Próximo artículo">
+      <div class="blog-card-meta">
+        <span class="blog-card-cat">Casos reales</span>
+        <span>Próximamente</span>
+      </div>
+      <h2 class="blog-card-title" style="color:var(--ink-3)">14 días de implementación: qué ocurre semana a semana</h2>
+      <p class="blog-card-excerpt" style="color:var(--ink-3)">Un recorrido honesto por el proceso: desde el diagnóstico hasta el primer mes de operación, con los ajustes que nadie menciona antes de firmar.</p>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="index.html">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="../industrias/clinicas.html">Clínicas</a>
+        <a href="../industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="../industrias/restaurantes.html">Restaurantes</a>
+        <a href="../industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>

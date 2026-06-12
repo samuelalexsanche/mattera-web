@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización para Clínicas | Mattera Systems</title>
+<meta name="description" content="Agenda citas 24/7, envía recordatorios automáticos y devuelve horas a tu recepción. Sistemas de IA para clínicas privadas. Implementación en 14 días.">
+<link rel="canonical" href="https://samuelalexsanche.github.io/mattera-web/industrias/clinicas.html">
+<meta property="og:title" content="Automatización para Clínicas | Mattera Systems">
+<meta property="og:description" content="Agenda citas 24/7, envía recordatorios automáticos y devuelve horas a tu recepción.">
+<meta property="og:url" content="https://samuelalexsanche.github.io/mattera-web/industrias/clinicas.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://samuelalexsanche.github.io/mattera-web/mattera-logo-transparent.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://samuelalexsanche.github.io/mattera-web/"},
+        {"@type": "ListItem", "position": 2, "name": "Clínicas", "item": "https://samuelalexsanche.github.io/mattera-web/industrias/clinicas.html"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Automatización con IA para clínicas privadas",
+      "provider": {"@type": "Organization", "name": "Mattera Systems", "url": "https://samuelalexsanche.github.io/mattera-web/"},
+      "description": "Sistemas de IA para clínicas: agendamiento automático, recordatorios, atención por WhatsApp 24/7 e historial de pacientes.",
+      "areaServed": "México"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="../blog/" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="clinicas.html" role="menuitem">Clínicas</a>
+          <a href="inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="../blog/">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<div class="industria-hero-wrap">
+  <div class="industria-hero">
+    <p class="industria-hero-eyebrow reveal">Industria / Clínicas</p>
+    <h1 class="industria-hero-h1 reveal reveal-delay-1">Cada cita perdida es ingreso que no vuelve.</h1>
+    <p class="industria-hero-sub reveal reveal-delay-2">Tu recepcionista contesta el mismo WhatsApp 40 veces al día. El sistema lo hace solo, agenda la cita y envía el recordatorio — para que tu equipo se enfoque en el paciente frente a ellos.</p>
+    <div class="reveal reveal-delay-3">
+      <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+      <p style="margin-top:.7rem;font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.06em">Sin compromiso. 30 minutos. Respuesta en menos de 1 hora.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LO QUE CAMBIA -->
+<section class="section sec-dark" aria-labelledby="lqc-title">
+  <p class="section-eyebrow reveal">Lo que cambia</p>
+  <h2 class="section-title reveal reveal-delay-1" id="lqc-title">La clínica que atiende <br>a cualquier hora.</h2>
+  <div class="lqc-grid">
+    <div class="lqc-card reveal reveal-delay-1">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="20" height="18" rx="2"/><path d="M3 11h20M9 5V3M17 5V3M8 17l3 3 6-6"/></svg>
+      <div class="lqc-title">Recepción disponible 24/7</div>
+      <p class="lqc-desc">El sistema responde dudas, muestra disponibilidad y agenda citas a cualquier hora — fin de semana, noche, hora pico. Sin que nadie de tu equipo intervenga.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-2">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="10" r="5"/><path d="M6 28c0-5.5 4.5-10 10-10s10 4.5 10 10"/><path d="M16 20v8M12 24h8"/></svg>
+      <div class="lqc-title">Historial en orden</div>
+      <p class="lqc-desc">Cada paciente tiene su registro de contacto, citas y seguimientos en un solo lugar. Sin cuadernos, sin hojas sueltas, sin depender de la memoria de nadie.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-3">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg>
+      <div class="lqc-title">Recordatorios automáticos</div>
+      <p class="lqc-desc">El sistema envía recordatorio 24 horas antes de cada cita. Menos inasistencias, menos huecos en la agenda, más pacientes que realmente llegan.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-4">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><path d="M3 11h26"/><path d="M10 5V3M22 5V3"/><path d="M9 19h4M9 23h8"/></svg>
+      <div class="lqc-title">Tiempo de recepción devuelto</div>
+      <p class="lqc-desc">Tu equipo deja de contestar el mismo WhatsApp toda la mañana y se enfoca en la experiencia del paciente en la sala. El sistema atiende lo repetitivo.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EL RETORNO -->
+<section class="section sec-paper" aria-labelledby="roi-title">
+  <p class="section-eyebrow reveal">El retorno</p>
+  <h2 class="section-title reveal reveal-delay-1" id="roi-title">El retorno, con números conservadores.</h2>
+  <p class="roi-subtitle reveal reveal-delay-2">Escenario ilustrativo con los precios publicados de Mattera (desarrollo desde $10,000 MXN + operación desde $1,500 MXN/mes). Tu cifra real sale del diagnóstico, no de una tabla.</p>
+  <div class="roi-table-wrap reveal reveal-delay-2">
+    <table class="roi-table">
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Escenario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Citas perdidas por no contestar (estimación conservadora: 1 al día)</td>
+          <td>~22 citas/mes</td>
+        </tr>
+        <tr>
+          <td>Valor promedio de una consulta</td>
+          <td>$600 MXN (ajústalo al tuyo)</td>
+        </tr>
+        <tr>
+          <td>Ingreso en riesgo por mes</td>
+          <td>~$13,200 MXN</td>
+        </tr>
+        <tr class="roi-hl">
+          <td>Costo mensual del sistema</td>
+          <td>desde $1,500 MXN</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="roi-callout reveal reveal-delay-3">
+    Si el sistema recupera una sola cita perdida cada dos días, la operación mensual ya se pagó. Todo lo demás — recordatorios, historial, horas devueltas a recepción — es margen.
+  </div>
+  <div class="reveal reveal-delay-3">
+    <a href="../#calculadora" class="btn-paper-ghost">Calcular con mis números →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section class="section sec-dark" aria-labelledby="faq-title">
+  <p class="section-eyebrow reveal">Preguntas frecuentes</p>
+  <h2 class="section-title reveal reveal-delay-1" id="faq-title">Preguntas directas. <br>Respuestas honestas.</h2>
+  <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede agendar en mi calendario actual?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. El sistema se integra con Google Calendar, Calendly y otras herramientas de agenda. El paciente elige horario disponible directamente desde WhatsApp, sin que nadie tenga que confirmar manualmente.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si un paciente reporta una urgencia médica?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema está configurado para detectar palabras de urgencia y escalar de inmediato al médico o al personal de turno. Ninguna urgencia queda sin respuesta humana. Tú defines los criterios de escalamiento.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Los pacientes saben que están hablando con un sistema de IA?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Eso lo defines tú. Podemos configurarlo como asistente transparente ("Soy el asistente virtual de la Clínica X") o como extensión de tu equipo. Lo importante es que el paciente recibe respuesta útil en segundos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Los datos de mis pacientes están protegidos?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Cumplimos con la LFPDPPP. Los datos se almacenan de forma segura y pueden residir en servidores en México si tu normativa lo requiere. El acceso está restringido a tu equipo.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA FINAL -->
+<section class="cta-final sec-cta" aria-labelledby="cta-text">
+  <p class="cta-final-line reveal" id="cta-text">30 minutos de diagnóstico. Tu operación mapeada y una propuesta con números reales.</p>
+  <div class="cta-final-btns reveal reveal-delay-1">
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+  <p class="cta-microcopy reveal reveal-delay-2">Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="../blog/">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="clinicas.html">Clínicas</a>
+        <a href="inmobiliarias.html">Inmobiliarias</a>
+        <a href="restaurantes.html">Restaurantes</a>
+        <a href="distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+        <a href="../#faq">Preguntas frecuentes</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const wasOpen=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!wasOpen){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>

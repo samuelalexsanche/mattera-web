@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización para Restaurantes | Mattera Systems</title>
+<meta name="description" content="Captura pedidos y reservaciones 24/7 por WhatsApp, incluso en hora pico y fuera de horario. Sistemas de IA para restaurantes. Implementación en 14 días.">
+<link rel="canonical" href="https://samuelalexsanche.github.io/mattera-web/industrias/restaurantes.html">
+<meta property="og:title" content="Automatización para Restaurantes | Mattera Systems">
+<meta property="og:description" content="Captura pedidos y reservaciones 24/7 por WhatsApp, incluso en hora pico y fuera de horario.">
+<meta property="og:url" content="https://samuelalexsanche.github.io/mattera-web/industrias/restaurantes.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://samuelalexsanche.github.io/mattera-web/mattera-logo-transparent.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://samuelalexsanche.github.io/mattera-web/"},
+        {"@type": "ListItem", "position": 2, "name": "Restaurantes", "item": "https://samuelalexsanche.github.io/mattera-web/industrias/restaurantes.html"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Automatización con IA para restaurantes",
+      "provider": {"@type": "Organization", "name": "Mattera Systems", "url": "https://samuelalexsanche.github.io/mattera-web/"},
+      "description": "Sistemas de IA para restaurantes: pedidos y reservaciones automáticas por WhatsApp, menú disponible 24/7 y reactivación de clientes.",
+      "areaServed": "México"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="../blog/" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="clinicas.html" role="menuitem">Clínicas</a>
+          <a href="inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="../blog/">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<div class="industria-hero-wrap">
+  <div class="industria-hero">
+    <p class="industria-hero-eyebrow reveal">Industria / Restaurantes</p>
+    <h1 class="industria-hero-h1 reveal reveal-delay-1">En hora pico, cada pedido que no entra es venta que no existe.</h1>
+    <p class="industria-hero-sub reveal reveal-delay-2">El sistema toma pedidos y reservaciones a cualquier hora, responde el menú al instante y no colapsa cuando el teléfono no para. Tu equipo atiende la mesa de enfrente.</p>
+    <div class="reveal reveal-delay-3">
+      <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+      <p style="margin-top:.7rem;font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.06em">Sin compromiso. 30 minutos. Respuesta en menos de 1 hora.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LO QUE CAMBIA -->
+<section class="section sec-dark" aria-labelledby="lqc-title">
+  <p class="section-eyebrow reveal">Lo que cambia</p>
+  <h2 class="section-title reveal reveal-delay-1" id="lqc-title">El restaurante que nunca <br>deja ir un pedido.</h2>
+  <div class="lqc-grid">
+    <div class="lqc-card reveal reveal-delay-1">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v8a6 6 0 0 0 12 0V4"/><path d="M16 16v12"/><path d="M10 28h12"/></svg>
+      <div class="lqc-title">Pedidos capturados 24/7</div>
+      <p class="lqc-desc">En hora pico, de madrugada, fin de semana: el sistema recibe el pedido, confirma disponibilidad y da número de seguimiento. Sin que nadie de tu equipo tenga que contestar.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-2">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><path d="M3 11h26M10 5V3M22 5V3"/><path d="M9 19h6M9 23h10"/></svg>
+      <div class="lqc-title">Reservaciones sin fricción</div>
+      <p class="lqc-desc">El cliente elige fecha, hora y número de personas directamente por WhatsApp en 30 segundos. El sistema confirma disponibilidad y bloquea la mesa en tu calendario.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-3">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h22M5 13h14M5 18h10"/><rect x="3" y="4" width="26" height="24" rx="2"/></svg>
+      <div class="lqc-title">Menú disponible al instante</div>
+      <p class="lqc-desc">El sistema responde precios, disponibilidad, ingredientes y horarios en segundos. El catálogo se actualiza fácilmente y el sistema siempre muestra la información vigente.</p>
+    </div>
+    <div class="lqc-card reveal reveal-delay-4">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 16c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12"/><path d="M16 10v6l4 2"/><path d="M4 22l4-2 2 4"/></svg>
+      <div class="lqc-title">Reactivación de clientes</div>
+      <p class="lqc-desc">El sistema identifica clientes que no han vuelto en 30 o 60 días y envía un mensaje personalizado. La reactivación pasiva que ningún equipo tiene tiempo de hacer.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EL RETORNO -->
+<section class="section sec-paper" aria-labelledby="roi-title">
+  <p class="section-eyebrow reveal">El retorno</p>
+  <h2 class="section-title reveal reveal-delay-1" id="roi-title">El retorno, con números conservadores.</h2>
+  <p class="roi-subtitle reveal reveal-delay-2">Escenario ilustrativo con los precios publicados de Mattera (desarrollo desde $10,000 MXN + operación desde $1,500 MXN/mes). Tu cifra real sale del diagnóstico, no de una tabla.</p>
+  <div class="roi-table-wrap reveal reveal-delay-2">
+    <table class="roi-table">
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Escenario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pedidos perdidos en hora pico y fuera de horario (2 al día)</td>
+          <td>~60 pedidos/mes</td>
+        </tr>
+        <tr>
+          <td>Ticket promedio</td>
+          <td>$250 MXN (ajústalo al tuyo)</td>
+        </tr>
+        <tr>
+          <td>Venta no capturada por mes</td>
+          <td>~$15,000 MXN</td>
+        </tr>
+        <tr class="roi-hl">
+          <td>Costo mensual del sistema</td>
+          <td>desde $1,500 MXN</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="roi-callout reveal reveal-delay-3">
+    El sistema no necesita aumentar tus ventas: con dejar de perder las que ya tocaban tu puerta, el retorno está hecho.
+  </div>
+  <div class="reveal reveal-delay-3">
+    <a href="../#calculadora" class="btn-paper-ghost">Calcular con mis números →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section class="section sec-dark" aria-labelledby="faq-title">
+  <p class="section-eyebrow reveal">Preguntas frecuentes</p>
+  <h2 class="section-title reveal reveal-delay-1" id="faq-title">Preguntas directas. <br>Respuestas honestas.</h2>
+  <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar pedidos para entrega y para comer en el restaurante?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. El sistema diferencia entre pedidos para llevar, a domicilio y reservaciones de mesa. Cada tipo sigue un flujo distinto y registra la información que necesitas en cada caso.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa cuando se acaba un platillo o hay cambios en el menú?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El catálogo se actualiza fácilmente desde un Google Sheet o desde un panel sencillo — sin saber de tecnología. El sistema refleja los cambios en minutos y deja de ofrecer platillos no disponibles.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Funciona con plataformas de delivery como Rappi o DiDi?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema maneja pedidos directos por WhatsApp, que son los de mayor margen. La integración con plataformas de delivery se evalúa en el diagnóstico según el volumen y la plataforma específica.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi equipo necesita aprender a usar alguna herramienta nueva?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No. Los pedidos y reservaciones llegan a donde ya los gestionas — WhatsApp, una pantalla de cocina o un sistema existente. El equipo sigue trabajando como siempre; el sistema hace la parte de recepción.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA FINAL -->
+<section class="cta-final sec-cta" aria-labelledby="cta-text">
+  <p class="cta-final-line reveal" id="cta-text">30 minutos de diagnóstico. Tu operación mapeada y una propuesta con números reales.</p>
+  <div class="cta-final-btns reveal reveal-delay-1">
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+  <p class="cta-microcopy reveal reveal-delay-2">Sin compromiso &nbsp;·&nbsp; Respuesta en menos de 1 hora &nbsp;·&nbsp; +52 33 2787 4747</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="../blog/">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="clinicas.html">Clínicas</a>
+        <a href="inmobiliarias.html">Inmobiliarias</a>
+        <a href="restaurantes.html">Restaurantes</a>
+        <a href="distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const wasOpen=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!wasOpen){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>
