@@ -795,62 +795,72 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   .pricing-cta-row .btn-primary { text-align: center; justify-content: center; }
 }
 
+
 /* ═══════════════════════════════════════════════════════════════
-   CARD STACK — secciones 7, 8, 9 emergen desde abajo
+   CARD DECK (secciones 7, 8, 9) — baraja en mano
+   Cada card ocupa el mismo frame; el scroll trae la de atrás al frente
    ═══════════════════════════════════════════════════════════════ */
 
-.card-stack-zone {
+/* Zona de scroll: 300vh = 3 transiciones × 100vh cada una */
+.card-deck-zone {
   position: relative;
-  isolation: isolate;
+  height: 300vh;
 }
 
-.csw { position: relative; }
-
-/* Extra scroll space: la card siguiente emerge MIENTRAS la actual
-   está pinned, no después */
-.csw:not(:last-child) {
-  padding-bottom: 40vh;
+/* Inner pinned: el "frame" de la mano que sostiene las cartas */
+.card-deck-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  /* Pequeña perspectiva para reforzar la ilusión de profundidad */
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
 }
 
-/* Cada sección se convierte en una card sticky ─────────────────── */
-.card-in-stack {
-  position: sticky !important;
-  top: 0 !important;
-  /* Esquinas superiores redondeadas = aspecto de "tarjeta física" */
-  border-radius: 20px 20px 0 0 !important;
-  overflow: hidden !important;
-  transform-origin: top center;
+/* Cada sección = una carta en la baraja */
+.card-in-deck {
+  position: absolute !important;
+  inset: 0 !important;
   will-change: transform, opacity;
-  /* Sombra debajo de la card — la siguiente la proyecta sobre la anterior */
-  box-shadow: 0 8px 48px rgba(0,0,0,.45), 0 1px 0 rgba(168,172,151,.06) !important;
-  margin-top: 0 !important;
+  transform-origin: center 30%;   /* pivot en la parte alta = más natural */
+  transform-style: preserve-3d;
+  /* Esquinas redondeadas dan el look de carta física */
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  /* Reduce padding interno para que el contenido quepa en 100vh */
+  padding-top:    clamp(28px, 4.5vh, 64px) !important;
+  padding-bottom: clamp(28px, 4.5vh, 64px) !important;
+  min-height: unset !important;
+  /* Sombra que da profundidad entre cartas */
+  box-shadow: 0 24px 64px rgba(0,0,0,.55), 0 2px 0 rgba(168,172,151,.06) !important;
+  /* Las transiciones las maneja JS, aquí solo suavizamos ligeros ajustes */
+  transition: none !important;
 }
 
-/* Z-index creciente: cada card nueva tapa a la anterior ─────────── */
-.csw:nth-child(1) .card-in-stack { z-index: 10; }
-.csw:nth-child(2) .card-in-stack { z-index: 20; }
-.csw:nth-child(3) .card-in-stack { z-index: 30; }
-
-/* Indicador de profundidad: peek de la card de debajo ──────────── */
-.csw:not(:first-child) .card-in-stack::before {
+/* Capa que muestra el "borde" de cartas detrás (peek effect) */
+.card-in-deck::after {
   content: '';
   position: absolute;
-  top: -8px; left: 12px; right: 12px; height: 8px;
-  background: rgba(168,172,151,.06);
-  border-radius: 8px 8px 0 0;
+  inset: 0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px rgba(168,172,151,.09);
   pointer-events: none;
-  z-index: -1;
 }
 
-/* ─── Mobile: desactiva el efecto (no hay espacio suficiente) ──── */
+/* ─── Responsive: en mobile vuelve al flujo normal ───────────── */
 @media (max-width: 768px) {
-  .csw:not(:last-child) { padding-bottom: 0 !important; }
-  .card-in-stack {
+  .card-deck-zone  { height: auto !important; }
+  .card-deck-inner { position: static !important; height: auto !important; overflow: visible !important; perspective: none !important; }
+  .card-in-deck    {
     position: relative !important;
+    inset: auto !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+    padding-top: clamp(56px, 8vh, 96px) !important;
+    padding-bottom: clamp(56px, 8vh, 96px) !important;
     transform: none !important;
     opacity: 1 !important;
+    min-height: auto !important;
   }
-  .csw:not(:first-child) .card-in-stack::before { display: none; }
 }

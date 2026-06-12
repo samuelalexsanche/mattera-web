@@ -143,57 +143,81 @@ function initRevealStagger() {
   });
 }
 
-/* ─── CARD STACK (secciones 7, 8, 9) ────────────────────────── */
-function initCardStack() {
-  const zone = document.querySelector('.card-stack-zone');
-  if (!zone || REDUCED) return;
+/* ─── CARD DECK (secciones 7, 8, 9) ─────────────────────────── */
+/*
+ * Mecánica: la zona tiene 300 vh de scroll.
+ * t = (px scrollados dentro de la zona) / vh   →   t ∈ [0, N-1]
+ * depth de la carta i en el tiempo t: d = i - t
+ *   d = 0  →  frente  (front card, escala 1, opacidad 1)
+ *   d = 1  →  medio   (scale .92, ty -16 px, opacidad .62)
+ *   d = 2  →  atrás   (scale .84, ty -32 px, opacidad .35)
+ *   d < 0  →  saliendo (escala y opacidad decrecen, sube y desaparece)
+ */
+function initCardDeck() {
+  const zone  = document.querySelector('.card-deck-zone');
+  const inner = document.querySelector('.card-deck-inner');
+  if (!zone || !inner || REDUCED) return;
+  if (window.innerWidth <= 768) return;   // CSS ya desactiva el efecto en mobile
 
-  const cards = Array.from(zone.querySelectorAll('.card-in-stack'));
-  if (cards.length < 2) return;
+  const cards = Array.from(inner.querySelectorAll('.card-in-deck'));
+  const N     = cards.length;             // 3
 
-  // Skip on mobile (CSS disables the visual anyway)
-  if (window.innerWidth <= 768) return;
+  // Lookup table de transforms por depth
+  function depthToStyle(d) {
+    if (d > N) return { s: 0.84 - (d - N) * 0.04, ty: -32, op: 0 };
+
+    if (d < 0) {
+      // Carta saliendo: sale HACIA ARRIBA y encoge
+      const t   = Math.min(1, -d);                 // 0→1 mientras d va 0→-1
+      const e   = easeOut(t);
+      return {
+        s:  1 - e * 0.14,                          // 1.0 → 0.86
+        ty: -(e * 90),                              // sube hasta -90 px
+        op: 1 - e,                                  // desvanece
+      };
+    }
+
+    // Cartas en la baraja: d ∈ [0, N-1]
+    const e  = easeOut(Math.min(d, 1));             // suaviza la interpolación cercana al frente
+    const dC = Math.max(0, d);
+    return {
+      s:  1   - dC * 0.080,                        // 1.00 → 0.84
+      ty: -dC * 16,                                 // 0 → -32 px (las traseras "flotan" un poco más arriba)
+      op: 1   - dC * 0.325,                         // 1.00 → 0.35
+    };
+  }
 
   function update() {
-    const vh = window.innerHeight;
+    const vh      = window.innerHeight;
+    const zRect   = zone.getBoundingClientRect();
+    // t: progreso lineal de la zona bajo el viewport
+    const t       = Math.max(0, Math.min(N - 1, -zRect.top / vh));
 
     cards.forEach((card, i) => {
-      // Last card: never scales down
-      if (i === cards.length - 1) return;
+      const d    = i - t;                           // depth continuo de esta carta
+      const { s, ty, op } = depthToStyle(d);
 
-      const next     = cards[i + 1];
-      const nextTop  = next.getBoundingClientRect().top;
+      // z-index: carta con menor depth (más al frente) → número mayor
+      const z    = Math.round(30 - d * 9);
 
-      // progress 0 = next card at viewport bottom, 1 = next card at viewport top
-      const raw      = 1 - (nextTop / vh);
-      const progress = Math.max(0, Math.min(1, raw));
+      card.style.transform  = `translateY(${ty.toFixed(2)}px) scale(${s.toFixed(4)})`;
+      card.style.opacity    = op.toFixed(3);
+      card.style.zIndex     = z;
 
-      if (progress <= 0) {
-        card.style.transform = '';
-        card.style.opacity   = '';
-        return;
-      }
-
-      const e = easeOut(progress);                // cubic ease-out
-
-      const scale   = (1 - e * 0.075).toFixed(4); // 1.000 → 0.925
-      const ty      = (-(e * 32)).toFixed(2);      // 0 → -32 px  (va hacia arriba)
-      const opacity = (1 - e * 0.20).toFixed(3);   // 1.0  → 0.80
-
-      card.style.transform = `scale(${scale}) translateY(${ty}px)`;
-      card.style.opacity   = opacity;
+      // Solo la carta al frente permite scroll interno
+      card.style.overflowY  = (d < 0.15) ? 'auto' : 'hidden';
     });
   }
 
+  // También re-aplica si el viewport cambia de tamaño
   let ticking = false;
-  const onScroll = () => {
+  window.addEventListener('scroll', () => {
     if (!ticking) { requestAnimationFrame(update); ticking = true; }
-  };
-  window.addEventListener('scroll',  onScroll, { passive: true });
-  window.addEventListener('resize',  update,   { passive: true });
+    ticking = false;  // permit next
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
 
-  // Run once so initial state is correct (e.g. after hard reload mid-page)
-  update();
+  update();    // estado inicial correcto al cargar mid-page
 }
 
 /* ─── PRICING SECTION PARALLAX ──────────────────────────────── */
@@ -254,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline();
   initSliders();
   initRevealStagger();
-  initCardStack();
+  initCardDeck();
   initPricingParallax();
   initPricingCardTilt();
   // Patch after calcUpdate is defined (it's in inline script, already available at DOMContentLoaded)
