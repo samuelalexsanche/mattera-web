@@ -35,6 +35,31 @@
       "provider": {"@type": "Organization", "name": "Mattera Systems", "url": "https://samuelalexsanche.github.io/mattera-web/"},
       "description": "Sistemas de IA para distribuidoras: cotizaciones automáticas, status de pedidos, cobranza puntual y reactivación de clientes inactivos.",
       "areaServed": "México"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿El sistema puede manejar diferentes precios para diferentes clientes?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema maneja listas de precios diferenciadas por cliente, volumen o canal. Cada cliente ve los precios que le corresponden, sin que el equipo tenga que calcular manualmente ni enviar tablas por correo."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se mantiene actualizado el catálogo de productos?",
+          "acceptedAnswer": {"@type": "Answer", "text": "El catálogo se conecta a Google Sheets, a tu ERP o a la fuente de datos que ya uses. Cuando actualizas el precio o el inventario, el sistema lo refleja automáticamente en la siguiente consulta."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede dar seguimiento a pedidos y fechas de entrega?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema puede consultar el estado del pedido en tu sistema de gestión y reportarlo al cliente por WhatsApp. El alcance exacto de la integración se define en el diagnóstico según la plataforma que uses."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si un cliente pregunta algo que el sistema no sabe responder?",
+          "acceptedAnswer": {"@type": "Answer", "text": "El sistema escala al equipo con el contexto completo de la conversación. Tu persona recibe el mensaje, el historial del cliente y el punto exacto donde se necesita intervención — sin empezar desde cero."}
+        }
+      ]
     }
   ]
 }
