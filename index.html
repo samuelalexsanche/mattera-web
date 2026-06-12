@@ -725,46 +725,94 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
 </section>
 <!-- PRECIO -->
-<section class="precio-section sec-paper" id="agenda" aria-labelledby="precio-title">
-  <div class="precio-inner">
+<section class="precio-section sec-pricing" id="agenda" aria-labelledby="precio-title">
+
+  <!-- ── Capa 1 (más profunda): número "08" marca de agua ── -->
+  <div class="pricing-depth" id="pricingDepth1" data-pricing-depth="0.28" aria-hidden="true">
+    <div class="pricing-watermark-num">08</div>
+  </div>
+
+  <!-- ── Capa 2 (media): anillos concéntricos ── -->
+  <div class="pricing-depth" id="pricingDepth2" data-pricing-depth="0.14" aria-hidden="true">
+    <svg class="pricing-rings-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="300" cy="300" r="120" stroke="rgba(168,172,151,.055)" stroke-width="1"/>
+      <circle cx="300" cy="300" r="185" stroke="rgba(168,172,151,.042)" stroke-width="1"/>
+      <circle cx="300" cy="300" r="252" stroke="rgba(168,172,151,.030)" stroke-width="1"/>
+      <circle cx="300" cy="300" r="320" stroke="rgba(168,172,151,.020)" stroke-width="1"/>
+      <circle cx="300" cy="300" r="390" stroke="rgba(168,172,151,.013)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <!-- ── Capa 3 (más cerca): campo de puntos ── -->
+  <div class="pricing-depth" id="pricingDepth3" data-pricing-depth="0.06" aria-hidden="true">
+    <svg class="pricing-dots-svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="pricing-dot-grid" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+          <circle cx="28" cy="28" r="1" fill="rgba(168,172,151,.09)"/>
+        </pattern>
+      </defs>
+      <rect width="1400" height="700" fill="url(#pricing-dot-grid)"/>
+    </svg>
+  </div>
+
+  <div class="precio-inner" style="position:relative;z-index:2">
     <p class="section-eyebrow reveal" data-i18n="s8.eyebrow">08 — INVERSIÓN</p>
     <h2 class="section-title reveal reveal-delay-1" id="precio-title" data-i18n="s8.title">Precio claro. <br>Sin sorpresas.</h2>
-    <div class="precio-wrapper">
-      <div class="reveal reveal-delay-2">
-        <div class="precio-label" data-i18n="s8.label">Desarrollo desde</div>
-        <div class="precio-big">$10,000</div>
-        <div class="precio-currency" data-i18n="s8.currency">MXN · pago único por el desarrollo</div>
-        <div style="margin-top:2rem">
-          <div class="precio-label">Operación mensual desde</div>
-          <div style="font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,52px);letter-spacing:-.04em;color:var(--ink);line-height:1">$1,500</div>
-          <div class="precio-currency">MXN / mes · servidores, APIs, monitoreo, mejoras y reporte mensual de horas devueltas. Cifra exacta en tu cotización.</div>
+
+    <!-- ── Dos tarjetas de precio ── -->
+    <div class="pricing-cards">
+
+      <!-- Tarjeta 1: Desarrollo -->
+      <div class="pricing-card card-primary reveal reveal-delay-2">
+        <span class="pricing-card-tag">Desarrollo · pago único</span>
+        <div class="pricing-card-price">$10,000</div>
+        <div class="pricing-card-currency" data-i18n="s8.currency">MXN · pago único por el desarrollo</div>
+        <div class="pricing-card-rule"></div>
+        <p class="pricing-card-desc">El precio exacto depende del alcance — integraciones, complejidad y plataformas. Te damos cotización en el diagnóstico gratuito.</p>
+        <div class="pricing-conditions" style="margin-top:1.5rem">
+          <span class="pricing-badge">Entrega en 14 días</span>
+          <span class="pricing-badge">NDA disponible</span>
+          <span class="pricing-badge">LFPDPPP</span>
         </div>
-        <p class="precio-note" data-i18n="s8.note">El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.</p>
-        <div class="precio-conditions">
-          <span>Desarrollo único + operación mensual, sin sorpresas</span>
-          <span>Entrega en 14 días calendario</span>
-          <span>NDA disponible · cumplimos LFPDPPP</span>
+        <div class="card-ghost" aria-hidden="true">$10k</div>
+      </div>
+
+      <!-- Tarjeta 2: Operación -->
+      <div class="pricing-card card-secondary reveal reveal-delay-3">
+        <span class="pricing-card-tag">Operación mensual</span>
+        <div class="pricing-card-price">$1,500</div>
+        <div class="pricing-card-currency">MXN / mes · cifra exacta en tu cotización</div>
+        <div class="pricing-card-rule"></div>
+        <p class="pricing-card-desc">Cubre servidores, APIs, monitoreo activo, mejoras continuas y el reporte mensual de horas devueltas.</p>
+        <div class="pricing-conditions" style="margin-top:1.5rem">
+          <span class="pricing-badge">Sin contrato mínimo</span>
+          <span class="pricing-badge">Reporte mensual</span>
         </div>
+        <div class="card-ghost" aria-hidden="true">/mes</div>
       </div>
-      <div class="precio-includes reveal reveal-delay-3">
-        <h3 data-i18n="s8.includes.title">¿Qué incluye cualquier proyecto?</h3>
-        <ul class="includes-list">
-          <li>Diagnóstico inicial y mapeo de flujos (gratuito)</li>
-          <li>Diseño de arquitectura del agente o sistema</li>
-          <li>Entrenamiento con la data de tu negocio</li>
-          <li>Integraciones con las herramientas que ya usas</li>
-          <li>Dashboard de métricas y conversaciones</li>
-          <li>Capacitación a tu equipo + soporte post-entrega</li>
-          <li>Si el sistema no devuelve horas en los primeros 30 días, lo reconfiguramos sin costo</li>
-        </ul>
+    </div>
+
+    <!-- ── Qué incluye ── -->
+    <div class="pricing-includes reveal reveal-delay-3">
+      <p class="pricing-includes-title">Cualquier proyecto incluye</p>
+      <ul class="pricing-includes-grid">
+        <li>Diagnóstico inicial y mapeo de flujos (gratuito)</li>
+        <li>Diseño de arquitectura del agente o sistema</li>
+        <li>Entrenamiento con la data de tu negocio</li>
+        <li>Integraciones con las herramientas que ya usas</li>
+        <li>Dashboard de métricas y conversaciones</li>
+        <li>Capacitación a tu equipo + soporte post-entrega</li>
+        <li class="pricing-guarantee">Si el sistema no devuelve horas en los primeros 30 días, lo reconfiguramos sin costo.</li>
+      </ul>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="pricing-cta-row reveal reveal-delay-4">
+      <div>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Cotizar mi proyecto →</span></a>
+        <p class="pricing-cta-note" style="margin-top:.7rem">Te respondo en menos de 1 hora.</p>
       </div>
-      <div class="precio-cta-wrap reveal reveal-delay-4">
-        <div>
-          <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Cotizar mi proyecto →</span></a>
-          <p style="margin-top:.7rem;font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.05em">Te respondo en menos de 1 hora.</p>
-        </div>
-        <p class="precio-enterprise">¿Proyecto complejo o enterprise? <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizamos a medida →</a></p>
-      </div>
+      <p class="pricing-enterprise-link">¿Proyecto enterprise? <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizamos a medida →</a></p>
     </div>
   </div>
 </section>

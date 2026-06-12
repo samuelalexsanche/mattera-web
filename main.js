@@ -143,6 +143,57 @@ function initRevealStagger() {
   });
 }
 
+/* ─── PRICING SECTION PARALLAX ──────────────────────────────── */
+function initPricingParallax() {
+  const section = document.getElementById('agenda');
+  const layers  = section ? section.querySelectorAll('[data-pricing-depth]') : [];
+  if (!layers.length || REDUCED) return;
+
+  let ticking = false;
+
+  function update() {
+    const rect = section.getBoundingClientRect();
+    // Only animate while section is in / near viewport
+    if (rect.bottom < -200 || rect.top > window.innerHeight + 200) { ticking = false; return; }
+    const progress = -rect.top / (section.offsetHeight || 1);
+
+    layers.forEach(layer => {
+      const depth = parseFloat(layer.dataset.pricingDepth || '0');
+      const y = progress * depth * 120;
+      layer.style.transform = `translateY(${y.toFixed(2)}px)`;
+    });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+
+  // Initial position
+  update();
+}
+
+/* ─── PRICING CARDS: subtle mouse tilt ──────────────────────── */
+function initPricingCardTilt() {
+  if (REDUCED) return;
+  document.querySelectorAll('.pricing-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * 8;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * 5;
+      card.style.transform = `translateY(-6px) rotateX(${(-y).toFixed(2)}deg) rotateY(${x.toFixed(2)}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 400ms ease';
+      card.style.transform = '';
+      setTimeout(() => { card.style.transition = ''; }, 400);
+    });
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 120ms ease';
+    });
+  });
+}
+
 /* ─── INIT ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initCounter();
@@ -150,6 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline();
   initSliders();
   initRevealStagger();
+  initPricingParallax();
+  initPricingCardTilt();
   // Patch after calcUpdate is defined (it's in inline script, already available at DOMContentLoaded)
   patchCalcUpdate();
 });
