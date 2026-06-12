@@ -801,10 +801,11 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
    Cada card ocupa el mismo frame; el scroll trae la de atrás al frente
    ═══════════════════════════════════════════════════════════════ */
 
-/* Zona de scroll: 300vh = 3 transiciones × 100vh cada una */
+/* Zona de scroll: 600vh = inner(100vh) + 2 slots × 250vh
+   Cada slot = 100vh estable + 150vh transición */
 .card-deck-zone {
   position: relative;
-  height: 300vh;
+  height: 600vh;
 }
 
 /* Inner pinned: el "frame" de la mano que sostiene las cartas */

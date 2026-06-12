@@ -191,7 +191,30 @@ function initCardDeck() {
     const vh      = window.innerHeight;
     const zRect   = zone.getBoundingClientRect();
     // t: progreso lineal de la zona bajo el viewport
-    const t       = Math.max(0, Math.min(N - 1, -zRect.top / vh));
+    // ── Progreso con fase estable + fase de transición ──────────
+    //   STABLE  : carta frontal fija  (1.0 × vh de scroll)
+    //   TRANSIT : animación al frente (1.5 × vh de scroll)
+    //   SLOT    : total por carta     (2.5 × vh)
+    //   Zona CSS debe ser: 100vh + (N-1)*SLOT*100vh = 600vh
+    const STABLE   = vh * 1.0;
+    const TRANSIT  = vh * 1.5;
+    const SLOT     = STABLE + TRANSIT;           // 2.5 × vh
+    const scrolled = Math.max(0, -zRect.top);    // px dentro de la zona
+
+    const slotIdx  = Math.min(N - 2, Math.floor(scrolled / SLOT));
+    const slotProg = (scrolled - slotIdx * SLOT) / SLOT;  // 0‥1 dentro del slot
+    const sFrac    = STABLE / SLOT;              // 0.4 — fracción estable
+
+    let t;
+    if (scrolled >= SLOT * (N - 1)) {
+      t = N - 1;                                 // última carta: queda al frente
+    } else if (slotProg <= sFrac) {
+      t = slotIdx;                               // fase estable: sin cambio
+    } else {
+      const p = (slotProg - sFrac) / (1 - sFrac);
+      t = slotIdx + easeOut(p);                  // fase de transición
+    }
+    t = Math.max(0, Math.min(N - 1, t));
 
     cards.forEach((card, i) => {
       const d    = i - t;                           // depth continuo de esta carta
