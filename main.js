@@ -37,7 +37,10 @@ function initCounter() {
 
 /* ─── CHAT DEMO ──────────────────────────────────────────────── */
 function initChatDemo() {
-  const body = document.getElementById('chatBody');
+  const body      = document.getElementById('chatBody');
+  const footerEl  = document.getElementById('chatFooterText');
+  const inputEl   = document.getElementById('chatInput');
+  const sendBtn   = document.getElementById('chatSend');
   if (!body) return;
 
   const msgs = [
@@ -46,31 +49,84 @@ function initChatDemo() {
     { type: 'system',    text: 'cita confirmada · CRM actualizado · 0 intervención humana',               delay: 3000 },
   ];
 
-  if (REDUCED) {
-    msgs.forEach(({ type, text }) => {
-      const b = document.createElement('div');
-      b.className = 'chat-bubble chat-bubble-' + type;
-      b.textContent = text;
-      body.appendChild(b);
+  /* Guion animado — solo corre cuando NO hay endpoint real */
+  function playDemoScript() {
+    if (REDUCED) {
+      msgs.forEach(({ type, text }) => {
+        const b = document.createElement('div');
+        b.className = 'chat-bubble chat-bubble-' + type;
+        b.textContent = text;
+        body.appendChild(b);
+      });
+      return;
+    }
+    msgs.forEach(({ type, text, delay }) => {
+      setTimeout(() => {
+        const b = document.createElement('div');
+        b.className = 'chat-bubble chat-bubble-' + type;
+        b.textContent = text;
+        b.style.cssText = 'opacity:0;transform:translateY(8px)';
+        body.appendChild(b);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          b.style.transition = 'opacity 250ms ease, transform 250ms ease';
+          b.style.opacity = '1';
+          b.style.transform = 'translateY(0)';
+        }));
+        body.scrollTop = body.scrollHeight;
+      }, delay);
     });
-    return;
   }
 
-  msgs.forEach(({ type, text, delay }) => {
-    setTimeout(() => {
+  if (window.MATTERA_AGENT_ENDPOINT) {
+    /* ── Modo agente real ──────────────────────────────────────── */
+    if (footerEl) footerEl.textContent = 'Este asistente es el producto. Pruébalo.';
+    if (inputEl)  { inputEl.disabled = false; inputEl.placeholder = 'Escríbele al asistente…'; }
+    if (sendBtn)  sendBtn.disabled = false;
+
+    function appendBubble(type, text) {
       const b = document.createElement('div');
       b.className = 'chat-bubble chat-bubble-' + type;
       b.textContent = text;
-      b.style.cssText = 'opacity:0;transform:translateY(8px)';
       body.appendChild(b);
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        b.style.transition = 'opacity 250ms ease, transform 250ms ease';
-        b.style.opacity = '1';
-        b.style.transform = 'translateY(0)';
-      }));
       body.scrollTop = body.scrollHeight;
-    }, delay);
-  });
+    }
+
+    function sendMessage() {
+      const text = (inputEl ? inputEl.value.trim() : '');
+      if (!text) return;
+      appendBubble('client', text);
+      if (inputEl) inputEl.value = '';
+      if (inputEl) inputEl.disabled = true;
+      if (sendBtn) sendBtn.disabled = true;
+
+      fetch(window.MATTERA_AGENT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text }),
+      })
+        .then(r => r.json())
+        .then(data => appendBubble('assistant', data.reply || ''))
+        .catch(() => {
+          const b = document.createElement('div');
+          b.className = 'chat-bubble chat-bubble-system';
+          b.innerHTML = 'Error al conectar. <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" style="color:var(--bt-orange)">WhatsApp →</a>';
+          body.appendChild(b);
+          body.scrollTop = body.scrollHeight;
+        })
+        .finally(() => {
+          if (inputEl) inputEl.disabled = false;
+          if (sendBtn) sendBtn.disabled = false;
+          if (inputEl) inputEl.focus();
+        });
+    }
+
+    if (sendBtn)  sendBtn.addEventListener('click', sendMessage);
+    if (inputEl)  inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+  } else {
+    /* ── Modo demo (endpoint no existe) ───────────────────────── */
+    playDemoScript();
+  }
 }
 
 /* ─── TIMELINE DRAW ──────────────────────────────────────────── */

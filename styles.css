@@ -865,3 +865,66 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
     min-height: auto !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN 05 — MANIFIESTO
+   ═══════════════════════════════════════════════════════════════ */
+.manifiesto-quote {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 4.5vw, 64px);
+  line-height: 1.2;
+  color: var(--bt-ink);
+  max-width: 24ch;
+  margin: 2rem 0 1.5rem;
+}
+.manifiesto-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(15px, 1.1vw, 18px);
+  line-height: 1.65;
+  color: var(--bt-sage);
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CHAT DEMO — input row
+   ═══════════════════════════════════════════════════════════════ */
+.chat-input-row {
+  display: flex;
+  gap: 7px;
+  padding-top: 10px;
+  border-top: 1px solid var(--bt-border);
+  margin-top: 2px;
+}
+.chat-input {
+  flex: 1;
+  background: rgba(30,35,24,.5);
+  border: 1px solid var(--bt-border);
+  color: var(--bt-ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 200ms;
+  min-width: 0;
+}
+.chat-input::placeholder { color: var(--bt-sage); opacity: .6; }
+.chat-input:not(:disabled):focus { border-color: var(--bt-sage); }
+.chat-input:disabled { opacity: .45; cursor: not-allowed; }
+.chat-send {
+  background: transparent;
+  border: 1px solid var(--bt-border);
+  color: var(--bt-sage);
+  padding: 7px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: border-color 200ms, color 200ms;
+}
+.chat-send:disabled { opacity: .35; cursor: not-allowed; }
+.chat-send:not(:disabled):hover { border-color: var(--bt-sage); color: var(--bt-ink); }
