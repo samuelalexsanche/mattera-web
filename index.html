@@ -1007,13 +1007,13 @@ function applyLang(lang) {
   localStorage.setItem('ms-lang', lang);
   // update html title
   document.title = lang === 'en'
-    ? 'Mattera Systems — AI Digital Agency in Guadalajara'
-    : 'Mattera Systems — Agencia Digital IA en Guadalajara';
+    ? 'Mattera Systems — AI Automation Systems in Guadalajara'
+    : 'Mattera Systems — Sistemas de Automatización con IA en Guadalajara';
   // update meta description
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.content = lang === 'en'
-    ? 'Mattera Systems — AI Digital Agency in Guadalajara. Websites, AI chatbots, management systems and more for Mexican businesses. From $10,000 MXN.'
-    : 'Mattera Systems — Agencia Digital IA en Guadalajara. Sitios web, chatbots con IA, sistemas de gestión y más para empresas mexicanas. Desde $10,000 MXN.';
+    ? 'AI automation systems for businesses in Guadalajara: WhatsApp chatbots, AI agents, custom CRM and integrations. 14-day implementation. Free diagnostic.'
+    : 'Sistemas de automatización con IA para empresas en Guadalajara: chatbots WhatsApp, agentes IA, CRM e integraciones. Implementación en 14 días. Diagnóstico gratuito.';
 }
 
 function toggleLang() {
