@@ -794,3 +794,63 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   .pricing-cta-row { flex-direction: column; align-items: stretch; }
   .pricing-cta-row .btn-primary { text-align: center; justify-content: center; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CARD STACK — secciones 7, 8, 9 emergen desde abajo
+   ═══════════════════════════════════════════════════════════════ */
+
+.card-stack-zone {
+  position: relative;
+  isolation: isolate;
+}
+
+.csw { position: relative; }
+
+/* Extra scroll space: la card siguiente emerge MIENTRAS la actual
+   está pinned, no después */
+.csw:not(:last-child) {
+  padding-bottom: 40vh;
+}
+
+/* Cada sección se convierte en una card sticky ─────────────────── */
+.card-in-stack {
+  position: sticky !important;
+  top: 0 !important;
+  /* Esquinas superiores redondeadas = aspecto de "tarjeta física" */
+  border-radius: 20px 20px 0 0 !important;
+  overflow: hidden !important;
+  transform-origin: top center;
+  will-change: transform, opacity;
+  /* Sombra debajo de la card — la siguiente la proyecta sobre la anterior */
+  box-shadow: 0 8px 48px rgba(0,0,0,.45), 0 1px 0 rgba(168,172,151,.06) !important;
+  margin-top: 0 !important;
+}
+
+/* Z-index creciente: cada card nueva tapa a la anterior ─────────── */
+.csw:nth-child(1) .card-in-stack { z-index: 10; }
+.csw:nth-child(2) .card-in-stack { z-index: 20; }
+.csw:nth-child(3) .card-in-stack { z-index: 30; }
+
+/* Indicador de profundidad: peek de la card de debajo ──────────── */
+.csw:not(:first-child) .card-in-stack::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: 12px; right: 12px; height: 8px;
+  background: rgba(168,172,151,.06);
+  border-radius: 8px 8px 0 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ─── Mobile: desactiva el efecto (no hay espacio suficiente) ──── */
+@media (max-width: 768px) {
+  .csw:not(:last-child) { padding-bottom: 0 !important; }
+  .card-in-stack {
+    position: relative !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .csw:not(:first-child) .card-in-stack::before { display: none; }
+}

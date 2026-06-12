@@ -143,6 +143,59 @@ function initRevealStagger() {
   });
 }
 
+/* ─── CARD STACK (secciones 7, 8, 9) ────────────────────────── */
+function initCardStack() {
+  const zone = document.querySelector('.card-stack-zone');
+  if (!zone || REDUCED) return;
+
+  const cards = Array.from(zone.querySelectorAll('.card-in-stack'));
+  if (cards.length < 2) return;
+
+  // Skip on mobile (CSS disables the visual anyway)
+  if (window.innerWidth <= 768) return;
+
+  function update() {
+    const vh = window.innerHeight;
+
+    cards.forEach((card, i) => {
+      // Last card: never scales down
+      if (i === cards.length - 1) return;
+
+      const next     = cards[i + 1];
+      const nextTop  = next.getBoundingClientRect().top;
+
+      // progress 0 = next card at viewport bottom, 1 = next card at viewport top
+      const raw      = 1 - (nextTop / vh);
+      const progress = Math.max(0, Math.min(1, raw));
+
+      if (progress <= 0) {
+        card.style.transform = '';
+        card.style.opacity   = '';
+        return;
+      }
+
+      const e = easeOut(progress);                // cubic ease-out
+
+      const scale   = (1 - e * 0.075).toFixed(4); // 1.000 → 0.925
+      const ty      = (-(e * 32)).toFixed(2);      // 0 → -32 px  (va hacia arriba)
+      const opacity = (1 - e * 0.20).toFixed(3);   // 1.0  → 0.80
+
+      card.style.transform = `scale(${scale}) translateY(${ty}px)`;
+      card.style.opacity   = opacity;
+    });
+  }
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  };
+  window.addEventListener('scroll',  onScroll, { passive: true });
+  window.addEventListener('resize',  update,   { passive: true });
+
+  // Run once so initial state is correct (e.g. after hard reload mid-page)
+  update();
+}
+
 /* ─── PRICING SECTION PARALLAX ──────────────────────────────── */
 function initPricingParallax() {
   const section = document.getElementById('agenda');
@@ -201,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline();
   initSliders();
   initRevealStagger();
+  initCardStack();
   initPricingParallax();
   initPricingCardTilt();
   // Patch after calcUpdate is defined (it's in inline script, already available at DOMContentLoaded)
