@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matterasystems.com/privacidad.html">
+<meta property="og:title" content="Política de Privacidad — Mattera Systems">
+<meta property="og:description" content="Política de privacidad y tratamiento de datos personales de Mattera Systems.">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Mattera Systems">
+<meta name="description" content="Política de privacidad y tratamiento de datos personales de Mattera Systems.">
+<title>Política de Privacidad — Mattera Systems</title>
+<link rel="canonical" href="https://matterasystems.com/privacidad.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shared.css">
+<style>
+.privacy-hero {
+  padding: 8rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.privacy-hero .eyebrow {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 1.5rem;
+}
+.privacy-hero h1 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  max-width: 18ch;
+}
+.privacy-hero .last-update {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--ink-3);
+  letter-spacing: .08em;
+  margin-top: 1.5rem;
+}
+.privacy-body {
+  padding: 5rem 0 8rem;
+  max-width: 760px;
+}
+.privacy-body h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 3rem 0 1rem;
+  letter-spacing: -.01em;
+}
+.privacy-body h2:first-child {
+  margin-top: 0;
+}
+.privacy-body p {
+  font-size: .97rem;
+  line-height: 1.8;
+  color: var(--ink-2);
+  margin-bottom: 1rem;
+}
+.privacy-body ul {
+  margin: 0 0 1.25rem 1.5rem;
+}
+.privacy-body ul li {
+  font-size: .97rem;
+  line-height: 1.8;
+  color: var(--ink-2);
+  margin-bottom: .4rem;
+}
+.privacy-body a {
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  transition: opacity .2s;
+}
+.privacy-body a:hover {
+  opacity: .7;
+}
+.privacy-contact-box {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1.5px solid var(--border);
+  background: var(--bg-2);
+}
+.privacy-contact-box p {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="./" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="index.html#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="index.html#calculadora">Cálculo</a>
+      <a href="blog/">Blog</a>
+      <a href="nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <button class="mobile-nav-close" onclick="toggleMobileNav()" aria-label="Cerrar menú">CERRAR ✕</button>
+  <a href="index.html#servicios" onclick="toggleMobileNav()">Servicios</a>
+  <a href="industrias/" onclick="toggleMobileNav()">Industrias</a>
+  <a href="index.html#calculadora" onclick="toggleMobileNav()">Cálculo</a>
+  <a href="blog/" onclick="toggleMobileNav()">Blog</a>
+  <a href="nosotros.html" onclick="toggleMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Agendar diagnóstico →</a>
+</div>
+
+<main id="main">
+  <div class="container">
+
+    <section class="privacy-hero">
+      <p class="eyebrow">Legal</p>
+      <h1>Política de Privacidad</h1>
+      <p class="last-update">Última actualización: 18 de mayo de 2026</p>
+    </section>
+
+    <div class="privacy-body">
+
+      <h2>1. Responsable del tratamiento</h2>
+      <p>Mattera Systems (en adelante "Mattera", "nosotros" o "la empresa"), con domicilio en Guadalajara, Jalisco, México, es responsable del tratamiento de los datos personales que usted nos proporciona a través de este sitio web, por WhatsApp, correo electrónico u otros medios de contacto.</p>
+      <p>Contacto: <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a></p>
+
+      <h2>2. Datos personales que recopilamos</h2>
+      <p>Podemos recopilar y tratar los siguientes datos personales:</p>
+      <ul>
+        <li>Nombre y apellidos</li>
+        <li>Número de teléfono (incluyendo WhatsApp)</li>
+        <li>Correo electrónico</li>
+        <li>Nombre y giro de su empresa o negocio</li>
+        <li>Ciudad y estado</li>
+        <li>Información de contacto general que usted nos proporcione voluntariamente</li>
+      </ul>
+
+      <h2>3. Finalidades del tratamiento</h2>
+      <p>Los datos personales que recopilamos son utilizados exclusivamente para:</p>
+      <ul>
+        <li>Contactarle para presentar nuestros servicios de automatización e inteligencia artificial</li>
+        <li>Atender solicitudes de información, cotizaciones o diagnósticos gratuitos</li>
+        <li>Enviar comunicaciones comerciales relacionadas con nuestros servicios, a través de WhatsApp u otros canales</li>
+        <li>Dar seguimiento a propuestas y proyectos activos</li>
+        <li>Cumplir con obligaciones legales y fiscales aplicables</li>
+      </ul>
+
+      <h2>4. Fundamento legal</h2>
+      <p>El tratamiento de sus datos personales se realiza con base en:</p>
+      <ul>
+        <li>Su consentimiento, cuando nos proporciona sus datos de forma voluntaria</li>
+        <li>El interés legítimo de Mattera para ofrecer sus servicios a empresas que puedan beneficiarse de ellos</li>
+        <li>La ejecución de un contrato o relación comercial existente</li>
+      </ul>
+
+      <h2>5. Transferencia de datos</h2>
+      <p>Mattera no vende ni cede sus datos personales a terceros. Únicamente los compartimos con proveedores de servicios tecnológicos necesarios para la operación de nuestras herramientas (como plataformas de mensajería, CRM o servicios en la nube), quienes están obligados contractualmente a tratar los datos bajo estrictas medidas de confidencialidad.</p>
+
+      <h2>6. Conservación de datos</h2>
+      <p>Sus datos personales se conservarán durante el tiempo necesario para cumplir con las finalidades descritas, o hasta que usted solicite su eliminación, salvo que exista una obligación legal que requiera su conservación por un período mayor.</p>
+
+      <h2>7. Sus derechos (ARCO)</h2>
+      <p>De conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), usted tiene derecho a:</p>
+      <ul>
+        <li><strong>Acceso:</strong> conocer qué datos personales tenemos sobre usted</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos</li>
+        <li><strong>Cancelación:</strong> solicitar la eliminación de sus datos</li>
+        <li><strong>Oposición:</strong> oponerse al tratamiento de sus datos para fines específicos</li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos, o para revocar su consentimiento, envíe un correo a <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a> con el asunto "Derechos ARCO". Atenderemos su solicitud en un plazo máximo de 20 días hábiles.</p>
+
+      <h2>8. Mensajes de WhatsApp</h2>
+      <p>Si recibió un mensaje de WhatsApp de parte de Mattera Systems, fue porque su número de teléfono está asociado a un negocio que podría beneficiarse de nuestros servicios. Si no desea recibir más comunicaciones, puede responder "STOP" o "NO GRACIAS" en cualquier momento y eliminaremos su número de nuestra base de datos de forma inmediata.</p>
+
+      <h2>9. Cookies y tecnologías de seguimiento</h2>
+      <p>Este sitio web puede utilizar cookies de sesión y analíticas para mejorar la experiencia de navegación. No utilizamos cookies de rastreo publicitario de terceros. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio.</p>
+
+      <h2>10. Cambios a esta política</h2>
+      <p>Mattera se reserva el derecho de actualizar esta política de privacidad en cualquier momento. Las modificaciones serán publicadas en esta misma página con la fecha de última actualización. Le recomendamos revisarla periódicamente.</p>
+
+      <div class="privacy-contact-box">
+        <p>¿Preguntas sobre tu privacidad? Escríbenos a <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a> o contáctanos por WhatsApp al <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="index.html#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="index.html#servicios">Agentes IA personalizados</a>
+        <a href="index.html#servicios">CRMs a medida</a>
+        <a href="index.html#servicios">Integraciones y automatizaciones</a>
+        <a href="index.html#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog/">Blog</a>
+        <a href="index.html#como-funciona">Proceso</a>
+        <a href="industrias/clinicas.html">Clínicas</a>
+        <a href="industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="industrias/restaurantes.html">Restaurantes</a>
+        <a href="industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="index.html#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <a href="privacidad.html" style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase;">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
