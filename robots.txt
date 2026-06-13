@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Actualizar la URL del sitemap cuando se migre a dominio propio (mattera.mx)
-Sitemap: https://samuelalexsanche.github.io/mattera-web/sitemap.xml
+Sitemap: https://mattera.mx/sitemap.xml

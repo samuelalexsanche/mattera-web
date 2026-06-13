@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- URL base: GitHub Pages. Actualizar a https://mattera.mx/ cuando esté disponible el dominio propio. -->
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/</loc>
+    <loc>https://mattera.mx/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/nosotros.html</loc>
+    <loc>https://mattera.mx/nosotros.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/blog/</loc>
+    <loc>https://mattera.mx/blog/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/blog/automatizacion-vs-contratar-personal.html</loc>
+    <loc>https://mattera.mx/blog/automatizacion-vs-contratar-personal.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html</loc>
+    <loc>https://mattera.mx/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/industrias/</loc>
+    <loc>https://mattera.mx/industrias/</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/industrias/clinicas.html</loc>
+    <loc>https://mattera.mx/industrias/clinicas.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/industrias/inmobiliarias.html</loc>
+    <loc>https://mattera.mx/industrias/inmobiliarias.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/industrias/restaurantes.html</loc>
+    <loc>https://mattera.mx/industrias/restaurantes.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://samuelalexsanche.github.io/mattera-web/industrias/distribuidoras.html</loc>
+    <loc>https://mattera.mx/industrias/distribuidoras.html</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
