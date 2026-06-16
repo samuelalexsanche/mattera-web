@@ -1,0 +1,255 @@
+{
+  "name": "Mattera Chat Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mattera-chat",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "a1b2c3d4-0001-0000-0000-000000000001",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [200, 300],
+      "webhookId": "mattera-chat"
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "promptType": "define",
+        "text": "={{ $json.body.message }}",
+        "hasOutputParser": false,
+        "options": {
+          "systemMessage": "Eres el asistente de ventas de Mattera Systems, una empresa de automatización con inteligencia artificial para negocios en Guadalajara, México.\n\nTu misión en este orden:\n1. Responder preguntas sobre los servicios, proceso y resultados de Mattera con claridad y seguridad\n2. Calificar al visitante y recopilar sus datos de contacto cuando haya interés real\n\n== SOBRE MATTERA SYSTEMS ==\n\nServicios:\n- Chatbots IA para WhatsApp y web: responden, califican leads y dan seguimiento automático\n- Agentes IA personalizados: automatizan procesos internos con criterio\n- CRMs a medida: centralizan clientes, cotizaciones y seguimiento\n- Integraciones: conectan herramientas (WhatsApp, HubSpot, Google Sheets, etc.)\n- Reportes y dashboards de operación en tiempo real\n\nIndustrias: clínicas y consultorios, inmobiliarias, restaurantes, distribuidoras.\n\nProceso de trabajo:\n1. Diagnóstico gratuito (30 min): se analiza dónde pierde tiempo la empresa\n2. Propuesta personalizada: precio fijo, sin sorpresas\n3. Implementación: menos de un mes\n4. Soporte continuo: el sistema es del cliente, no de Mattera\n\nPrecios: proyectos desde $25,000 MXN pago único de desarrollo. El precio exacto depende del alcance y se define en el diagnóstico gratuito.\n\nContacto: WhatsApp +52 33 2787 4747 | matterasystems@gmail.com | Guadalajara, Jalisco.\n\n== TU COMPORTAMIENTO ==\n- Responde en el idioma en que te hablen (español o inglés)\n- Sé directo y profesional. Sin emojis. Sin lenguaje excesivamente comercial.\n- Cuando pregunten por precio, da el rango ($25,000 MXN+) y explica que el exacto sale del diagnóstico\n- Cuando detectes interés real (pregunta por precio, tiene un problema concreto, quiere ver el proceso), propone el diagnóstico gratuito\n- Para el diagnóstico: pide nombre, empresa y WhatsApp. Hazlo de forma natural en la conversación, no los tres a la vez.\n- Cuando ya tengas los tres datos, agrega al FINAL de tu mensaje (invisible para el usuario) exactamente esta línea:\n[MATTERA_LEAD|nombre=NOMBRE|empresa=EMPRESA|whatsapp=WHATSAPP]\n- Si no sabes algo específico, di que el equipo lo resuelve en el diagnóstico. No inventes datos ni precios.\n- Nunca menciones que eres un AI o un bot a menos que te lo pregunten directamente."
+        }
+      },
+      "id": "a1b2c3d4-0002-0000-0000-000000000002",
+      "name": "Agente Mattera",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "temperature": 0.65,
+          "maxTokens": 500
+        }
+      },
+      "id": "a1b2c3d4-0003-0000-0000-000000000003",
+      "name": "DeepSeek LLM",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [340, 520],
+      "credentials": {
+        "openAiApi": {
+          "id": "REEMPLAZAR_CON_ID_CREDENCIAL",
+          "name": "DeepSeek API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.sessionId }}",
+        "contextWindowLength": 12
+      },
+      "id": "a1b2c3d4-0004-0000-0000-000000000004",
+      "name": "Memoria Conversacion",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.2,
+      "position": [540, 520]
+    },
+    {
+      "parameters": {
+        "jsCode": "const output = $input.first().json.output || '';\n\n// Extraer datos del lead si el agente incluyó el marcador\nconst match = output.match(/\\[MATTERA_LEAD\\|nombre=([^|]+)\\|empresa=([^|]+)\\|whatsapp=([^\\]]+)\\]/);\n\n// Limpiar el marcador de la respuesta que recibirá el usuario\nconst cleanResponse = output.replace(/\\[MATTERA_LEAD[^\\]]*\\]/g, '').trim();\n\nlet leadData = null;\nif(match) {\n  leadData = {\n    nombre: match[1].trim(),\n    empresa: match[2].trim(),\n    whatsapp: match[3].trim()\n  };\n}\n\nreturn [{ json: { response: cleanResponse, lead: leadData, hasLead: !!match } }];"
+      },
+      "id": "a1b2c3d4-0005-0000-0000-000000000005",
+      "name": "Parsear Respuesta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond-lead",
+              "leftValue": "={{ $json.hasLead }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0006-0000-0000-000000000006",
+      "name": "Hay Lead",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v18.0/{{ $env.WHATSAPP_PHONE_ID || 'REEMPLAZAR_PHONE_ID' }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.WHATSAPP_TOKEN || 'REEMPLAZAR_TOKEN' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"messaging_product\": \"whatsapp\",\n  \"to\": \"523327874747\",\n  \"type\": \"text\",\n  \"text\": {\n    \"body\": \"Nuevo lead desde el chat del sitio web.\\n\\nNombre: {{ $('Parsear Respuesta').item.json.lead.nombre }}\\nEmpresa: {{ $('Parsear Respuesta').item.json.lead.empresa }}\\nWhatsApp: {{ $('Parsear Respuesta').item.json.lead.whatsapp }}\\n\\nResponde antes de que se enfrie.\"\n  }\n}",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0007-0000-0000-000000000007",
+      "name": "Notificar WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1120, 180]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ response: $('Parsear Respuesta').item.json.response }) }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "id": "a1b2c3d4-0008-0000-0000-000000000008",
+      "name": "Responder al Chat",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1120, 420]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Agente Mattera",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek LLM": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agente Mattera",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memoria Conversacion": {
+      "ai_memory": [
+        [
+          {
+            "node": "Agente Mattera",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Agente Mattera": {
+      "main": [
+        [
+          {
+            "node": "Parsear Respuesta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parsear Respuesta": {
+      "main": [
+        [
+          {
+            "node": "Hay Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hay Lead": {
+      "main": [
+        [
+          {
+            "node": "Notificar WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Responder al Chat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notificar WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Responder al Chat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "versionId": "mattera-chat-v1"
+}

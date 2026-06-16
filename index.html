@@ -283,6 +283,40 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   .btn-primary,.btn-outline{justify-content:center;text-align:center}
   .hero-ctas,.precio-cta-wrap{flex-direction:column;align-items:flex-start}
 }
+/* ===== CHAT WIDGET ===== */
+#chat-fab{position:fixed;bottom:2rem;right:2rem;z-index:950;width:56px;height:56px;border-radius:50%;background:var(--accent-orange);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(252,163,17,.35);transition:transform .2s var(--ease),box-shadow .2s}
+#chat-fab:hover{transform:scale(1.08);box-shadow:0 6px 32px rgba(252,163,17,.5)}
+#chat-fab svg{width:24px;height:24px;color:var(--bg-dark)}
+#chat-fab .ic-chat{display:block}
+#chat-fab .ic-close{display:none}
+#chat-fab.open .ic-chat{display:none}
+#chat-fab.open .ic-close{display:block}
+#chat-window{position:fixed;bottom:5.5rem;right:2rem;z-index:949;width:360px;max-height:520px;display:flex;flex-direction:column;background:var(--bg-warm);border:1.5px solid var(--line-soft);border-radius:12px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,.45);opacity:0;transform:translateY(14px) scale(.97);pointer-events:none;transition:opacity .25s var(--ease),transform .25s var(--ease)}
+#chat-window.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+.chat-hdr{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.1rem;background:var(--bg-dark);border-bottom:1.5px solid var(--line-soft);flex-shrink:0}
+.chat-hdr-av{width:36px;height:36px;border-radius:50%;background:var(--accent-orange);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:1.1rem;font-weight:300;color:var(--bg-dark);flex-shrink:0}
+.chat-hdr-name{font-family:var(--display);font-weight:700;font-size:.85rem;letter-spacing:-.02em;color:var(--ink)}
+.chat-hdr-sub{font-family:var(--mono);font-size:.58rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:2px}
+.chat-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
+#chat-msgs{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:.65rem;scroll-behavior:smooth}
+#chat-msgs::-webkit-scrollbar{width:3px}
+#chat-msgs::-webkit-scrollbar-thumb{background:var(--line-soft);border-radius:2px}
+.cm{max-width:84%;padding:.6rem .85rem;border-radius:10px;font-size:.82rem;line-height:1.65;word-break:break-word}
+.cm.bot{background:var(--bg);color:var(--ink);align-self:flex-start;border-bottom-left-radius:3px}
+.cm.user{background:var(--accent-orange);color:var(--bg-dark);align-self:flex-end;border-bottom-right-radius:3px;font-weight:500}
+.cm-typing{display:flex;align-items:center;gap:4px;padding:.6rem .85rem;background:var(--bg);border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start}
+.cm-typing span{width:6px;height:6px;border-radius:50%;background:var(--ink-2);animation:chtblink 1.2s infinite}
+.cm-typing span:nth-child(2){animation-delay:.2s}
+.cm-typing span:nth-child(3){animation-delay:.4s}
+@keyframes chtblink{0%,60%,100%{opacity:.2}30%{opacity:1}}
+.chat-row{display:flex;gap:.5rem;padding:.75rem .9rem;background:var(--bg);border-top:1.5px solid var(--line-soft);flex-shrink:0}
+#chat-inp{flex:1;background:var(--bg-warm);border:1.5px solid var(--line-soft);border-radius:7px;padding:.5rem .8rem;font-family:var(--body);font-size:.82rem;color:var(--ink);outline:none;transition:border-color .2s}
+#chat-inp:focus{border-color:var(--accent)}
+#chat-inp::placeholder{color:var(--ink-3)}
+#chat-btn{width:36px;height:36px;border-radius:7px;background:var(--accent-orange);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .2s}
+#chat-btn:disabled{opacity:.4;cursor:default}
+#chat-btn svg{width:15px;height:15px;color:var(--bg-dark)}
+@media(max-width:480px){#chat-window{right:.75rem;left:.75rem;width:auto;bottom:5rem}#chat-fab{right:1rem;bottom:1.25rem}}
 </style>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="shared.css">
@@ -963,6 +997,29 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     </div>
   </div>
 </footer>
+
+<!-- CHAT WIDGET -->
+<button id="chat-fab" onclick="toggleChat()" aria-label="Abrir asistente">
+  <svg class="ic-chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+  <svg class="ic-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+</button>
+<div id="chat-window" role="dialog" aria-label="Asistente Mattera" aria-modal="true">
+  <div class="chat-hdr">
+    <div class="chat-hdr-av">M</div>
+    <div>
+      <div class="chat-hdr-name">Asistente Mattera</div>
+      <div class="chat-hdr-sub"><span class="chat-dot"></span>En línea</div>
+    </div>
+  </div>
+  <div id="chat-msgs"></div>
+  <div class="chat-row">
+    <input id="chat-inp" placeholder="Escribe tu pregunta…" autocomplete="off">
+    <button id="chat-btn" onclick="sendChat()" aria-label="Enviar">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+    </button>
+  </div>
+</div>
+
 <script src="main.js" defer></script>
 <script>
 const casos={
@@ -1256,6 +1313,90 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   requestAnimationFrame(tick);
+})();
+</script>
+<script>
+// ── CHAT WIDGET ──────────────────────────────────────────────
+(function(){
+  // Reemplaza esta URL con tu webhook de N8N cuando tengas el túnel activo
+  const WEBHOOK = 'https://TU_URL_N8N/webhook/mattera-chat';
+  let sid = sessionStorage.getItem('ms_cid') || (()=>{
+    const id = crypto.randomUUID();
+    sessionStorage.setItem('ms_cid', id);
+    return id;
+  })();
+  let started = false;
+
+  window.toggleChat = function(){
+    const fab = document.getElementById('chat-fab');
+    const win = document.getElementById('chat-window');
+    const open = win.classList.toggle('open');
+    fab.classList.toggle('open', open);
+    if(open){
+      if(!started){
+        started = true;
+        addBot('Hola, soy el asistente de Mattera. ¿En qué puedo ayudarte hoy?');
+      }
+      document.getElementById('chat-inp').focus();
+    }
+  };
+
+  function addBot(text){
+    const el = document.createElement('div');
+    el.className = 'cm bot';
+    el.textContent = text;
+    append(el);
+  }
+
+  function addUser(text){
+    const el = document.createElement('div');
+    el.className = 'cm user';
+    el.textContent = text;
+    append(el);
+  }
+
+  function showTyping(){
+    const el = document.createElement('div');
+    el.className = 'cm-typing'; el.id = 'cht';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    append(el);
+  }
+
+  function append(el){
+    const msgs = document.getElementById('chat-msgs');
+    msgs.appendChild(el);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  window.sendChat = async function(){
+    const inp = document.getElementById('chat-inp');
+    const btn = document.getElementById('chat-btn');
+    const text = inp.value.trim();
+    if(!text) return;
+    inp.value = '';
+    btn.disabled = true;
+    addUser(text);
+    showTyping();
+    try{
+      const res = await fetch(WEBHOOK, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({sessionId: sid, message: text})
+      });
+      const data = await res.json();
+      document.getElementById('cht')?.remove();
+      addBot(data.response || data.output || data.message || 'Hubo un error. Escríbenos al WhatsApp: +52 33 2787 4747');
+    } catch(e){
+      document.getElementById('cht')?.remove();
+      addBot('No pude conectarme. Escríbenos directo al WhatsApp: +52 33 2787 4747');
+    }
+    btn.disabled = false;
+    document.getElementById('chat-msgs').scrollTop = 9999;
+  };
+
+  document.getElementById('chat-inp').addEventListener('keydown', e => {
+    if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendChat(); }
+  });
 })();
 </script>
 </body>
