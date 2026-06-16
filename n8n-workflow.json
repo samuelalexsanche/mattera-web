@@ -107,27 +107,14 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://graph.facebook.com/v18.0/{{ $env.WHATSAPP_PHONE_ID || 'REEMPLAZAR_PHONE_ID' }}/messages",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Authorization",
-              "value": "=Bearer {{ $env.WHATSAPP_TOKEN || 'REEMPLAZAR_TOKEN' }}"
-            },
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
+        "url": "REEMPLAZAR_CON_SLACK_WEBHOOK_URL",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"messaging_product\": \"whatsapp\",\n  \"to\": \"523327874747\",\n  \"type\": \"text\",\n  \"text\": {\n    \"body\": \"Nuevo lead desde el chat del sitio web.\\n\\nNombre: {{ $('Parsear Respuesta').item.json.lead.nombre }}\\nEmpresa: {{ $('Parsear Respuesta').item.json.lead.empresa }}\\nWhatsApp: {{ $('Parsear Respuesta').item.json.lead.whatsapp }}\\n\\nResponde antes de que se enfrie.\"\n  }\n}",
+        "jsonBody": "={\n  \"text\": \"*Nuevo lead desde el chat de matterasystems.com*\",\n  \"blocks\": [\n    {\n      \"type\": \"header\",\n      \"text\": { \"type\": \"plain_text\", \"text\": \"Nuevo lead desde el sitio web\" }\n    },\n    {\n      \"type\": \"section\",\n      \"fields\": [\n        { \"type\": \"mrkdwn\", \"text\": \"*Nombre:*\\n{{ $('Parsear Respuesta').item.json.lead.nombre }}\" },\n        { \"type\": \"mrkdwn\", \"text\": \"*Empresa:*\\n{{ $('Parsear Respuesta').item.json.lead.empresa }}\" },\n        { \"type\": \"mrkdwn\", \"text\": \"*WhatsApp:*\\n{{ $('Parsear Respuesta').item.json.lead.whatsapp }}\" }\n      ]\n    }\n  ]\n}",
         "options": {}
       },
       "id": "a1b2c3d4-0007-0000-0000-000000000007",
-      "name": "Notificar WhatsApp",
+      "name": "Notificar Slack",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [1120, 180]
@@ -218,7 +205,7 @@
       "main": [
         [
           {
-            "node": "Notificar WhatsApp",
+            "node": "Notificar Slack",
             "type": "main",
             "index": 0
           }
@@ -232,7 +219,7 @@
         ]
       ]
     },
-    "Notificar WhatsApp": {
+    "Notificar Slack": {
       "main": [
         [
           {
