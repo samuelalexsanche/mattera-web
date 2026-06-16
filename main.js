@@ -91,6 +91,12 @@ function initChatDemo() {
       body.scrollTop = body.scrollHeight;
     }
 
+    const sessionId = sessionStorage.getItem('ms_cid') || (()=>{
+      const id = crypto.randomUUID();
+      sessionStorage.setItem('ms_cid', id);
+      return id;
+    })();
+
     function sendMessage() {
       const text = (inputEl ? inputEl.value.trim() : '');
       if (!text) return;
@@ -102,10 +108,10 @@ function initChatDemo() {
       fetch(window.MATTERA_AGENT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ sessionId, message: text }),
       })
         .then(r => r.json())
-        .then(data => appendBubble('assistant', data.reply || ''))
+        .then(data => appendBubble('assistant', data.response || data.reply || data.output || ''))
         .catch(() => {
           const b = document.createElement('div');
           b.className = 'chat-bubble chat-bubble-system';
