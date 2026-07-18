@@ -71,7 +71,7 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .faq-icon{width:18px;height:18px;flex-shrink:0;border:1.5px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;transition:transform .3s var(--ease)}
 .faq-btn[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
 .faq-answer{font-size:.875rem;line-height:1.75;color:var(--ink-2);max-height:0;overflow:hidden;padding:0 1.5rem;transition:max-height .4s var(--ease),padding .3s}
-.faq-answer.open{max-height:300px;padding:0 1.5rem 1.4rem}
+.faq-answer.open{max-height:900px;padding:0 1.5rem 1.4rem}
 .cta-final{padding:var(--s-section) 2rem;max-width:var(--max-w);margin:0 auto;text-align:center}
 .cta-final-line{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(30px,5vw,80px);line-height:1.1;letter-spacing:-.02em;max-width:22ch;margin:0 auto 2.75rem;color:var(--ink)}
 .cta-final-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
