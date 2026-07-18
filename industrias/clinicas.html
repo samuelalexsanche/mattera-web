@@ -111,6 +111,7 @@
         </div>
       </div>
       <a href="../#calculadora">Cálculo</a>
+      <a href="../faq.html">FAQ</a>
       <a href="../blog/">Blog</a>
       <a href="../nosotros.html">Nosotros</a>
     </div>
@@ -265,19 +266,43 @@
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede agendar en mi calendario actual?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Sí. El sistema se integra con Google Calendar, Calendly y otras herramientas de agenda. El paciente elige horario disponible directamente desde WhatsApp, sin que nadie tenga que confirmar manualmente.</p></div>
+      <div class="faq-answer" role="region"><p>Sí. Se integra con Google Calendar, Calendly y plataformas similares. El paciente elige horario disponible directamente desde WhatsApp, ve los slots en tiempo real y confirma sin que nadie de tu equipo intervenga. Si usas una agenda propia en Excel o Google Sheets, también podemos conectarla.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si un paciente reporta una urgencia médica?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El sistema está configurado para detectar palabras de urgencia y escalar de inmediato al médico o al personal de turno. Ninguna urgencia queda sin respuesta humana. Tú defines los criterios de escalamiento.</p></div>
+      <div class="faq-answer" role="region"><p>El sistema detecta palabras de urgencia (dolor intenso, accidente, emergencia, entre otras que tú defines) y escala de inmediato al médico o al personal de turno — con el historial completo de la conversación. Tú defines los criterios y a quién se escala según la hora del día. Ninguna urgencia queda sin respuesta humana.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Los pacientes saben que están hablando con un sistema de IA?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Eso lo defines tú. Podemos configurarlo como asistente transparente ("Soy el asistente virtual de la Clínica X") o como extensión de tu equipo. Lo importante es que el paciente recibe respuesta útil en segundos.</p></div>
+      <div class="faq-answer" role="region"><p>Eso lo defines tú. Podemos configurarlo como asistente transparente ("Soy el asistente virtual de la Clínica X") o como extensión de tu equipo con el nombre que prefieras. En nuestra experiencia, los pacientes se adaptan sin problema cuando el sistema responde rápido y con información útil — la velocidad de respuesta importa más que si saben o no que es IA.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Los datos de mis pacientes están protegidos?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Sí. Cumplimos con la LFPDPPP. Los datos se almacenan de forma segura y pueden residir en servidores en México si tu normativa lo requiere. El acceso está restringido a tu equipo.</p></div>
+      <div class="faq-answer" role="region"><p>Sí. Cumplimos con la LFPDPPP (Ley Federal de Protección de Datos Personales en Posesión de los Particulares). Los datos se almacenan con cifrado en tránsito y en reposo. Si tu clínica requiere que los datos residan en servidores en México, lo implementamos así. El acceso está restringido exclusivamente a tu equipo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo tarda en estar funcionando?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El promedio para una clínica es 11 días hábiles desde el diagnóstico hasta el lanzamiento. El proceso incluye 3 días de mapeo de flujos, 4 días de configuración y entrenamiento del agente con tus servicios y políticas, y 2-3 días de pruebas con el equipo antes de activar con pacientes reales. El récord fue 6 días para una clínica dental en Guadalajara.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi recepcionista tiene que aprender a usar algo nuevo?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No. El sistema opera en segundo plano desde WhatsApp, que tu equipo ya conoce. Cuando el sistema escala a un humano, el recepcionista retoma la conversación exactamente desde donde quedó — sin aprender una plataforma nueva ni instalar nada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si la IA da una respuesta incorrecta a un paciente?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El agente está entrenado únicamente con la información que tú nos proporcionas — tus servicios, precios, horarios y políticas. Para preguntas fuera de ese ámbito, el sistema no improvisa: escala al humano con el contexto de la conversación. Nuestra postura es que es mejor decir "te paso con alguien de la clínica" que dar una respuesta incorrecta sobre salud.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si el sistema no me da resultados en los primeros 30 días?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Lo reconfiguramos sin costo adicional. En más de 18 meses de operación nunca hemos dejado un proyecto sin resolver. Si en los primeros 30 días el sistema no devuelve horas medibles a tu operación, ajustamos los flujos hasta que lo haga.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema también envía recordatorios para pacientes que no han vuelto?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Podemos configurar un flujo de reactivación: pacientes que no han tenido cita en X meses reciben un mensaje personalizado con una invitación a agendar. Muchas clínicas recuperan pacientes que simplemente olvidaron regresar, sin que nadie tenga que llamarlos manualmente.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto cuesta y cómo funciona el pago?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El desarrollo se paga una sola vez desde $10,000 MXN (modalidad 50% al iniciar, 50% al entregar). La operación mensual parte de $1,500 MXN e incluye servidores, APIs, monitoreo y ajustes. El costo exacto lo entregamos en el diagnóstico gratuito antes de que decidas. Sin contrato mínimo de permanencia.</p></div>
     </div>
   </div>
 </section>
@@ -317,8 +342,9 @@
       <div class="footer-col">
         <h4>Páginas</h4>
         <a href="../nosotros.html">Nosotros</a>
+        <a href="../faq.html">Preguntas frecuentes</a>
+        <a href="../que-es-automatizacion.html">¿Qué es automatización con IA?</a>
         <a href="../blog/">Blog</a>
-        <a href="../#como-funciona">Proceso</a>
         <a href="clinicas.html">Clínicas</a>
         <a href="inmobiliarias.html">Inmobiliarias</a>
         <a href="restaurantes.html">Restaurantes</a>

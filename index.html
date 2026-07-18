@@ -993,25 +993,43 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo toma implementarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Menos de un mes. El tiempo exacto depende del alcance — te lo confirmamos en el diagnóstico, sin sorpresas.</p></div>
+      <div class="faq-answer" role="region"><p>El promedio es 11 días hábiles. El proceso: Diagnóstico (días 1-3) donde mapeamos flujos, Diseño (días 4-7) donde construimos la arquitectura, Entrenamiento (días 8-12) donde capacitamos al agente con tus datos, y Lanzamiento (días 13-14). El récord fue 6 días para una clínica dental en Guadalajara. El tiempo exacto lo confirmamos en el diagnóstico, sin sorpresas.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi equipo necesita saber de informática?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>No. Tu equipo solo usa WhatsApp o la web como siempre. Si algo se daña, nosotros lo arreglamos. Tú no tienes que hacer nada técnico.</p></div>
+      <div class="faq-answer" role="region"><p>No. Tu equipo usa WhatsApp o la web exactamente como siempre. Si algo falla, lo detectamos en el monitoreo activo y lo resolvemos — la mayoría de las veces antes de que tu equipo lo note. Tú no tienes que hacer nada técnico.</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mis clientes ven sus datos?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>No. Guardamos la información de tus clientes de forma segura. Cumplimos con las leyes de protección de datos en México. Si lo requieres, los datos residen en servidores en México.</p></div>
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué diferencia hay entre un agente de IA y un chatbot básico?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Un chatbot básico sigue un árbol de decisiones fijo: si el usuario dice X, responde Y. No puede salirse del guión. Un agente de IA entiende lenguaje natural, puede responder preguntas no previstas, consultar bases de datos en tiempo real y decidir cuándo escalar a un humano. El chatbot sirve para menús sencillos; el agente sirve para atender clientes reales con preguntas reales.</p></div>
     </div>
-
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Los datos de mis clientes están protegidos?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Cumplimos con la LFPDPPP. Los datos se almacenan con cifrado en tránsito y en reposo. Si lo requieres, los datos residen en servidores en México. El acceso está restringido exclusivamente a tu equipo. Los modelos de IA que usamos (OpenAI, Anthropic) tienen contratos empresariales que garantizan que los datos no se usan para entrenar sus modelos.</p></div>
+    </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pago una sola vez y qué pago cada mes?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El desarrollo se paga una sola vez: desde $10,000 MXN según el alcance, en modalidad 100% al inicio o 50-50 (mitad al arrancar, mitad al entregar). La operación mensual cubre servidores, APIs, monitoreo, ajustes y el reporte de horas devueltas. El costo exacto te lo damos en el diagnóstico gratuito, antes de que decidas.</p></div>
+      <div class="faq-answer" role="region"><p>El desarrollo se paga una sola vez: desde $10,000 MXN según el alcance, en modalidad 100% al inicio o 50-50 (mitad al arrancar, mitad al entregar). La operación mensual desde $1,500 MXN cubre servidores, APIs, monitoreo activo, ajustes continuos y el reporte mensual de horas devueltas. El costo exacto lo entregamos en el diagnóstico gratuito, antes de que decidas. Sin contrato mínimo de permanencia.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si el sistema no funciona como esperaba?<span class="faq-icon" aria-hidden="true">+</span></button>
       <div class="faq-answer" role="region"><p>Lo reconfiguramos sin costo adicional. Si en los primeros 30 días el sistema no devuelve horas medibles a tu operación, hacemos los ajustes necesarios hasta que lo haga. No cobramos por correcciones — es parte del compromiso. En más de 18 meses de operación nunca hemos dejado un proyecto sin resolver.</p></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Puede integrarse con las herramientas que ya uso?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Integramos con HubSpot, Salesforce, Google Workspace (Sheets, Calendar, Gmail), Notion, Shopify, Stripe, sistemas de punto de venta (POS), Calendly, Slack, y más. Si tu herramienta tiene API, podemos conectarla. Si no tiene API estándar, evaluamos alternativas en el diagnóstico.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema es mío si dejo de trabajar con Mattera?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Los flujos, los datos y el entrenamiento del agente son de tu propiedad. Construimos sobre herramientas estándar del mercado (N8N, Make, APIs de OpenAI/Anthropic, WhatsApp Cloud) — no tecnología propietaria que te obligue a quedarte. Si decides cambiar de proveedor o manejarlo internamente, todo sigue funcionando.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿En qué se diferencia Mattera de contratar una persona para hacer lo mismo?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Una persona dedicada a responder WhatsApp y dar seguimiento cuesta entre $8,000 y $15,000 MXN al mes, trabaja 8 horas al día, 5 días a la semana, y se va de vacaciones. El sistema opera 24/7/365, responde en segundos, nunca pierde un lead por olvido, y su costo mensual parte de $1,500 MXN. La persona liberada se reenfoca en ventas, relaciones o trabajo que genuinamente requiere criterio humano.</p></div>
+    </div>
+  </div>
+  <div style="margin-top:1.75rem" class="reveal">
+    <a href="faq.html" style="font-family:var(--mono);font-size:.78rem;color:var(--accent);letter-spacing:.06em;text-decoration:none;border-bottom:1px solid var(--accent)">Ver las 50 preguntas completas →</a>
   </div>
 </section>
   </div>
@@ -1050,8 +1068,9 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="footer-col">
         <h4>Páginas</h4>
         <a href="nosotros.html">Nosotros</a>
+        <a href="faq.html">Preguntas frecuentes</a>
+        <a href="que-es-automatizacion.html">¿Qué es automatización con IA?</a>
         <a href="blog/">Blog</a>
-        <a href="#como-funciona">Proceso</a>
         <a href="industrias/clinicas.html">Clínicas</a>
         <a href="industrias/inmobiliarias.html">Inmobiliarias</a>
         <a href="industrias/restaurantes.html">Restaurantes</a>

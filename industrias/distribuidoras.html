@@ -111,6 +111,7 @@
         </div>
       </div>
       <a href="../#calculadora">Cálculo</a>
+      <a href="../faq.html">FAQ</a>
       <a href="../blog/">Blog</a>
       <a href="../nosotros.html">Nosotros</a>
     </div>
@@ -265,19 +266,35 @@
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar diferentes precios para diferentes clientes?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Sí. El sistema maneja listas de precios diferenciadas por cliente, volumen o canal. Cada cliente ve los precios que le corresponden, sin que el equipo tenga que calcular manualmente ni enviar tablas por correo.</p></div>
+      <div class="faq-answer" role="region"><p>Sí. El sistema maneja listas de precios diferenciadas por cliente, volumen de compra, canal de venta o acuerdo comercial específico. Cuando un cliente identifica su número o nombre, el sistema consulta su lista de precios en el catálogo y cotiza con los valores que le corresponden. Sin que el comercial tenga que recordar el acuerdo ni buscar la tabla manualmente.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cómo se mantiene actualizado el catálogo de productos?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El catálogo se conecta a Google Sheets, a tu ERP o a la fuente de datos que ya uses. Cuando actualizas el precio o el inventario, el sistema lo refleja automáticamente en la siguiente consulta.</p></div>
+      <div class="faq-answer" role="region"><p>El catálogo se conecta a Google Sheets, a tu ERP (Bind, SAP Business One, CONTPAQi u otros) o a la fuente de datos que ya uses. Cuando actualizas precio, disponibilidad o unidad de venta, el sistema lo refleja automáticamente en la siguiente cotización — sin necesidad de "avisar" al agente. En Distribuidora Norte, Guadalajara, esto eliminó los errores de precio en cotizaciones, que antes representaban un problema recurrente.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Puede dar seguimiento a pedidos y fechas de entrega?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Sí. El sistema puede consultar el estado del pedido en tu sistema de gestión y reportarlo al cliente por WhatsApp. El alcance exacto de la integración se define en el diagnóstico según la plataforma que uses.</p></div>
+      <div class="faq-answer" role="region"><p>Sí. El sistema puede consultar el estado del pedido en tu sistema de gestión y reportarlo al cliente por WhatsApp: "Tu pedido #1234 está en almacén, salida programada mañana jueves." El alcance exacto de la integración depende de la plataforma que uses — lo definimos en el diagnóstico. Si no tienes un sistema de seguimiento automatizado, podemos construir uno básico en Google Sheets que sirva como fuente de datos.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si un cliente pregunta algo que el sistema no sabe responder?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El sistema escala al equipo con el contexto completo de la conversación. Tu persona recibe el mensaje, el historial del cliente y el punto exacto donde se necesita intervención — sin empezar desde cero.</p></div>
+      <div class="faq-answer" role="region"><p>El sistema escala al equipo con el contexto completo: qué preguntó el cliente, qué productos consultó, y el historial de conversación. Tu comercial retoma desde donde quedó sin empezar desde cero. Nuestra postura: es mejor escalar y responder bien que intentar responder todo y dar información incorrecta — especialmente en cotizaciones B2B donde un precio mal dado puede costar un cliente.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede generar órdenes de compra o cotizaciones formales?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Podemos configurar el sistema para que, al confirmar una cotización, genere automáticamente un documento PDF con el detalle del pedido, los precios acordados y la fecha estimada de entrega — enviado al cliente por WhatsApp y copiado a tu equipo por correo o Slack. Elimina entre 15-20 minutos de trabajo administrativo por cotización.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema funciona para distribuidoras con catálogos grandes (miles de SKUs)?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. El sistema no carga el catálogo completo en memoria — hace consultas en tiempo real a tu fuente de datos. Esto significa que puede manejar catálogos de 5 SKUs o de 50,000 SKUs con el mismo rendimiento. El tiempo de respuesta es de 2-8 segundos independientemente del tamaño del catálogo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cómo maneja el sistema pedidos recurrentes de clientes frecuentes?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema puede identificar al cliente por número de WhatsApp, recuperar su historial de pedidos anteriores y preguntar "¿El mismo pedido de la semana pasada?" — reduciendo una cotización de 15 minutos a 30 segundos. Para distribuidoras con clientes que reorden los mismos productos cada semana o quincena, esto es uno de los mayores generadores de tiempo recuperado.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar múltiples vendedores con carteras de clientes distintas?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Configuramos reglas de asignación: cuando un cliente de la cartera del vendedor A escribe, el sistema cotiza con sus precios específicos y, si necesita escalar, notifica al vendedor A. Si el cliente es nuevo, el sistema lo asigna según criterios que tú defines (zona geográfica, tipo de producto, o round-robin entre vendedores disponibles).</p></div>
     </div>
   </div>
 </section>
@@ -317,8 +334,9 @@
       <div class="footer-col">
         <h4>Páginas</h4>
         <a href="../nosotros.html">Nosotros</a>
+        <a href="../faq.html">Preguntas frecuentes</a>
+        <a href="../que-es-automatizacion.html">¿Qué es automatización con IA?</a>
         <a href="../blog/">Blog</a>
-        <a href="../#como-funciona">Proceso</a>
         <a href="clinicas.html">Clínicas</a>
         <a href="inmobiliarias.html">Inmobiliarias</a>
         <a href="restaurantes.html">Restaurantes</a>

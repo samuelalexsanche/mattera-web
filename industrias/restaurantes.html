@@ -111,6 +111,7 @@
         </div>
       </div>
       <a href="../#calculadora">Cálculo</a>
+      <a href="../faq.html">FAQ</a>
       <a href="../blog/">Blog</a>
       <a href="../nosotros.html">Nosotros</a>
     </div>
@@ -265,19 +266,35 @@
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar pedidos para entrega y para comer en el restaurante?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Sí. El sistema diferencia entre pedidos para llevar, a domicilio y reservaciones de mesa. Cada tipo sigue un flujo distinto y registra la información que necesitas en cada caso.</p></div>
+      <div class="faq-answer" role="region"><p>Sí. El sistema diferencia entre pedidos para llevar, a domicilio y reservaciones de mesa — cada tipo sigue un flujo distinto. Para llevar: confirma dirección y tiempo estimado. Para domicilio: valida zona de entrega y horario. Para reserva: confirma el número de comensales, horario y mesa si aplica. Todo sin que nadie en el salón o cocina tenga que contestar el teléfono.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa cuando se acaba un platillo o hay cambios en el menú?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El catálogo se actualiza fácilmente desde un Google Sheet o desde un panel sencillo — sin saber de tecnología. El sistema refleja los cambios en minutos y deja de ofrecer platillos no disponibles.</p></div>
+      <div class="faq-answer" role="region"><p>El catálogo se conecta a un Google Sheet que tu equipo controla — sin saber de tecnología. Cuando marcas un platillo como no disponible, el sistema lo refleja en minutos y deja de ofrecerlo en los pedidos. Para restaurantes que cambian el menú diariamente, también podemos configurar actualizaciones automáticas según el horario del día (menú del almuerzo vs. menú de cena).</p></div>
     </div>
     <div class="faq-item">
-      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Funciona con plataformas de delivery como Rappi o DiDi?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El sistema maneja pedidos directos por WhatsApp, que son los de mayor margen. La integración con plataformas de delivery se evalúa en el diagnóstico según el volumen y la plataforma específica.</p></div>
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Funciona con plataformas de delivery como Rappi o DiDi Food?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema está diseñado para manejar pedidos directos por WhatsApp, que son los de mayor margen (Rappi y DiDi se llevan entre 25-30% de comisión). La integración con plataformas de delivery se evalúa en el diagnóstico según el volumen y si tienen API disponible. Nuestra postura: los pedidos directos son más rentables y construyen la relación con el cliente directamente en tu canal.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi equipo necesita aprender a usar alguna herramienta nueva?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>No. Los pedidos y reservaciones llegan a donde ya los gestionas — WhatsApp, una pantalla de cocina o un sistema existente. El equipo sigue trabajando como siempre; el sistema hace la parte de recepción.</p></div>
+      <div class="faq-answer" role="region"><p>No. Los pedidos y reservaciones llegan donde ya los gestionas — WhatsApp del restaurante, una pantalla de cocina conectada, o un sistema de POS existente. El equipo sigue trabajando como siempre; el sistema hace la parte de recepción y confirmación antes de que la orden llegue a cocina.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede enviar promociones o descuentos automáticamente?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Podemos programar envíos de promociones a clientes que ya compraron antes: "Miércoles de 2x1 en pizzas — ¿te reservamos mesa?" enviado el martes por la noche a tu base de clientes frecuentes. Los mensajes de marketing en WhatsApp tienen tasas de apertura de 85-90% vs. el 20% típico del correo electrónico. El calendario de promociones lo defines tú; el sistema los envía solo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa durante hora pico cuando hay muchos mensajes a la vez?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema atiende todas las conversaciones simultáneamente sin degradarse — no hay "espera". Esto es precisamente cuando más valor entrega: viernes a las 7pm cuando el personal tiene las manos llenas y los pedidos por WhatsApp se acumulan, el sistema los procesa todos al mismo tiempo y en segundos. En nuestra experiencia, los restaurantes pierden entre 15-30% de sus pedidos de hora pico por no poder contestar a tiempo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar restricciones alimentarias o alérgenos?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. El agente puede preguntar sobre restricciones (vegetariano, sin gluten, sin nueces) y filtrar el menú en consecuencia, o advertir qué platillos contienen alérgenos específicos. Esta información también queda registrada en el pedido para que cocina la tenga al prepararlo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El sistema puede manejar clientes frecuentes con preferencias guardadas?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Sí. Si el sistema identifica el número de WhatsApp de un cliente que ya ha pedido antes, puede recuperar su pedido habitual y preguntar "¿Lo mismo de siempre?" — reduciendo el tiempo de pedido a segundos. Los clientes frecuentes que sienten que el restaurante los recuerda tienen tasas de recompra significativamente más altas.</p></div>
     </div>
   </div>
 </section>
@@ -317,8 +334,9 @@
       <div class="footer-col">
         <h4>Páginas</h4>
         <a href="../nosotros.html">Nosotros</a>
+        <a href="../faq.html">Preguntas frecuentes</a>
+        <a href="../que-es-automatizacion.html">¿Qué es automatización con IA?</a>
         <a href="../blog/">Blog</a>
-        <a href="../#como-funciona">Proceso</a>
         <a href="clinicas.html">Clínicas</a>
         <a href="inmobiliarias.html">Inmobiliarias</a>
         <a href="restaurantes.html">Restaurantes</a>

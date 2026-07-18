@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es Automatización con Inteligencia Artificial? | Mattera Systems</title>
+<meta name="description" content="Guía completa sobre automatización con IA para empresas: qué es, cómo funciona, casos de uso, diferencias con chatbots básicos, y por qué importa para PyMEs en México.">
+<link rel="canonical" href="https://matterasystems.com/que-es-automatizacion.html">
+<meta property="og:title" content="¿Qué es Automatización con IA para Empresas? | Mattera Systems">
+<meta property="og:description" content="Guía práctica: qué es un agente de IA, cómo difiere de un chatbot, cuánto cuesta, y qué procesos se pueden automatizar hoy en México.">
+<meta property="og:url" content="https://matterasystems.com/que-es-automatizacion.html">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#1E2318">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
+        {"@type": "ListItem", "position": 2, "name": "¿Qué es automatización con IA?", "item": "https://matterasystems.com/que-es-automatizacion.html"}
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "¿Qué es automatización con inteligencia artificial para empresas?",
+      "description": "Guía completa sobre automatización con IA: qué es, cómo funciona, diferencias con chatbots, casos de uso para empresas en México y costos reales.",
+      "author": {
+        "@type": "Person",
+        "name": "Samuel Alexander Gonzalez Legaspi",
+        "jobTitle": "Fundador, Mattera Systems"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
+      "datePublished": "2026-07-17",
+      "dateModified": "2026-07-17"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"¿Qué es un agente de inteligencia artificial?","acceptedAnswer":{"@type":"Answer","text":"Un agente de IA es un sistema de software que puede recibir instrucciones en lenguaje natural, tomar decisiones, ejecutar acciones (consultar una base de datos, enviar un mensaje, agendar una cita) y responder de forma contextual. A diferencia de un chatbot con árbol de decisiones, el agente entiende variaciones del lenguaje y puede responder preguntas que no fueron preprogramadas."}},
+        {"@type":"Question","name":"¿Cuál es la diferencia entre automatización tradicional y automatización con IA?","acceptedAnswer":{"@type":"Answer","text":"La automatización tradicional (Zapier, Make, scripts) conecta aplicaciones y ejecuta reglas fijas: 'cuando pase A, haz B'. Funciona perfectamente para flujos estructurados y predecibles. La automatización con IA añade la capacidad de manejar variabilidad: entiende lenguaje natural, interpreta respuestas ambiguas, toma decisiones según contexto y aprende del comportamiento. En la práctica: Zapier puede mover datos de un formulario al CRM; el agente de IA puede entender un mensaje de WhatsApp, calificar si el prospecto es válido, buscar el asesor correcto en el CRM y agendar la cita — todo sin reglas predefinidas para cada escenario."}},
+        {"@type":"Question","name":"¿Qué procesos se pueden automatizar con IA en una empresa?","acceptedAnswer":{"@type":"Answer","text":"Los más comunes en México: atención de WhatsApp (responder preguntas, calificar leads, agendar), seguimiento de prospectos (mensajes automáticos según etapa del embudo), cotizaciones (consultar catálogo y generar propuesta en segundos), recordatorios de citas, registro en CRM, actualización de inventario, reportes automáticos, y clasificación de mensajes entrantes por urgencia o tipo."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="/#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="/#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="faq.html" onclick="closeMobileNav()">FAQ</a>
+  <a href="blog/" onclick="closeMobileNav()">Blog</a>
+  <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta" onclick="closeMobileNav()">Agendar diagnóstico →</a>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav-inner" aria-label="Navegación principal">
+    <a href="/" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="mattera-logo-transparent.png" alt="" aria-hidden="true" width="32" height="32">
+      <span>Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="/#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="/#calculadora">Cálculo</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog/">Blog</a>
+      <a href="nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<div class="industria-hero-wrap">
+  <div class="industria-hero">
+    <p class="industria-hero-eyebrow reveal">Guía de referencia</p>
+    <h1 class="industria-hero-h1 reveal reveal-delay-1">¿Qué es automatización<br>con inteligencia artificial?</h1>
+    <p class="industria-hero-sub reveal reveal-delay-2">Una guía práctica: qué es, cómo funciona, en qué se diferencia de un chatbot básico, y qué procesos puedes automatizar hoy en tu empresa. Escrito desde la experiencia de implementar más de 8,400 horas devueltas a empresas en México.</p>
+    <div class="industria-hero-ctas reveal reveal-delay-3">
+      <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Diagnóstico gratuito →</span></a>
+      <a href="faq.html" class="btn-outline">Ver FAQ completo</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- DEFINICIÓN -->
+<section class="section sec-dark" aria-labelledby="def-title">
+  <p class="section-eyebrow reveal">01 — Definición</p>
+  <h2 class="section-title reveal reveal-delay-1" id="def-title">¿Qué es automatización<br>con IA para empresas?</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>Automatización con inteligencia artificial es el uso de software con IA para ejecutar, sin intervención humana, tareas que hoy hacen personas en una empresa. No hablamos de robots industriales ni de código de ciencia ficción — hablamos de procesos cotidianos: responder mensajes de WhatsApp, calificar prospectos, agendar citas, generar cotizaciones, dar seguimiento a clientes que no han contestado, registrar información en un CRM, o enviar recordatorios.</p>
+
+    <p>La diferencia con automatización tradicional (como macros de Excel o Zapier) es el componente de inteligencia: el sistema puede <em>entender lenguaje natural</em>, interpretar mensajes ambiguos, tomar decisiones según el contexto y manejar variaciones que un flujo rígido no podría resolver.</p>
+
+    <p>En términos concretos: Zapier puede mover datos de un formulario a Google Sheets cuando alguien lo llena. Un agente de IA puede leer un mensaje de WhatsApp como "quiero info de los deptos de 3 recámaras en Zapopan, presupuesto 2M", entender que es una consulta inmobiliaria calificada, buscar propiedades relevantes en el catálogo, enviar las fichas técnicas y agendar una visita — todo sin que nadie lo haya programado para ese mensaje específico.</p>
+
+    <blockquote class="edu-quote">
+      "Lo que vimos al implementar los primeros sistemas es que el problema no era la tecnología — era que los equipos llevaban años resolviendo con horas de trabajo lo que un sistema podía resolver en segundos. La tecnología ya existía; faltaba la conexión entre el problema real y la solución correcta."
+      <cite>— Samuel Alexander Gonzalez Legaspi, Fundador · Mattera Systems</cite>
+    </blockquote>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CHATBOT VS AGENTE -->
+<section class="section sec-alt" aria-labelledby="comp-title">
+  <p class="section-eyebrow reveal">02 — Conceptos clave</p>
+  <h2 class="section-title reveal reveal-delay-1" id="comp-title">Chatbot vs. agente de IA:<br>¿cuál es la diferencia real?</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>Estos dos términos se usan como si fueran sinónimos, pero son fundamentalmente distintos en lo que pueden hacer.</p>
+  </div>
+
+  <div class="lqc-grid reveal reveal-delay-2" style="margin-top:2rem">
+    <div class="lqc-card">
+      <div class="lqc-title" style="color:var(--ink-3)">Chatbot tradicional</div>
+      <p class="lqc-desc">Sigue un árbol de decisiones fijo. Cuando el usuario dice X, responde Y. No puede salirse del guión. Si el usuario hace una pregunta no prevista, responde "no entendí" o redirige al menú. Los ves en botones de "1. Precios 2. Soporte 3. Agendar cita". Son baratos de construir y útiles para flujos muy simples y predecibles.</p>
+    </div>
+    <div class="lqc-card">
+      <div class="lqc-title" style="color:var(--accent-orange)">Agente de inteligencia artificial</div>
+      <p class="lqc-desc">Entiende lenguaje natural. Puede responder "¿cuánto cuesta el local en Providencia con estacionamiento?" sin que nadie haya programado esa pregunta. Consulta bases de datos en tiempo real, toma decisiones según el contexto de la conversación, recuerda lo que dijo el usuario antes y sabe cuándo escalar a un humano. Requiere entrenamiento con los datos del negocio.</p>
+    </div>
+  </div>
+
+  <div class="edu-body reveal" style="margin-top:2.5rem">
+    <p>En nuestra experiencia, el chatbot básico sirve como filtro inicial cuando el volumen es muy alto. El agente de IA sirve para atender clientes reales que hacen preguntas reales. Para la mayoría de las empresas que trabajan con Mattera, la decisión correcta es el agente — porque sus clientes no preguntan desde menús, preguntan como lo harían con una persona.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- QUÉ SE PUEDE AUTOMATIZAR -->
+<section class="section sec-dark" aria-labelledby="procesos-title">
+  <p class="section-eyebrow reveal">03 — Casos de uso</p>
+  <h2 class="section-title reveal reveal-delay-1" id="procesos-title">¿Qué procesos se pueden<br>automatizar con IA hoy?</h2>
+
+  <div class="edu-body reveal reveal-delay-1">
+    <p>Desde 2024, en Mattera hemos implementado sistemas en clínicas privadas, inmobiliarias, distribuidoras mayoristas, restaurantes y despachos de servicios profesionales. Los procesos que más tiempo devuelven, en orden de impacto:</p>
+  </div>
+
+  <div class="flujo-steps reveal reveal-delay-2" style="margin-top:2rem">
+    <div class="flujo-step">
+      <span class="flujo-num">01</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Atención y calificación de WhatsApp</h3>
+        <p class="flujo-desc">El proceso que más horas consume en la mayoría de las empresas. El agente responde preguntas frecuentes, califica si el prospecto tiene intención real de compra, y escala al equipo solo cuando es necesario. Resultado promedio: 4 horas diarias devueltas al equipo desde el primer mes.</p>
+        <span class="flujo-entregable">aplica a: todas las industrias</span>
+      </div>
+    </div>
+    <div class="flujo-step">
+      <span class="flujo-num">02</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Agendamiento y recordatorios de citas</h3>
+        <p class="flujo-desc">El sistema muestra disponibilidad en tiempo real, el cliente elige y confirma — sin llamadas de coordinación. Los recordatorios automáticos 24 horas antes reducen inasistencias entre 20-40% según el sector. En clínicas privadas, una cita recuperada cada dos días paga el costo mensual del sistema.</p>
+        <span class="flujo-entregable">aplica a: clínicas, servicios profesionales, inmobiliarias</span>
+      </div>
+    </div>
+    <div class="flujo-step">
+      <span class="flujo-num">03</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Cotizaciones automáticas con catálogo en tiempo real</h3>
+        <p class="flujo-desc">El agente conectado al catálogo de productos o servicios responde cotizaciones en segundos, con precios actualizados automáticamente. En Distribuidora Norte, Guadalajara, esto redujo el tiempo de respuesta de 6 horas a 45 segundos y subió las conversiones 47% en 60 días.</p>
+        <span class="flujo-entregable">aplica a: distribuidoras, servicios B2B, restaurantes</span>
+      </div>
+    </div>
+    <div class="flujo-step">
+      <span class="flujo-num">04</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Seguimiento automático de prospectos</h3>
+        <p class="flujo-desc">Los leads que no convierten de inmediato no se pierden: el sistema envía mensajes de seguimiento a los 1, 3, 7 y 15 días según el perfil del prospecto. Sin que nadie tenga que recordar hacerlo, sin CRM desactualizado. Los leads fríos bien nutridos representan entre 15-20% de las ventas de los siguientes meses.</p>
+        <span class="flujo-entregable">aplica a: inmobiliarias, servicios B2B, clínicas</span>
+      </div>
+    </div>
+    <div class="flujo-step">
+      <span class="flujo-num">05</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Registro automático en CRM</h3>
+        <p class="flujo-desc">Cada conversación importante queda registrada en el CRM sin que nadie lo capture manualmente: nombre, empresa, necesidad, etapa del proceso, y próximo paso. Elimina entre 3 y 7 pasos manuales por cliente nuevo según el flujo de cada negocio.</p>
+        <span class="flujo-entregable">aplica a: todas las industrias con CRM</span>
+      </div>
+    </div>
+    <div class="flujo-step">
+      <span class="flujo-num">06</span>
+      <div class="flujo-body">
+        <h3 class="flujo-titulo">Reportes automáticos de operación</h3>
+        <p class="flujo-desc">Cada semana o mes el sistema genera un reporte que incluye conversaciones atendidas, leads calificados, tiempo promedio de respuesta, citas agendadas, y horas devueltas al equipo. El reporte llega automáticamente al responsable sin que nadie lo elabore.</p>
+        <span class="flujo-entregable">aplica a: todas las industrias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CÓMO FUNCIONA TÉCNICAMENTE -->
+<section class="section sec-alt" aria-labelledby="tec-title">
+  <p class="section-eyebrow reveal">04 — Cómo funciona</p>
+  <h2 class="section-title reveal reveal-delay-1" id="tec-title">¿Cómo funciona un sistema<br>de automatización con IA?</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>Sin entrar en tecnicismos que no aportan al día a día: un sistema de automatización con IA tiene tres componentes principales.</p>
+  </div>
+
+  <div class="lqc-grid reveal reveal-delay-2" style="margin-top:2rem">
+    <div class="lqc-card">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M16 8v8l5 3"/></svg>
+      <div class="lqc-title">El modelo de IA</div>
+      <p class="lqc-desc">El "cerebro" — usamos GPT-4 de OpenAI, Claude de Anthropic, o Gemini de Google según el caso. El modelo entiende lenguaje natural y genera respuestas coherentes. Por sí solo, el modelo no sabe nada de tu negocio — ahí entra el entrenamiento.</p>
+    </div>
+    <div class="lqc-card">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="2"/><path d="M4 12h24M12 4v24"/></svg>
+      <div class="lqc-title">El entrenamiento</div>
+      <p class="lqc-desc">El modelo recibe el contexto específico de tu negocio: tus servicios, precios, políticas, tono de comunicación, y las reglas de cuándo escalar. Esto convierte un modelo genérico en un asistente que conoce tu operación. En nuestra experiencia, el 90% del valor está aquí — no en qué modelo se usa.</p>
+    </div>
+    <div class="lqc-card">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 16h4l4-8 4 16 4-10 2 2h4"/></svg>
+      <div class="lqc-title">Las integraciones</div>
+      <p class="lqc-desc">Los conectores que permiten al agente hacer cosas: consultar el calendario para agendar, leer el catálogo para cotizar, escribir en el CRM para registrar, enviar notificaciones por Slack al equipo. Sin integraciones, el agente solo puede conversar — las integraciones son las que le dan capacidad de acción.</p>
+    </div>
+    <div class="lqc-card">
+      <svg class="lqc-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="8" r="4"/><circle cx="6" cy="24" r="4"/><circle cx="26" cy="24" r="4"/><path d="M16 12v4M12 22l-4-4M20 22l4-4"/></svg>
+      <div class="lqc-title">El monitoreo</div>
+      <p class="lqc-desc">Un sistema de automatización no es "instalar y olvidar". Requiere monitoreo activo: revisar conversaciones escaladas, ajustar respuestas cuando cambia el negocio, detectar flujos que no funcionan como se esperaba. En Mattera esto está incluido en la operación mensual.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- HERRAMIENTAS -->
+<section class="section sec-dark" aria-labelledby="herr-title">
+  <p class="section-eyebrow reveal">05 — Herramientas</p>
+  <h2 class="section-title reveal reveal-delay-1" id="herr-title">Las herramientas detrás<br>de la automatización con IA</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>Estas son las tecnologías reales que usamos en Mattera para construir los sistemas de automatización. No es una lista exhaustiva — es el stack que hemos validado en proyectos reales con empresas en México:</p>
+  </div>
+
+  <div class="faq-list reveal reveal-delay-2" style="max-width:760px;margin-top:2rem">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">WhatsApp Cloud API (Meta)<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>La API oficial de Meta para WhatsApp Business, diferente a la aplicación gratuita. Permite enviar y recibir mensajes programáticamente, integrar el agente de IA directamente en el número de WhatsApp del negocio, y manejar conversaciones a escala. Es el canal de comunicación preferido en México para negocios — el 90% de las conversaciones comerciales con clientes ocurren aquí. Para usar la API se requiere una cuenta Business en Meta y aprobación del número.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">N8N — Plataforma de automatización<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>N8N es la plataforma que usamos para construir los flujos de automatización — los "workflows" que conectan WhatsApp con el agente de IA, el CRM, el calendario, y el resto de herramientas. Es de código abierto y puede instalarse en tu propia infraestructura, lo que significa que los datos se quedan en tu servidor. Lo preferimos sobre Zapier o Make para proyectos complejos por mayor flexibilidad y control. Para flujos más simples, Zapier o Make también funcionan bien.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">OpenAI GPT-4 / Anthropic Claude / Google Gemini<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Los tres modelos de IA que usamos según el caso de uso. GPT-4 de OpenAI es el más usado para conversaciones complejas. Claude de Anthropic tiene ventajas para procesar documentos largos y seguir instrucciones específicas con menos desviaciones. Gemini de Google funciona bien cuando el sistema se integra con el ecosistema de Google Workspace. La elección del modelo no es el factor más importante — el entrenamiento con los datos del negocio importa mucho más.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">HubSpot / Google Sheets / Notion — CRM y bases de datos<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Dependiendo del tamaño y preferencia del cliente usamos HubSpot (el CRM más completo para equipos comerciales), Google Sheets bien estructurado (sorprendentemente efectivo para PyMEs con presupuesto ajustado), o Notion (flexible para operaciones con documentación variada). Para proyectos con mayor volumen de datos usamos Supabase (PostgreSQL en la nube). El CRM correcto no es el más caro — es el que tu equipo realmente usa.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">Google Calendar / Calendly — Agendamiento<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El agente de IA puede leer disponibilidad y crear eventos en Google Calendar o Calendly directamente desde la conversación de WhatsApp. El paciente o cliente elige el horario, el evento se crea automáticamente en el calendario del profesional correspondiente, y ambas partes reciben confirmación. Sin llamadas de coordinación, sin "voy a verificar y te confirmo".</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COSTOS -->
+<section class="section sec-alt" aria-labelledby="costos-title">
+  <p class="section-eyebrow reveal">06 — Costos reales</p>
+  <h2 class="section-title reveal reveal-delay-1" id="costos-title">¿Cuánto cuesta automatizar<br>con IA en México?</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>La pregunta que más escuchamos. La respuesta honesta depende del alcance, pero aquí están los números reales de Mattera y los rangos del mercado:</p>
+  </div>
+
+  <div class="roi-table-wrap reveal reveal-delay-2" style="margin-top:2rem">
+    <table class="roi-table">
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Mattera Systems</th>
+          <th>Rango de mercado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Desarrollo inicial (pago único)</td>
+          <td>Desde $10,000 MXN</td>
+          <td>$8,000 – $80,000 MXN</td>
+        </tr>
+        <tr>
+          <td>Operación mensual</td>
+          <td>Desde $1,500 MXN/mes</td>
+          <td>$1,000 – $15,000 MXN/mes</td>
+        </tr>
+        <tr>
+          <td>Modalidad de pago desarrollo</td>
+          <td>50-50 (inicio / entrega)</td>
+          <td>Variable</td>
+        </tr>
+        <tr>
+          <td>Contrato mínimo</td>
+          <td>Sin contrato mínimo</td>
+          <td>3-12 meses en la mayoría</td>
+        </tr>
+        <tr class="roi-hl">
+          <td>Tiempo de implementación</td>
+          <td>~11 días hábiles</td>
+          <td>2 semanas – 3 meses</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="edu-body reveal" style="margin-top:2rem">
+    <p>La variación en el rango de mercado es amplia porque el alcance varía mucho: un chatbot básico con respuestas predefinidas cuesta $3,000-5,000 MXN; un sistema completo con agente de IA entrenado, CRM a medida, integraciones múltiples y operación incluida puede justificar $50,000+ MXN. Lo que Mattera ofrece está en el rango de precio accesible para PyMEs medianas con la profundidad técnica de proyectos enterprise.</p>
+
+    <p>Para la mayoría de las empresas, el ROI se calcula en horas recuperadas: si un asistente que cuesta $12,000-18,000 MXN al año devuelve 4 horas diarias a un equipo cuyo tiempo vale $150-250 MXN/hora, el ahorro teórico es $26,000-45,000 MXN anuales. La primera cita recuperada, el primer lead que no se perdió, o la primera cotización enviada a las 11pm que cerró la venta — esos son los primeros indicadores reales.</p>
+  </div>
+
+  <div class="roi-callout reveal reveal-delay-2">
+    El costo exacto lo entregamos en el diagnóstico gratuito de 30 minutos, antes de que decidas. No hay propuesta genérica — hay un número específico para tu operación específica.
+  </div>
+  <div class="reveal reveal-delay-3" style="margin-top:1.5rem">
+    <a href="/#calculadora" class="btn-paper-ghost">Calcular con mis números →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CASOS REALES -->
+<section class="section sec-dark" aria-labelledby="casos-title">
+  <p class="section-eyebrow reveal">07 — Resultados reales</p>
+  <h2 class="section-title reveal reveal-delay-1" id="casos-title">Lo que pasa en la práctica:<br>casos implementados por Mattera</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>La teoría sobre automatización con IA abunda. Los resultados medibles en operaciones reales en México son más escasos. Estos son los nuestros:</p>
+  </div>
+
+  <div class="casos-list reveal reveal-delay-2" style="margin-top:2rem">
+    <article class="caso-row" itemscope itemtype="https://schema.org/Review">
+      <div class="caso-num">+47%</div>
+      <div class="caso-info">
+        <div class="caso-name" itemprop="name">Distribuidora Norte — Distribución mayorista · Guadalajara, Jalisco</div>
+        <div class="caso-sub" itemprop="description">El equipo comercial tardaba entre 4 y 8 horas en responder cotizaciones por WhatsApp porque tenía que consultar el catálogo, verificar stock y calcular precios con descuentos por volumen. Los clientes se iban con la competencia antes de recibir respuesta. Implementamos un agente de IA conectado al catálogo en Google Sheets que responde cotizaciones completas en tiempo real, 24/7. Resultado: tiempo de respuesta de 6 horas a 45 segundos. Conversiones: +47% en 60 días. 32 horas semanales devueltas al equipo comercial.</div>
+        <blockquote class="caso-quote" itemprop="reviewBody">"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial</blockquote>
+      </div>
+      <span class="caso-tag">Distribución</span>
+    </article>
+    <article class="caso-row" itemscope itemtype="https://schema.org/Review">
+      <div class="caso-num">-89%</div>
+      <div class="caso-info">
+        <div class="caso-name" itemprop="name">Inmobiliaria Plata — Bienes raíces residencial · Monterrey, NL</div>
+        <div class="caso-sub" itemprop="description">Los asesores dedicaban 3-4 horas diarias a responder leads no calificados: curiosos sin presupuesto real, personas de zonas donde no operaban, o prospectos que solo querían información general sin intención de compra. El sistema califica leads en segundos (zona, presupuesto, plazo de compra), muestra fichas de propiedades relevantes, y solo transfiere al asesor cuando el prospecto cruza el umbral de calificación. Resultado: leads perdidos por falta de respuesta en primeros 5 minutos: -89%. Agendas de asesores: 95% llenas con prospectos calificados.</div>
+        <blockquote class="caso-quote" itemprop="reviewBody">"Mis asesores ya no pierden la mañana con curiosos — llegan a cierres." — Directora Comercial</blockquote>
+      </div>
+      <span class="caso-tag">Inmobiliaria</span>
+    </article>
+    <article class="caso-row" itemscope itemtype="https://schema.org/Review">
+      <div class="caso-num">2.4×</div>
+      <div class="caso-info">
+        <div class="caso-name" itemprop="name">Clínica Vida — Medicina privada · CDMX</div>
+        <div class="caso-sub" itemprop="description">La recepcionista dedicaba 5-6 horas diarias a contestar WhatsApp con preguntas repetitivas (horarios, precios, disponibilidad) y a coordinar citas por teléfono. El sistema implementado responde preguntas 24/7, muestra disponibilidad en tiempo real, agenda directamente en Google Calendar y envía recordatorio 24 horas antes. Resultado: leads calificados: 2.4 veces más en el primer mes. Inasistencias: -31%. Tiempo de recepcionista en WhatsApp: de 5.5 horas diarias a 40 minutos.</div>
+        <blockquote class="caso-quote" itemprop="reviewBody">"Mi recepcionista ahora atiende a los pacientes que están aquí, no a los que están en WhatsApp." — Director Médico</blockquote>
+      </div>
+      <span class="caso-tag">Salud privada</span>
+    </article>
+    <article class="caso-row" itemscope itemtype="https://schema.org/Review">
+      <div class="caso-num">+67%</div>
+      <div class="caso-info">
+        <div class="caso-name" itemprop="name">Despacho García — Servicios legales · Guadalajara, Jalisco</div>
+        <div class="caso-sub" itemprop="description">Los prospectos llegaban por diferentes canales (sitio web, Instagram, referidos) y el seguimiento dependía de que alguien del equipo los llamara o escribiera. El 40% de los leads no recibían seguimiento porque el equipo estaba ocupado con casos activos. El sistema centraliza todos los leads entrantes, califica si el caso encaja con las especialidades del despacho, agenda la consulta inicial, y da seguimiento automático a los que no respondieron. Resultado: tasa de conversión de lead a consulta: +67%. Tiempo del equipo en seguimiento manual: -4.5 horas diarias.</div>
+        <blockquote class="caso-quote" itemprop="reviewBody">"Antes perdíamos casos por no contestar a tiempo. Ahora el sistema no deja que ningún prospecto se vaya sin respuesta." — Socio Fundador</blockquote>
+      </div>
+      <span class="caso-tag">Servicios legales</span>
+    </article>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PARA QUIÉN ES -->
+<section class="section sec-alt" aria-labelledby="quien-title">
+  <p class="section-eyebrow reveal">08 — Para quién es</p>
+  <h2 class="section-title reveal reveal-delay-1" id="quien-title">¿La automatización con IA<br>es para mi empresa?</h2>
+
+  <div class="edu-body reveal reveal-delay-2">
+    <p>Creemos en ser directos: la automatización con IA no es la solución correcta para todos. Estas son las señales de que probablemente sí es para tu empresa, y las señales de que probablemente no lo es.</p>
+  </div>
+
+  <div class="lqc-grid reveal reveal-delay-2" style="margin-top:2rem">
+    <div class="lqc-card">
+      <div class="lqc-title" style="color:var(--accent-orange)">Buenas señales</div>
+      <p class="lqc-desc">Recibes más de 50 mensajes de WhatsApp al mes. Tu equipo responde las mismas preguntas repetidamente. Pierdes prospectos porque no contestaste a tiempo. El seguimiento de clientes depende de que alguien lo recuerde. Tienes información de tus productos o servicios documentada en algún lugar digital. El crecimiento de tu negocio se ha traducido en más trabajo para las mismas personas.</p>
+    </div>
+    <div class="lqc-card">
+      <div class="lqc-title" style="color:var(--ink-3)">Señales de que no es el momento</div>
+      <p class="lqc-desc">Tienes menos de 50 interacciones mensuales con clientes (el ROI no justifica la inversión todavía). Tu operación no tiene ningún registro digital. Cada cliente requiere criterio humano profundo en cada interacción desde el primer segundo. No tienes un número de WhatsApp ni presencia digital básica. En esos casos, lo decimos en el diagnóstico y no forzamos el proyecto.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA -->
+<section class="cta-final sec-cta" aria-labelledby="cta-edu">
+  <p class="cta-final-line reveal" id="cta-edu">¿Quieres saber si tu operación es un buen candidato para automatización con IA? 30 minutos de diagnóstico, sin compromiso.</p>
+  <div class="cta-final-btns reveal reveal-delay-1">
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico gratuito →</span></a>
+    <a href="faq.html" class="btn-outline">Ver todas las preguntas frecuentes</a>
+  </div>
+  <p class="cta-microcopy reveal reveal-delay-2">Sin compromiso · Respuesta en menos de 1 hora · +52 33 2787 4747</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México · Fundada 2024</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="/#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="/#servicios">Agentes IA personalizados</a>
+        <a href="/#servicios">CRMs a medida</a>
+        <a href="/#servicios">Integraciones y automatizaciones</a>
+        <a href="/#servicios">Reportes y analytics</a>
+        <a href="/#servicios">Páginas web</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="faq.html">Preguntas frecuentes</a>
+        <a href="que-es-automatizacion.html">¿Qué es automatización con IA?</a>
+        <a href="blog/">Blog</a>
+        <a href="industrias/clinicas.html">Clínicas</a>
+        <a href="industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="industrias/restaurantes.html">Restaurantes</a>
+        <a href="industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="/#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <a href="privacidad.html" class="footer-privacy">Privacidad</a>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos · 2026</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+.edu-body { max-width: 720px; }
+.edu-body p { font-size: 1rem; line-height: 1.75; color: var(--ink-1); margin-bottom: 1.25rem; }
+.edu-body em { font-style: italic; color: var(--accent-orange); }
+.edu-quote { border-left: 3px solid var(--accent-orange); padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(255,255,255,.04); border-radius: 0 8px 8px 0; }
+.edu-quote p { margin: 0; font-style: italic; color: var(--ink-1); }
+.edu-quote cite { display: block; margin-top: .75rem; font-style: normal; font-family: var(--mono); font-size: .72rem; color: var(--ink-3); letter-spacing: .06em; }
+.caso-quote { margin: .75rem 0 0; padding: .75rem 1rem; border-left: 2px solid var(--accent-orange); font-style: italic; color: var(--ink-2); font-size: .9rem; }
+</style>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const wasOpen=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!wasOpen){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body>
+</html>
