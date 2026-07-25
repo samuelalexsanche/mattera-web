@@ -805,7 +805,7 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
    Cada slot = 100vh estable + 150vh transición */
 .card-deck-zone {
   position: relative;
-  height: 600vh;
+  height: 350vh;
 }
 
 /* Inner pinned: el "frame" de la mano que sostiene las cartas */
