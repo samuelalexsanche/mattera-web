@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="shared.css">
@@ -132,21 +132,33 @@
 /* Hero */
 .planes-hero{background:var(--bg);padding:clamp(72px,10vh,120px) 2rem clamp(56px,7vh,96px);text-align:center;position:relative;overflow:hidden}
 .planes-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(181,186,163,.06) 0%,transparent 70%);pointer-events:none}
-.planes-hero-eyebrow{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.75rem}
+.planes-hero-eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;color:var(--ink-2);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.75rem}
 .planes-hero-eyebrow::before,.planes-hero-eyebrow::after{content:'';flex:0 0 32px;height:1px;background:var(--line-soft)}
-.planes-hero h1{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(34px,5.5vw,76px);line-height:1.08;letter-spacing:-.025em;color:var(--ink);margin-bottom:1.25rem;max-width:16ch;margin-inline:auto}
-.planes-hero-sub{font-family:var(--body);font-size:clamp(.9rem,1.2vw,1.05rem);line-height:1.65;color:var(--ink-2);max-width:48ch;margin:0 auto 2.5rem}
+.planes-hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,4.8vw,64px);line-height:1.12;letter-spacing:-.015em;color:var(--ink);margin-bottom:1.25rem;max-width:16ch;margin-inline:auto}
+.planes-hero-sub{font-family:var(--body);font-size:clamp(1.02rem,1.2vw,1.15rem);line-height:1.7;color:var(--ink-2);max-width:50ch;margin:0 auto 2.5rem}
 .planes-hero-ctas{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
 
 /* SEO/GEO info box */
-.geo-box-wrap{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
-.geo-box{border:1.5px solid var(--line-soft);padding:2rem 2.5rem;margin:clamp(40px,5vw,64px) 0}
-.geo-box-label{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-orange);margin-bottom:1rem}
-.geo-box-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.02em}
-.geo-box-body{font-size:.875rem;line-height:1.75;color:var(--ink-2);margin-bottom:1.5rem;max-width:68ch}
-.geo-box-body code{font-family:var(--mono);font-size:.78rem;color:var(--ink);background:rgba(255,255,255,.06);padding:.1em .35em;border-radius:3px}
-.geo-box-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-sage{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--accent);padding:.6rem 1.25rem;color:var(--accent);position:relative;overflow:hidden;transition:color .25s;cursor:pointer;background:none}
+/* ─── EXPLICADOR SEO + GEO — protagonista, va antes de los precios ─── */
+.geoex{background:var(--bg-warm);padding:clamp(56px,7vw,96px) 2rem}
+.geoex-inner{max-width:var(--max-w);margin:0 auto}
+.geoex-label{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-orange);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
+.geoex-label::after{content:'';flex:1;height:1px;background:var(--line-soft);max-width:72px}
+.geoex-title{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.8vw,50px);line-height:1.18;letter-spacing:-.015em;color:var(--ink);max-width:24ch;margin-bottom:1.25rem}
+.geoex-sub{font-size:1.12rem;line-height:1.75;color:var(--ink-2);max-width:58ch;margin-bottom:3rem}
+.geoex-pair{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:2.5rem}
+.geoex-card{background:var(--bg);border:1.5px solid var(--line-soft);padding:2rem 2.25rem;border-radius:6px}
+.geoex-card-tag{display:inline-block;font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:.32rem .75rem;border-radius:3px;margin-bottom:1.25rem}
+.geoex-card h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.3;color:var(--ink);margin-bottom:1rem}
+.geoex-card p{font-size:1.02rem;line-height:1.78;color:var(--ink-2)}
+.geoex-card p+p{margin-top:.9rem}
+.geoex-card-eg{margin-top:1.1rem;padding:.85rem 1.1rem;background:var(--bg-warm);border-left:3px solid var(--line-soft);font-size:.98rem;line-height:1.6;color:var(--ink-2);font-style:italic}
+/* franja "haz la prueba" — el gancho comercial */
+.geoex-test{background:var(--bg);border-left:4px solid var(--accent-orange);padding:1.75rem 2rem;margin-bottom:2.25rem;border-radius:0 6px 6px 0}
+.geoex-test-q{font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.35;color:var(--ink);margin-bottom:.7rem}
+.geoex-test-a{font-size:1.02rem;line-height:1.75;color:var(--ink-2);max-width:62ch}
+.geo-box-btns{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-sage{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--accent);padding:.6rem 1.25rem;color:var(--accent);position:relative;overflow:hidden;transition:color .25s;cursor:pointer;background:none}
 .btn-sage::before{content:'';position:absolute;inset:0;background:var(--accent);transform:translateX(-101%);transition:transform .25s var(--ease)}
 .btn-sage:hover{color:var(--bg)}
 .btn-sage:hover::before{transform:translateX(0)}
@@ -161,35 +173,35 @@
 .plan-card{background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:2rem;display:flex;flex-direction:column;position:relative;transition:border-color .22s}
 .plan-card:hover{border-color:rgba(181,186,163,.45)}
 .plan-card.featured{border:2px solid var(--accent);z-index:1;padding-top:3rem}
-.plan-badge{position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:var(--bg-warm);border:1.5px solid var(--accent);padding:.3rem 1rem;color:var(--accent);white-space:nowrap}
-.plan-tier{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.35rem}
-.plan-name{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.5rem;color:var(--ink);margin-bottom:1.5rem}
+.plan-badge{position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:var(--bg-warm);border:1.5px solid var(--accent);padding:.3rem 1rem;color:var(--accent);white-space:nowrap}
+.plan-tier{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.35rem}
+.plan-name{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--ink);margin-bottom:1.5rem}
 .plan-price-main{font-family:var(--mono);font-weight:500;color:var(--ink);line-height:1}
 .plan-price-main .amount{font-family:var(--display);font-weight:800;letter-spacing:-.05em;line-height:1}
 .plan-t1 .plan-price-main .amount,.plan-t3 .plan-price-main .amount{font-size:clamp(36px,4vw,54px)}
 .plan-t2 .plan-price-main .amount{font-size:clamp(42px,4.8vw,64px)}
-.plan-price-cadencia{font-family:var(--mono);font-size:.7rem;color:var(--ink-2);letter-spacing:.04em;margin-top:.2rem}
-.plan-price-total{font-family:var(--mono);font-size:.68rem;color:var(--ink-3);letter-spacing:.04em;margin-top:.35rem}
+.plan-price-cadencia{font-family:var(--mono);font-size:.86rem;color:var(--ink-2);letter-spacing:.03em;margin-top:.3rem}
+.plan-price-total{font-family:var(--mono);font-size:.82rem;color:var(--ink-2);letter-spacing:.03em;margin-top:.4rem}
 .plan-divider{border:none;border-top:1.5px solid var(--line-soft);margin:1.5rem 0}
 .plan-features{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem;flex:1}
-.plan-features li{font-size:.85rem;line-height:1.55;color:var(--ink-2);padding-left:1.4rem;position:relative}
+.plan-features li{font-size:1rem;line-height:1.65;color:var(--ink-2);padding-left:1.5rem;position:relative}
 .plan-features li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-size:.8rem;font-weight:600;font-family:var(--mono)}
-.plan-features li.strike{color:var(--muted);text-decoration:line-through;opacity:.6}
+.plan-features li.strike{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--ink-3)}
 .plan-features li.strike::before{content:'✗';color:var(--muted)}
 .plan-cta{width:100%;text-align:center;justify-content:center}
-.plan-guarantee{margin-top:.85rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;color:var(--ink-3);text-align:center;line-height:1.55;padding-top:.5rem;border-top:1px solid var(--line-soft)}
-.plan-note{margin-top:.6rem;font-size:.75rem;color:var(--ink-3);text-align:center;font-family:var(--mono)}
+.plan-guarantee{margin-top:.95rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.03em;color:var(--ink-2);text-align:center;line-height:1.6;padding-top:.5rem;border-top:1px solid var(--line-soft)}
+.plan-note{margin-top:.6rem;font-size:.78rem;color:var(--ink-3);text-align:center;font-family:var(--mono)}
 
 /* T4 band */
 .t4-band{background:var(--bg-warm);border-top:1.5px solid var(--line-soft);border-bottom:1.5px solid var(--line-soft);padding:2rem 2rem;margin-top:1.5rem}
 .t4-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:3rem;justify-content:space-between;flex-wrap:wrap}
-.t4-label{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.4rem}
-.t4-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.15rem;color:var(--ink);margin-bottom:.6rem}
+.t4-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.4rem}
+.t4-title{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--ink);margin-bottom:.6rem}
 .t4-desc{font-size:.83rem;line-height:1.65;color:var(--ink-2);max-width:52ch}
 
 /* Garantías */
 .garantias-wrap{max-width:var(--max-w);margin:0 auto}
-.garantias-title{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.75rem;display:flex;align-items:center;gap:.75rem}
+.garantias-title{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.75rem;display:flex;align-items:center;gap:.75rem}
 .garantias-title::after{content:'';flex:1;height:1px;background:var(--line-soft);max-width:48px}
 .garantias-list{list-style:none;display:flex;flex-direction:column;gap:1.1rem}
 .garantias-list li{font-size:.95rem;line-height:1.65;color:var(--ink);padding-left:1.6rem;position:relative}
@@ -199,10 +211,10 @@
 .ejemplos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
 .ejemplo-card{background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.75rem;display:flex;flex-direction:column;gap:1rem;transition:border-color .22s,transform .22s}
 .ejemplo-card:hover{border-color:rgba(181,186,163,.45);transform:translateY(-3px)}
-.ejemplo-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-.ejemplo-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.2rem;color:var(--ink);line-height:1.25}
+.ejemplo-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2)}
+.ejemplo-title{font-family:var(--serif);font-weight:600;font-size:1.3rem;color:var(--ink);line-height:1.25}
 .ejemplo-desc{font-size:.83rem;line-height:1.65;color:var(--ink-2);flex:1}
-.ejemplo-link{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px;align-self:flex-start;transition:color .2s,border-color .2s}
+.ejemplo-link{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px;align-self:flex-start;transition:color .2s,border-color .2s}
 .ejemplo-link:hover{color:var(--accent-orange);border-color:var(--accent-orange)}
 
 /* Asistente CTA block */
@@ -212,18 +224,18 @@
 .asist-hdr{background:var(--bg-dark);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.75rem;border-bottom:1.5px solid var(--line-soft)}
 .asist-av{width:32px;height:32px;border-radius:50%;background:var(--accent-orange);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--bg-dark);flex-shrink:0}
 .asist-name{font-family:var(--display);font-weight:700;font-size:.82rem;color:var(--ink);letter-spacing:-.02em}
-.asist-status{font-family:var(--mono);font-size:.55rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:1px}
+.asist-status{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:1px}
 .asist-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;flex-shrink:0}
 .asist-msgs{padding:1.1rem;display:flex;flex-direction:column;gap:.65rem}
 .asist-bubble{font-size:.82rem;line-height:1.6;padding:.65rem .9rem;border-radius:8px;max-width:85%}
 .asist-bubble.bot{background:rgba(181,186,163,.12);color:var(--ink-2);border-radius:0 8px 8px 8px}
 .asist-bubble.user{background:rgba(252,163,17,.12);color:var(--ink);border-radius:8px 8px 0 8px;align-self:flex-end}
-.asist-footer{padding:.75rem 1.1rem;border-top:1.5px solid var(--line-soft);font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--ink-3)}
+.asist-footer{padding:.75rem 1.1rem;border-top:1.5px solid var(--line-soft);font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--ink-3)}
 
 /* Final CTA */
 .planes-cta-final{text-align:center;padding:clamp(56px,7vw,96px) 2rem}
 .planes-cta-final-inner{max-width:680px;margin:0 auto}
-.planes-cta-final-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,4vw,52px);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem}
+.planes-cta-final-title{font-family:var(--serif);font-weight:600;font-size:clamp(30px,3.8vw,48px);line-height:1.15;letter-spacing:-.015em;color:var(--ink);margin-bottom:1rem}
 .planes-cta-final-sub{font-size:.9rem;color:var(--ink-2);margin-bottom:2.5rem;line-height:1.65}
 .planes-cta-final-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
 
@@ -232,16 +244,16 @@
 .geo-panel-overlay.open{opacity:1;pointer-events:all}
 .geo-panel{position:fixed;top:0;right:0;bottom:0;width:min(540px,100vw);background:var(--bg);border-left:1.5px solid var(--line-soft);z-index:801;transform:translateX(100%);transition:transform .35s var(--ease);overflow-y:auto;padding:2rem}
 .geo-panel-overlay.open .geo-panel{transform:translateX(0)}
-.geo-panel-close{position:absolute;top:1.25rem;right:1.5rem;font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer;padding:.35rem .6rem;transition:color .2s}
+.geo-panel-close{position:absolute;top:1.25rem;right:1.5rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer;padding:.35rem .6rem;transition:color .2s}
 .geo-panel-close:hover{color:var(--ink)}
-.geo-panel h2{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,3vw,32px);color:var(--ink);margin-bottom:.5rem;margin-top:2rem;line-height:1.15}
-.geo-panel-deck{font-size:.9rem;color:var(--ink-2);margin-bottom:2rem;line-height:1.65}
+.geo-panel h2{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3vw,30px);color:var(--ink);margin-bottom:.5rem;margin-top:2rem;line-height:1.15}
+.geo-panel-deck{font-size:1.02rem;color:var(--ink-2);margin-bottom:2rem;line-height:1.65}
 .geo-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.75rem}
 .geo-card{background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.25rem}
-.geo-card-type{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-orange);margin-bottom:.4rem}
-.geo-card-title{font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--ink);margin-bottom:.65rem}
-.geo-card-quote{border-left:2px solid var(--line-soft);padding:.55rem .85rem;margin-bottom:.65rem;font-size:.8rem;font-style:italic;color:var(--ink-2);line-height:1.55}
-.geo-card-body{font-size:.83rem;line-height:1.65;color:var(--ink-2)}
+.geo-card-type{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-orange);margin-bottom:.4rem}
+.geo-card-title{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.65rem}
+.geo-card-quote{border-left:2px solid var(--accent);padding:.65rem 1rem;margin-bottom:.65rem;font-size:.95rem;font-style:italic;color:var(--ink-2);line-height:1.6}
+.geo-card-body{font-size:.95rem;line-height:1.7;color:var(--ink-2)}
 .geo-section{margin-bottom:1.75rem}
 .geo-section-title{font-family:var(--display);font-weight:700;font-size:.9rem;color:var(--ink);margin-bottom:.6rem;letter-spacing:-.02em}
 .geo-section-body{font-size:.85rem;line-height:1.75;color:var(--ink-2)}
@@ -262,7 +274,7 @@
 .chat-hdr{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.1rem;background:var(--bg-dark);border-bottom:1.5px solid var(--line-soft);flex-shrink:0}
 .chat-hdr-av{width:36px;height:36px;border-radius:50%;background:var(--accent-orange);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:1.1rem;font-weight:300;color:var(--bg-dark);flex-shrink:0}
 .chat-hdr-name{font-family:var(--display);font-weight:700;font-size:.85rem;letter-spacing:-.02em;color:var(--ink)}
-.chat-hdr-sub{font-family:var(--mono);font-size:.58rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:2px}
+.chat-hdr-sub{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:2px}
 .chat-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
 #chat-msgs{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:.65rem;scroll-behavior:smooth}
 #chat-msgs::-webkit-scrollbar{width:3px}
@@ -286,6 +298,7 @@
   .ejemplos-grid{grid-template-columns:1fr 1fr}
   .asistente-block{grid-template-columns:1fr;gap:3rem}
   .geo-cards{grid-template-columns:1fr}
+  .geoex-pair{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .planes-grid{grid-template-columns:1fr}
@@ -368,21 +381,39 @@
 
 <hr class="divider">
 
-<!-- SEO/GEO BOX -->
-<div class="geo-box-wrap">
-  <div class="geo-box" aria-label="SEO y GEO incluido en todos los planes">
-    <p class="geo-box-label">SEO + GEO · Incluido en todos los planes</p>
-    <p class="geo-box-title">Pregúntale a ChatGPT quién ofrece tu servicio en tu ciudad.</p>
-    <p class="geo-box-body">Fíjate qué tanto de tu negocio conoce.<br>
-    Datos estructurados, <code>llms.txt</code> y acceso abierto a los rastreadores de IA.
-    Preparamos tu sitio para que la inteligencia artificial pueda leerlo —
-    y te damos con qué comprobarlo tú mismo.</p>
+<!-- EXPLICADOR SEO + GEO — antes de los precios, en lenguaje llano -->
+<section class="geoex" aria-labelledby="geoex-title">
+  <div class="geoex-inner">
+    <p class="geoex-label">Incluido en los tres planes</p>
+    <h2 class="geoex-title" id="geoex-title">Antes te buscaban en Google. Ahora le preguntan a una IA.</h2>
+    <p class="geoex-sub">Tu sitio tiene que salir bien en los dos lados. Son dos trabajos distintos y <strong>los dos vienen incluidos</strong> — sin costo extra, en cualquier plan.</p>
+
+    <div class="geoex-pair">
+      <div class="geoex-card">
+        <span class="geoex-card-tag">SEO</span>
+        <h3>Que te encuentren cuando buscan</h3>
+        <p>Alguien escribe lo que necesita en Google y tu negocio aparece en la lista de resultados. Es lo que se ha hecho siempre, y sigue trayendo clientes todos los días.</p>
+        <p class="geoex-card-eg">"dentista en Guadalajara" → apareces entre los resultados</p>
+      </div>
+      <div class="geoex-card">
+        <span class="geoex-card-tag">GEO</span>
+        <h3>Que te recomienden cuando preguntan</h3>
+        <p>Alguien le pregunta a ChatGPT y la IA responde con <strong>nombres concretos</strong>. Si tu sitio no está preparado, no te menciona — aunque seas el mejor de tu ciudad.</p>
+        <p class="geoex-card-eg">"¿qué dentista me recomiendas en Guadalajara?" → te menciona por nombre</p>
+      </div>
+    </div>
+
+    <div class="geoex-test">
+      <p class="geoex-test-q">Haz la prueba ahora: abre ChatGPT y pregunta quién ofrece tu servicio en tu ciudad.</p>
+      <p class="geoex-test-a">Si no te menciona, <span class="mark">tus clientes te están preguntando a una IA que no sabe que existes</span> — y le está dando el nombre de tu competencia. Eso es exactamente lo que corregimos.</p>
+    </div>
+
     <div class="geo-box-btns">
-      <button class="btn-sage" onclick="openGeoPanel()" aria-haspopup="dialog"><span>¿Qué es SEO y GEO? →</span></button>
-      <a href="https://wa.me/523327874747?text=Quiero%20revisar%20mi%20sitio%20web%20para%20SEO%20y%20GEO" target="_blank" rel="noopener noreferrer" class="btn-sage"><span>Revisar mi sitio</span></a>
+      <button class="btn-sage" onclick="openGeoPanel()" aria-haspopup="dialog"><span>Ver cómo funciona →</span></button>
+      <a href="https://wa.me/523327874747?text=Quiero%20revisar%20mi%20sitio%20web%20para%20SEO%20y%20GEO" target="_blank" rel="noopener noreferrer" class="btn-sage"><span>Revisar mi sitio gratis</span></a>
     </div>
   </div>
-</div>
+</section>
 
 <hr class="divider">
 
@@ -406,16 +437,16 @@
         <hr class="plan-divider">
         <ul class="plan-features">
           <li>Sitio de 1 página, hasta 6 bloques</li>
-          <li>Base técnica SEO/GEO</li>
-          <li>Carga en menos de 2 segundos</li>
+          <li><strong>Base técnica SEO/GEO</strong></li>
+          <li>Carga en menos de <strong>2 segundos</strong></li>
           <li>Botón directo a tu WhatsApp y formulario</li>
           <li>Dominio, hosting, SSL y respaldos</li>
-          <li>En línea en 5 días</li>
+          <li>En línea en <strong>5 días</strong></li>
           <li class="strike">Asistente IA 24/7</li>
           <li class="strike">Registro de contactos y conversaciones</li>
           <li class="strike">Verificación de citación en ChatGPT</li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Presencia%20T1%20%E2%80%94%20%245%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Presencia%20T1%20%E2%80%94%20%245%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar →</span></a>
       </div>
 
       <!-- T2 SISTEMA — único botón naranja, tarjeta destacada -->
@@ -430,7 +461,7 @@
         <p class="plan-price-total">$9,900 total · $299/mes mantenimiento</p>
         <hr class="plan-divider">
         <ul class="plan-features">
-          <li>Todo lo de Presencia, más</li>
+          <li><strong>Todo lo de Presencia</strong>, más</li>
           <li>Hasta 5 secciones</li>
           <li>Asistente IA entrenado con tu negocio, 24/7 (hasta 200 conversaciones al mes)</li>
           <li>SEO y GEO completos + ficha de Google Business conectada</li>
@@ -439,9 +470,9 @@
           <li>Pase a tu WhatsApp de siempre con la conversación ya resumida</li>
           <li>Reporte mensual de actividad del sistema</li>
           <li>1 actualización de contenido al mes</li>
-          <li>En línea en 7 días</li>
+          <li>En línea en <strong>7 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Sistema%20T2%20%E2%80%94%20%249%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-primary plan-cta"><span>Contratar ahora →</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Sistema%20T2%20%E2%80%94%20%249%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-primary plan-cta"><span>Contratar →</span></a>
         <p class="plan-guarantee">En línea al día 7 o el primer año de mantenimiento va por nuestra cuenta.</p>
       </div>
 
@@ -456,7 +487,7 @@
         <p class="plan-price-total">$19,900 total · $799/mes mantenimiento</p>
         <hr class="plan-divider">
         <ul class="plan-features">
-          <li>Todo lo de Sistema, más</li>
+          <li><strong>Todo lo de Sistema</strong>, más</li>
           <li>Secciones ilimitadas, catálogo o blog</li>
           <li>Asistente entrenado a profundidad, hasta 600 conversaciones al mes</li>
           <li>Monitoreo de citación en cuatro motores generativos</li>
@@ -465,9 +496,9 @@
           <li>Agenda conectada — el asistente agenda en tu calendario</li>
           <li>4 actualizaciones de contenido al mes</li>
           <li>Reporte quincenal</li>
-          <li>En línea en 14 días</li>
+          <li>En línea en <strong>14 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Operaci%C3%B3n%20T3%20%E2%80%94%20%2419%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Operaci%C3%B3n%20T3%20%E2%80%94%20%2419%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar →</span></a>
         <p class="plan-note">Actualizaciones adicionales: $600 c/u</p>
       </div>
 
@@ -650,7 +681,7 @@
       <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Sistema%20T2%20%E2%80%94%20%249%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline"><span>Contratar ahora — T2 · $1,650/mes →</span></a>
       <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-ghost">Tengo una duda primero</a>
     </div>
-    <p style="margin-top:1.25rem;font-family:var(--mono);font-size:.62rem;color:var(--ink-3);letter-spacing:.06em">En línea al día 7 o el primer año de mantenimiento va por nuestra cuenta.</p>
+    <p style="margin-top:1.25rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-2);letter-spacing:.05em;line-height:1.6">En línea al día 7 o el primer año de mantenimiento va por nuestra cuenta.</p>
   </div>
 </div>
 
@@ -810,7 +841,7 @@ function sendChat(){
       link.href='https://wa.me/523327874747?text='+encodeURIComponent(text);
       link.target='_blank';link.rel='noopener noreferrer';
       link.className='chat-msg bot';link.textContent='Continuar en WhatsApp →';
-      link.style.cssText='display:block;color:var(--accent-orange);border-bottom:1px solid currentColor;padding:.5rem .75rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-align:center;margin-top:.25rem';
+      link.style.cssText='display:block;color:var(--accent-orange);border-bottom:1px solid currentColor;padding:.5rem .75rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-align:center;margin-top:.25rem';
       document.getElementById('chat-msgs').appendChild(link);
       document.getElementById('chat-msgs').scrollTop=document.getElementById('chat-msgs').scrollHeight;
     },400);

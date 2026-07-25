@@ -31,23 +31,23 @@
      Patrón: samuelalexsanche.github.io/mattera-web/ → mattera.mx/ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{border:none;background:none;font:inherit;cursor:pointer}
 ul{list-style:none}
 :root{
   --bg:#1E2318;--bg-warm:#2B3122;--bg-dark:#151910;
-  --ink:#F2EFE6;--ink-2:#A8AC97;--ink-3:rgba(242,239,230,.45);
+  --ink:#F2EFE6;--ink-2:#C8CCB8;--ink-3:#9DA192;
   --accent:#B5BAA3;--accent-soft:rgba(181,186,163,.12);
   --accent-orange:#FCA311;--accent-orange-soft:rgba(252,163,17,.10);
   --line:#F2EFE6;--line-soft:rgba(168,172,151,.25);
   --paper:#EFEFE3;--paper-ink:#686D5C;
-  --serif:"Fraunces","Georgia",serif;
+  --serif:"Source Serif 4","Georgia",serif;
   --display:"Inter","system-ui",sans-serif;
   --body:"Inter","system-ui",sans-serif;
   --mono:"JetBrains Mono","ui-monospace",monospace;
@@ -61,9 +61,9 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .nav-logo img{height:28px;width:auto}
 .nav-logo-word{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.03em;color:var(--ink)}
 .nav-links{display:flex;align-items:center;gap:2.25rem}
-.nav-links a{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--ink-2);letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
+.nav-links a{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--ink-2);letter-spacing:.05em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
-.nav-cta{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--accent);padding:.6rem 1.25rem;color:var(--accent);position:relative;overflow:hidden;transition:color .25s}
+.nav-cta{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;border:1.5px solid var(--accent);padding:.6rem 1.25rem;color:var(--accent);position:relative;overflow:hidden;transition:color .25s}
 .nav-cta::before{content:'';position:absolute;inset:0;background:var(--accent);transform:translateX(-101%);transition:transform .25s var(--ease)}
 .nav-cta:hover{color:var(--bg)}
 .nav-cta:hover::before{transform:translateX(0)}
@@ -72,48 +72,48 @@ nav{display:flex;align-items:center;justify-content:space-between;max-width:var(
 .nav-burger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.3s}
 .mobile-nav{position:fixed;inset:0;background:var(--bg);z-index:500;display:none;flex-direction:column;justify-content:center;align-items:center;gap:2.5rem}
 .mobile-nav.open{display:flex}
-.mobile-nav a{font-family:var(--serif);font-style:italic;font-size:2.25rem;color:var(--ink);transition:color .2s}
+.mobile-nav a{font-family:var(--serif);font-weight:600;font-size:2rem;color:var(--ink);transition:color .2s}
 .mobile-nav a:hover{color:var(--accent)}
-.mobile-nav-close{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer}
+.mobile-nav-close{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer}
 .hero{position:relative;overflow:hidden;min-height:96svh;display:flex;flex-direction:column;justify-content:center;max-width:var(--max-w);margin:0 auto;padding:0 2rem}
 .hero-parallax{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
 .hero-pl{position:absolute;inset:-12%;width:124%;height:124%;will-change:transform}
-.hero-eyebrow{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase;margin-bottom:2rem}
-.hero-headline{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(42px,7vw,108px);line-height:1.05;letter-spacing:-.02em;color:var(--ink);max-width:16ch;position:relative;z-index:1}
+.hero-eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase;margin-bottom:2rem}
+.hero-headline{font-family:var(--serif);font-weight:600;font-size:clamp(40px,6vw,84px);line-height:1.1;letter-spacing:-.015em;color:var(--ink);max-width:16ch;position:relative;z-index:1}
 .hero-number{color:var(--accent-orange);font-style:normal;font-weight:600}
 .hero-sub{margin-top:2.25rem;font-size:clamp(.95rem,1.4vw,1.15rem);color:var(--ink-2);line-height:1.75;max-width:50ch;position:relative;z-index:1}
 .hero-ctas{margin-top:2.75rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;position:relative;z-index:1}
-.hero-microline{margin-top:3.5rem;font-family:var(--mono);font-size:.68rem;color:var(--ink-3);letter-spacing:.08em;position:relative;z-index:1}
+.hero-microline{margin-top:3.5rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.08em;position:relative;z-index:1}
 .hero-microline::before{content:'';display:inline-block;width:20px;height:1.5px;background:var(--ink-3);vertical-align:middle;margin-right:.65rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent-orange);color:var(--bg-dark);font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.75rem;position:relative;overflow:hidden;transition:transform .2s var(--ease)}
+.btn-primary{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent-orange);color:var(--bg-dark);font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.75rem;position:relative;overflow:hidden;transition:transform .2s var(--ease)}
 .btn-primary::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);transform:translateX(-101%);transition:transform .25s var(--ease)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-primary:hover::before{transform:translateX(0)}
 .btn-primary span{position:relative;z-index:1}
 .btn-ghost{font-family:var(--body);font-size:.92rem;font-weight:500;color:var(--ink);border-bottom:1.5px solid var(--ink);padding-bottom:1px;transition:color .2s,border-color .2s}
 .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
-.btn-outline{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--ink);padding:.85rem 1.75rem;color:var(--ink);position:relative;overflow:hidden;transition:color .25s}
+.btn-outline{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--ink);padding:.85rem 1.75rem;color:var(--ink);position:relative;overflow:hidden;transition:color .25s}
 .btn-outline::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateX(-101%);transition:transform .25s var(--ease)}
 .btn-outline:hover{color:var(--bg)}
 .btn-outline:hover::before{transform:translateX(0)}
 .btn-outline span{position:relative;z-index:1}
 .divider{border:none;border-top:1.5px solid var(--line-soft);max-width:var(--max-w);margin:0 auto}
 .section{padding:var(--s-section) 2rem;max-width:var(--max-w);margin:0 auto}
-.section-eyebrow{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
+.section-eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;color:var(--ink-2);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
 .section-eyebrow::after{content:'';flex:1;height:1.5px;background:var(--line-soft);max-width:48px}
-.section-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,4.5vw,66px);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem;color:var(--ink)}
+.section-title{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.2vw,58px);line-height:1.15;letter-spacing:-.015em;margin-bottom:1rem;color:var(--ink)}
 .servicios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
 .servicio-card{padding:2.25rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);transition:transform .22s var(--ease),border-color .22s,box-shadow .22s}
 
 .servicio-card:hover{background:var(--bg-warm);border-color:rgba(181,186,163,.45);transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.32)}
-.servicio-num{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;margin-bottom:1.25rem}
+.servicio-num{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;margin-bottom:1.25rem}
 .servicio-icon{width:36px;height:36px;margin-bottom:1.25rem;color:var(--accent)}
 .servicio-title{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.02em;margin-bottom:.75rem;color:var(--ink)}
 .servicio-desc{font-size:.875rem;line-height:1.72;color:var(--ink-2)}
-.servicio-tag{display:inline-block;margin-top:1.25rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid rgba(168,172,151,.4);padding-bottom:1px}
+.servicio-tag{display:inline-block;margin-top:1.25rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid rgba(168,172,151,.4);padding-bottom:1px}
 .calc-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:3rem}
 .calc-inputs{display:flex;flex-direction:column;gap:2.25rem}
-.calc-field label{display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.65rem}
+.calc-field label{display:block;font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.65rem}
 .calc-field .val-display{font-family:var(--display);font-weight:800;font-size:1.65rem;letter-spacing:-.04em;color:var(--ink);margin-bottom:.5rem}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:var(--line-soft);outline:none;cursor:pointer}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;background:var(--accent-orange);border-radius:50%;cursor:pointer}
@@ -122,36 +122,36 @@ input[type=number]:focus{border-color:var(--accent-orange);outline:none}
 input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .calc-results{padding:2.5rem 2.75rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);display:flex;flex-direction:column;gap:1.25rem}
 .calc-result-row{display:flex;flex-direction:column;gap:.2rem}
-.calc-result-label{font-family:var(--mono);font-size:.65rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.calc-result-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
 .calc-result-value{font-family:var(--display);font-weight:800;font-size:clamp(22px,3.2vw,44px);letter-spacing:-.04em;color:var(--ink)}
 .calc-result-value.accent{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(32px,5vw,72px);color:var(--accent-orange)}
 .calc-divider{border:none;border-top:1.5px solid var(--line-soft);margin:.25rem 0}
 .calc-cta-wrap{margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
-.calc-note{font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.04em;line-height:1.6}
+.calc-note{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.04em;line-height:1.6}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
 .why-block{padding:2.25rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);transition:transform .22s var(--ease),border-color .22s,box-shadow .22s}
 .why-block:hover{border-color:rgba(181,186,163,.45);transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.28)}
 .why-icon{width:36px;height:36px;margin-bottom:1.5rem;color:var(--accent)}
-.why-block-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.3rem;line-height:1.2;margin-bottom:.85rem;letter-spacing:-.01em}
-.why-body{font-size:.875rem;line-height:1.75;color:var(--ink-2)}
+.why-block-title{font-family:var(--serif);font-weight:600;font-size:1.4rem;line-height:1.3;margin-bottom:.85rem;letter-spacing:-.01em}
+.why-body{font-size:1rem;line-height:1.75;color:var(--ink-2)}
 .casos-list{border-top:1.5px solid var(--line);margin-top:2rem}
 .caso-row{display:grid;grid-template-columns:180px 1fr auto;align-items:baseline;border-bottom:1.5px solid var(--line-soft);padding:1.75rem 0;cursor:pointer;transition:background .2s,padding .15s}
 .caso-row:hover{background:var(--accent-soft);padding-left:1rem;padding-right:1rem;margin:0 -1rem}
 .caso-num{font-family:var(--display);font-weight:800;font-size:clamp(52px,6.5vw,110px);letter-spacing:-.05em;color:var(--ink);line-height:1}
 .caso-info{padding:0 1.5rem}
 .caso-name{font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:-.02em;color:var(--ink)}
-.caso-sub{font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:.2rem}
-.caso-tag{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink-2);padding:.3rem .7rem;color:var(--ink-2);transition:background .2s,color .2s,border-color .2s;align-self:center}
+.caso-sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:.2rem}
+.caso-tag{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink-2);padding:.3rem .7rem;color:var(--ink-2);transition:background .2s,color .2s,border-color .2s;align-self:center}
 .caso-row:hover .caso-tag{background:var(--accent);color:var(--bg);border-color:var(--accent)}
 .drawer-overlay{position:fixed;inset:0;background:rgba(21,25,16,.65);z-index:200;opacity:0;pointer-events:none;transition:opacity .3s}
 .drawer-overlay.open{opacity:1;pointer-events:auto}
 .drawer{position:fixed;right:0;top:0;bottom:0;width:min(480px,95vw);background:var(--bg);z-index:201;padding:3rem 2.25rem;overflow-y:auto;transform:translateX(100%);transition:transform .35s var(--ease);border-left:1.5px solid var(--line-soft)}
 .drawer.open{transform:translateX(0)}
-.drawer-close{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer;border-bottom:1px solid var(--line-soft);padding-bottom:2px}
+.drawer-close{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer;border-bottom:1px solid var(--line-soft);padding-bottom:2px}
 .drawer-num{font-family:var(--display);font-weight:800;font-size:clamp(52px,8vw,88px);letter-spacing:-.05em;color:var(--accent);line-height:1;margin-bottom:.35rem}
-.drawer-title{font-family:var(--serif);font-style:italic;font-size:1.5rem;margin-bottom:.35rem}
-.drawer-sector{font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.75rem}
-.drawer-body h4{font-family:var(--mono);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.45rem;margin-top:1.25rem}
+.drawer-title{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin-bottom:.35rem}
+.drawer-sector{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.75rem}
+.drawer-body h4{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.45rem;margin-top:1.25rem}
 .drawer-body p{font-size:.875rem;line-height:1.75;color:var(--ink-2)}
 .drawer-quote{margin-top:1.75rem;padding:1.1rem 1.25rem;border-left:3px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink);background:var(--accent-soft)}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative;margin-top:4rem}
@@ -160,10 +160,10 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .timeline-node:hover{border-color:rgba(181,186,163,.45);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .timeline-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink-2);background:var(--bg-warm);margin-bottom:1.5rem;position:relative;z-index:1;transition:background .2s,border-color .2s}
 .timeline-node:hover .timeline-dot{background:var(--accent);border-color:var(--accent)}
-.timeline-phase{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.4rem}
+.timeline-phase{font-family:var(--mono);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-bottom:.4rem}
 .timeline-title{font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:-.02em;margin-bottom:.65rem}
-.timeline-desc{font-size:.83rem;line-height:1.65;color:var(--ink-2)}
-.timeline-deliverable{margin-top:.65rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.timeline-desc{font-size:.95rem;line-height:1.7;color:var(--ink-2)}
+.timeline-deliverable{margin-top:.65rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .section-dark{background:var(--bg-dark);color:var(--ink);padding:var(--s-section) 2rem}
 .section-dark .inner{max-width:var(--max-w);margin:0 auto}
 .section-dark .section-eyebrow{color:var(--ink-3)}
@@ -171,55 +171,55 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .section-dark .section-title{color:var(--ink)}
 .section-dark .section-sub{font-size:.95rem;color:var(--ink-2);max-width:50ch;line-height:1.7;margin-bottom:3rem}
 .stack-grid{display:flex;flex-wrap:wrap;gap:.65rem;padding-top:2.5rem}
-.stack-item{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:.55rem 1rem;border:1.5px solid var(--line-soft);background:transparent;transition:color .2s,border-color .2s,background .2s}
+.stack-item{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:.55rem 1rem;border:1.5px solid var(--line-soft);background:transparent;transition:color .2s,border-color .2s,background .2s}
 .stack-item:hover{color:var(--ink);border-color:rgba(181,186,163,.5);background:rgba(181,186,163,.06)}
 .stack-item.hl{color:var(--ink);border-color:rgba(181,186,163,.4);background:rgba(181,186,163,.08)}
 .precio-section{background:var(--bg-warm);padding:var(--s-section) 2rem}
 .precio-inner{max-width:var(--max-w);margin:0 auto}
 .precio-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3rem}
-.precio-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.65rem}
+.precio-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.65rem}
 .precio-big{font-family:var(--display);font-weight:800;font-size:clamp(44px,6.5vw,90px);letter-spacing:-.05em;color:var(--ink);line-height:1}
 .precio-currency{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;color:var(--ink-2);margin-top:.35rem}
 .precio-note{margin-top:1.25rem;font-size:.85rem;line-height:1.7;color:var(--ink-2);max-width:34ch}
 .precio-conditions{margin-top:1.5rem;display:flex;flex-direction:column;gap:.35rem}
-.precio-conditions span{font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;color:var(--ink-2)}
+.precio-conditions span{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;color:var(--ink-2)}
 .precio-conditions span::before{content:'— ';color:var(--accent)}
 .precio-includes{border-left:1.5px solid var(--line-soft);padding-left:4rem}
-.precio-includes h3{font-family:var(--serif);font-style:italic;font-size:1.3rem;margin-bottom:1.25rem;color:var(--ink);font-weight:300}
+.precio-includes h3{font-family:var(--serif);font-size:1.35rem;margin-bottom:1.25rem;color:var(--ink);font-weight:600}
 .includes-list{display:flex;flex-direction:column;gap:.9rem}
 .includes-list li{display:flex;align-items:flex-start;gap:.65rem;font-size:.875rem;line-height:1.55;color:var(--ink-2)}
-.includes-list li::before{content:'→';color:var(--accent);font-family:var(--mono);font-size:.75rem;flex-shrink:0;margin-top:1px}
+.includes-list li::before{content:'→';color:var(--accent);font-family:var(--mono);font-size:.78rem;flex-shrink:0;margin-top:1px}
 .precio-cta-wrap{margin-top:2.75rem;grid-column:1/-1;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.precio-enterprise{font-family:var(--serif);font-style:italic;font-size:.92rem;color:var(--ink-2)}
+.precio-enterprise{font-family:var(--serif);font-size:1rem;color:var(--ink-2)}
 .precio-enterprise a{color:var(--accent);border-bottom:1px solid var(--accent)}
 .faq-list{border:1.5px solid var(--line-soft);margin-top:2rem;background:var(--bg-warm)}
 .faq-item{border-bottom:1.5px solid var(--line-soft)}
 .faq-btn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:1.4rem 1.5rem;text-align:left;font-family:var(--display);font-weight:600;font-size:.95rem;letter-spacing:-.02em;color:var(--ink);transition:color .2s}
 .faq-btn:hover,.faq-btn[aria-expanded="true"]{color:var(--accent)}
-.faq-icon{width:18px;height:18px;flex-shrink:0;border:1.5px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;transition:transform .3s var(--ease)}
+.faq-icon{width:18px;height:18px;flex-shrink:0;border:1.5px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;transition:transform .3s var(--ease)}
 .faq-btn[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
 .faq-answer{font-size:.875rem;line-height:1.75;color:var(--ink-2);max-height:0;overflow:hidden;padding:0 1.5rem;transition:max-height .4s var(--ease),padding .3s}
 .faq-answer.open{max-height:260px;padding:0 1.5rem 1.4rem}
 
 .cta-final{padding:var(--s-section) 2rem;max-width:var(--max-w);margin:0 auto;text-align:center}
-.cta-final-line{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(30px,5vw,80px);line-height:1.1;letter-spacing:-.02em;max-width:22ch;margin:0 auto 2.75rem;color:var(--ink)}
+.cta-final-line{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.4vw,64px);line-height:1.15;letter-spacing:-.015em;max-width:24ch;margin:0 auto 2.75rem;color:var(--ink)}
 .cta-final-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
-.cta-microcopy{margin-top:1.25rem;font-family:var(--mono);font-size:.65rem;color:var(--ink-3);letter-spacing:.07em}
-.lang-toggle{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--line-soft);padding:.45rem .85rem;color:var(--ink-2);background:none;cursor:pointer;transition:color .2s,border-color .2s;margin-right:.5rem}
+.cta-microcopy{margin-top:1.25rem;font-family:var(--mono);font-size:.82rem;color:var(--ink-2);letter-spacing:.07em}
+.lang-toggle{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--line-soft);padding:.45rem .85rem;color:var(--ink-2);background:none;cursor:pointer;transition:color .2s,border-color .2s;margin-right:.5rem}
 .lang-toggle:hover{color:var(--ink);border-color:var(--ink)}
 .lang-toggle.active-en{color:var(--ink);border-color:var(--ink)}
 
 .comparativa-wrap{margin-top:4rem;border-top:1.5px solid var(--line-soft);padding-top:3rem}
-.comparativa-label{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.5rem}
+.comparativa-label{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.5rem}
 .comparativa-table{display:grid;border:1.5px solid var(--line-soft)}
 .comparativa-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-bottom:1.5px solid var(--line-soft)}
 .comparativa-row-last{border-bottom:none}
 .comparativa-row>div{padding:.85rem 1rem;font-size:.83rem;color:var(--ink-2);line-height:1.5}
-.comparativa-header>div{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:.75rem 1rem;border-bottom:1.5px solid var(--line-soft)}
-.comparativa-rowlabel{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)!important;background:rgba(168,172,151,.06)}
+.comparativa-header>div{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:.75rem 1rem;border-bottom:1.5px solid var(--line-soft)}
+.comparativa-rowlabel{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)!important;background:rgba(168,172,151,.06)}
 .comparativa-col-mattera{color:var(--ink)!important;font-weight:600;border-left:1.5px solid var(--line-soft)}
 .comparativa-header .comparativa-col-mattera{color:var(--accent-orange)!important;border-left:1.5px solid var(--line-soft)}
-.comparativa-note{margin-top:1.5rem;font-size:.83rem;line-height:1.75;color:var(--ink-2);max-width:65ch;font-style:italic}
+.comparativa-note{margin-top:1.5rem;font-size:.95rem;line-height:1.75;color:var(--ink-2);max-width:65ch}
 @media(max-width:768px){
   .comparativa-row{grid-template-columns:1.2fr 1fr 1fr}
   .comparativa-row>div:nth-child(3){display:none}
@@ -235,14 +235,14 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1.5px solid var(--line-soft)}
 .footer-logo-wrap{display:flex;align-items:center;gap:.85rem;margin-bottom:.85rem}
 .footer-logo-wrap img{height:30px}
-.footer-logo-word{font-family:var(--serif);font-style:italic;font-size:1.85rem;color:var(--ink);letter-spacing:-.02em}
-.footer-tagline{font-size:.83rem;line-height:1.7;color:var(--ink-3);max-width:26ch}
-.footer-addr{margin-top:.85rem;font-family:var(--mono);font-size:.63rem;letter-spacing:.06em;color:var(--ink-3)}
-.footer-col h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.1rem}
-.footer-col a{display:block;font-size:.83rem;color:var(--ink-2);margin-bottom:.6rem;transition:color .2s}
+.footer-logo-word{font-family:var(--serif);font-weight:600;font-size:1.7rem;color:var(--ink);letter-spacing:-.02em}
+.footer-tagline{font-size:.95rem;line-height:1.7;color:var(--ink-2);max-width:30ch}
+.footer-addr{margin-top:.85rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;color:var(--ink-2)}
+.footer-col h4{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:1.1rem}
+.footer-col a{display:block;font-size:.92rem;color:var(--ink-2);margin-bottom:.65rem;transition:color .2s}
 .footer-col a:hover{color:var(--ink)}
 .footer-bottom{margin-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-copy,.footer-build{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--ink-3)}
+.footer-copy,.footer-build{font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;color:var(--ink-2)}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}
@@ -296,7 +296,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 .chat-hdr{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.1rem;background:var(--bg-dark);border-bottom:1.5px solid var(--line-soft);flex-shrink:0}
 .chat-hdr-av{width:36px;height:36px;border-radius:50%;background:var(--accent-orange);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:1.1rem;font-weight:300;color:var(--bg-dark);flex-shrink:0}
 .chat-hdr-name{font-family:var(--display);font-weight:700;font-size:.85rem;letter-spacing:-.02em;color:var(--ink)}
-.chat-hdr-sub{font-family:var(--mono);font-size:.58rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:2px}
+.chat-hdr-sub{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);letter-spacing:.06em;display:flex;align-items:center;gap:.35rem;margin-top:2px}
 .chat-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
 #chat-msgs{flex:1;overflow-y:auto;padding:1.1rem;display:flex;flex-direction:column;gap:.65rem;scroll-behavior:smooth}
 #chat-msgs::-webkit-scrollbar{width:3px}
@@ -610,12 +610,12 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="servicio-title">Sitio Web Profesional</div>
       <p class="servicio-desc">Tu página web lista para vender: carga en menos de 2 segundos y convierte visitas en conversaciones. Incluye el asistente IA integrado para que los visitantes puedan contactarte o preguntar sin salir del sitio.</p>
       <span class="servicio-tag">Rápida · Profesional · Integrada</span>
-      <a href="planes.html" style="display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px">Ver planes y precios →</a>
+      <a href="planes.html" style="display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px">Ver planes y precios →</a>
     </div>
   </div>
   <div style="margin-top:3rem;text-align:center" class="reveal">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico gratuito →</span></a>
-    <p style="margin-top:.7rem;font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.06em">Sin compromiso. 30 minutos. Respuesta en menos de 1 hora.</p>
+    <p style="margin-top:.7rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.06em">Sin compromiso. 30 minutos. Respuesta en menos de 1 hora.</p>
   </div>
 </section>
 <hr class="divider">
@@ -624,59 +624,77 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <div style="max-width:var(--max-w);margin:0 auto">
     <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — SITIOS WEB CON IA</p>
     <h2 class="section-title reveal reveal-delay-1" id="planes-home-title" data-i18n="s9.title">Precio público.<br>Sin cotización.</h2>
-    <p class="reveal" style="font-size:.9rem;color:var(--ink-2);max-width:44ch;margin-bottom:2.5rem;line-height:1.65">Tres planes con precio fijo, pago en línea y meses sin intereses. SEO y GEO incluidos en todos.</p>
+    <p class="reveal" style="font-size:1.12rem;color:var(--ink-2);max-width:52ch;margin-bottom:2.5rem;line-height:1.75">Tres planes con precio fijo, pago en línea y meses sin intereses. <strong>Todos incluyen SEO y GEO</strong> — las dos formas en que hoy te encuentran clientes.</p>
+
+    <!-- Qué es SEO y GEO, en llano, ANTES de ver precios -->
+    <div class="geomini reveal">
+      <div class="geomini-card">
+        <span class="geomini-tag">SEO</span>
+        <h3>Que te encuentren cuando buscan</h3>
+        <p>Alguien escribe lo que necesita en Google y tu negocio aparece en los resultados. Lo de siempre, y sigue funcionando.</p>
+      </div>
+      <div class="geomini-card">
+        <span class="geomini-tag">GEO</span>
+        <h3>Que te recomienden cuando preguntan</h3>
+        <p>Alguien le pregunta a ChatGPT y la IA contesta con <strong>nombres concretos</strong>. Si tu sitio no está preparado, no te menciona.</p>
+      </div>
+    </div>
+
+    <div class="geomini-note reveal">
+      <p>Haz la prueba: pregúntale a ChatGPT quién ofrece tu servicio en tu ciudad. Si no apareces, <span class="mark">le está dando a tus clientes el nombre de tu competencia</span>. <a href="planes.html" style="color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:1px;white-space:nowrap">Ver cómo lo corregimos →</a></p>
+    </div>
 
     <!-- Tarjetas compactas -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem" class="reveal reveal-delay-1">
 
       <!-- T1 -->
       <div style="background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem">
-        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T1 · Presencia</p>
+        <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2)">T1 · Presencia</p>
         <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$983<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
-        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$5,900 total · 6 MSI</p>
+        <p style="font-family:var(--mono);font-size:.82rem;color:var(--ink-2)">$5,900 total · 6 MSI</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>1 página, base SEO/GEO</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Botón WhatsApp y formulario</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 5 días</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>1 página, <strong>base SEO/GEO</strong></li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Botón <strong>WhatsApp</strong> y formulario</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>5 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T1%20Presencia%20(%245%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.7rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T1%20Presencia%20(%245%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
       <!-- T2 destacado -->
       <div style="background:var(--bg-warm);border:2px solid var(--accent);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem;position:relative">
-        <span style="position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg-warm);border:1.5px solid var(--accent);padding:.25rem .85rem;color:var(--accent);white-space:nowrap">Más elegido</span>
-        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T2 · Sistema</p>
+        <span style="position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg-warm);border:1.5px solid var(--accent);padding:.28rem .85rem;color:var(--accent);white-space:nowrap">Más elegido</span>
+        <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2)">T2 · Sistema</p>
         <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$1,650<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
-        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$9,900 total · 6 MSI</p>
+        <p style="font-family:var(--mono);font-size:.82rem;color:var(--ink-2)">$9,900 total · 6 MSI</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Asistente IA 24/7 entrenado</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>SEO y GEO completos</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 7 días</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>Asistente IA 24/7</strong> entrenado</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>SEO y GEO completos</strong></li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>7 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T2%20Sistema%20(%249%2C900)" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-align:center;justify-content:center;font-size:.7rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T2%20Sistema%20(%249%2C900)" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
       <!-- T3 -->
       <div style="background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem">
-        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T3 · Operación</p>
+        <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2)">T3 · Operación</p>
         <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$3,317<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
-        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$19,900 total · 6 MSI</p>
+        <p style="font-family:var(--mono);font-size:.82rem;color:var(--ink-2)">$19,900 total · 6 MSI</p>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Secciones ilimitadas + blog</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Panel de contactos y agenda</li>
-          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 14 días</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>Secciones ilimitadas</strong> + blog</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>Panel de contactos</strong> y agenda</li>
+          <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>14 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T3%20Operaci%C3%B3n%20(%2419%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.7rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T3%20Operaci%C3%B3n%20(%2419%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
     </div>
 
     <!-- Ver todos los planes -->
     <div class="reveal" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;border-top:1.5px solid var(--line-soft)">
-      <p style="font-size:.85rem;color:var(--ink-2)">¿Necesitas algo distinto? Tienda en línea, portal, integración con ERP.</p>
+      <p style="font-size:1rem;line-height:1.7;color:var(--ink-2)">¿Necesitas algo distinto? Tienda en línea, portal, integración con ERP.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
         <a href="planes.html" class="btn-ghost">Ver planes completos →</a>
-        <a href="https://wa.me/523327874747?text=Quiero%20cotizar%20un%20proyecto%20a%20medida" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--ink-2);padding-bottom:1px">Cotizar a medida</a>
+        <a href="https://wa.me/523327874747?text=Quiero%20cotizar%20un%20proyecto%20a%20medida" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--ink-2);padding-bottom:1px">Cotizar a medida</a>
       </div>
     </div>
   </div>
@@ -719,7 +737,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
   <!-- MATTERA OPERA MATTERA -->
   <div class="reveal reveal-delay-4" style="margin-top:3.5rem;padding:2.25rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);border-left:3px solid var(--accent);max-width:720px">
-    <p style="font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem">Mattera opera Mattera</p>
+    <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem">Mattera opera Mattera</p>
     <p style="font-size:.9rem;line-height:1.8;color:var(--ink-2)">Cada sistema que vendemos lo usamos primero en nuestra propia operación: el asistente que te responde en este sitio atiende más de 200 conversaciones al mes con un tiempo de respuesta promedio de 8 segundos, el CRM da seguimiento automático a cada diagnóstico solicitado, y los reportes mensuales de horas devueltas son los mismos que mandamos a nuestros clientes. Somos nuestro primer caso de éxito — y el más exigente. Nuestra opinión: si no usas tu propio sistema todos los días, no puedes venderlo con honestidad.</p>
   </div>
 </section>
@@ -739,7 +757,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
         <label for="inputSueldo">Sueldo promedio mensual por persona (MXN)</label>
         <div class="val-display" id="valSueldo">$10,000</div>
         <input type="number" id="inputSueldo" value="10000" min="5000" max="100000" step="500" aria-label="Sueldo mensual" oninput="calcUpdate()">
-        <p style="margin-top:.4rem;font-family:var(--mono);font-size:.6rem;color:var(--ink-3);letter-spacing:.04em">Referencia: salario mínimo México ≈ $10,000 MXN/mes (2025)</p>
+        <p style="margin-top:.4rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.04em">Referencia: salario mínimo México ≈ $10,000 MXN/mes (2025)</p>
       </div>
       <div class="calc-field">
         <label for="sliderConversaciones">Interacciones / conversaciones diarias</label>
@@ -801,7 +819,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <p class="manifiesto-sub reveal reveal-delay-4" style="margin-top:1.25rem;font-size:.9rem;color:var(--ink-2)">
     Nuestra postura es clara: creemos que la automatización no es para reemplazar personas, sino para devolverles las horas que el crecimiento les robó. Preferimos medir el éxito en horas recuperadas — no en funcionalidades entregadas. Y creemos que si un sistema no devuelve valor medible en 30 días, no vale la pena.
   </p>
-  <p class="manifiesto-sub reveal reveal-delay-4" style="margin-top:1rem;font-family:var(--mono);font-size:.75rem;color:var(--ink-3);letter-spacing:.06em">
+  <p class="manifiesto-sub reveal reveal-delay-4" style="margin-top:1rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.06em">
     — Samuel Alexander Gonzalez Legaspi, Fundador · Mattera Systems · Guadalajara, Jalisco
   </p>
 </section>
@@ -828,7 +846,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     </div>
   </div>
   <div class="dashboard-wrap reveal reveal-delay-4">
-    <p style="font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bt-sage);opacity:.7;margin-bottom:1rem">Vista del reporte mensual</p>
+    <p style="font-family:var(--mono);font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--bt-sage);margin-bottom:1rem">Vista del reporte mensual</p>
     <div class="browser-frame">
       <div class="browser-bar">
         <div class="browser-dots">
@@ -883,7 +901,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <section class="section sec-alt" id="casos" aria-labelledby="casos-title">
   <p class="section-eyebrow reveal">RESULTADOS REALES</p>
   <h2 class="section-title reveal reveal-delay-1" id="casos-title">Lo que pasa cuando <br>el sistema opera.</h2>
-  <p style="font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;color:var(--ink-3);margin-bottom:2rem">Resultados reportados por cada cliente · evidencia histórica, no oferta</p>
+  <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--ink-3);margin-bottom:2rem">Resultados reportados por cada cliente · evidencia histórica, no oferta</p>
   <div class="casos-list reveal reveal-delay-2">
 
     <article class="caso-row" itemscope itemtype="https://schema.org/Review">
@@ -891,7 +909,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="caso-info">
         <div class="caso-name" itemprop="name">Distribuidora Norte — Distribución mayorista · Guadalajara</div>
         <div class="caso-sub" itemprop="description">El equipo tardaba entre 4 y 8 horas en responder cotizaciones por WhatsApp. Los clientes se iban con la competencia antes de recibir respuesta. Implementamos un agente IA conectado al catálogo en Google Sheets que responde cotizaciones en tiempo real, 24/7, con precios actualizados automáticamente. Tiempo de respuesta: de 6 horas a 45 segundos. Conversiones: +47% en 60 días. 32 horas semanales devueltas al equipo.</div>
-        <blockquote itemprop="reviewBody" style="margin-top:.75rem;font-style:italic;color:var(--ink-2);font-size:.85rem;border-left:2px solid var(--accent);padding-left:.75rem">"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial</blockquote>
+        <blockquote itemprop="reviewBody" style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial</blockquote>
       </div>
       <span class="caso-tag">Distribución</span>
     </article>
@@ -901,7 +919,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="caso-info">
         <div class="caso-name" itemprop="name">Inmobiliaria Plata — Bienes raíces · Monterrey</div>
         <div class="caso-sub" itemprop="description">Más de 200 consultas diarias por WhatsApp. El equipo no daba abasto y perdían leads calificados por falta de respuesta oportuna. El agente IA califica leads en 3 segundos, agenda citas con el asesor correcto y actualiza el CRM sin intervención humana. Primera respuesta: 3 segundos. Leads perdidos: -89%. Agendas de asesores: llenas al 95%.</div>
-        <blockquote itemprop="reviewBody" style="margin-top:.75rem;font-style:italic;color:var(--ink-2);font-size:.85rem;border-left:2px solid var(--accent);padding-left:.75rem">"Nuestros asesores ahora hablan solo con clientes listos para comprar." — Director Comercial</blockquote>
+        <blockquote itemprop="reviewBody" style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Nuestros asesores ahora hablan solo con clientes listos para comprar." — Director Comercial</blockquote>
       </div>
       <span class="caso-tag">Inmobiliaria</span>
     </article>
@@ -911,7 +929,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="caso-info">
         <div class="caso-name" itemprop="name">Clínica Vida — Salud privada · CDMX</div>
         <div class="caso-sub" itemprop="description">La recepcionista dedicaba 6 horas al día a responder dudas repetitivas por WhatsApp. Los leads se enfriaban mientras esperaban. El agente atiende dudas, muestra precios, agenda citas y envía recordatorios automáticos. Leads calificados: 2.4 veces más. Citas agendadas por semana: +68%. Tiempo administrativo de recepción: reducido en 5 horas diarias.</div>
-        <blockquote itemprop="reviewBody" style="margin-top:.75rem;font-style:italic;color:var(--ink-2);font-size:.85rem;border-left:2px solid var(--accent);padding-left:.75rem">"Mi recepcionista ahora se enfoca en la experiencia del paciente, no en el teléfono." — Directora Médica</blockquote>
+        <blockquote itemprop="reviewBody" style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Mi recepcionista ahora se enfoca en la experiencia del paciente, no en el teléfono." — Directora Médica</blockquote>
       </div>
       <span class="caso-tag">Clínica</span>
     </article>
@@ -921,7 +939,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="caso-info">
         <div class="caso-name" itemprop="name">Despacho García — Servicios legales · Guadalajara</div>
         <div class="caso-sub" itemprop="description">$85,000 MXN al mes en 3 personas para atención inicial y clasificación de casos, un gasto insostenible que limitaba el crecimiento del despacho. El agente hace el primer filtro legal, clasifica el caso, recopila documentos y agenda con el abogado correcto sin intervención manual. Costo de atención inicial: -67%. Tiempo de abogados en trabajo facturable: +40%. Satisfacción de clientes: 4.7 de 5.</div>
-        <blockquote itemprop="reviewBody" style="margin-top:.75rem;font-style:italic;color:var(--ink-2);font-size:.85rem;border-left:2px solid var(--accent);padding-left:.75rem">"Ahorramos más de $57,000 MXN al mes. El ROI fue evidente desde el primer mes." — Socio fundador, Despacho García</blockquote>
+        <blockquote itemprop="reviewBody" style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Ahorramos más de $57,000 MXN al mes. El ROI fue evidente desde el primer mes." — Socio fundador, Despacho García</blockquote>
       </div>
       <span class="caso-tag">Legal</span>
     </article>
@@ -973,7 +991,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
   <div style="margin-top:3rem" class="reveal reveal-delay-3">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
-    <p style="margin-top:.7rem;font-family:var(--mono);font-size:.63rem;color:var(--ink-3);letter-spacing:.05em">Sin compromiso. Respuesta en menos de 1 hora.</p>
+    <p style="margin-top:.7rem;font-family:var(--mono);font-size:.78rem;color:var(--ink-3);letter-spacing:.05em">Sin compromiso. Respuesta en menos de 1 hora.</p>
   </div>
 </section>
 <div class="card-deck-zone">

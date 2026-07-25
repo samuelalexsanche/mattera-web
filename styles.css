@@ -21,10 +21,10 @@
   --bt-dark:    #1E2318;
   --bt-alt:     #2B3122;
   --bt-ink:     #F2EFE6;
-  --bt-sage:    #A8AC97;
+  --bt-sage:    #C8CCB8;
   --bt-paper:   #EFEFE3;
   --bt-p-ink:   #1E2318;
-  --bt-p-sec:   #686D5C;
+  --bt-p-sec:   #4F5445;
   --bt-border:  #333829;
   --bt-bpaper:  #D8D9CC;
   --bt-orange:  #FCA311;
@@ -115,7 +115,9 @@
   margin-top: .35rem;
   display: block;
 }
-.sec-paper .calc-result-value.accent { color: var(--bt-orange) !important; }
+/* naranja de marca sobre papel: #FCA311 solo da 1.75:1, se oscurece para AA */
+.sec-paper .calc-result-value.accent { color: #A85F02 !important; }
+.sec-paper .comparativa-header .comparativa-col-mattera { color: #A85F02 !important; }
 
 /* Calc instrument card */
 .calc-instrument {
@@ -158,8 +160,8 @@
 
 .hero-eyebrow {
   font-family: var(--mono) !important;
-  font-size: 12px !important;
-  letter-spacing: 2px !important;
+  font-size: 13px !important;
+  letter-spacing: 1.6px !important;
   color: var(--bt-sage) !important;
   text-transform: uppercase;
   margin-bottom: 1.75rem !important;
@@ -227,7 +229,7 @@
   align-items: center;
   text-decoration: none;
   transition: transform 200ms ease !important;
-  font-size: .875rem;
+  font-size: .95rem;
   letter-spacing: normal !important;
   text-transform: none !important;
 }
@@ -240,7 +242,7 @@
   color: var(--bt-ink);
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: .875rem;
+  font-size: .95rem;
   text-decoration: none;
   border-radius: 8px;
   transition: border-color 200ms ease;
@@ -270,7 +272,7 @@
   flex-shrink: 0;
 }
 .chat-name { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; color: var(--bt-ink); }
-.chat-status { font-family: var(--mono); font-size: 11px; color: var(--bt-sage); margin-top: 2px; }
+.chat-status { font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage); margin-top: 2px; }
 .chat-status::before {
   content: '';
   display: inline-block; width: 6px; height: 6px;
@@ -297,25 +299,25 @@
   align-self: flex-start; border-radius: 8px 8px 8px 2px;
 }
 .chat-bubble-system {
-  font-family: var(--mono) !important; font-size: 11px !important;
+  font-family: var(--mono) !important; font-size: 12.5px !important;
   color: var(--bt-sage) !important; background: transparent !important;
   padding: 4px 0 !important; align-self: flex-start; max-width: 100% !important;
 }
 .chat-footer {
-  font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
+  font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage);
   border-top: 1px solid var(--bt-border); padding-top: 10px; text-align: center;
 }
 
 /* ─── TYPOGRAPHY HIERARCHY ───────────────────────────────────── */
 .section-title {
-  font-family: 'Fraunces', Georgia, serif !important;
+  font-family: var(--serif) !important;
   font-weight: 600 !important;
-  font-size: clamp(34px, 4.5vw, 56px) !important;
-  line-height: 1.12 !important;
+  font-size: clamp(34px, 4.2vw, 56px) !important;
+  line-height: 1.18 !important;
 }
 .section-eyebrow {
   font-family: var(--mono) !important;
-  font-size: 12px !important;
+  font-size: 12.5px !important;
   letter-spacing: 2px !important;
 }
 
@@ -372,7 +374,7 @@
 }
 .stack-item {
   font-family: var(--mono) !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
   color: var(--bt-sage) !important;
@@ -406,15 +408,15 @@
   background: var(--bt-sage); opacity: 0.4;
 }
 .browser-url {
-  font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
+  font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage);
   flex: 1; background: rgba(30,35,24,.4); padding: 3px 10px;
   border-radius: 3px; letter-spacing: .5px;
 }
 .browser-body { background: var(--bt-dark); padding: 20px; }
 .dash-eyebrow {
-  font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
-  letter-spacing: 1.5px; text-transform: uppercase;
-  margin-bottom: 16px; opacity: .7;
+  font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage);
+  letter-spacing: 1.2px; text-transform: uppercase;
+  margin-bottom: 16px;
 }
 .dash-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 16px; }
 .dash-metric { background: var(--bt-alt); border: 1px solid var(--bt-border); padding: 16px; }
@@ -422,16 +424,16 @@
   font-family: var(--mono); font-size: 28px; color: var(--bt-ink);
   line-height: 1; margin-bottom: 6px; display: block;
 }
-.dash-metric-label { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--bt-sage); line-height: 1.4; }
+.dash-metric-label { font-family: 'Inter', sans-serif; font-size: 12.5px; color: var(--bt-sage); line-height: 1.4; }
 .dash-sparkline-wrap { background: var(--bt-alt); border: 1px solid var(--bt-border); padding: 16px; margin-bottom: 10px; }
-.dash-sparkline-label { font-family: var(--mono); font-size: 11px; color: var(--bt-sage); letter-spacing: .5px; margin-bottom: 10px; }
+.dash-sparkline-label { font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage); letter-spacing: .5px; margin-bottom: 10px; }
 .dash-sparkline { height: 36px; display: flex; align-items: flex-end; gap: 3px; }
 .dash-bar { flex: 1; background: rgba(168,172,151,.2); border-radius: 2px 2px 0 0; transition: background 200ms; }
 .dash-bar:nth-child(5) { background: rgba(168,172,151,.5); }
 .dash-bar:last-child { background: rgba(168,172,151,.75); }
 .dash-bar:hover { background: rgba(168,172,151,.9) !important; }
 .browser-footer {
-  font-family: var(--mono); font-size: 11px; color: var(--bt-sage);
+  font-family: var(--mono); font-size: 12.5px; color: var(--bt-sage);
   padding: 10px 16px; background: var(--bt-alt);
   border-top: 1px solid var(--bt-border); text-align: center;
 }
@@ -461,16 +463,15 @@
   color: var(--bt-ink) !important;
 }
 .cta-final-line {
-  font-family: 'Fraunces', Georgia, serif !important;
-  font-weight: 400 !important;
-  font-style: italic !important;
-  font-size: clamp(28px, 3.5vw, 44px) !important;
+  font-family: var(--serif) !important;
+  font-weight: 600 !important;
+  font-size: clamp(30px, 3.4vw, 44px) !important;
   color: var(--bt-ink) !important;
   line-height: 1.25 !important;
 }
 .cta-microcopy {
   font-family: var(--mono) !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
   color: var(--bt-sage) !important;
 }
 /* Oculta el botón outline en el CTA (solo 1 naranja) */
@@ -481,15 +482,15 @@
 footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important; }
 .footer-logo-word { color: var(--bt-ink) !important; }
 .footer-tagline { color: var(--bt-sage) !important; }
-.footer-addr { color: var(--bt-sage) !important; }
+.footer-addr { color: var(--bt-sage) !important; font-size: 12.5px !important; }
 .footer-col h4 {
   font-family: var(--mono) !important;
-  font-size: 11px !important; letter-spacing: 1.5px !important;
-  text-transform: uppercase !important; color: var(--bt-sage) !important;
+  font-size: 12.5px !important; letter-spacing: 1.1px !important;
+  text-transform: uppercase !important; color: var(--bt-ink) !important;
 }
-.footer-col a { font-family: 'Inter', sans-serif !important; font-size: 14px !important; color: var(--bt-sage) !important; }
+.footer-col a { font-family: 'Inter', sans-serif !important; font-size: 15px !important; color: var(--bt-sage) !important; }
 .footer-col a:hover { color: var(--bt-ink) !important; }
-.footer-copy, .footer-build { font-family: var(--mono) !important; font-size: 11px !important; color: var(--bt-sage) !important; opacity: .65; }
+.footer-copy, .footer-build { font-family: var(--mono) !important; font-size: 12.5px !important; color: var(--bt-sage) !important; opacity: 1; }
 .footer-top { border-bottom-color: var(--bt-border) !important; }
 
 /* ─── SERVICIOS — tarjetas alt en fondo dark ─────────────────── */
@@ -622,7 +623,7 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
 
 .pricing-card-tag {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12.5px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--bt-sage);
@@ -641,12 +642,12 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
 }
 .card-secondary .pricing-card-price {
   font-size: clamp(44px, 5vw, 72px);
-  color: rgba(242,239,230,.7);
+  color: rgba(242,239,230,.92);
 }
 
 .pricing-card-currency {
   font-family: var(--mono);
-  font-size: .72rem;
+  font-size: .8rem;
   color: var(--bt-sage);
   letter-spacing: .05em;
   margin-bottom: 1.5rem;
@@ -693,10 +694,9 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
 }
 .pricing-includes-title {
   font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: rgba(242,239,230,.6);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--bt-ink);
   margin-bottom: 1.75rem;
 }
 .pricing-includes-grid {
@@ -707,8 +707,8 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   padding: 0; margin: 0;
 }
 .pricing-includes-grid li {
-  font-size: .875rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--bt-sage);
   padding-left: 1.4rem;
   position: relative;
@@ -719,13 +719,12 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   left: 0;
   color: var(--bt-ink);
   font-family: var(--mono);
-  font-size: .7rem;
+  font-size: .78rem;
   top: .15em;
 }
 .pricing-includes-grid .pricing-guarantee {
   grid-column: 1 / -1;
-  color: rgba(242,239,230,.75);
-  font-style: italic;
+  color: var(--bt-sage);
   border-top: 1px solid var(--bt-border);
   padding-top: 1rem;
   margin-top: .5rem;
@@ -746,19 +745,19 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
 }
 .pricing-cta-note {
   font-family: var(--mono);
-  font-size: .63rem;
+  font-size: .78rem;
   color: var(--bt-sage);
   letter-spacing: .05em;
 }
 .pricing-enterprise-link {
   font-family: var(--serif);
-  font-style: italic;
-  font-size: .92rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--bt-sage);
   margin-left: auto;
 }
 .pricing-enterprise-link a {
-  color: rgba(242,239,230,.75);
+  color: var(--bt-ink);
   border-bottom: 1px solid var(--bt-border);
   transition: color 200ms, border-color 200ms;
 }
@@ -773,7 +772,7 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
 }
 .pricing-badge {
   font-family: var(--mono);
-  font-size: .65rem;
+  font-size: .78rem;
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--bt-sage);
@@ -870,10 +869,10 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
    SECCIÓN 05 — MANIFIESTO
    ═══════════════════════════════════════════════════════════════ */
 .manifiesto-quote {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(28px, 4.5vw, 64px);
+  font-size: clamp(30px, 4vw, 56px);
   line-height: 1.2;
   color: var(--bt-ink);
   max-width: 24ch;
@@ -904,7 +903,7 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   border: 1px solid var(--bt-border);
   color: var(--bt-ink);
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 12.5px;
   padding: 7px 10px;
   border-radius: 6px;
   outline: none;
@@ -922,7 +921,7 @@ footer { background: var(--bt-dark) !important; color: var(--bt-ink) !important;
   border-radius: 6px;
   cursor: pointer;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 12.5px;
   flex-shrink: 0;
   transition: border-color 200ms, color 200ms;
 }

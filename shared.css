@@ -4,7 +4,7 @@
 .nav-dropdown { position: relative; }
 .nav-dropdown-btn {
   font-family: var(--mono);
-  font-size: .72rem;
+  font-size: .78rem;
   font-weight: 500;
   color: var(--ink-2);
   letter-spacing: .05em;
@@ -32,7 +32,7 @@
 .nav-dropdown:hover .nav-dropdown-btn::after,
 .nav-dropdown:focus-within .nav-dropdown-btn::after { transform: scaleX(1); }
 .nav-dropdown-arrow {
-  opacity: .5; font-size: .55rem;
+  opacity: .85; font-size: .78rem;
   transition: transform .2s ease; display: inline-block;
 }
 .nav-dropdown:hover .nav-dropdown-arrow,
@@ -61,7 +61,7 @@
 .nav-dropdown-menu a {
   display: block !important;
   font-family: var(--mono) !important;
-  font-size: .65rem !important;
+  font-size: .78rem !important;
   letter-spacing: .06em !important;
   text-transform: uppercase !important;
   color: var(--ink-2) !important;
@@ -83,11 +83,11 @@
   width: 100%;
 }
 .mobile-nav-industrias-label {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2);
 }
 .mobile-nav-industrias a {
-  font-family: var(--serif) !important; font-style: italic !important;
+  font-family: var(--serif) !important; font-weight: 600 !important;
   font-size: 1.5rem !important; color: var(--ink-2) !important;
   transition: color .2s !important;
 }
@@ -107,8 +107,7 @@
 }
 .sec-cta .cta-final-line {
   font-family: var(--serif) !important;
-  font-style: italic !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   font-size: clamp(28px, 3.5vw, 44px) !important;
   color: var(--ink) !important;
 }
@@ -131,7 +130,7 @@
   padding: clamp(80px,12vh,140px) 2rem clamp(64px,8vh,100px);
 }
 .industria-hero-eyebrow {
-  font-family: var(--mono); font-size: .68rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-2); margin-bottom: 1.5rem;
   display: flex; align-items: center; gap: .75rem;
@@ -141,7 +140,7 @@
   background: var(--line-soft); max-width: 48px;
 }
 .industria-hero-h1 {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: clamp(36px, 5.5vw, 76px);
   line-height: 1.08; letter-spacing: -.02em;
   color: var(--ink); max-width: 18ch; margin-bottom: 1.5rem;
@@ -173,7 +172,7 @@
 
 /* ─── EL RETORNO (sec-paper) ───────────────────────────────── */
 .roi-subtitle {
-  font-family: var(--mono); font-size: .7rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .04em; color: var(--bt-p-sec);
   line-height: 1.7; max-width: 68ch;
   margin: -.25rem 0 2rem;
@@ -184,14 +183,14 @@
   border: 1.5px solid var(--bt-bpaper);
 }
 .roi-table th {
-  font-family: var(--mono); font-size: .62rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--bt-p-sec); background: rgba(30,35,24,.04);
   padding: .75rem 1.25rem; text-align: left;
   border-bottom: 1.5px solid var(--bt-bpaper);
 }
 .roi-table td {
-  font-size: .875rem; line-height: 1.6; color: var(--bt-p-sec);
+  font-size: 1rem; line-height: 1.65; color: var(--bt-p-sec);
   padding: .8rem 1.25rem; border-bottom: 1.5px solid var(--bt-bpaper);
   vertical-align: top;
 }
@@ -202,19 +201,20 @@
   white-space: nowrap; color: var(--bt-p-ink);
 }
 .roi-table tr.roi-hl td { background: rgba(30,35,24,.05); }
-.roi-table tr.roi-hl td:last-child { color: var(--bt-orange); }
+/* naranja de marca (#FCA311) solo da 1.75:1 sobre papel: se oscurece para AA */
+.roi-table tr.roi-hl td:last-child { color: #8F5002; font-weight: 600; }
 
 .roi-callout {
   padding: 1.25rem 1.5rem;
   border-left: 3px solid var(--bt-p-ink);
   background: rgba(30,35,24,.04);
-  font-size: .875rem; line-height: 1.75;
+  font-size: 1rem; line-height: 1.75;
   color: var(--bt-p-ink); font-style: italic;
   margin-bottom: 1.75rem;
 }
 .btn-paper-ghost {
   display: inline-flex; align-items: center; gap: .45rem;
-  font-family: var(--mono); font-size: .72rem; font-weight: 500;
+  font-family: var(--mono); font-size: .78rem; font-weight: 500;
   letter-spacing: .06em; text-transform: uppercase;
   border: 1.5px solid var(--bt-border);
   padding: .75rem 1.5rem; color: var(--bt-p-ink);
@@ -243,30 +243,30 @@
 .blog-card:hover { border-color: rgba(181,186,163,.45); transform: translateY(-4px); }
 .blog-card-meta { display: flex; align-items: center; gap: 1rem; }
 .blog-card-cat {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-2); border: 1px solid var(--line-soft);
   padding: .25rem .65rem;
 }
 .blog-card-time {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .06em; color: var(--ink-3);
 }
 .blog-card-title {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: 1.15rem; line-height: 1.3; letter-spacing: -.01em;
   color: var(--ink); margin: .25rem 0;
 }
-.blog-card-excerpt { font-size: .85rem; line-height: 1.65; color: var(--ink-2); flex: 1; }
+.blog-card-excerpt { font-size: 1rem; line-height: 1.7; color: var(--ink-2); flex: 1; }
 .blog-card-date {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3);
   margin-top: .5rem;
 }
 
 /* ─── ARTICLE PAGE ─────────────────────────────────────────── */
 .breadcrumb {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .08em; color: var(--ink-2);
   display: flex; align-items: center; gap: .5rem;
   text-transform: uppercase; margin-bottom: 2rem;
@@ -281,17 +281,17 @@
 }
 .article-meta { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; flex-wrap: wrap; }
 .article-cat {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-2); border: 1px solid var(--line-soft);
   padding: .3rem .75rem;
 }
 .article-read-time, .article-date {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .06em; color: var(--ink-3);
 }
 .article-h1 {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: clamp(32px, 4.5vw, 60px);
   line-height: 1.1; letter-spacing: -.02em; color: var(--ink);
   margin-bottom: 1.5rem;
@@ -302,7 +302,7 @@
   padding: 0 2rem clamp(80px,10vh,140px);
 }
 .article-body h2 {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: clamp(20px, 2.5vw, 30px); line-height: 1.2;
   color: var(--ink); margin: 2.5rem 0 1rem;
 }
@@ -318,7 +318,7 @@
 }
 .article-body ul li::before {
   content: '→'; position: absolute; left: 0;
-  color: var(--ink); font-family: var(--mono); font-size: .75rem;
+  color: var(--ink); font-family: var(--mono); font-size: .78rem;
 }
 .article-table-wrap { overflow-x: auto; margin: 1.75rem 0; }
 .article-table {
@@ -326,7 +326,7 @@
   background: var(--bt-paper); color: var(--bt-p-ink);
 }
 .article-table th {
-  font-family: var(--mono); font-size: .62rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--bt-p-sec); padding: .75rem 1rem;
   border-bottom: 1.5px solid var(--bt-bpaper);
@@ -345,12 +345,12 @@
   padding: 2rem; margin: 2.5rem 0;
 }
 .article-mid-cta-text {
-  font-family: var(--serif); font-style: italic;
+  font-family: var(--serif); font-weight: 600;
   font-size: 1.05rem; color: var(--ink);
   line-height: 1.5; margin-bottom: 1rem !important;
 }
 .article-mid-cta-sub {
-  font-family: var(--mono) !important; font-size: .63rem !important;
+  font-family: var(--mono) !important; font-size: .78rem !important;
   color: var(--ink-3) !important; letter-spacing: .06em !important;
   margin-top: .65rem !important;
 }
@@ -370,7 +370,7 @@
   padding: clamp(80px,12vh,140px) 2rem clamp(64px,8vh,100px);
 }
 .nosotros-eyebrow {
-  font-family: var(--mono); font-size: .68rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-2); margin-bottom: 1.5rem;
   display: flex; align-items: center; gap: .75rem;
@@ -380,7 +380,7 @@
   background: var(--line-soft); max-width: 48px;
 }
 .nosotros-h1 {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: clamp(34px, 5vw, 72px);
   line-height: 1.08; letter-spacing: -.02em;
   color: var(--ink); max-width: 22ch; margin-bottom: 1.5rem;
@@ -411,7 +411,7 @@
   border-color: var(--bt-bpaper); border-style: dashed;
 }
 .historia-hito-year {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--bt-p-sec); margin-bottom: .35rem;
 }
@@ -445,7 +445,7 @@
 }
 .principio-card:hover { border-color: rgba(181,186,163,.45); transform: translateY(-4px); }
 .principio-num {
-  font-family: var(--mono); font-size: .62rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-3); margin-bottom: 1.25rem;
 }
@@ -462,7 +462,7 @@
   color: var(--bt-p-sec); max-width: 64ch; margin-bottom: 1.75rem;
 }
 .detras-link {
-  font-family: var(--mono); font-size: .72rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .06em; text-transform: uppercase;
   color: var(--bt-p-ink); border-bottom: 1px solid var(--bt-p-ink);
   transition: opacity .2s; display: inline-block;
@@ -505,7 +505,7 @@
   margin-top: .75rem;
 }
 .blog-card-link {
-  font-family: var(--mono); font-size: .65rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .06em; text-transform: uppercase;
   color: var(--ink-2); transition: color .2s;
   margin-top: auto; padding-top: .5rem;
@@ -513,7 +513,7 @@
 }
 .blog-card-link:hover { color: var(--ink); }
 .blog-card-placeholder { opacity: .45; pointer-events: none; }
-.blog-card-meta time { font-family: var(--mono); font-size: .6rem; letter-spacing: .06em; color: var(--ink-3); }
+.blog-card-meta time { font-family: var(--mono); font-size: .78rem; letter-spacing: .06em; color: var(--ink-3); }
 .blog-card-title a { color: inherit; text-decoration: none; }
 .blog-card-title a:hover { text-decoration: underline; text-decoration-color: var(--line-soft); }
 
@@ -549,11 +549,11 @@
 .equipo-avatar svg { width: 100%; height: 100%; }
 .equipo-info { display: flex; flex-direction: column; gap: .4rem; }
 .equipo-nombre { font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--ink); }
-.equipo-rol { font-family: var(--mono); font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.equipo-rol { font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
 .equipo-bio { font-size: .875rem; line-height: 1.72; color: var(--ink-2); margin-top: .35rem; max-width: 52ch; }
 .equipo-linkedin {
   display: inline-flex; align-items: center; gap: .45rem;
-  font-family: var(--mono); font-size: .63rem; letter-spacing: .06em;
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .06em;
   text-transform: uppercase; color: var(--ink-2);
   transition: color .2s; margin-top: .5rem;
   text-decoration: none;
@@ -585,7 +585,7 @@
 .flujo-step:first-child { border-top: none; padding-top: 0; }
 .flujo-step:last-child { padding-bottom: 0; }
 .flujo-num {
-  font-family: var(--mono); font-size: .62rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .1em; color: var(--ink-3);
   padding-top: .15rem;
 }
@@ -596,7 +596,7 @@
 }
 .flujo-desc { font-size: .875rem; line-height: 1.72; color: var(--ink-2); }
 .flujo-entregable {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--accent); border: 1px solid rgba(252,163,17,.22);
   padding: .22rem .65rem; display: inline-block;
@@ -611,7 +611,7 @@
   background: rgba(252,163,17,.04);
 }
 .mop-label {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .14em; text-transform: uppercase;
   color: var(--accent); display: block; margin-bottom: .55rem;
 }
@@ -641,25 +641,25 @@
 }
 .industria-card:hover { border-color: rgba(181,186,163,.45); transform: translateY(-4px); }
 .industria-card-tag {
-  font-family: var(--mono); font-size: .6rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-3); border: 1px solid var(--line-soft);
   padding: .2rem .6rem; display: inline-block; align-self: flex-start;
 }
 .industria-card-titulo {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: 1.2rem; line-height: 1.25; color: var(--ink);
 }
-.industria-card-desc { font-size: .875rem; line-height: 1.7; color: var(--ink-2); flex: 1; }
+.industria-card-desc { font-size: 1rem; line-height: 1.7; color: var(--ink-2); flex: 1; }
 .industria-card-link {
-  font-family: var(--mono); font-size: .63rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .06em; text-transform: uppercase;
   color: var(--ink-2); margin-top: .35rem;
   transition: color .2s;
 }
 .industria-card:hover .industria-card-link { color: var(--ink); }
 .hub-cierre {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 600;
   font-size: clamp(1.1rem,2vw,1.4rem); line-height: 1.5;
   color: var(--ink-2); max-width: 54ch;
   margin-top: 3rem; padding-top: 2.5rem;
@@ -675,7 +675,7 @@
   display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.5rem;
 }
 .industria-pill {
-  font-family: var(--mono); font-size: .72rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--ink); border: 1px solid var(--line-soft);
   padding: .6rem 1.25rem; border-radius: 999px;
@@ -684,7 +684,7 @@
 .industria-pill:hover { background: var(--accent-soft); border-color: var(--accent); }
 .industrias-strip-more {
   display: inline-block; margin-top: 2rem;
-  font-family: var(--mono); font-size: .72rem;
+  font-family: var(--mono); font-size: .78rem;
   letter-spacing: .08em; color: var(--accent-orange);
   transition: opacity .2s;
 }
@@ -706,3 +706,84 @@
 @media (max-width: 480px) {
   .numeros-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ─── ÉNFASIS EN PALABRAS CLAVE (toda la web) ────────────────── */
+strong,b,.key{color:var(--ink);font-weight:600}
+.sec-paper strong,.sec-paper b,.sec-paper .key{color:var(--bt-p-ink)}
+.mark{color:var(--ink);font-weight:600;box-shadow:inset 0 -.42em 0 rgba(181,186,163,.22)}
+.sec-paper .mark{color:var(--bt-p-ink);box-shadow:inset 0 -.42em 0 rgba(181,186,163,.40)}
+.num{font-family:var(--display);font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.sec-paper .num{color:var(--bt-p-ink)}
+
+/* ─── EXPLICADOR SEO/GEO COMPACTO (home) ─────────────────────── */
+.geomini{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-bottom:2.5rem}
+.geomini-card{background:var(--bg-warm);border:1.5px solid var(--line-soft);border-radius:6px;padding:1.6rem 1.75rem}
+.geomini-tag{display:inline-block;font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);padding:.28rem .7rem;border-radius:3px;margin-bottom:.9rem}
+.geomini-card h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;line-height:1.3;color:var(--ink);margin-bottom:.6rem}
+.geomini-card p{font-size:1rem;line-height:1.72;color:var(--ink-2)}
+.geomini-note{border-left:4px solid var(--accent-orange);background:var(--bg-warm);padding:1.25rem 1.5rem;margin-bottom:2.5rem;border-radius:0 6px 6px 0}
+.geomini-note p{font-size:1.02rem;line-height:1.75;color:var(--ink-2)}
+@media(max-width:768px){.geomini{grid-template-columns:1fr}}
+
+/* ─── FIX: artículos de blog dentro de secciones PAPEL (fondo claro) ───
+   .article-body vive en <section class="section sec-paper">, pero sus
+   reglas usaban var(--ink) (casi blanco) -> texto invisible sobre papel. */
+.sec-paper .article-body h2,
+.sec-paper .article-body h3        { color: var(--bt-p-ink) !important; }
+.sec-paper .article-body p strong,
+.sec-paper .article-body li strong { color: var(--bt-p-ink) !important; }
+.sec-paper .article-body ul li::before { color: var(--bt-p-ink) !important; }
+.sec-paper .article-lede           { color: var(--bt-p-ink) !important; }
+.sec-paper .article-table th       { color: var(--bt-p-ink) !important; }
+
+/* lectura larga: 15.2px era muy chico para un artículo */
+.article-body p, .article-body ul li { font-size: 1.05rem; }
+.article-deck  { font-size: clamp(1.05rem,1.3vw,1.18rem); }
+.article-lede  { font-size: 1.15rem; }
+.article-mid-cta p { font-size: 1.05rem !important; }
+
+/* ─── FIX: .roi-table / .roi-callout / .btn-paper-ghost en fondo OSCURO ───
+   Se diseñaron para secciones papel (usan --bt-p-ink, casi negro). En
+   que-es-automatizacion.html viven dentro de .sec-alt (fondo #2B3122),
+   donde ese texto oscuro quedaba invisible (1.2:1). */
+.sec-dark .roi-table,          .sec-alt .roi-table          { border-color: var(--line-soft); }
+.sec-dark .roi-table th,       .sec-alt .roi-table th       { color: var(--ink); background: rgba(242,239,230,.05); border-bottom-color: var(--line-soft); }
+.sec-dark .roi-table td,       .sec-alt .roi-table td       { color: var(--ink-2); border-bottom-color: var(--line-soft); }
+.sec-dark .roi-table td:first-child, .sec-alt .roi-table td:first-child { color: var(--ink); }
+.sec-dark .roi-table td:last-child,  .sec-alt .roi-table td:last-child  { color: var(--ink); }
+.sec-dark .roi-table tr.roi-hl td,   .sec-alt .roi-table tr.roi-hl td   { background: rgba(242,239,230,.06); }
+.sec-dark .roi-table tr.roi-hl td:last-child,
+.sec-alt  .roi-table tr.roi-hl td:last-child { color: var(--accent-orange); }
+.sec-dark .roi-callout,        .sec-alt .roi-callout        { border-left-color: var(--accent-orange); background: rgba(242,239,230,.04); color: var(--ink); }
+.sec-dark .btn-paper-ghost,    .sec-alt .btn-paper-ghost    { border-color: var(--line-soft); color: var(--ink); }
+.sec-dark .btn-paper-ghost:hover, .sec-alt .btn-paper-ghost:hover { border-color: var(--ink); background: rgba(242,239,230,.06); }
+
+/* ─── FIX: tarjetas de fondo OSCURO dentro de secciones PAPEL ─────────
+   styles.css fuerza `.sec-paper p, .sec-paper li { color: oscuro !important }`,
+   pero estas tarjetas tienen background var(--bg-warm) (#2B3122), así que su
+   texto quedaba oscuro-sobre-oscuro (~1.7:1). Se le devuelve el color claro.
+   Componentes afectados (verificados en el HTML): blog-card, industria-card,
+   numero-card, article-mid-cta. */
+.sec-paper .blog-card p,        .sec-paper .blog-card li,
+.sec-paper .blog-card-excerpt,
+.sec-paper .industria-card p,   .sec-paper .industria-card li,
+.sec-paper .industria-card-desc,
+.sec-paper .numero-card p,      .sec-paper .numero-card li,
+.sec-paper .article-mid-cta p,  .sec-paper .article-mid-cta li,
+.sec-paper .equipo-card p,      .sec-paper .principio-card p,
+.sec-paper .lqc-card p,         .sec-paper .lqc-card li,
+.sec-paper .geomini-card p,     .sec-paper .geomini-note p   { color: var(--ink-2) !important; }
+
+.sec-paper .blog-card-title,    .sec-paper .blog-card-title a,
+.sec-paper .industria-card-titulo,
+.sec-paper .article-mid-cta-text,
+.sec-paper .equipo-card h3,     .sec-paper .principio-card h3,
+.sec-paper .lqc-card h3,        .sec-paper .geomini-card h3,
+.sec-paper .blog-card strong,   .sec-paper .industria-card strong,
+.sec-paper .numero-card strong, .sec-paper .article-mid-cta strong,
+.sec-paper .geomini-card strong,.sec-paper .geomini-note strong,
+.sec-paper .geomini-note .mark                               { color: var(--ink) !important; }
+
+.sec-paper .blog-card-cat,      .sec-paper .blog-card-meta time,
+.sec-paper .industria-card-tag, .sec-paper .article-mid-cta-sub { color: var(--ink-2) !important; }
+.sec-paper .blog-card-link,     .sec-paper .industria-card-link { color: var(--ink) !important; }
