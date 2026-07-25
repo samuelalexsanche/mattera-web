@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es GEO y por qué tu sitio ya no compite solo en Google? | Blog Mattera Systems</title>
+<meta name="description" content="Qué es GEO (optimización para motores generativos), en qué se diferencia del SEO y qué necesita tu sitio para que los sistemas de inteligencia artificial puedan leerlo. Explicado sin tecnicismos.">
+<link rel="canonical" href="https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html">
+<meta property="og:title" content="¿Qué es GEO y por qué tu sitio ya no compite solo en Google?">
+<meta property="og:description" content="Tus clientes dejaron de buscar y empezaron a preguntar. Qué cambia cuando la respuesta la da una IA, y qué tiene que tener tu sitio para poder estar en esa respuesta.">
+<meta property="og:url" content="https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://matterasystems.com/og/og-blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://matterasystems.com/og/og-blog.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="article:published_time" content="2026-07-24">
+<meta property="article:author" content="Mattera Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "¿Qué es GEO y por qué tu sitio web ya no compite solo en Google?",
+      "description": "Qué es GEO (optimización para motores generativos), en qué se diferencia del SEO y qué necesita tu sitio para que los sistemas de inteligencia artificial puedan leerlo.",
+      "author": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
+      "publisher": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
+      "datePublished": "2026-07-24",
+      "dateModified": "2026-07-24",
+      "url": "https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html",
+      "image": "https://matterasystems.com/og/og-blog.png",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://matterasystems.com/blog/"},
+          {"@type": "ListItem", "position": 3, "name": "¿Qué es GEO?", "item": "https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html"}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿El GEO reemplaza al SEO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. Son dos trabajos distintos que comparten buena parte de la base técnica. Un sitio ordenado, rápido y bien descrito sirve para los dos."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Alguien puede garantizarme que ChatGPT me mencione?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No, de la misma forma que nadie puede garantizar el primer lugar de Google. Lo que sí se puede hacer es dejar el sitio en condiciones de que sea posible, y eso es verificable."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda en notarse el GEO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "El contenido nuevo entra a los conjuntos de citación en cuestión de días. También pierde prioridad si no se actualiza, así que es un trabajo de mantenimiento, no de una sola vez."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿El GEO sirve si mi negocio es local y pequeño?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Especialmente. Las preguntas con ciudad —'¿qué taller me recomiendas en Tlaquepaque?'— son de las más comunes, y ahí compite un conjunto chico de negocios locales, no todo el país."}
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que rehacer mi sitio para aplicar GEO?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Depende de si el contenido se arma con JavaScript. Si el contenido se arma con JavaScript, normalmente sí. Los otros tres puntos —robots.txt, datos estructurados y llms.txt— se pueden corregir sobre el sitio existente."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../planes.html" onclick="closeMobileNav()">Sitios web</a>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="index.html" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="../industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="../industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="../industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="../industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="../industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../planes.html">Sitios web</a>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="index.html">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ARTICLE HEADER -->
+<div class="article-header-wrap sec-dark">
+  <div class="article-header">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../">Inicio</a>
+      <span aria-hidden="true">›</span>
+      <a href="index.html">Blog</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">¿Qué es GEO?</span>
+    </nav>
+    <div class="article-meta">
+      <span class="blog-card-cat">IA Aplicada</span>
+      <time datetime="2026-07-24">Julio 2026</time>
+      <span>·</span>
+      <span>Mattera Systems</span>
+    </div>
+    <h1 class="article-h1 reveal">¿Qué es GEO y por qué tu sitio web ya no compite solo en Google?</h1>
+    <p class="article-deck reveal reveal-delay-1">Tus clientes dejaron de buscar y empezaron a preguntar. Qué cambia cuando la respuesta la da una IA, y qué tiene que tener tu sitio para poder estar en esa respuesta.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ARTICLE BODY -->
+<section class="section sec-paper">
+  <div class="article-body">
+
+    <p class="article-lede">Durante veinte años, que te encontraran en internet significó una cosa: aparecer en la lista de Google. El trabajo para lograrlo se llama SEO, y sigue siendo necesario.</p>
+
+    <p>Pero cambió algo en cómo la gente busca. Muchos ya no escriben palabras sueltas en un buscador para revisar diez resultados. Abren ChatGPT, Perplexity o el propio Google, hacen una pregunta completa, y reciben una respuesta con unos cuantos nombres.</p>
+
+    <p>El trabajo de preparar tu sitio para poder estar en esas respuestas se llama GEO: optimización para motores generativos.</p>
+
+    <h2>¿Cuál es la diferencia entre SEO y GEO?</h2>
+
+    <p><strong>El SEO busca que aparezcas en una lista. El GEO busca que puedas ser mencionado en una respuesta.</strong></p>
+
+    <p>Un ejemplo con la misma persona y la misma necesidad:</p>
+
+    <p>Alguien necesita un dentista en Zapopan. Si abre Google y escribe "dentista en Zapopan", ve una lista de resultados y decide entre ellos. El SEO es el trabajo que hace que estés en esa lista, y no en la página cuatro donde nadie llega.</p>
+
+    <p>Si esa misma persona le pregunta a ChatGPT "¿qué dentista me recomiendas en Zapopan?", no recibe una lista de diez opciones para revisar. Recibe unos cuantos nombres. El GEO es el trabajo que hace que tu negocio pueda ser uno de ellos.</p>
+
+    <p>Los dos importan, y no se sustituyen entre sí. Buena parte del trabajo técnico se comparte: un sitio ordenado, rápido y bien descrito sirve para ambos.</p>
+
+    <h2>¿Por qué importa justo ahora?</h2>
+
+    <p>Porque hay menos lugares.</p>
+
+    <p>Una página de resultados de Google te da una lista larga para revisar. Una respuesta generada por inteligencia artificial te da unos cuantos nombres y cierra el tema.</p>
+
+    <p>Es la misma historia del SEO en 2010: los negocios que hicieron el trabajo temprano ocuparon posiciones que después costó años disputar. La diferencia es que esta vez el espacio disponible es más chico.</p>
+
+    <h2>¿Cómo decide una IA a quién mencionar?</h2>
+
+    <p>No hay una fórmula pública, y quien te diga que la conoce te está vendiendo algo. Pero sí hay condiciones técnicas verificables que determinan si tu sitio siquiera puede entrar en la conversación.</p>
+
+    <p><strong>Si un sistema de IA no puede leer tu sitio, no puede mencionarlo.</strong> Eso no es opinión: es cómo funcionan estos sistemas.</p>
+
+    <p>Hay cuatro condiciones que se revisan primero.</p>
+
+    <h2>¿Qué necesita tu sitio para que la IA pueda leerlo?</h2>
+
+    <h3>1. Que los rastreadores tengan permiso de entrar</h3>
+
+    <p>Todo sitio tiene un archivo llamado <code>robots.txt</code> que dice qué programas automáticos pueden leerlo. Muchos sitios bloquean ahí a los rastreadores de inteligencia artificial — GPTBot, ClaudeBot, PerplexityBot, Google-Extended — sin que su dueño lo sepa.</p>
+
+    <p>Es un archivo de tres líneas, casi nadie lo revisa, y decide si tu negocio puede ser leído o no.</p>
+
+    <h3>2. Que el contenido no dependa de JavaScript</h3>
+
+    <p>Muchos sitios modernos se arman en el navegador del visitante: el servidor manda una página casi vacía y el navegador la llena. Para una persona es invisible; para varios rastreadores de IA no, porque no ejecutan JavaScript.</p>
+
+    <p>El resultado es que ven una página en blanco donde tú ves tu negocio completo.</p>
+
+    <p>Este es el punto que más sitios reprueban sin sospecharlo.</p>
+
+    <h3>3. Que la información esté estructurada</h3>
+
+    <p>Una máquina puede leer el texto "Av. Vallarta 1200, Guadalajara" y no entender que es tu dirección. Los datos estructurados — un formato llamado JSON-LD — sirven para decirlo explícitamente: esto es una dirección, esto es un horario, esto es un servicio, esto es un precio.</p>
+
+    <p>Sin eso, el sistema tiene que adivinar. Y cuando adivina, se equivoca o prefiere citar a alguien que no lo hizo adivinar.</p>
+
+    <h3>4. Que exista un resumen para modelos</h3>
+
+    <p><code>llms.txt</code> es un archivo de texto, en la raíz del sitio, que explica en una página qué es el negocio, qué ofrece y dónde está. Es reciente y todavía no lo usan todos los sistemas, pero cuesta poco ponerlo y elimina ambigüedad.</p>
+
+    <h2>¿Cómo saber cómo está tu sitio hoy?</h2>
+
+    <p>Estos cuatro puntos son verificables. No requieren una herramienta especial ni un experto: son archivos de texto y etiquetas en el código.</p>
+
+    <p>Si quieres revisarlo por tu cuenta, empieza por escribir tu dominio seguido de <code>/robots.txt</code> en el navegador y busca si aparecen los nombres GPTBot o ClaudeBot con la palabra <code>Disallow</code>.</p>
+
+    <p>En Mattera todos nuestros sitios se entregan con este trabajo hecho — robots.txt abierto, datos estructurados en JSON-LD, <code>llms.txt</code> y contenido en HTML que cualquier rastreador puede leer. <a href="../planes.html">Ver planes →</a></p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿El GEO reemplaza al SEO?</h3>
+    <p>No. Son dos trabajos distintos que comparten buena parte de la base técnica. Un sitio ordenado, rápido y bien descrito sirve para los dos.</p>
+
+    <h3>¿Alguien puede garantizarme que ChatGPT me mencione?</h3>
+    <p>No, de la misma forma que nadie puede garantizar el primer lugar de Google. Lo que sí se puede hacer es dejar el sitio en condiciones de que sea posible, y eso es verificable.</p>
+
+    <h3>¿Cuánto tarda en notarse?</h3>
+    <p>El contenido nuevo entra a los conjuntos de citación en cuestión de días. También pierde prioridad si no se actualiza, así que es un trabajo de mantenimiento, no de una sola vez.</p>
+
+    <h3>¿Sirve si mi negocio es local y pequeño?</h3>
+    <p>Especialmente. Las preguntas con ciudad — "¿qué taller me recomiendas en Tlaquepaque?" — son de las más comunes, y ahí compite un conjunto chico de negocios locales, no todo el país.</p>
+
+    <h3>¿Tengo que rehacer mi sitio?</h3>
+    <p>Depende del punto 2. Si el contenido se arma con JavaScript, normalmente sí. Los otros tres puntos se pueden corregir sobre el sitio existente.</p>
+
+    <hr style="border:none;border-top:1.5px solid var(--line-soft);margin:2.5rem 0">
+
+    <p style="font-size:.85rem;color:var(--ink-3);font-style:italic">Este artículo está escrito con las mismas reglas que aplicamos a los sitios de nuestros clientes — puedes revisar el código de esta página y comprobarlo.</p>
+
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="article-mid-cta reveal">
+    <p>¿Quieres ver los planes de sitio web con SEO y GEO incluidos?</p>
+    <a href="../planes.html" class="btn-primary"><span>Ver planes →</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../planes.html">Sitios web con IA</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="index.html">Blog</a>
+        <a href="../planes.html">Planes y precios</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../que-es-automatizacion.html">¿Qué es automatización con IA?</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Mattera Systems</p>
+      <p class="footer-build">Este sitio lo operan los mismos sistemas que vendemos.</p>
+      <a href="../privacidad.html" class="footer-privacy">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

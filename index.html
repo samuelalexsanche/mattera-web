@@ -359,16 +359,52 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     },
     {
       "@type": "Service",
-      "@id": "https://matterasystems.com/#service",
+      "@id": "https://matterasystems.com/#service-automatizacion",
       "name": "Automatización con IA para empresas",
       "serviceType": "Automatización con IA, chatbots WhatsApp, CRM a medida, integraciones",
       "provider": {"@id": "https://matterasystems.com/#organization"},
-      "areaServed": "México",
+      "areaServed": "México"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://matterasystems.com/#plan-t1",
+      "name": "T1 Presencia — Sitio web con IA",
+      "description": "Sitio de 1 página hasta 6 bloques, base técnica SEO/GEO, carga en menos de 2 segundos, botón a WhatsApp, dominio, hosting, SSL y respaldos. En línea en 5 días.",
+      "brand": {"@id": "https://matterasystems.com/#organization"},
       "offers": {
         "@type": "Offer",
         "priceCurrency": "MXN",
-        "price": "10000",
-        "description": "Desarrollo desde $10,000 MXN pago único. Operación mensual desde $1,500 MXN."
+        "price": "5900",
+        "availability": "https://schema.org/InStock",
+        "url": "https://matterasystems.com/planes.html"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://matterasystems.com/#plan-t2",
+      "name": "T2 Sistema — Sitio web con asistente IA",
+      "description": "Hasta 5 secciones, asistente IA entrenado con el negocio disponible 24/7 (hasta 200 conversaciones al mes), SEO y GEO completos, registro de contactos, reporte mensual. En línea en 7 días.",
+      "brand": {"@id": "https://matterasystems.com/#organization"},
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MXN",
+        "price": "9900",
+        "availability": "https://schema.org/InStock",
+        "url": "https://matterasystems.com/planes.html"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://matterasystems.com/#plan-t3",
+      "name": "T3 Operación — Sitio web con IA y panel de operación",
+      "description": "Secciones ilimitadas, asistente IA a profundidad (hasta 600 conversaciones al mes), agenda conectada, panel de seguimiento de contactos, reportes quincenales. En línea en 14 días.",
+      "brand": {"@id": "https://matterasystems.com/#organization"},
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MXN",
+        "price": "19900",
+        "availability": "https://schema.org/InStock",
+        "url": "https://matterasystems.com/planes.html"
       }
     },
     {
@@ -412,6 +448,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     <a href="industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
     <a href="industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
   </div>
+  <a href="planes.html" onclick="closeMobileNav()">Sitios web</a>
   <a href="#calculadora" onclick="closeMobileNav()">Cálculo</a>
   <a href="blog/" onclick="closeMobileNav()">Blog</a>
   <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
@@ -441,6 +478,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <a href="industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
         </div>
       </div>
+      <a href="planes.html">Sitios web</a>
       <a href="#calculadora">Cálculo</a>
       <a href="blog/">Blog</a>
       <a href="nosotros.html">Nosotros</a>
@@ -535,7 +573,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="servicio-num">01</div>
       <svg class="servicio-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="22" height="16" rx="2"/><path d="M7 28l4-6h10l4 6"/><circle cx="28" cy="10" r="5"/><path d="M26 10h4M28 8v4"/></svg>
       <div class="servicio-title">Chat en WhatsApp y Web</div>
-      <p class="servicio-desc">Un asistente que responde los mensajes de tus clientes automáticamente. Disponible 24 horas, atiende dudas, toma pedidos y califica clientes interesados. En promedio, nuestros clientes eliminan 4 horas diarias de atención manual desde el primer mes.</p>
+      <p class="servicio-desc">Un asistente que responde los mensajes de tus clientes automáticamente. Disponible 24 horas, atiende dudas, toma pedidos y califica clientes interesados. Un cliente de distribución reportó 4 horas diarias menos de atención manual.</p>
       <span class="servicio-tag">WhatsApp · Web · 24/7</span>
     </div>
     <div class="servicio-card reveal reveal-delay-2">
@@ -572,6 +610,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="servicio-title">Sitio Web Profesional</div>
       <p class="servicio-desc">Tu página web lista para vender: carga en menos de 2 segundos y convierte visitas en conversaciones. Incluye el asistente IA integrado para que los visitantes puedan contactarte o preguntar sin salir del sitio.</p>
       <span class="servicio-tag">Rápida · Profesional · Integrada</span>
+      <a href="planes.html" style="display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:1px">Ver planes y precios →</a>
     </div>
   </div>
   <div style="margin-top:3rem;text-align:center" class="reveal">
@@ -624,8 +663,8 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <hr class="divider">
 <!-- CALCULADORA -->
 <section class="section sec-paper" id="calculadora" aria-labelledby="calc-title">
-  <p class="section-eyebrow reveal" data-i18n="s4.eyebrow">04 — CALCULADORA DE AHORRO</p>
-  <h2 class="section-title reveal reveal-delay-1" id="calc-title" data-i18n="s4.title">Ingresa tus números. <br>Nosotros hacemos el corte.</h2>
+  <p class="section-eyebrow reveal" data-i18n="s4.eyebrow">04 — ESTIMADOR CON TUS SUPUESTOS</p>
+  <h2 class="section-title reveal reveal-delay-1" id="calc-title" data-i18n="s4.title">Cálculo basado en los números <br>que tú ingresas.</h2>
   <div class="calc-instrument"><div class="calc-wrapper">
     <div class="calc-inputs reveal reveal-delay-2">
       <div class="calc-field">
@@ -661,19 +700,15 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       </div>
       <hr class="calc-divider">
       <div class="calc-result-row">
-        <span class="calc-result-label">Ahorro mensual</span>
+        <span class="calc-result-label">Diferencia estimada con tus datos</span>
         <span class="calc-result-value" id="resAhorroMensual">$26,500 MXN</span>
       </div>
       <div class="calc-result-row" style="margin-top:.35rem">
-        <span class="calc-result-label">Ahorro anual estimado</span>
+        <span class="calc-result-label">Diferencia anual estimada</span>
         <span class="calc-result-value accent" id="resAhorroAnual">$318,000 MXN</span>
       </div>
       <hr class="calc-divider">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-        <div class="calc-result-row">
-          <span class="calc-result-label">Días para recuperar tu inversión</span>
-          <span class="calc-result-value" id="resPayback">11</span>
-        </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:1rem">
         <div class="calc-result-row">
           <span class="calc-result-label">Horas recuperadas</span>
           <span class="calc-result-value" id="resHoras" style="font-size:clamp(18px,2.5vw,32px)">480 h/mes</span>
@@ -785,6 +820,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 <section class="section sec-alt" id="casos" aria-labelledby="casos-title">
   <p class="section-eyebrow reveal">RESULTADOS REALES</p>
   <h2 class="section-title reveal reveal-delay-1" id="casos-title">Lo que pasa cuando <br>el sistema opera.</h2>
+  <p style="font-family:var(--mono);font-size:.65rem;letter-spacing:.08em;color:var(--ink-3);margin-bottom:2rem">Resultados reportados por cada cliente · evidencia histórica, no oferta</p>
   <div class="casos-list reveal reveal-delay-2">
 
     <article class="caso-row" itemscope itemtype="https://schema.org/Review">
@@ -894,95 +930,65 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     </div>
   </div>
 </section>
-    <!-- PRECIO -->
-<section class="precio-section sec-pricing card-in-deck" data-deck-i="1" id="agenda" aria-labelledby="precio-title">
+    <!-- PLANES WEB (reemplaza sección 09 INVERSIÓN) -->
+<section class="section sec-dark card-in-deck" data-deck-i="1" id="agenda" aria-labelledby="planes-home-title">
+  <div style="max-width:var(--max-w);margin:0 auto">
+    <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — SITIOS WEB CON IA</p>
+    <h2 class="section-title reveal reveal-delay-1" id="planes-home-title" data-i18n="s9.title">Precio público.<br>Sin cotización.</h2>
+    <p class="reveal" style="font-size:.9rem;color:var(--ink-2);max-width:44ch;margin-bottom:2.5rem;line-height:1.65">Tres planes con precio fijo, pago en línea y meses sin intereses. SEO y GEO incluidos en todos.</p>
 
-  <!-- ── Capa 1 (más profunda): número "08" marca de agua ── -->
-  <div class="pricing-depth" id="pricingDepth1" data-pricing-depth="0.28" aria-hidden="true">
-    <div class="pricing-watermark-num">08</div>
-  </div>
+    <!-- Tarjetas compactas -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem" class="reveal reveal-delay-1">
 
-  <!-- ── Capa 2 (media): anillos concéntricos ── -->
-  <div class="pricing-depth" id="pricingDepth2" data-pricing-depth="0.14" aria-hidden="true">
-    <svg class="pricing-rings-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="300" cy="300" r="120" stroke="rgba(168,172,151,.055)" stroke-width="1"/>
-      <circle cx="300" cy="300" r="185" stroke="rgba(168,172,151,.042)" stroke-width="1"/>
-      <circle cx="300" cy="300" r="252" stroke="rgba(168,172,151,.030)" stroke-width="1"/>
-      <circle cx="300" cy="300" r="320" stroke="rgba(168,172,151,.020)" stroke-width="1"/>
-      <circle cx="300" cy="300" r="390" stroke="rgba(168,172,151,.013)" stroke-width="1"/>
-    </svg>
-  </div>
-
-  <!-- ── Capa 3 (más cerca): campo de puntos ── -->
-  <div class="pricing-depth" id="pricingDepth3" data-pricing-depth="0.06" aria-hidden="true">
-    <svg class="pricing-dots-svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="pricing-dot-grid" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
-          <circle cx="28" cy="28" r="1" fill="rgba(168,172,151,.09)"/>
-        </pattern>
-      </defs>
-      <rect width="1400" height="700" fill="url(#pricing-dot-grid)"/>
-    </svg>
-  </div>
-
-  <div class="precio-inner" style="position:relative;z-index:2">
-    <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — INVERSIÓN</p>
-    <h2 class="section-title reveal reveal-delay-1" id="precio-title" data-i18n="s9.title">Precio claro. <br>Sin sorpresas.</h2>
-
-    <!-- ── Dos tarjetas de precio ── -->
-    <div class="pricing-cards">
-
-      <!-- Tarjeta 1: Desarrollo -->
-      <div class="pricing-card card-primary reveal reveal-delay-2">
-        <span class="pricing-card-tag">Desarrollo · pago único</span>
-        <div class="pricing-card-price">$10,000</div>
-        <div class="pricing-card-currency" data-i18n="s9.currency">MXN · pago único por el desarrollo</div>
-        <div class="pricing-card-rule"></div>
-        <p class="pricing-card-desc">El precio exacto depende del alcance — integraciones, complejidad y plataformas. Te damos cotización en el diagnóstico gratuito.</p>
-        <div class="pricing-conditions" style="margin-top:1.5rem">
-          <span class="pricing-badge">Entrega en menos de un mes</span>
-          <span class="pricing-badge">NDA disponible</span>
-          <span class="pricing-badge">LFPDPPP</span>
-        </div>
-        <div class="card-ghost" aria-hidden="true">$10k</div>
+      <!-- T1 -->
+      <div style="background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem">
+        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T1 · Presencia</p>
+        <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$983<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
+        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$5,900 total · 6 MSI</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>1 página, base SEO/GEO</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Botón WhatsApp y formulario</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 5 días</li>
+        </ul>
+        <a href="planes.html#t1" class="btn-outline" style="text-align:center;justify-content:center;font-size:.7rem"><span>Ver detalles</span></a>
       </div>
 
-      <!-- Tarjeta 2: Operación -->
-      <div class="pricing-card card-secondary reveal reveal-delay-3">
-        <span class="pricing-card-tag">Operación mensual</span>
-        <div class="pricing-card-price">$1,500</div>
-        <div class="pricing-card-currency">MXN / mes · cifra exacta en tu cotización</div>
-        <div class="pricing-card-rule"></div>
-        <p class="pricing-card-desc">Cubre servidores, APIs, monitoreo activo, mejoras continuas y el reporte mensual de horas devueltas.</p>
-        <div class="pricing-conditions" style="margin-top:1.5rem">
-          <span class="pricing-badge">Sin contrato mínimo</span>
-          <span class="pricing-badge">Reporte mensual</span>
-        </div>
-        <div class="card-ghost" aria-hidden="true">/mes</div>
+      <!-- T2 destacado -->
+      <div style="background:var(--bg-warm);border:2px solid var(--accent);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem;position:relative">
+        <span style="position:absolute;top:0;left:50%;transform:translateX(-50%) translateY(-50%);font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg-warm);border:1.5px solid var(--accent);padding:.25rem .85rem;color:var(--accent);white-space:nowrap">Más elegido</span>
+        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T2 · Sistema</p>
+        <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$1,650<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
+        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$9,900 total · 6 MSI</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Asistente IA 24/7 entrenado</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>SEO y GEO completos</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 7 días</li>
+        </ul>
+        <a href="planes.html#t2" class="btn-primary" style="text-align:center;justify-content:center;font-size:.7rem"><span>Contratar ahora →</span></a>
       </div>
+
+      <!-- T3 -->
+      <div style="background:var(--bg-warm);border:1.5px solid var(--line-soft);padding:1.75rem;display:flex;flex-direction:column;gap:.75rem">
+        <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)">T3 · Operación</p>
+        <p style="font-family:var(--display);font-weight:800;font-size:clamp(28px,3.5vw,44px);letter-spacing:-.04em;color:var(--ink);line-height:1">$3,317<span style="font-size:.55em;font-weight:500;color:var(--ink-2)">/mes</span></p>
+        <p style="font-family:var(--mono);font-size:.65rem;color:var(--ink-3)">$19,900 total · 6 MSI</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:.45rem;flex:1">
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Secciones ilimitadas + blog</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Panel de contactos y agenda</li>
+          <li style="font-size:.83rem;color:var(--ink-2);padding-left:1.1rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en 14 días</li>
+        </ul>
+        <a href="planes.html#t3" class="btn-outline" style="text-align:center;justify-content:center;font-size:.7rem"><span>Ver detalles</span></a>
+      </div>
+
     </div>
 
-    <!-- ── Qué incluye ── -->
-    <div class="pricing-includes reveal reveal-delay-3">
-      <p class="pricing-includes-title">Cualquier proyecto incluye</p>
-      <ul class="pricing-includes-grid">
-        <li>Diagnóstico inicial y mapeo de flujos (gratuito)</li>
-        <li>Diseño de arquitectura del agente o sistema</li>
-        <li>Entrenamiento con la data de tu negocio</li>
-        <li>Integraciones con las herramientas que ya usas</li>
-        <li>Dashboard de métricas y conversaciones</li>
-        <li>Capacitación a tu equipo + soporte post-entrega</li>
-        <li class="pricing-guarantee">Si el sistema no devuelve horas en los primeros 30 días, lo reconfiguramos sin costo.</li>
-      </ul>
-    </div>
-
-    <!-- ── CTA ── -->
-    <div class="pricing-cta-row reveal reveal-delay-4">
-      <div>
-        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Cotizar mi proyecto →</span></a>
-        <p class="pricing-cta-note" style="margin-top:.7rem">Respuesta en menos de 1 hora.</p>
+    <!-- Ver todos los planes -->
+    <div class="reveal" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:1.5rem;border-top:1.5px solid var(--line-soft)">
+      <p style="font-size:.85rem;color:var(--ink-2)">¿Necesitas algo distinto? Tienda en línea, portal, integración con ERP.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+        <a href="planes.html" class="btn-ghost">Ver planes completos →</a>
+        <a href="https://wa.me/523327874747?text=Quiero%20cotizar%20un%20proyecto%20a%20medida" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--ink-2);padding-bottom:1px">Cotizar a medida</a>
       </div>
-      <p class="pricing-enterprise-link">¿Proyecto enterprise? <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizamos a medida →</a></p>
     </div>
   </div>
 </section>
@@ -1013,7 +1019,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si el sistema no funciona como esperaba?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>Lo reconfiguramos sin costo adicional. Si en los primeros 30 días el sistema no devuelve horas medibles a tu operación, hacemos los ajustes necesarios hasta que lo haga. No cobramos por correcciones — es parte del compromiso. En más de 18 meses de operación nunca hemos dejado un proyecto sin resolver.</p></div>
+      <div class="faq-answer" role="region"><p>Entregamos en la fecha comprometida. Si no cumplimos, el primer año de mantenimiento va por nuestra cuenta. Además, incluimos dos rondas de ajuste antes de publicar. En más de 18 meses de operación nunca hemos dejado un proyecto sin resolver.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Puede integrarse con las herramientas que ya uso?<span class="faq-icon" aria-hidden="true">+</span></button>
@@ -1063,11 +1069,12 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
         <a href="#servicios">CRMs a medida</a>
         <a href="#servicios">Integraciones y automatizaciones</a>
         <a href="#servicios">Reportes y analytics</a>
-        <a href="#servicios">Páginas web</a>
+        <a href="planes.html">Sitios web con IA</a>
       </div>
       <div class="footer-col">
         <h4>Páginas</h4>
         <a href="nosotros.html">Nosotros</a>
+        <a href="planes.html">Planes y precios</a>
         <a href="faq.html">Preguntas frecuentes</a>
         <a href="que-es-automatizacion.html">¿Qué es automatización con IA?</a>
         <a href="blog/">Blog</a>
@@ -1216,12 +1223,12 @@ const T = {
     's8.eyebrow':'08 — HERRAMIENTAS',
     's8.title':'Construido sobre <br>infraestructura probada.',
     's8.sub':'El sistema es tuyo. Si mañana cambias de proveedor — o de nosotros — sigue funcionando.',
-    's9.eyebrow':'09 — INVERSIÓN',
-    's9.title':'Precio claro. <br>Sin sorpresas.',
-    's9.label':'Inversión de desarrollo desde',
-    's9.currency':'MXN · pago único por el desarrollo',
-    's9.note':'El precio final depende del alcance: integraciones, complejidad del agente y plataformas. Te damos cotización exacta en el diagnóstico gratuito — sin compromiso.',
-    's9.includes.title':'¿Qué incluye cualquier proyecto?',
+    's9.eyebrow':'09 — SITIOS WEB CON IA',
+    's9.title':'Precio público.<br>Sin cotización.',
+    's9.label':'Desde',
+    's9.currency':'MXN · 6 meses sin intereses',
+    's9.note':'Tres planes con precio fijo. SEO y GEO incluidos en todos.',
+    's9.includes.title':'Incluido en todos los planes',
     's10.eyebrow':'10 — FAQ',
     's10.title':'Preguntas directas. <br>Respuestas honestas.',
     'cta.quote':'"El primer mes ya pagaste tu inversión. ¿Lo arrancamos?"',
