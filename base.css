@@ -135,3 +135,15 @@ strong,b,.key{color:var(--ink);font-weight:600}
 /* .num = cifras y plazos */
 .num{font-family:var(--display);font-weight:700;color:var(--ink);letter-spacing:-.01em}
 .sec-paper .num{color:var(--bt-p-ink)}
+
+/* ─── NAV: umbral de hamburguesa ─────────────────────────────────
+   Con los tamaños de tipografía actuales el nav completo necesita ~870px.
+   Antes cambiaba a hamburguesa en 768px y se traslapaba en el rango
+   769-870px. El gap reducido da holgura entre 901 y 1100. */
+@media (max-width: 1100px) {
+  .nav-links { gap: 1.5rem; }
+}
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+}

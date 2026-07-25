@@ -128,7 +128,7 @@
 <hr class="divider">
 
 <!-- DEFINICIÓN -->
-<section class="section sec-dark" aria-labelledby="def-title">
+<section class="section sec-dark px" data-px="sistemas" aria-labelledby="def-title">
   <p class="section-eyebrow reveal">01 — Definición</p>
   <h2 class="section-title reveal reveal-delay-1" id="def-title">¿Qué es automatización<br>con IA para empresas?</h2>
 
@@ -149,7 +149,7 @@
 <hr class="divider">
 
 <!-- CHATBOT VS AGENTE -->
-<section class="section sec-alt" aria-labelledby="comp-title">
+<section class="section sec-alt px" aria-labelledby="comp-title" data-px="industrias">
   <p class="section-eyebrow reveal">02 — Conceptos clave</p>
   <h2 class="section-title reveal reveal-delay-1" id="comp-title">Chatbot vs. agente de IA:<br>¿cuál es la diferencia real?</h2>
 
@@ -239,7 +239,7 @@
 <hr class="divider">
 
 <!-- CÓMO FUNCIONA TÉCNICAMENTE -->
-<section class="section sec-alt" aria-labelledby="tec-title">
+<section class="section sec-alt px" aria-labelledby="tec-title" data-px="cierre">
   <p class="section-eyebrow reveal">04 — Cómo funciona</p>
   <h2 class="section-title reveal reveal-delay-1" id="tec-title">¿Cómo funciona un sistema<br>de automatización con IA?</h2>
 
@@ -274,7 +274,7 @@
 <hr class="divider">
 
 <!-- HERRAMIENTAS -->
-<section class="section sec-dark" aria-labelledby="herr-title">
+<section class="section sec-dark px" data-px="editorial" aria-labelledby="herr-title">
   <p class="section-eyebrow reveal">05 — Herramientas</p>
   <h2 class="section-title reveal reveal-delay-1" id="herr-title">Las herramientas detrás<br>de la automatización con IA</h2>
 
@@ -373,7 +373,7 @@
 <hr class="divider">
 
 <!-- CASOS REALES -->
-<section class="section sec-dark" aria-labelledby="casos-title">
+<section class="section sec-dark px" aria-labelledby="casos-title" data-px="sistemas">
   <p class="section-eyebrow reveal">07 — Resultados reales</p>
   <h2 class="section-title reveal reveal-delay-1" id="casos-title">Lo que pasa en la práctica:<br>casos implementados por Mattera</h2>
 
@@ -447,7 +447,7 @@
 <hr class="divider">
 
 <!-- CTA -->
-<section class="cta-final sec-cta" aria-labelledby="cta-edu">
+<section class="cta-final sec-cta px" data-px="cierre" aria-labelledby="cta-edu">
   <p class="cta-final-line reveal" id="cta-edu">¿Quieres saber si tu operación es un buen candidato para automatización con IA? 30 minutos de diagnóstico, sin compromiso.</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico gratuito →</span></a>
@@ -556,5 +556,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

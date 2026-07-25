@@ -141,7 +141,7 @@
 <hr class="divider">
 
 <!-- LO QUE CAMBIA -->
-<section class="section sec-dark" aria-labelledby="lqc-title">
+<section class="section sec-dark px" data-px="industrias" aria-labelledby="lqc-title">
   <p class="section-eyebrow reveal">Lo que cambia</p>
   <h2 class="section-title reveal reveal-delay-1" id="lqc-title">La distribuidora que opera <br>sin depender de nadie.</h2>
   <div class="lqc-grid">
@@ -171,7 +171,7 @@
 <hr class="divider">
 
 <!-- ASÍ OPERA EL SISTEMA -->
-<section class="section sec-alt" id="flujo" aria-labelledby="flujo-title">
+<section class="section sec-alt px" data-px="sistemas" id="flujo" aria-labelledby="flujo-title">
   <p class="section-eyebrow reveal">Así opera el sistema</p>
   <h2 class="section-title reveal reveal-delay-1" id="flujo-title">Cuatro pasos. <em>Tu equipo vende. El sistema atiende.</em></h2>
   <div class="flujo-steps">
@@ -302,7 +302,7 @@
 <hr class="divider">
 
 <!-- CTA FINAL -->
-<section class="cta-final sec-cta" aria-labelledby="cta-text">
+<section class="cta-final sec-cta px" data-px="cierre" aria-labelledby="cta-text">
   <p class="cta-final-line reveal" id="cta-text">30 minutos de diagnóstico. Tu operación mapeada y una propuesta con números reales.</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
@@ -377,5 +377,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

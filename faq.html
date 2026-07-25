@@ -144,7 +144,7 @@
 <hr class="divider">
 
 <!-- SOBRE MATTERA -->
-<section class="section sec-dark" aria-labelledby="s-mattera">
+<section class="section sec-dark px" data-px="sistemas" aria-labelledby="s-mattera">
   <p class="section-eyebrow reveal">01</p>
   <h2 class="section-title reveal reveal-delay-1" id="s-mattera">Sobre Mattera Systems</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:760px">
@@ -175,7 +175,7 @@
 <hr class="divider">
 
 <!-- QUÉ ES IA / EDUCATIVO -->
-<section class="section sec-alt" aria-labelledby="s-ia">
+<section class="section sec-alt px" aria-labelledby="s-ia" data-px="industrias">
   <p class="section-eyebrow reveal">02</p>
   <h2 class="section-title reveal reveal-delay-1" id="s-ia">¿Qué es automatización con IA?</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:760px">
@@ -257,7 +257,7 @@
 <hr class="divider">
 
 <!-- IMPLEMENTACIÓN -->
-<section class="section sec-alt" aria-labelledby="s-impl">
+<section class="section sec-alt px" aria-labelledby="s-impl" data-px="cierre">
   <p class="section-eyebrow reveal">04</p>
   <h2 class="section-title reveal reveal-delay-1" id="s-impl">Implementación y proceso</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:760px">
@@ -293,7 +293,7 @@
 <hr class="divider">
 
 <!-- PRECIOS -->
-<section class="section sec-dark" aria-labelledby="s-precios">
+<section class="section sec-dark px" data-px="editorial" aria-labelledby="s-precios">
   <p class="section-eyebrow reveal">05</p>
   <h2 class="section-title reveal reveal-delay-1" id="s-precios">Precios y pago</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:760px">
@@ -360,7 +360,7 @@
 <hr class="divider">
 
 <!-- POR INDUSTRIA -->
-<section class="section sec-dark" aria-labelledby="s-industrias">
+<section class="section sec-dark px" aria-labelledby="s-industrias" data-px="sistemas">
   <p class="section-eyebrow reveal">07</p>
   <h2 class="section-title reveal reveal-delay-1" id="s-industrias">Por industria</h2>
   <div class="faq-list reveal reveal-delay-2" style="max-width:760px">
@@ -437,7 +437,7 @@
 <hr class="divider">
 
 <!-- CTA -->
-<section class="cta-final sec-cta" aria-labelledby="cta-faq">
+<section class="cta-final sec-cta px" data-px="cierre" aria-labelledby="cta-faq">
   <p class="cta-final-line reveal" id="cta-faq">¿Tienes una pregunta que no está aquí? Escríbenos — la respondemos y la añadimos.</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico gratuito →</span></a>
@@ -514,5 +514,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

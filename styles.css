@@ -129,12 +129,25 @@
 }
 
 /* ─── BLUEPRINT TEXTURE (hero + cta-final) ───────────────────── */
+/* La retícula va encima; debajo, el arte de fondo atenuado por un velo
+   oscuro para que el titular conserve su contraste. */
 .hero,
 .sec-cta {
   background-image:
     linear-gradient(rgba(168,172,151,.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168,172,151,.045) 1px, transparent 1px) !important;
-  background-size: 64px 64px !important;
+    linear-gradient(90deg, rgba(168,172,151,.045) 1px, transparent 1px),
+    linear-gradient(rgba(30,35,24,.72), rgba(30,35,24,.86)),
+    url("/art/hero.webp") !important;
+  background-size: 64px 64px, 64px 64px, cover, cover !important;
+  background-position: 0 0, 0 0, center, center !important;
+  background-repeat: repeat, repeat, no-repeat, no-repeat !important;
+}
+.sec-cta {
+  background-image:
+    linear-gradient(rgba(168,172,151,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168,172,151,.045) 1px, transparent 1px),
+    linear-gradient(rgba(43,49,34,.70), rgba(43,49,34,.86)),
+    url("/art/cierre.webp") !important;
 }
 
 /* ─── HERO 2-COLUMN ──────────────────────────────────────────── */

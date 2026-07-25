@@ -369,7 +369,7 @@
 <main id="main">
 
 <!-- HERO — Botón 1 de contratar -->
-<section class="planes-hero" aria-labelledby="planes-h1">
+<section class="planes-hero px" data-px="planes" aria-labelledby="planes-h1">
   <p class="planes-hero-eyebrow">09 — Planes</p>
   <h1 id="planes-h1">Precio público.<br>Sin cotización.</h1>
   <p class="planes-hero-sub">Tres planes con precio fijo, pago en línea y meses sin intereses. El sistema opera desde el primer día.</p>
@@ -382,7 +382,7 @@
 <hr class="divider">
 
 <!-- EXPLICADOR SEO + GEO — antes de los precios, en lenguaje llano -->
-<section class="geoex" aria-labelledby="geoex-title">
+<section class="geoex px" data-px="sistemas" aria-labelledby="geoex-title">
   <div class="geoex-inner">
     <p class="geoex-label">Incluido en los tres planes</p>
     <h2 class="geoex-title" id="geoex-title">Antes te buscaban en Google. Ahora le preguntan a una IA.</h2>
@@ -418,7 +418,7 @@
 <hr class="divider">
 
 <!-- PLANES GRID — ID para anchor, Botón 2 (naranja) en T2 -->
-<section class="planes-section" id="planes" aria-labelledby="planes-section-title">
+<section class="planes-section px" data-px="industrias" id="planes" aria-labelledby="planes-section-title">
   <div class="planes-inner">
     <p class="section-eyebrow reveal">Elige tu plan</p>
     <h2 class="section-title reveal reveal-delay-1" id="planes-section-title">Tres planes.<br>Precio fijo. Sin sorpresas.</h2>
@@ -537,7 +537,7 @@
 <hr class="divider">
 
 <!-- TRES EJEMPLOS NAVEGABLES -->
-<section class="section sec-alt" aria-labelledby="ejemplos-title">
+<section class="section sec-alt px" data-px="editorial" aria-labelledby="ejemplos-title">
   <div class="garantias-wrap">
     <p class="section-eyebrow reveal">Ejemplos navegables</p>
     <h2 class="section-title reveal reveal-delay-1" id="ejemplos-title">Ve cómo queda<br>antes de decidir.</h2>
@@ -875,5 +875,6 @@ function closeMobileNav(){document.getElementById('mobileNav').classList.remove(
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

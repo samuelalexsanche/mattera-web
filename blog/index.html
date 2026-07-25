@@ -119,7 +119,7 @@
 <main id="main">
 
 <!-- BLOG HERO -->
-<section class="section sec-dark blog-hub-hero" aria-labelledby="blog-hub-title">
+<section class="section sec-dark blog-hub-hero px" data-px="editorial" aria-labelledby="blog-hub-title">
   <p class="section-eyebrow reveal">Blog</p>
   <h1 class="section-title reveal reveal-delay-1" id="blog-hub-title">Lo que aprendemos <br><em>lo escribimos.</em></h1>
   <p class="blog-hub-sub reveal reveal-delay-2">Automatización, IA aplicada y eficiencia operativa para empresas mexicanas. Sin humo — solo lo que funciona.</p>
@@ -222,5 +222,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

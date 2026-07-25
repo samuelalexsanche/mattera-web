@@ -787,3 +787,70 @@ strong,b,.key{color:var(--ink);font-weight:600}
 .sec-paper .blog-card-cat,      .sec-paper .blog-card-meta time,
 .sec-paper .industria-card-tag, .sec-paper .article-mid-cta-sub { color: var(--ink-2) !important; }
 .sec-paper .blog-card-link,     .sec-paper .industria-card-link { color: var(--ink) !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FONDOS DE ARTE CON PARALLAX  (ver parallax.js)
+   La capa se inyecta por JS dentro de cualquier .px[data-px].
+   La opacidad es baja a propósito: estas secciones llevan texto encima
+   y el contraste AA no se negocia. --px-op es el único dial.
+   ═══════════════════════════════════════════════════════════════ */
+.px {
+  position: relative;
+  /* `clip` recorta SIN crear contenedor scrolleable: la capa mide 124% y con
+     `hidden` un focus dentro de la sección podría desplazar el contenido.
+     `hidden` queda como respaldo para Safari < 16. */
+  overflow: hidden;
+  overflow: clip;
+}
+/* el contenido de la sección debe quedar por encima de la capa */
+.px > *:not(.px-bg) { position: relative; z-index: 1; }
+
+.px-bg {
+  position: absolute;
+  left: 0; right: 0; top: -12%;
+  height: 124%;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: var(--px-op, .26);
+  will-change: transform;
+}
+/* Viñeta suave: aporta profundidad sin borrar el arte. Va DENTRO de .px-bg,
+   así que la opacidad de la capa también la afecta — cualquier oscurecimiento
+   aquí solo mejora el contraste calculado abajo, nunca lo empeora. */
+.px-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 85% 70% at 50% 45%,
+              transparent 0%, rgba(30,35,24,.30) 78%, rgba(30,35,24,.55) 100%);
+}
+
+/* ── Opacidad POR MOTIVO, no por sección ────────────────────────────
+   Cada imagen tiene un brillo máximo distinto, así que un valor único
+   sería o invisible o inseguro. Estos valores están al 80% del techo que
+   mantiene el texto secundario (#C8CCB8) en >=5:1 sobre el fondo más claro
+   donde se usa el motivo — medido contra el percentil 99.9 de brillo de
+   cada imagen, no contra su promedio. Ratios resultantes: 5.5-6.7:1.
+   Si cambias una imagen, recalcula antes de subir el valor. */
+.px[data-px="hero"]       { --px-op: .28; }  /* techo .35 — planos claros */
+.px[data-px="planes"]     { --px-op: .39; }  /* techo .49 */
+.px[data-px="sistemas"]   { --px-op: .40; }  /* techo .50 */
+.px[data-px="industrias"] { --px-op: .63; }  /* techo .79 */
+.px[data-px="editorial"]  { --px-op: .80; }  /* textura casi plana */
+.px[data-px="cierre"]     { --px-op: .80; }
+
+/* Las secciones claras no llevan arte: una textura olivo sobre papel
+   oscurecería el fondo y tumbaría el contraste del texto oscuro. */
+.sec-paper.px .px-bg { display: none; }
+
+/* Sin animación: la imagen se queda quieta pero visible */
+@media (prefers-reduced-motion: reduce) {
+  .px-bg { transform: none !important; }
+}
+/* En móvil se mantiene estática (parallax.js no la anima bajo 600px) */
+@media (max-width: 600px) {
+  /* en móvil el arte pesa más visualmente sobre poco ancho: se atenúa */
+  .px-bg { opacity: calc(var(--px-op, .26) * .7); }
+}

@@ -115,7 +115,7 @@
 <hr class="divider">
 
 <!-- POR QUÉ EXISTIMOS -->
-<section class="section sec-dark" aria-labelledby="intention-title">
+<section class="section sec-dark px" data-px="hero" aria-labelledby="intention-title">
   <p class="section-eyebrow reveal">Por qué existimos</p>
   <h2 class="section-title reveal reveal-delay-1" id="intention-title">El costo de no automatizar <br>no aparece en ningún reporte.</h2>
   <div class="nosotros-manifesto reveal reveal-delay-2">
@@ -129,7 +129,7 @@
 <hr class="divider">
 
 <!-- PRINCIPIOS -->
-<section class="section sec-alt" aria-labelledby="principios-title">
+<section class="section sec-alt px" aria-labelledby="principios-title" data-px="editorial">
   <p class="section-eyebrow reveal">Principios</p>
   <h2 class="section-title reveal reveal-delay-1" id="principios-title">Cómo tomamos decisiones.</h2>
   <div class="principios-grid">
@@ -205,7 +205,7 @@
 <hr class="divider">
 
 <!-- CTA FINAL -->
-<section class="cta-final sec-cta" aria-labelledby="cta-nosotros">
+<section class="cta-final sec-cta px" data-px="cierre" aria-labelledby="cta-nosotros">
   <p class="cta-final-line reveal" id="cta-nosotros">Treinta minutos de diagnóstico. Salimos sabiendo si podemos trabajar juntos — los dos.</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
@@ -273,5 +273,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

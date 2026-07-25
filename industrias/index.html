@@ -109,7 +109,7 @@
 <main id="main">
 
 <!-- HERO -->
-<section class="section sec-dark industrias-hub-hero" aria-labelledby="hub-title">
+<section class="section sec-dark industrias-hub-hero px" data-px="industrias" aria-labelledby="hub-title">
   <p class="section-eyebrow reveal">Industrias</p>
   <h1 class="section-title reveal reveal-delay-1" id="hub-title">Tu giro tiene sus propias fugas de tiempo. <em>Nosotros las mapeamos.</em></h1>
   <p class="industrias-hub-sub reveal reveal-delay-2">No vendemos software genérico. Cada sistema parte del diagnóstico de tu operación específica — su punto de dolor, su flujo actual y el retorno que tiene sentido esperar.</p>
@@ -157,7 +157,7 @@
 <hr class="divider">
 
 <!-- CTA -->
-<section class="cta-final sec-cta" aria-labelledby="hub-cta">
+<section class="cta-final sec-cta px" data-px="cierre" aria-labelledby="hub-cta">
   <p class="cta-final-line reveal" id="hub-cta">30 minutos de diagnóstico. Tu operación mapeada y una propuesta con números reales.</p>
   <div class="cta-final-btns reveal reveal-delay-1">
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
@@ -225,5 +225,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>

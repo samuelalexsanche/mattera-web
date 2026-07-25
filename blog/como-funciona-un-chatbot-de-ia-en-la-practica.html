@@ -101,7 +101,7 @@
 <main id="main">
 
 <!-- ARTICLE HEADER -->
-<div class="article-header-wrap sec-dark">
+<div class="article-header-wrap sec-dark px" data-px="editorial">
   <div class="article-header">
     <nav class="breadcrumb" aria-label="Ruta de navegación">
       <a href="../">Inicio</a>
@@ -220,5 +220,6 @@ function closeMobileNav(){
 const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
+<script src="/parallax.js" defer></script>
 </body>
 </html>
