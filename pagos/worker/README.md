@@ -42,8 +42,9 @@ Esto se hace en el panel, no por código.
 
 En **Tu integración → Webhooks**:
 
-- URL: `https://mattera-pagos.<tu-subdominio>.workers.dev`
-- Evento: **Pagos** (`payment`)
+- URL: `https://mattera-pagos.mattera.workers.dev`
+- Evento: **Pagos (legacy)** — es el webhook clásico `payment`, que es el que
+  este Worker lee. NO marcar "Order (Mercado Pago)": usa otro formato.
 - Copia la **clave secreta** que genera. La necesitas en el paso 3.
 
 ---
@@ -66,7 +67,8 @@ npx wrangler secret put TELEGRAM_CHAT_ID
 ```
 
 - `MP_ACCESS_TOKEN` → Tus integraciones → Credenciales de **producción**
-- `MP_WEBHOOK_SECRET` → la clave secreta del paso 2
+- `MP_WEBHOOK_SECRET` → la **Clave secreta** de la pantalla de Webhooks.
+  NO es el Client Secret: ese es de OAuth y no se usa aquí.
 - `TELEGRAM_BOT_TOKEN` → tu bot en @BotFather
 - `TELEGRAM_CHAT_ID` → tu chat (escríbele al bot y consulta `/getUpdates`)
 
@@ -87,7 +89,7 @@ descoméntalo) y vuelve a desplegar.
 ## 4. Comprobar que quedó
 
 ```bash
-curl https://mattera-pagos.<tu-subdominio>.workers.dev
+curl https://mattera-pagos.mattera.workers.dev
 ```
 
 Debe responder `{"ok":true,"servicio":"mattera-pagos"}`.
