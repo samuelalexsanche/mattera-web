@@ -169,23 +169,55 @@ async function consultarPago(id, token, base) {
   return res.json();
 }
 
-async function avisar(pago, env) {
+/**
+ * Averigua qué plan se compró.
+ *
+ * Primero por `external_reference` (t1/t2/t3), que es lo confiable. Si el
+ * panel de Mercado Pago no permitió capturarla al crear el link, se cae al
+ * monto: los tres precios son distintos, así que identifican el plan sin
+ * ambigüedad. Devuelve también cómo se identificó, para poder avisar cuando
+ * fue por monto y convenga arreglar el link.
+ */
+function identificarPlan(pago) {
   const ref = String(pago.external_reference || '').toLowerCase();
-  const plan = PLANES[ref];
+  if (PLANES[ref]) return { plan: PLANES[ref], via: 'referencia', ref };
+
+  const monto = Number(pago.transaction_amount || 0);
+  for (const clave of Object.keys(PLANES)) {
+    if (Math.abs(monto - PLANES[clave].monto) < 1) {
+      return { plan: PLANES[clave], via: 'monto', ref };
+    }
+  }
+  return { plan: null, via: 'ninguna', ref };
+}
+
+async function avisar(pago, env) {
+  const { plan, via, ref } = identificarPlan(pago);
   const monto = Number(pago.transaction_amount || 0);
   const cuotas = Number(pago.installments || 1);
   const neto = pago.transaction_details && pago.transaction_details.net_received_amount;
 
-  // Si el monto no cuadra con el plan, el link está mal configurado:
-  // se avisa igual pero marcado, para revisarlo.
-  const alerta = plan && Math.abs(monto - plan.monto) > 1
-    ? `\n⚠️ El monto no coincide con ${plan.nombre} ($${plan.monto.toLocaleString('es-MX')}). Revisa el link de pago.`
-    : '';
+  const avisos = [];
+  // Se identificó por monto: el pago es válido, pero al link le falta la
+  // referencia y conviene ponerla para no depender del precio.
+  if (plan && via === 'monto') {
+    avisos.push(`ℹ️ Identificado por monto${ref ? ` (la referencia decía "${ref}")` : ' (el link no trae external_reference)'}. Ponle la referencia al link.`);
+  }
+  // Referencia válida pero monto distinto: link mal configurado.
+  if (plan && via === 'referencia' && Math.abs(monto - plan.monto) > 1) {
+    avisos.push(`⚠️ El monto no coincide con ${plan.nombre} ($${plan.monto.toLocaleString('es-MX')}). Revisa el link de pago.`);
+  }
+  // Ni referencia ni monto conocido: probablemente el link sin monto definido
+  // (cotización a medida). Es legítimo, solo hay que saber que no es un plan.
+  if (!plan) {
+    avisos.push('ℹ️ No corresponde a T1/T2/T3 — seguramente es una cotización a medida.');
+  }
+  const alerta = avisos.length ? '\n' + avisos.join('\n') : '';
 
   const lineas = [
     '💰 *Pago aprobado*',
     '',
-    `*Plan:* ${plan ? plan.nombre : (ref || 'sin referencia')}`,
+    `*Plan:* ${plan ? plan.nombre : 'a medida / sin identificar'}`,
     `*Monto:* $${monto.toLocaleString('es-MX')} ${pago.currency_id || 'MXN'}`,
     `*Pago:* ${cuotas > 1 ? `${cuotas} MSI` : 'una sola exhibición'}`,
     neto != null ? `*Te llega:* $${Number(neto).toLocaleString('es-MX')} (ya sin comisión)` : null,

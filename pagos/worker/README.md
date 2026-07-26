@@ -23,8 +23,15 @@ Esto se hace en el panel, no por código.
    | T2 Sistema    | $9,900 MXN  | `t2` |
    | T3 Operación  | $19,900 MXN | `t3` |
 
-   El `external_reference` es **obligatorio**: es lo único que le dice al Worker
-   qué plan se compró. Si lo dejas vacío el aviso llegará sin plan.
+   Pon el `external_reference` si el panel te lo permite. Si no aparece el
+   campo, no pasa nada: el Worker identifica el plan por el monto, porque los
+   tres precios son distintos. En ese caso el aviso te llega igual, marcado con
+   "identificado por monto" para que sepas que al link le falta la referencia.
+
+   **Ojo con el tipo de link:** tienen que ser links **con monto definido**. Un
+   "Link sin monto definido" deja que el cliente escriba la cantidad, así que no
+   sirve para vender un plan a precio fijo — pero sí es perfecto para las
+   cotizaciones a medida (T4).
 
 3. En cada link, como URL de retorno al aprobar:
    `https://matterasystems.com/gracias.html?plan=t1` (t2 / t3 según el caso).
