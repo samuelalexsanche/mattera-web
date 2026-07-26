@@ -15,9 +15,9 @@
  * ═══════════════════════════════════════════════════════════════
  */
 window.MATTERA_PAGOS = {
-  t1: '', // $5,900  — ej. 'https://mpago.la/xxxxxxx'
-  t2: '', // $9,900
-  t3: '', // $19,900
+  t1: 'https://mpago.la/1bwWWsK', // $5,900  · verificado en el checkout
+  t2: 'https://mpago.la/2NWNhHr', // $9,900  · verificado en el checkout
+  t3: 'https://mpago.la/31qnam6', // $19,900 · verificado en el checkout
 };
 
 (function () {
