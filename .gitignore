@@ -1,0 +1,6 @@
+# secretos locales de wrangler — nunca se suben
+.dev.vars
+**/.dev.vars
+.wrangler/
+node_modules/
+.DS_Store

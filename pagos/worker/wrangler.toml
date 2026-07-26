@@ -1,0 +1,16 @@
+name = "mattera-pagos"
+main = "worker.js"
+compatibility_date = "2026-05-01"
+
+# Los secretos NO van aquí. Se ponen con `wrangler secret put NOMBRE`:
+#   MP_ACCESS_TOKEN · MP_WEBHOOK_SECRET · TELEGRAM_BOT_TOKEN · TELEGRAM_CHAT_ID
+
+# Opcional: KV para no avisar dos veces del mismo pago.
+# Crea el namespace con:  wrangler kv namespace create PAGOS
+# y pega el id que devuelve aquí abajo, descomentando el bloque.
+# [[kv_namespaces]]
+# binding = "PAGOS"
+# id = "pega-aqui-el-id"
+
+[observability]
+enabled = true

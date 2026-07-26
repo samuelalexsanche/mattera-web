@@ -636,7 +636,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <div style="max-width:var(--max-w);margin:0 auto">
     <p class="section-eyebrow reveal" data-i18n="s9.eyebrow">09 — SITIOS WEB CON IA</p>
     <h2 class="section-title reveal reveal-delay-1" id="planes-home-title" data-i18n="s9.title">Precio público.<br>Sin cotización.</h2>
-    <p class="reveal" style="font-size:1.12rem;color:var(--ink-2);max-width:52ch;margin-bottom:2.5rem;line-height:1.75">Tres planes con precio fijo, pago en línea y meses sin intereses. <strong>Todos incluyen SEO y GEO</strong> — las dos formas en que hoy te encuentran clientes.</p>
+    <p class="reveal" style="font-size:1.12rem;color:var(--ink-2);max-width:52ch;margin-bottom:2.5rem;line-height:1.75">Tres planes con precio fijo. De contado o a <strong>6 meses sin intereses</strong> con tarjeta de crédito, al mismo precio. <strong>Todos incluyen SEO y GEO</strong> — las dos formas en que hoy te encuentran clientes.</p>
 
     <!-- Qué es SEO y GEO, en llano, ANTES de ver precios -->
     <div class="geomini reveal">
@@ -669,7 +669,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>Botón <strong>WhatsApp</strong> y formulario</li>
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>5 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T1%20Presencia%20(%245%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T1%20Presencia%20(%245%2C900)" target="_blank" rel="noopener noreferrer" data-plan="t1" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
       <!-- T2 destacado -->
@@ -683,7 +683,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>SEO y GEO completos</strong></li>
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>7 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T2%20Sistema%20(%249%2C900)" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T2%20Sistema%20(%249%2C900)" target="_blank" rel="noopener noreferrer" data-plan="t2" class="btn-primary" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
       <!-- T3 -->
@@ -696,7 +696,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span><strong>Panel de contactos</strong> y agenda</li>
           <li style="font-size:1rem;line-height:1.6;color:var(--ink-2);padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--accent);font-family:var(--mono)">✓</span>En línea en <strong>14 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T3%20Operaci%C3%B3n%20(%2419%2C900)" target="_blank" rel="noopener noreferrer" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Hola%2C%20me%20interesa%20el%20plan%20T3%20Operaci%C3%B3n%20(%2419%2C900)" target="_blank" rel="noopener noreferrer" data-plan="t3" class="btn-outline" style="text-align:center;justify-content:center;font-size:.82rem"><span>Contratar →</span></a>
       </div>
 
     </div>
@@ -1533,5 +1533,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 </script>
 <script src="/parallax.js" defer></script>
+<script src="/pagos/links.js" defer></script>
 </body>
 </html>

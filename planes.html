@@ -167,6 +167,7 @@
 /* Plans grid */
 .planes-section{background:var(--bg);padding:clamp(56px,7vw,96px) 2rem}
 .planes-inner{max-width:var(--max-w);margin:0 auto}
+.planes-msi-nota{margin-top:1.75rem;font-family:var(--mono);font-size:.78rem;line-height:1.75;color:var(--ink-2);max-width:72ch}
 .planes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:end;margin-top:3rem}
 
 /* Plan card */
@@ -372,7 +373,7 @@
 <section class="planes-hero px" data-px="planes" aria-labelledby="planes-h1">
   <p class="planes-hero-eyebrow">09 — Planes</p>
   <h1 id="planes-h1">Precio público.<br>Sin cotización.</h1>
-  <p class="planes-hero-sub">Tres planes con precio fijo, pago en línea y meses sin intereses. El sistema opera desde el primer día.</p>
+  <p class="planes-hero-sub">Tres planes con precio fijo y pago en línea. Puedes pagar de contado o a <strong>6 meses sin intereses</strong> con tarjeta de crédito — al mismo precio. El sistema opera desde el primer día.</p>
   <div class="planes-hero-ctas">
     <a href="#planes" class="btn-primary"><span>Ver precios →</span></a>
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-ghost">Hablar con un asesor</a>
@@ -446,7 +447,7 @@
           <li class="strike">Registro de contactos y conversaciones</li>
           <li class="strike">Verificación de citación en ChatGPT</li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Presencia%20T1%20%E2%80%94%20%245%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Presencia%20T1%20%E2%80%94%20%245%2C900%20MXN" target="_blank" rel="noopener noreferrer" data-plan="t1" class="btn-outline plan-cta"><span>Contratar →</span></a>
       </div>
 
       <!-- T2 SISTEMA — único botón naranja, tarjeta destacada -->
@@ -472,7 +473,7 @@
           <li>1 actualización de contenido al mes</li>
           <li>En línea en <strong>7 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Sistema%20T2%20%E2%80%94%20%249%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-primary plan-cta"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Sistema%20T2%20%E2%80%94%20%249%2C900%20MXN" target="_blank" rel="noopener noreferrer" data-plan="t2" class="btn-primary plan-cta"><span>Contratar →</span></a>
         <p class="plan-guarantee">En línea al día 7 o el primer año de mantenimiento va por nuestra cuenta.</p>
       </div>
 
@@ -498,11 +499,16 @@
           <li>Reporte quincenal</li>
           <li>En línea en <strong>14 días</strong></li>
         </ul>
-        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Operaci%C3%B3n%20T3%20%E2%80%94%20%2419%2C900%20MXN" target="_blank" rel="noopener noreferrer" class="btn-outline plan-cta"><span>Contratar →</span></a>
+        <a href="https://wa.me/523327874747?text=Quiero%20contratar%20el%20plan%20Operaci%C3%B3n%20T3%20%E2%80%94%20%2419%2C900%20MXN" target="_blank" rel="noopener noreferrer" data-plan="t3" class="btn-outline plan-cta"><span>Contratar →</span></a>
         <p class="plan-note">Actualizaciones adicionales: $600 c/u</p>
       </div>
 
     </div><!-- /planes-grid -->
+
+    <p class="planes-msi-nota">
+      Los 6 MSI los otorga tu banco y requieren tarjeta de crédito mexicana. Sin ella,
+      el mismo precio se paga de contado con tarjeta o por transferencia SPEI.
+    </p>
 
     <!-- T4 BAND — bajo las tarjetas, no como cuarta tarjeta -->
     <div class="t4-band">
@@ -631,7 +637,7 @@
           <span>¿Los meses sin intereses tienen algún costo extra?</span>
           <span class="faq-icon" aria-hidden="true">+</span>
         </button>
-        <div class="faq-answer"><p>No. Pagas exactamente $9,900 dividido en seis mensualidades de $1,650. La comisión la absorbemos nosotros.</p></div>
+        <div class="faq-answer"><p>No. Pagas exactamente $9,900 dividido en seis mensualidades de $1,650 — el mismo precio que de contado. La comisión la absorbemos nosotros.</p><p>Ten en cuenta que los meses sin intereses los otorga tu banco, así que <strong>requieren tarjeta de crédito mexicana</strong> (no aplica con débito ni con tarjetas empresariales). Si tu tarjeta no participa, puedes pagar en una sola exhibición con tarjeta o por transferencia SPEI — el precio no cambia.</p></div>
       </div>
 
       <div class="faq-item">
@@ -876,5 +882,6 @@ const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInter
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 </script>
 <script src="/parallax.js" defer></script>
+<script src="/pagos/links.js" defer></script>
 </body>
 </html>
