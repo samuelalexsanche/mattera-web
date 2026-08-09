@@ -1,49 +1,68 @@
-name: IndexNow
+name: Sitemap + IndexNow
 
-# Avisa a Bing (y por tanto a ChatGPT, que se apoya en su índice) cada vez
-# que cambia el contenido. GitHub Pages despliega solo desde main; este
-# workflow NO toca ese despliegue, únicamente manda el ping.
+# En cada push: regenera el sitemap desde los archivos reales y avisa a Bing
+# (que es de donde ChatGPT toma resultados). Al agregar una página nueva no
+# hay que tocar nada: entra sola.
+#
+# El commit del bot usa GITHUB_TOKEN, y GitHub NO dispara workflows con
+# eventos originados por ese token, así que no se hace un bucle.
 on:
   push:
     branches: [main]
     paths:
       - '**.html'
-      - 'sitemap.xml'
-      - 'llms.txt'
+      - 'tools/gen_sitemap.py'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  ping:
+  sitemap-e-indexnow:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # gen_sitemap.py lee la fecha del último commit por archivo
 
-      - name: Enviar URLs del sitemap a IndexNow
+      - name: Regenerar sitemap
+        run: python3 tools/gen_sitemap.py
+
+      - name: Publicar sitemap si cambió
+        run: |
+          if [ -n "$(git status --porcelain sitemap.xml)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add sitemap.xml
+            git commit -m "sitemap: regenerado automáticamente"
+            git push
+            echo "sitemap actualizado y publicado"
+          else
+            echo "sitemap sin cambios"
+          fi
+
+      - name: Avisar a IndexNow
         env:
           # La llave viaja por entorno y se lee con os.environ.
-          # Interpolarla dentro del heredoc da 422 (llave literal sin expandir).
+          # Interpolarla dentro del heredoc da 422 (llega literal, sin expandir).
           INDEXNOW_KEY: ed60cc06467317361e98a88dfff914ab
         run: |
           python3 - <<'PY'
           import os, json, re, urllib.request
 
-          key = os.environ['INDEXNOW_KEY']
+          key  = os.environ['INDEXNOW_KEY']
           host = 'matterasystems.com'
-
-          xml = open('sitemap.xml', encoding='utf-8').read()
-          urls = re.findall(r'<loc>([^<]+)</loc>', xml)
+          urls = re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())
           if not urls:
               raise SystemExit('sitemap sin URLs')
 
-          payload = {
-              'host': host,
-              'key': key,
-              'keyLocation': f'https://{host}/{key}.txt',
-              'urlList': urls,
-          }
           req = urllib.request.Request(
               'https://api.indexnow.org/indexnow',
-              data=json.dumps(payload).encode(),
+              data=json.dumps({
+                  'host': host, 'key': key,
+                  'keyLocation': f'https://{host}/{key}.txt',
+                  'urlList': urls,
+              }).encode(),
               headers={'Content-Type': 'application/json; charset=utf-8'},
           )
           with urllib.request.urlopen(req, timeout=30) as r:
