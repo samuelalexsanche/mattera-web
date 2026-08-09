@@ -1,20 +1,47 @@
 User-agent: *
 Allow: /
 
-# Rastreadores de IA — acceso explícito abierto
+# ─── Rastreadores de motores generativos ────────────────────────
+# Acceso explícito: si no pueden leer el sitio, no pueden citarlo.
+# Estos son los que ALIMENTAN RESPUESTAS con enlace a la fuente.
 User-agent: GPTBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
+# ─── Solo entrenamiento, sin citación ───────────────────────────
+# Se bloquean: consumen el contenido para entrenar modelos pero no
+# devuelven tráfico ni atribución. No aporta nada dejarlos entrar.
+User-agent: CCBot
+Disallow: /
 
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+Host: matterasystems.com
 Sitemap: https://matterasystems.com/sitemap.xml

@@ -270,6 +270,14 @@
   letter-spacing: .08em; color: var(--ink-2);
   display: flex; align-items: center; gap: .5rem;
   text-transform: uppercase; margin-bottom: 2rem;
+  /* El breadcrumb es un <nav>, así que hereda del selector generico `nav`
+     su justify-content:space-between, su padding de cabecera y su max-width.
+     Eso lo desparramaba de lado a lado. Se anulan las tres. */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  max-width: none;
+  margin-left: 0; margin-right: 0;
 }
 .breadcrumb a { color: var(--ink-2); transition: color .2s; }
 .breadcrumb a:hover { color: var(--ink); }
@@ -854,3 +862,56 @@ strong,b,.key{color:var(--ink);font-weight:600}
   /* en móvil el arte pesa más visualmente sobre poco ancho: se atenúa */
   .px-bg { opacity: calc(var(--px-op, .26) * .7); }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PÁGINAS DE PRODUCTO (/servicios/ y pilar local)
+   Los tamaños y colores heredan los tokens ya auditados en AA:
+   texto en --ink-2 (9.77:1) y piso de 12.5px. No bajar de ahí.
+   ═══════════════════════════════════════════════════════════════ */
+.pp-wrap{max-width:780px;margin:0 auto}
+.pp-eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent-orange);margin-bottom:1.25rem}
+.pp-h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.4vw,56px);line-height:1.15;
+  letter-spacing:-.015em;color:var(--ink);margin-bottom:1.5rem}
+.pp-h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.9vw,34px);line-height:1.25;
+  color:var(--ink);margin-bottom:1.25rem}
+/* La entradilla responde la búsqueda en las primeras 40-60 palabras:
+   es el fragmento que las IA suelen citar. */
+.pp-lede{font-size:1.15rem;line-height:1.75;color:var(--ink-2);margin-bottom:2.25rem}
+.pp-wrap p{font-size:1.05rem;line-height:1.78;color:var(--ink-2);margin-bottom:1.1rem}
+.pp-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+
+.lista-check,.lista-no{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin:1.25rem 0}
+.lista-check li,.lista-no li{font-size:1.05rem;line-height:1.7;color:var(--ink-2);
+  padding-left:1.9rem;position:relative}
+.lista-check li::before{content:'✓';position:absolute;left:0;color:var(--accent);
+  font-family:var(--mono);font-weight:700}
+.lista-no li::before{content:'✕';position:absolute;left:0;color:var(--ink-3);font-family:var(--mono)}
+
+/* Las tablas comparativas son de lo que más citan los motores generativos */
+.tabla-wrap{overflow-x:auto;margin:1.5rem 0;-webkit-overflow-scrolling:touch}
+.tabla-comp{width:100%;border-collapse:collapse;min-width:520px}
+.tabla-comp th{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);background:rgba(242,239,230,.05);padding:.85rem 1rem;text-align:left;
+  border-bottom:1.5px solid var(--line-soft)}
+.tabla-comp td{font-size:1rem;line-height:1.6;color:var(--ink-2);padding:.85rem 1rem;
+  border-bottom:1px solid var(--line-soft);vertical-align:top}
+.tabla-comp tr:last-child td{border-bottom:none}
+.tabla-comp td:first-child{color:var(--ink);font-weight:500}
+.tabla-comp a{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:1px}
+
+.pp-rels{display:flex;flex-wrap:wrap;gap:.75rem}
+.pp-rel{display:inline-flex;align-items:center;font-family:var(--mono);font-size:.8rem;
+  letter-spacing:.04em;color:var(--ink-2);border:1.5px solid var(--line-soft);border-radius:4px;
+  padding:.6rem 1rem;transition:border-color .2s,color .2s}
+.pp-rel:hover{color:var(--ink);border-color:var(--accent)}
+
+@media(max-width:600px){
+  .pp-ctas .btn-primary,.pp-ctas .btn-outline{width:100%;justify-content:center}
+}
+
+/* Enlace de cada tarjeta de servicio a su página propia */
+.servicio-link{display:inline-block;margin-top:.9rem;font-family:var(--mono);font-size:.78rem;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--accent);
+  border-bottom:1px solid var(--accent);padding-bottom:1px;transition:color .2s}
+.servicio-link:hover{color:var(--accent-orange);border-color:var(--accent-orange)}
