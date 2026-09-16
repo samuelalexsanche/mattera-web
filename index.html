@@ -320,11 +320,12 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 /* ─── NAV: umbral de hamburguesa ─────────────────────────────────
    Con los tamaños de tipografía actuales el nav completo necesita ~870px.
    Antes cambiaba a hamburguesa en 768px y se traslapaba en el rango
-   769-870px. El gap reducido da holgura entre 901 y 1100. */
+   769-870px. Con 7 enlaces + CTA + idioma el menú necesita ~1,130px; por debajo
+   de 1180px los enlaces se encogían y se cortaban, así que ahí pasa a hamburguesa. */
 @media (max-width: 1100px) {
   .nav-links { gap: 1.5rem; }
 }
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .nav-links, .nav-cta { display: none; }
   .nav-burger { display: flex; }
 }
@@ -638,8 +639,8 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       </h1>
       <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">Crece tu empresa, no tu carga. Construimos los sistemas que atienden, organizan y dan seguimiento a tus clientes — y los operamos contigo.</p>
       <div class="hero-counter reveal reveal-delay-2">
-        <span class="counter-num" id="heroCounter" data-target="312">0</span>
-        <p class="counter-legend">horas devueltas en nuestra propia operación este mes</p>
+        <span class="counter-num" id="heroCounter" data-target="6">0</span>
+        <p class="counter-legend">proyectos en línea que puedes visitar hoy. <a href="#portafolio" class="counter-link">Ver portafolio →</a></p>
       </div>
       <div class="hero-ctas reveal reveal-delay-3">
         <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span data-i18n="hero.cta1">Agendar diagnóstico →</span></a>

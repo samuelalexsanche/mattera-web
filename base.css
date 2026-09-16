@@ -139,11 +139,12 @@ strong,b,.key{color:var(--ink);font-weight:600}
 /* ─── NAV: umbral de hamburguesa ─────────────────────────────────
    Con los tamaños de tipografía actuales el nav completo necesita ~870px.
    Antes cambiaba a hamburguesa en 768px y se traslapaba en el rango
-   769-870px. El gap reducido da holgura entre 901 y 1100. */
+   769-870px. Con 7 enlaces + CTA + idioma el menú necesita ~1,130px; por debajo
+   de 1180px los enlaces se encogían y se cortaban, así que ahí pasa a hamburguesa. */
 @media (max-width: 1100px) {
   .nav-links { gap: 1.5rem; }
 }
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .nav-links, .nav-cta { display: none; }
   .nav-burger { display: flex; }
 }

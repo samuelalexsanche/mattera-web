@@ -210,7 +210,7 @@
   font-size: clamp(40px, 5vw, 64px);
   color: var(--bt-ink);
   line-height: 1;
-  min-width: 3.5ch;
+  min-width: 1.2ch;
   display: block;
 }
 .counter-legend {
@@ -218,9 +218,11 @@
   font-size: 14px;
   color: var(--bt-sage);
   line-height: 1.5;
-  max-width: 22ch;
+  max-width: 30ch;
   margin: 0;
 }
+.counter-link { color: var(--bt-ink); border-bottom: 1px solid var(--bt-orange); padding-bottom: 1px; white-space: nowrap; text-decoration: none; }
+.counter-link:hover { color: var(--bt-orange); }
 
 /* Hero CTAs */
 .hero-ctas {

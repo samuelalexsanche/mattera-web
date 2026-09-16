@@ -23,7 +23,7 @@ function animateCount(el, target, duration) {
 function initCounter() {
   const el = document.getElementById('heroCounter');
   if (!el) return;
-  const target = parseInt(el.dataset.target || '312', 10);
+  const target = parseInt(el.dataset.target || '0', 10);
   if (REDUCED) { el.textContent = target.toLocaleString('es-MX'); return; }
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
