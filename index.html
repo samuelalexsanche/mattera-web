@@ -134,28 +134,25 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .why-icon{width:36px;height:36px;margin-bottom:1.5rem;color:var(--accent)}
 .why-block-title{font-family:var(--serif);font-weight:600;font-size:1.4rem;line-height:1.3;margin-bottom:.85rem;letter-spacing:-.01em}
 .why-body{font-size:1rem;line-height:1.75;color:var(--ink-2)}
-.casos-list{border-top:1.5px solid var(--line);margin-top:2rem}
-.planes-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-bottom:2rem;margin-top:1.5rem}
-@media(max-width:900px){.planes-mini{grid-template-columns:1fr;max-width:520px;gap:1.75rem}}
-.caso-row{display:grid;grid-template-columns:minmax(150px,210px) 1fr auto;align-items:start;border-bottom:1.5px solid var(--line-soft);padding:1.75rem 0;cursor:pointer;transition:background .2s,padding .15s}
-.caso-row:hover{background:var(--accent-soft);padding-left:1rem;padding-right:1rem;margin:0 -1rem}
-.caso-num{font-family:var(--display);font-weight:800;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.04em;color:var(--ink);line-height:1;white-space:nowrap}
-.caso-info{padding:0 1.5rem}
-.caso-name{font-family:var(--display);font-weight:700;font-size:1.1rem;line-height:1.35;letter-spacing:-.02em;color:var(--ink)}
-.caso-sub{font-size:1rem;line-height:1.7;color:var(--ink-2);margin-top:.5rem;max-width:68ch}
-.caso-tag{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink-2);padding:.3rem .7rem;color:var(--ink-2);transition:background .2s,color .2s,border-color .2s;align-self:center}
-.caso-row:hover .caso-tag{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.drawer-overlay{position:fixed;inset:0;background:rgba(21,25,16,.65);z-index:200;opacity:0;pointer-events:none;transition:opacity .3s}
-.drawer-overlay.open{opacity:1;pointer-events:auto}
-.drawer{position:fixed;right:0;top:0;bottom:0;width:min(480px,95vw);background:var(--bg);z-index:201;padding:3rem 2.25rem;overflow-y:auto;transform:translateX(100%);transition:transform .35s var(--ease);border-left:1.5px solid var(--line-soft)}
-.drawer.open{transform:translateX(0)}
-.drawer-close{position:absolute;top:1.5rem;right:1.5rem;font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:none;border:none;cursor:pointer;border-bottom:1px solid var(--line-soft);padding-bottom:2px}
-.drawer-num{font-family:var(--display);font-weight:800;font-size:clamp(52px,8vw,88px);letter-spacing:-.05em;color:var(--accent);line-height:1;margin-bottom:.35rem}
-.drawer-title{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin-bottom:.35rem}
-.drawer-sector{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.75rem}
-.drawer-body h4{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.45rem;margin-top:1.25rem}
-.drawer-body p{font-size:.875rem;line-height:1.75;color:var(--ink-2)}
-.drawer-quote{margin-top:1.75rem;padding:1.1rem 1.25rem;border-left:3px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink);background:var(--accent-soft)}
+.pf-intro{font-size:1.1rem;line-height:1.7;color:var(--ink-2);max-width:56ch;margin:0 0 2.5rem}
+.pf-group{font-family:var(--mono);font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:2.5rem 0 1.25rem;padding-bottom:.6rem;border-bottom:1.5px solid var(--line-soft)}
+.pf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.pf-card{background:var(--bg-warm);border:1.5px solid var(--line-soft);display:flex;flex-direction:column;transition:border-color .22s,transform .22s var(--ease)}
+.pf-card:hover{border-color:rgba(181,186,163,.5);transform:translateY(-3px)}
+.pf-shot{display:block;aspect-ratio:16/9;overflow:hidden;border-bottom:1.5px solid var(--line-soft);background:#111}
+.pf-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s var(--ease)}
+.pf-card:hover .pf-shot img{transform:scale(1.03)}
+.pf-body{padding:1.5rem 1.6rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.pf-sector{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:.4rem .75rem;align-items:center}
+.pf-estado{color:var(--accent);border:1px solid var(--accent);padding:.1rem .45rem;letter-spacing:.06em}
+.pf-name{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.2;color:var(--ink)}
+.pf-desc{font-size:1rem;line-height:1.7;color:var(--ink-2);flex:1}
+.pf-tags{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;margin:.2rem 0 .3rem;padding:0}
+.pf-tags li{font-family:var(--mono);font-size:.75rem;letter-spacing:.04em;color:var(--ink-2);border:1px solid var(--line-soft);padding:.2rem .55rem}
+.pf-link{align-self:flex-start;font-family:var(--mono);font-size:.85rem;color:var(--ink);border-bottom:1.5px solid var(--accent);padding-bottom:2px;text-decoration:none}
+.pf-link:hover{color:var(--accent)}
+.pf-sys{border-left:3px solid var(--accent)}
+@media(max-width:820px){.pf-grid{grid-template-columns:1fr}.pf-name{font-size:1.3rem}.pf-body{padding:1.25rem}}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;position:relative;margin-top:4rem}
 .timeline::before{content:'';position:absolute;top:22px;left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:1px;background:var(--line-soft);z-index:0}
 .timeline-node{display:flex;flex-direction:column;align-items:flex-start;padding:1.75rem 1.5rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);transition:border-color .22s,box-shadow .22s}
@@ -265,8 +262,6 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   .servicio-card{padding:1.75rem}
   .why-grid{grid-template-columns:1fr}
   .why-block{padding:1.75rem}
-  .caso-row{grid-template-columns:1fr auto;padding:1.5rem 0;gap:.5rem 1rem}.caso-num{grid-column:1/-1}.caso-info{padding:0}
-  .caso-row:hover{margin:0 -1rem;padding:1.25rem 1rem}
   .timeline{grid-template-columns:1fr;gap:2rem}
   .timeline::before{display:none}
   .timeline-node{flex-direction:row;gap:1.25rem;padding-right:0}
@@ -280,7 +275,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   footer{padding:3rem 1.25rem 1.5rem}
 }
 @media(max-width:480px){
-  .caso-row{grid-template-columns:1fr;gap:.5rem}.caso-tag{display:none}.caso-row:hover{margin:0;padding:1.5rem 0}
+  
   .cta-final-btns{flex-direction:column;align-items:stretch}
   .btn-primary,.btn-outline{justify-content:center;text-align:center}
   .hero-ctas,.precio-cta-wrap{flex-direction:column;align-items:flex-start}
@@ -567,11 +562,6 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
   <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
 </div>
-<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
-<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Caso de estudio">
-  <button class="drawer-close" onclick="closeDrawer()">✕ Cerrar</button>
-  <div id="drawerContent"></div>
-</div>
 <header>
   <nav aria-label="Navegación principal">
     <a href="#" class="nav-logo" aria-label="Mattera Systems — Inicio">
@@ -687,7 +677,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
       <div class="servicio-num">01</div>
       <svg class="servicio-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="22" height="16" rx="2"/><path d="M7 28l4-6h10l4 6"/><circle cx="28" cy="10" r="5"/><path d="M26 10h4M28 8v4"/></svg>
       <div class="servicio-title">Chat en WhatsApp y Web</div>
-      <p class="servicio-desc">Un asistente que responde los mensajes de tus clientes automáticamente. Disponible 24 horas, atiende dudas, toma pedidos y califica clientes interesados. Un cliente de distribución reportó 4 horas diarias menos de atención manual.</p>
+      <p class="servicio-desc">Un asistente que responde los mensajes de tus clientes automáticamente. Disponible 24 horas, atiende dudas, toma pedidos y califica clientes interesados.</p>
       <span class="servicio-tag">WhatsApp · Web · 24/7</span>
       <a href="servicios/chatbot-whatsapp.html" class="servicio-link">Ver chatbot de WhatsApp →</a>
     </div>
@@ -842,7 +832,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
     <div class="why-block reveal reveal-delay-1">
       <svg class="why-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 4l2.5 7.5H28l-6.5 4.5 2.5 7.5L18 19l-6 4.5 2.5-7.5L8 11.5h7.5z"/><path d="M18 24v8M12 32h12"/></svg>
       <h3 class="why-block-title">Rapidez</h3>
-      <p class="why-body">Implementamos en semanas, no meses. Nuestro promedio de implementación es 11 días hábiles; el más rápido fue 6 días para una clínica dental en Guadalajara. Ves resultados desde el día uno.</p>
+      <p class="why-body">Implementamos en semanas, no meses. Nuestro promedio de implementación es 11 días hábiles. Ves resultados desde el día uno.</p>
     </div>
     <div class="why-block reveal reveal-delay-2">
       <svg class="why-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="12" height="12" rx="1.5"/><rect x="20" y="4" width="12" height="12" rx="1.5"/><rect x="4" y="20" width="12" height="12" rx="1.5"/><path d="M20 26h12M26 20v12"/></svg>
@@ -1017,53 +1007,78 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   </div>
 </section>
 <hr class="divider">
-<!-- CASOS -->
-<section class="section sec-alt px" data-px="cierre" id="casos" aria-labelledby="casos-title">
-  <p class="section-eyebrow reveal">RESULTADOS REALES</p>
-  <h2 class="section-title reveal reveal-delay-1" id="casos-title">Lo que pasa cuando <br>el sistema opera.</h2>
-  <p style="font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--ink-3);margin-bottom:2rem">Resultados reportados por cada cliente · evidencia histórica, no oferta</p>
-  <div class="casos-list reveal reveal-delay-2">
+<!-- PORTAFOLIO -->
+<section class="section sec-alt px" data-px="cierre" id="portafolio" aria-labelledby="portafolio-title">
+  <p class="section-eyebrow reveal">PORTAFOLIO</p>
+  <h2 class="section-title reveal reveal-delay-1" id="portafolio-title">Proyectos en línea, <br>con nombre y dirección.</h2>
+  <p class="pf-intro reveal reveal-delay-2">Todos están publicados en el dominio de cada negocio. Entra, navégalos y juzga tú.</p>
 
-    <article class="caso-row">
-      <div class="caso-num">+47%</div>
-      <div class="caso-info">
-        <div class="caso-name">Distribuidora Norte — Distribución mayorista · Guadalajara</div>
-        <div class="caso-sub">El equipo tardaba entre 4 y 8 horas en responder cotizaciones por WhatsApp. Los clientes se iban con la competencia antes de recibir respuesta. Implementamos un agente IA conectado al catálogo en Google Sheets que responde cotizaciones en tiempo real, 24/7, con precios actualizados automáticamente. Tiempo de respuesta: de 6 horas a 45 segundos. Conversiones: +47% en 60 días. 32 horas semanales devueltas al equipo.</div>
-        <blockquote style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial</blockquote>
+  <h3 class="pf-group reveal">Sitios web</h3>
+  <div class="pf-grid reveal reveal-delay-1">
+    <article class="pf-card">
+      <a class="pf-shot" href="https://caabsasteel.mx/" target="_blank" rel="noopener" aria-label="Ver el sitio de CAABSA STEEL"><img src="art/portafolio/caabsa.webp" width="960" height="540" loading="lazy" decoding="async" alt="Página de inicio del sitio de CAABSA STEEL"></a>
+      <div class="pf-body">
+        <p class="pf-sector">Construcción industrial · México</p>
+        <h3 class="pf-name">CAABSA STEEL</h3>
+        <p class="pf-desc">Sitio bilingüe español/inglés de 148 páginas: una por obra, sector, región y estado, para que cada proyecto aparezca en búsquedas propias. Incluye asistente de IA que responde dudas y formularios que llegan al correo de la empresa.</p>
+        <ul class="pf-tags"><li>Español / inglés</li><li>Asistente IA</li><li>SEO por proyecto</li></ul>
+        <a class="pf-link" href="https://caabsasteel.mx/" target="_blank" rel="noopener">caabsasteel.mx ↗</a>
       </div>
-      <span class="caso-tag">Distribución</span>
     </article>
-
-    <article class="caso-row">
-      <div class="caso-num">3 seg</div>
-      <div class="caso-info">
-        <div class="caso-name">Inmobiliaria Plata — Bienes raíces · Monterrey</div>
-        <div class="caso-sub">Más de 200 consultas diarias por WhatsApp. El equipo no daba abasto y perdían leads calificados por falta de respuesta oportuna. El agente IA califica leads en 3 segundos, agenda citas con el asesor correcto y actualiza el CRM sin intervención humana. Primera respuesta: 3 segundos. Leads perdidos: -89%. Agendas de asesores: llenas al 95%.</div>
-        <blockquote style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Nuestros asesores ahora hablan solo con clientes listos para comprar." — Director Comercial</blockquote>
+    <article class="pf-card">
+      <a class="pf-shot" href="https://birrieriacocula.com/" target="_blank" rel="noopener" aria-label="Ver el sitio de Birriería Cocula"><img src="art/portafolio/birrieria.webp" width="960" height="540" loading="lazy" decoding="async" alt="Página de inicio del sitio de Birriería Cocula"></a>
+      <div class="pf-body">
+        <p class="pf-sector">Restaurante · Guadalajara</p>
+        <h3 class="pf-name">Birriería Cocula</h3>
+        <p class="pf-desc">Sitio para una birriería con historia desde 1978: carta completa en su propia página, galería, ubicación y datos del local estructurados para Google.</p>
+        <ul class="pf-tags"><li>Carta en línea</li><li>Datos para Google Maps</li><li>Carga rápida</li></ul>
+        <a class="pf-link" href="https://birrieriacocula.com/" target="_blank" rel="noopener">birrieriacocula.com ↗</a>
       </div>
-      <span class="caso-tag">Inmobiliaria</span>
     </article>
-
-    <article class="caso-row">
-      <div class="caso-num">2.4×</div>
-      <div class="caso-info">
-        <div class="caso-name">Clínica Vida — Salud privada · CDMX</div>
-        <div class="caso-sub">La recepcionista dedicaba 6 horas al día a responder dudas repetitivas por WhatsApp. Los leads se enfriaban mientras esperaban. El agente atiende dudas, muestra precios, agenda citas y envía recordatorios automáticos. Leads calificados: 2.4 veces más. Citas agendadas por semana: +68%. Tiempo administrativo de recepción: reducido en 5 horas diarias.</div>
-        <blockquote style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Mi recepcionista ahora se enfoca en la experiencia del paciente, no en el teléfono." — Directora Médica</blockquote>
+    <article class="pf-card">
+      <a class="pf-shot" href="https://luxuryandblush.com/" target="_blank" rel="noopener" aria-label="Ver el sitio de Luxury and Blush Events"><img src="art/portafolio/luxury.webp" width="960" height="540" loading="lazy" decoding="async" alt="Página de inicio del sitio de Luxury and Blush Events"></a>
+      <div class="pf-body">
+        <p class="pf-sector">Bodas de destino · México</p>
+        <h3 class="pf-name">Luxury and Blush Events</h3>
+        <p class="pf-desc">Rediseño para una planeadora de bodas que atiende a parejas extranjeras: sitio bilingüe inglés/español con galería independiente por cada boda y página de reseñas.</p>
+        <ul class="pf-tags"><li>Inglés / español</li><li>Galerías por boda</li><li>Reseñas</li></ul>
+        <a class="pf-link" href="https://luxuryandblush.com/" target="_blank" rel="noopener">luxuryandblush.com ↗</a>
       </div>
-      <span class="caso-tag">Clínica</span>
     </article>
-
-    <article class="caso-row">
-      <div class="caso-num">67%</div>
-      <div class="caso-info">
-        <div class="caso-name">Despacho García — Servicios legales · Guadalajara</div>
-        <div class="caso-sub">$85,000 MXN al mes en 3 personas para atención inicial y clasificación de casos, un gasto insostenible que limitaba el crecimiento del despacho. El agente hace el primer filtro legal, clasifica el caso, recopila documentos y agenda con el abogado correcto sin intervención manual. Costo de atención inicial: -67%. Tiempo de abogados en trabajo facturable: +40%. Satisfacción de clientes: 4.7 de 5.</div>
-        <blockquote style="margin-top:.9rem;font-style:italic;color:var(--ink-2);font-size:1rem;line-height:1.6;border-left:2px solid var(--accent);padding-left:1rem">"Ahorramos más de $57,000 MXN al mes. El ROI fue evidente desde el primer mes." — Socio fundador, Despacho García</blockquote>
+    <article class="pf-card">
+      <a class="pf-shot" href="https://bisel3d.com/" target="_blank" rel="noopener" aria-label="Ver el sitio de Bisel"><img src="art/portafolio/bisel.webp" width="960" height="540" loading="lazy" decoding="async" alt="Página de inicio del sitio de Bisel"></a>
+      <div class="pf-body">
+        <p class="pf-sector">Impresión 3D · Guadalajara · proyecto propio</p>
+        <h3 class="pf-name">Bisel</h3>
+        <p class="pf-desc">Taller de impresión 3D operado por el equipo de Mattera. Catálogo, cotizador de piezas a medida, calculadora de presupuesto y blog.</p>
+        <ul class="pf-tags"><li>Catálogo</li><li>Cotizador</li><li>Calculadora</li></ul>
+        <a class="pf-link" href="https://bisel3d.com/" target="_blank" rel="noopener">bisel3d.com ↗</a>
       </div>
-      <span class="caso-tag">Legal</span>
     </article>
+  </div>
 
+  <h3 class="pf-group reveal">Sistemas de IA y automatización</h3>
+  <div class="pf-grid pf-grid-sys reveal reveal-delay-1">
+    <article class="pf-card pf-sys">
+      <div class="pf-body">
+        <p class="pf-sector">Inmobiliaria · Guadalajara<span class="pf-estado">En operación</span></p>
+        <h3 class="pf-name">Vista California Residencial</h3>
+        <p class="pf-desc">Asistente en Telegram para el seguimiento de prospectos: el asesor registra al interesado, el sistema programa y hace la llamada con voz de IA, y anota el resultado de cada llamada en la hoja de control.</p>
+        <ul class="pf-tags"><li>Telegram</li><li>Llamadas con IA</li><li>Seguimiento de prospectos</li></ul>
+      </div>
+    </article>
+    <article class="pf-card pf-sys">
+      <div class="pf-body">
+        <p class="pf-sector">Software de presupuestos de obra · México<span class="pf-estado">En implementación</span></p>
+        <h3 class="pf-name">Herramientas Excel</h3>
+        <p class="pf-desc">Asistente de WhatsApp que atiende y da seguimiento a los clientes, con un panel donde el dueño ve los resultados y recibe avisos.</p>
+        <ul class="pf-tags"><li>WhatsApp</li><li>Panel de resultados</li><li>Avisos al dueño</li></ul>
+        <a class="pf-link" href="https://herramientasexcel.com/" target="_blank" rel="noopener">herramientasexcel.com ↗</a>
+      </div>
+    </article>
+  </div>
+  <div class="reveal" style="margin-top:2.5rem">
+    <a href="https://wa.me/523327874747?text=Hola%2C%20vi%20su%20portafolio%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Quiero algo así para mi negocio →</span></a>
   </div>
 </section>
 <hr class="divider">
@@ -1136,7 +1151,7 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
   <div class="faq-list reveal reveal-delay-2" style="max-width:720px">
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tiempo toma implementarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
-      <div class="faq-answer" role="region"><p>El promedio es 11 días hábiles. El proceso: Diagnóstico (días 1-3) donde mapeamos flujos, Diseño (días 4-7) donde construimos la arquitectura, Entrenamiento (días 8-12) donde capacitamos al agente con tus datos, y Lanzamiento (días 13-14). El récord fue 6 días para una clínica dental en Guadalajara. El tiempo exacto lo confirmamos en el diagnóstico, sin sorpresas.</p></div>
+      <div class="faq-answer" role="region"><p>El promedio es 11 días hábiles. El proceso: Diagnóstico (días 1-3) donde mapeamos flujos, Diseño (días 4-7) donde construimos la arquitectura, Entrenamiento (días 8-12) donde capacitamos al agente con tus datos, y Lanzamiento (días 13-14). El tiempo exacto lo confirmamos en el diagnóstico, sin sorpresas.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi equipo necesita saber de informática?<span class="faq-icon" aria-hidden="true">+</span></button>
@@ -1259,26 +1274,6 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 
 <script src="main.js" defer></script>
 <script>
-const casos={
-  caso1:{num:'+47%',title:'Distribuidora Norte',sector:'Distribución mayorista · Guadalajara',problema:'El equipo tardaba 4–8h en responder cotizaciones por WhatsApp. Los clientes se iban con la competencia antes de recibir respuesta.',solucion:'Agente IA conectado al catálogo en Google Sheets que responde cotizaciones en tiempo real, 24/7, con precios actualizados automáticamente.',metricas:'Tiempo de respuesta: de 6h a 45 segundos. Conversiones: +47% en 60 días. Horas libres: +32h/semana.',cita:'"Ahora cerramos ventas mientras dormimos. Literalmente." — Gerente Comercial'},
-  caso2:{num:'3 seg',title:'Inmobiliaria Plata',sector:'Bienes raíces · Monterrey',problema:'200+ consultas diarias por WhatsApp. El equipo no daba abasto y perdían leads calificados por falta de respuesta.',solucion:'Agente IA que califica leads en 3 segundos, agenda citas con el asesor correcto y actualiza el CRM sin intervención humana.',metricas:'Primera respuesta: 3 segundos. Leads perdidos: -89%. Agendas de asesores: llenas al 95%.',cita:'"Nuestros asesores ahora hablan solo con clientes listos para comprar." — Director Comercial'},
-  caso3:{num:'2.4×',title:'Clínica Vida',sector:'Salud privada · CDMX',problema:'La recepcionista dedicaba 6 horas al día a responder dudas. Los leads se enfriaban mientras esperaban.',solucion:'Agente IA para WhatsApp que atiende dudas, muestra precios, agenda citas y envía recordatorios automáticos.',metricas:'Leads calificados: 2.4× más. Citas agendadas/semana: +68%. Tiempo admin de recepcionista: reducido.',cita:'"Mi recepcionista ahora se enfoca en la experiencia del paciente, no en el teléfono." — Directora Médica'},
-  caso4:{num:'67%',title:'Despacho García',sector:'Servicios legales · Guadalajara',problema:'$85,000 MXN/mes en 3 personas para atención inicial y clasificación de casos. Insostenible.',solucion:'Agente IA que hace el primer filtro legal, clasifica el caso, recopila documentos y agenda con el abogado correcto.',metricas:'Costo de atención inicial: -67%. Tiempo de abogados en billables: +40%. Satisfacción: 4.7/5.',cita:'"Ahorramos más de $57,000 MXN al mes. El ROI fue evidente desde el primer mes." — Socio fundador'}
-};
-function openDrawer(id){
-  const c=casos[id];if(!c)return;
-  document.getElementById('drawerContent').innerHTML=`<div class="drawer-num">${c.num}</div><div class="drawer-title">${c.title}</div><div class="drawer-sector">${c.sector}</div><div class="drawer-body"><h4>El problema</h4><p>${c.problema}</p><h4>La solución</h4><p>${c.solucion}</p><h4>Los resultados</h4><p>${c.metricas}</p></div><blockquote class="drawer-quote">${c.cita}</blockquote>`;
-  document.getElementById('drawer').classList.add('open');
-  document.getElementById('drawerOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeDrawer(){
-  document.getElementById('drawer').classList.remove('open');
-  document.getElementById('drawerOverlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-</script>
-<script>
 function fmt(n){return '$'+Math.round(n).toLocaleString('es-MX')+' MXN'}
 function calcUpdate(){
   const personas=+document.getElementById('sliderPersonas').value;
@@ -1299,7 +1294,7 @@ function calcUpdate(){
   document.getElementById('resOperativo').textContent='$'+operativo.toLocaleString('es-MX')+' MXN/mes';
   animVal('resAhorroMensual',ahorroMensual,fmt);
   animVal('resAhorroAnual',ahorroAnual,fmt);
-  document.getElementById('resPayback').textContent=payback>0?payback+' días':'—';
+  const pb=document.getElementById('resPayback'); if(pb) pb.textContent=payback>0?payback+' días':'—';
   document.getElementById('resHoras').textContent=horas.toLocaleString('es-MX')+' h/mes';
 }
 function animVal(id,target,formatter){
