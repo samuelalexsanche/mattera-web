@@ -303,6 +303,8 @@ footer{background:var(--bg-dark);color:var(--ink);padding:5rem 2rem 2rem}
 .cm{max-width:84%;padding:.6rem .85rem;border-radius:10px;font-size:.82rem;line-height:1.65;word-break:break-word}
 .cm.bot{background:var(--bg);color:var(--ink);align-self:flex-start;border-bottom-left-radius:3px}
 .cm.user{background:var(--accent-orange);color:var(--bg-dark);align-self:flex-end;border-bottom-right-radius:3px;font-weight:500}
+.cm-wa{align-self:flex-start;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--accent);border:1px solid var(--accent);border-radius:8px;padding:.45rem .8rem;text-decoration:none}
+.cm-wa:hover{background:var(--accent);color:var(--bg)}
 .cm-typing{display:flex;align-items:center;gap:4px;padding:.6rem .85rem;background:var(--bg);border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start}
 .cm-typing span{width:6px;height:6px;border-radius:50%;background:var(--ink-2);animation:chtblink 1.2s infinite}
 .cm-typing span:nth-child(2){animation-delay:.2s}
@@ -1463,15 +1465,14 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <script>
 // ── CHAT WIDGET ──────────────────────────────────────────────
+// Habla con el Worker mattera-chat (Cloudflare), que a su vez consulta al
+// modelo. La clave vive como secreto del Worker, nunca en esta página.
 (function(){
-  // Reemplaza esta URL con tu webhook de N8N cuando tengas el túnel activo
-  const WEBHOOK = 'https://universe-forgotten-elected-medication.trycloudflare.com/webhook/mattera-chat';
-  let sid = sessionStorage.getItem('ms_cid') || (()=>{
-    const id = crypto.randomUUID();
-    sessionStorage.setItem('ms_cid', id);
-    return id;
-  })();
-  let started = false;
+  const ENDPOINT = 'https://mattera-chat.mattera.workers.dev';
+  const WA = 'https://wa.me/523327874747';
+  const SALUDO = 'Hola, soy el asistente de Mattera. Puedo resolver dudas de planes, precios y plazos. ¿Qué necesitas?';
+  const historial = [];          // {role, content} — lo que ve el modelo
+  let started = false, enviando = false;
 
   window.toggleChat = function(){
     const fab = document.getElementById('chat-fab');
@@ -1479,65 +1480,98 @@ document.addEventListener('DOMContentLoaded', () => {
     const open = win.classList.toggle('open');
     fab.classList.toggle('open', open);
     if(open){
-      if(!started){
-        started = true;
-        addBot('Hola, soy el asistente de Mattera. ¿En qué puedo ayudarte hoy?');
-      }
+      if(!started){ started = true; addBot(SALUDO); }
       document.getElementById('chat-inp').focus();
     }
   };
 
-  function addBot(text){
+  function nodo(clase, texto){
     const el = document.createElement('div');
-    el.className = 'cm bot';
-    el.textContent = text;
+    el.className = clase;
+    if(texto !== undefined) el.textContent = texto;
     append(el);
+    return el;
   }
-
-  function addUser(text){
-    const el = document.createElement('div');
-    el.className = 'cm user';
-    el.textContent = text;
-    append(el);
-  }
-
-  function showTyping(){
-    const el = document.createElement('div');
-    el.className = 'cm-typing'; el.id = 'cht';
-    el.innerHTML = '<span></span><span></span><span></span>';
-    append(el);
-  }
+  function addBot(t){ return nodo('cm bot', t); }
+  function addUser(t){ return nodo('cm user', t); }
+  function showTyping(){ const el = nodo('cm-typing'); el.id='cht'; el.innerHTML='<span></span><span></span><span></span>'; return el; }
 
   function append(el){
     const msgs = document.getElementById('chat-msgs');
     msgs.appendChild(el);
     msgs.scrollTop = msgs.scrollHeight;
   }
+  function alFinal(){
+    const msgs = document.getElementById('chat-msgs');
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function fallback(el){
+    const txt = 'No pude conectarme en este momento. Escríbenos por WhatsApp al +52 33 2787 4747 y te contestamos ahí mismo.';
+    if(el){ el.textContent = txt; } else { addBot(txt); }
+    const a = document.createElement('a');
+    a.className = 'cm-wa'; a.href = WA; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    a.textContent = 'Abrir WhatsApp →';
+    append(a);
+  }
 
   window.sendChat = async function(){
+    if(enviando) return;
     const inp = document.getElementById('chat-inp');
     const btn = document.getElementById('chat-btn');
-    const text = inp.value.trim();
+    const text = inp.value.trim().slice(0, 1500);
     if(!text) return;
     inp.value = '';
-    btn.disabled = true;
+    enviando = true; btn.disabled = true;
     addUser(text);
-    showTyping();
+    historial.push({role:'user', content:text});
+    const typing = showTyping();
+
+    let burbuja = null, acumulado = '';
+    const escribe = (trozo) => {
+      acumulado += trozo;
+      if(!burbuja){ typing.remove(); burbuja = addBot(''); }
+      burbuja.textContent = acumulado;
+      alFinal();
+    };
+
     try{
-      const res = await fetch(WEBHOOK, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({sessionId: sid, message: text})
+      const res = await fetch(ENDPOINT, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ messages: historial.slice(-10) })
       });
-      const data = await res.json();
-      document.getElementById('cht')?.remove();
-      addBot(data.response || data.output || data.message || 'Hubo un error. Escríbenos al WhatsApp: +52 33 2787 4747');
-    } catch(e){
-      document.getElementById('cht')?.remove();
-      addBot('No pude conectarme. Escríbenos directo al WhatsApp: +52 33 2787 4747');
+      if(!res.ok || !res.body) throw new Error('respuesta ' + res.status);
+
+      // El Worker devuelve el stream del modelo en formato SSE.
+      const reader = res.body.getReader();
+      const dec = new TextDecoder();
+      let buffer = '';
+      while(true){
+        const {done, value} = await reader.read();
+        if(done) break;
+        buffer += dec.decode(value, {stream:true});
+        const lineas = buffer.split('\n');
+        buffer = lineas.pop();
+        for(const linea of lineas){
+          const l = linea.trim();
+          if(!l.startsWith('data:')) continue;
+          const dato = l.slice(5).trim();
+          if(dato === '[DONE]') continue;
+          try{
+            const j = JSON.parse(dato);
+            const trozo = j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content;
+            if(trozo) escribe(trozo);
+          }catch(_){ /* fragmento incompleto: se ignora */ }
+        }
+      }
+      if(!acumulado){ typing.remove(); fallback(); }
+      else historial.push({role:'assistant', content:acumulado});
+    }catch(e){
+      typing.remove();
+      fallback(burbuja);
     }
-    btn.disabled = false;
-    document.getElementById('chat-msgs').scrollTop = 9999;
+    enviando = false; btn.disabled = false; alFinal();
   };
 
   document.getElementById('chat-inp').addEventListener('keydown', e => {

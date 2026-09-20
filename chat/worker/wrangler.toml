@@ -1,0 +1,12 @@
+name = "mattera-chat"
+main = "worker.js"
+compatibility_date = "2026-05-01"
+
+# La clave NO va aquí (este repositorio es público). Se guarda cifrada:
+#   npx wrangler secret put DEEPSEEK_API_KEY
+#
+# Despliegue / actualización:
+#   cd chat/worker && npx wrangler deploy
+
+[observability]
+enabled = true
