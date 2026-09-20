@@ -106,8 +106,28 @@ div='<hr class="divider">\n'
 body=(P['nav']+P['hero']+div+P['qh']+div+P['portafolio']+div+planes+div+P['como']+div+calculadora+div+dudas+div+P['cta']+barra+'\n'+P['footer'])
 head=P['head']
 assert head.count('</head>')==1
-head=re.sub(r'<script type="application/ld\+json">.*?</script>\n?','',head,flags=re.S)
+import os
+PROD=os.environ.get('MODE')=='prod'
+if not PROD:
+    head=re.sub(r'<script type="application/ld\+json">.*?</script>\n?','',head,flags=re.S)
+else:
+    # El FAQPage debe listar exactamente las preguntas visibles en la página
+    import json,html as _h
+    def _txt(x): return _h.unescape(re.sub(r'<[^>]+>','',x)).strip()
+    qa=[]
+    for it in elegidas:
+        q=_txt(re.search(r'<button class="faq-btn".*?>(.*?)</button>',it,re.S).group(1)).replace('+','').strip()
+        a=_txt(re.search(r'<div class="faq-answer"[^>]*>(.*?)</div>',it,re.S).group(1))
+        qa.append({"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}})
+    def _fix(m):
+        d=json.loads(m.group(1))
+        g_=d.get('@graph',[d]); ch=False
+        for n in g_:
+            if n.get('@type')=='FAQPage': n['mainEntity']=qa; ch=True
+        if not ch: return m.group(0)
+        return '<script type="application/ld+json">\n'+json.dumps(d,ensure_ascii=False,indent=2)+'\n</script>'
+    head=re.sub(r'<script type="application/ld\+json">(.*?)</script>',_fix,head,flags=re.S)
 head=head.replace('</head>','<style>\n'+css+'</style>\n</head>')
 html=head+'<body>'+body
-open('preview-inicio.html','w').write(html)
+open('index.html' if PROD else 'preview-inicio.html','w').write(html)
 print(len(html))

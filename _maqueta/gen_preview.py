@@ -6,7 +6,9 @@ def block(marker, end='</section>'):
 
 head_end=src.index('<body>')
 head=src[:head_end]
-head=head.replace('<title>','<meta name="robots" content="noindex,nofollow">\n<title>MAQUETA · ',1)
+import os
+if os.environ.get('MODE')!='prod':
+    head=head.replace('<title>','<meta name="robots" content="noindex,nofollow">\n<title>MAQUETA · ',1)
 
 nav=src[src.index('<body>')+len('<body>'):src.index('<!-- HERO -->')]
 portafolio=block('<!-- PORTAFOLIO -->')
