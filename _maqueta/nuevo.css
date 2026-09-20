@@ -1,0 +1,107 @@
+/* ═══ MAQUETA 2026 — componentes nuevos ═══ */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Tira de prueba en el hero */
+.hero .hero-inner{min-height:auto!important;padding-bottom:clamp(20px,3vh,36px)!important}
+.hero{min-height:auto!important;padding-bottom:clamp(24px,4vh,48px)!important}
+.hero-proof{position:relative;z-index:1;max-width:var(--max-w);margin:0 auto;padding:1.1rem 2rem 0;border-top:1px solid rgba(168,172,151,.18)}
+.hero-proof-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .85rem}
+.hero-proof-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.9rem}
+.hero-proof-strip a{display:block;text-decoration:none}
+.hero-proof-strip img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;height:auto;border:1px solid var(--line-soft);display:block;filter:saturate(.9);transition:transform .25s var(--ease),border-color .2s}
+.hero-proof-strip a:hover img{transform:translateY(-2px);border-color:var(--accent)}
+.hero-proof-strip span{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.02em;color:var(--ink-3);margin-top:.35rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hero-proof-more{display:inline-block;margin-top:.9rem;font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:var(--ink-2);border-bottom:1px solid var(--accent);padding-bottom:2px;text-decoration:none}
+.hero-proof-more:hover{color:var(--accent)}
+
+/* Qué hacemos */
+.qh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-top:2.5rem}
+.qh-card{display:flex;flex-direction:column;gap:.75rem;padding:1.25rem;background:var(--bg-warm);border:1.5px solid var(--line-soft);text-decoration:none;color:inherit;transition:border-color .22s,transform .22s var(--ease)}
+.qh-card:hover{border-color:rgba(181,186,163,.5);transform:translateY(-3px)}
+.qh-art{color:var(--ink-2)}
+.qh-art svg{display:block;width:100%;height:auto}
+.qh-title{font-family:var(--serif);font-weight:600;font-size:1.28rem;line-height:1.25;color:var(--ink);margin:.25rem 0 0}
+.qh-desc{font-size:1rem;line-height:1.6;color:var(--ink-2);flex:1;margin:0}
+.qh-link{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:var(--accent)}
+.qh-industrias{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line-soft)}
+.qh-ind-label{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.qh-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.qh-chips a{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);border:1px solid var(--line-soft);padding:.35rem .7rem;text-decoration:none;transition:border-color .2s,color .2s}
+.qh-chips a:hover{border-color:var(--accent);color:var(--ink)}
+
+/* Planes en tabla */
+.pl-lede{font-size:1.1rem;line-height:1.7;color:var(--ink-2);max-width:54ch;margin:0 0 1.5rem}
+.pl-expl{border:1.5px solid var(--line-soft);background:var(--bg-warm);margin-bottom:2rem;max-width:680px}
+.pl-expl summary{cursor:pointer;padding:1rem 1.25rem;font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);list-style:none}
+.pl-expl summary::-webkit-details-marker{display:none}
+.pl-expl summary::after{content:'+';float:right;color:var(--accent)}
+.pl-expl[open] summary::after{content:'–'}
+.pl-expl-body{padding:0 1.25rem 1.25rem}
+.pl-expl-body p{font-size:1rem;line-height:1.7;color:var(--ink-2);margin:0 0 .6rem}
+.pl-expl-body a{color:var(--ink);border-bottom:1px solid var(--accent);text-decoration:none}
+.pl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pl-tabla{width:100%;border-collapse:collapse;min-width:680px}
+.pl-tabla th,.pl-tabla td{text-align:left;vertical-align:top;padding:.85rem 1rem;border-bottom:1px solid var(--line-soft);font-size:.95rem;line-height:1.5;color:var(--ink-2)}
+.pl-tabla thead th{border-bottom:1.5px solid var(--line);vertical-align:bottom;position:relative}
+.pl-tabla tbody th{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:500;width:22%}
+.pl-tier{display:block;font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.pl-precio{display:block;font-family:var(--display);font-weight:800;font-size:clamp(26px,2.4vw,36px);letter-spacing:-.03em;color:var(--ink);line-height:1.1;margin-top:.3rem}
+.pl-msi{display:block;font-family:var(--mono);font-size:.76rem;color:var(--ink-3);margin-top:.25rem}
+.pl-badge{position:absolute;top:-.1rem;left:1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.12rem .45rem}
+.pl-destacado{background:rgba(252,163,17,.05);box-shadow:inset 1px 0 0 var(--accent),inset -1px 0 0 var(--accent)}
+.pl-tabla thead .pl-destacado{padding-top:1.6rem}
+.pl-si{color:var(--accent);font-family:var(--mono);margin-right:.5rem}
+.pl-no{color:var(--ink-3)}
+.pl-tabla tfoot td{border-bottom:none;padding-top:1.25rem}
+.pl-tabla tfoot .btn-outline,.pl-tabla tfoot .btn-primary{width:100%;justify-content:center;text-align:center;font-size:.8rem}
+.pl-nota{font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--ink-3);margin-top:1.25rem}
+.pl-nota a,.pl-nota-link{color:var(--ink-2);border-bottom:1px solid var(--accent);text-decoration:none;font-family:var(--mono);font-size:.8rem}
+
+/* Calculadora desplegable */
+.calc-det{border:1.5px solid var(--bt-bpaper,var(--line-soft));max-width:920px;margin-top:1.5rem;background:#fff}
+.calc-det summary{cursor:pointer;padding:1.1rem 1.35rem;font-family:var(--mono);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;list-style:none}
+.calc-det summary::-webkit-details-marker{display:none}
+.calc-det summary::after{content:'+';float:right;color:var(--accent-orange,#C05621)}
+.calc-det[open] summary::after{content:'–'}
+.calc-det-body{padding:0 1.35rem 1.5rem}
+
+/* Barra fija en celular */
+.barra-movil{display:none}
+@media(max-width:768px){
+  .barra-movil{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:940;background:var(--bg-warm);border-top:1.5px solid var(--line-soft)}
+  .barra-movil a{padding:.9rem .5rem;text-align:center;font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;border-right:1px solid var(--line-soft)}
+  .barra-movil a:last-child{border-right:none}
+  .barra-wa{background:var(--accent);color:var(--bg)!important;font-weight:600}
+  body{padding-bottom:3.4rem}
+  #chat-fab{bottom:4.6rem!important}
+  .hero-proof-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){.qh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.qh-grid{grid-template-columns:1fr}}
+
+/* Hero más compacto: la prueba visual debe caber en la primera pantalla */
+.hero-headline{font-size:clamp(38px,4.4vw,62px)!important;max-width:18ch}
+.hero-sub{font-size:17px!important;margin-bottom:1.5rem!important;max-width:48ch}
+.hero-ctas{margin-top:1.5rem!important}
+
+@media(max-width:768px){.hero-headline{font-size:clamp(34px,8vw,46px)!important}}
+/* La demo de chat marcaba la altura del hero; se acota para que la tira de
+   sitios entre en la primera pantalla. */
+@media(min-width:901px){
+  .chat-demo{max-height:min(58svh,470px);overflow:hidden}
+  .hero-proof-strip img{max-height:118px}
+}
+@media(min-width:901px){
+  .hero-inner{padding-top:40px!important}
+  .hero-eyebrow{margin-bottom:1rem!important}
+  .hero-headline{margin-bottom:.75rem!important}
+  .hero-sub{margin-top:1.25rem!important;margin-bottom:1rem!important}
+  .hero-ctas{margin-top:1rem!important;margin-bottom:1rem!important}
+  .hero-proof-more{margin-top:.55rem}
+}
+
+/* Celular: la demo de chat se acorta para que la tira de sitios llegue antes */
+@media(max-width:900px){
+  .chat-demo{max-height:300px;overflow:hidden;-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+  .pl-wrap::after{content:'Desliza para comparar →';display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--ink-3);margin-top:.6rem;position:sticky;left:0}
+}
