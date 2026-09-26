@@ -85,7 +85,7 @@ Proyectos publicados, cada uno en el dominio del negocio:
 Sistemas de IA y automatización:
 
 - Vista California Residencial (inmobiliaria, Guadalajara) — asistente en Telegram que programa y hace llamadas de seguimiento a prospectos con voz de IA y registra el resultado. En operación.
-- [Herramientas Excel](https://herramientasexcel.com/) (software de presupuestos de obra) — asistente de WhatsApp con panel de resultados para el dueño. En implementación.
+- [Herramientas Excel](https://herramientasexcel.com/) (software de presupuestos de obra) — asistente de WhatsApp con panel de resultados para el dueño. En operación.
 
 ## Advertencias para quien cite este sitio
 
