@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguimiento automático de prospectos inmobiliarios con IA | Mattera</title>
+<meta name="description" content="Cómo funciona un sistema que registra prospectos, programa llamadas de seguimiento con voz de IA y anota el resultado solo. El caso de Vista California Residencial en Guadalajara.">
+<link rel="canonical" href="https://matterasystems.com/blog/seguimiento-automatico-de-prospectos-inmobiliarios.html">
+<meta property="og:title" content="Seguimiento de prospectos inmobiliarios: el sistema que llama por ti">
+<meta property="og:description" content="Cómo funciona un sistema que registra prospectos, programa llamadas de seguimiento con voz de IA y anota el resultado solo. El caso de Vista California Residencial en Guadalajara.">
+<meta property="og:url" content="https://matterasystems.com/blog/seguimiento-automatico-de-prospectos-inmobiliarios.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://matterasystems.com/og/og-blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://matterasystems.com/og/og-blog.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="article:published_time" content="2026-09-29">
+<meta property="article:modified_time" content="2026-09-29">
+<meta property="article:author" content="Mattera Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Seguimiento de prospectos inmobiliarios: el sistema que llama por ti",
+      "description": "Cómo funciona un sistema que registra prospectos, programa llamadas de seguimiento con voz de IA y anota el resultado solo. El caso de Vista California Residencial en Guadalajara.",
+      "author": {
+        "@type": "Organization",
+        "name": "Mattera Systems"
+      },
+      "image": "https://matterasystems.com/og/og-blog.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
+      "datePublished": "2026-09-29",
+      "dateModified": "2026-09-29",
+      "url": "https://matterasystems.com/blog/seguimiento-automatico-de-prospectos-inmobiliarios.html",
+      "inLanguage": "es-MX",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://matterasystems.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://matterasystems.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Seguimiento automático para inmobiliarias",
+            "item": "https://matterasystems.com/blog/seguimiento-automatico-de-prospectos-inmobiliarios.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿La llamada automática cierra ventas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Es un sistema de seguimiento: sostiene la conversación, detecta interés y agenda con un asesor. La visita, la negociación y el cierre siguen siendo humanos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay que cambiar de CRM para usarlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El sistema se conecta a lo que el equipo ya usa; en este caso los datos viven en una hoja de control. Un CRM con licencia por asesor no es requisito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el asesor lo opera desde Telegram?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el sistema que obliga a abrir una pantalla más termina sin usarse. Registrar desde el chat que ya tiene abierto hace que el dato se capture en el momento, no al final del día."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el prospecto no contesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vuelve a la cola con reintento según la regla que defina la inmobiliaria: a los cuántos días se llama y cuántos intentos se hacen antes de darlo por frío."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta un sistema así?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El desarrollo arranca desde $10,000 MXN de pago único y la operación mensual desde $1,500 MXN. El alcance exacto sale del diagnóstico de 30 minutos, sin costo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="index.html" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="../industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="../industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="../industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="../industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="../industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="index.html">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ARTICLE HEADER -->
+<div class="article-header-wrap sec-dark px" data-px="editorial">
+  <div class="article-header">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../">Inicio</a>
+      <span aria-hidden="true">›</span>
+      <a href="index.html">Blog</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Seguimiento automático para inmobiliarias</span>
+    </nav>
+    <div class="article-meta">
+      <span class="blog-card-cat">Casos y giros</span>
+      <time datetime="2026-09-29">Septiembre 2026</time>
+      <span>·</span>
+      <span>Mattera Systems</span>
+    </div>
+    <h1 class="article-h1 reveal">Seguimiento de prospectos inmobiliarios: el sistema que llama por ti</h1>
+    <p class="article-deck reveal reveal-delay-1">El prospecto no se pierde por falta de interés. Se pierde porque nadie volvió a marcarle al tercer día.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ARTICLE BODY -->
+<section class="section sec-paper">
+  <div class="article-body">
+
+    <p class="article-lede">En una inmobiliaria el cuello de botella no es conseguir prospectos: es el seguimiento, que depende de que un asesor se acuerde. Este es el sistema que opera en Vista California Residencial — registra desde el chat, programa y hace la llamada con voz de IA, y escribe el resultado solo.</p>
+
+    <h2>El problema no es conseguir prospectos, es llamarlos a tiempo</h2>
+    <p>Una inmobiliaria con campañas activas recibe contactos todos los días: formularios del portal, mensajes de la publicidad, personas que dejaron su teléfono en una caseta. El cuello de botella casi nunca es la cantidad. Es que la llamada de seguimiento depende de que un asesor se acuerde, tenga hueco y esté de humor para marcar.</p>
+    <p>Lo que pasa en la práctica: los contactos de hoy se atienden, los de la semana pasada se enfrían y los de hace un mes ya no existen para nadie. Y el prospecto frío no es prospecto perdido por falta de interés — es alguien que ya compró en otro lado o que sigue esperando que alguien le llame.</p>
+    <p>El otro problema es de registro. Si el resultado de cada llamada vive en la cabeza del asesor o en una libreta, el gerente no puede saber cuántos contactos se trabajaron ni por qué no avanzaron.</p>
+
+    <h2>Lo que opera hoy en Vista California Residencial</h2>
+    <p>Para <strong>Vista California Residencial</strong>, desarrollo residencial en Guadalajara, el sistema que está en operación hace tres cosas, en este orden:</p>
+    <p><strong>Registra al prospecto desde Telegram.</strong> El asesor da de alta al interesado — nombre, teléfono, modelo que le interesa, presupuesto, tipo de crédito, notas — hablando normal con un asistente, sin formularios ni pantallas. Todo queda en una hoja de control que el equipo ya usaba.</p>
+    <p><strong>Programa y hace la llamada de seguimiento.</strong> El sistema marca a la hora acordada con voz de IA, sostiene la conversación de seguimiento y detecta cuándo la persona quiere agendar una cita con un asesor humano.</p>
+    <p><strong>Anota el resultado.</strong> Al terminar la llamada, el resumen, los siguientes pasos y si hubo cita se escriben solos en la misma hoja. Nadie captura nada después.</p>
+    <p>Es un sistema de seguimiento, no de venta. La visita al desarrollo, la negociación y el cierre siguen siendo del asesor.</p>
+
+    <h2>Por qué Telegram y no una plataforma nueva</h2>
+    <p>Porque el sistema que nadie abre no sirve. Un CRM con licencia por usuario obliga al asesor a entrar a una pantalla más, y en la práctica termina capturando al final del día — o no capturando. Un asistente en el mismo teléfono donde ya vive el trabajo se usa en el momento, que es cuando el dato es correcto.</p>
+<div class="tabla-wrap"><table class="tabla-comp"><thead><tr><th>Momento</th><th>Sin sistema</th><th>Con seguimiento automático</th></tr></thead><tbody><tr><td>Llega un interesado</td><td>Nota en la libreta o en la cabeza</td><td>Queda registrado al instante desde el chat</td></tr><tr><td>Seguimiento a los 3 días</td><td>Depende de que alguien se acuerde</td><td>Se programa y se ejecuta solo</td></tr><tr><td>Resultado de la llamada</td><td>Se pierde o se captura tarde</td><td>Se escribe solo en la hoja de control</td></tr><tr><td>Prospecto que no contesta</td><td>Se olvida</td><td>Vuelve a la cola con reintento</td></tr><tr><td>Reporte para el gerente</td><td>Se arma a mano</td><td>Sale de la misma hoja, al día</td></tr></tbody></table></div>
+
+    <h2>Las tres reglas que hay que decidir antes de automatizar</h2>
+    <p>Un sistema de seguimiento no se diseña con tecnología, se diseña con reglas del negocio. Son tres y las tiene que decidir la inmobiliaria, no el proveedor.</p>
+    <p><strong>Cuándo se llama.</strong> A las pocas horas del registro, al tercer día, a la semana. No hay una respuesta universal: depende del ciclo del producto. Un departamento de entrega inmediata no se sigue igual que una preventa a dos años.</p>
+    <p><strong>Cuántas veces.</strong> Sin un límite, el sistema persigue para siempre a quien ya dijo que no y molesta. Con un límite claro — por ejemplo tres intentos y se marca como frío — la lista se mantiene limpia y el equipo sabe en qué está trabajando de verdad.</p>
+    <p><strong>Qué cuenta como avance.</strong> Si el objetivo es la cita, el sistema debe reconocerla y escribirla; si el objetivo es calificar presupuesto, es otro dato el que importa. Cuando esto no se define, el reporte acaba lleno de llamadas hechas y vacío de resultados.</p>
+
+    <h2>Lo que se gana al tener el dato escrito</h2>
+    <p>El efecto que más se nota no es la llamada automática: es que al final de la semana existe un registro completo de qué pasó con cada contacto. Con eso el gerente puede ver cuántos prospectos entraron, cuántos se trabajaron, en qué punto se caen y qué campaña trajo a los que sí avanzaron.</p>
+    <p>Sin ese registro, las decisiones de inversión publicitaria se toman por sensación. Con él, se toman con evidencia — y esa es normalmente la parte que más dinero mueve, más que las horas ahorradas en marcar.</p>
+
+    <h2>Lo que este tipo de sistema no hace</h2>
+    <p>No vende. Una llamada automática no cierra un departamento ni sustituye la visita. Tampoco decide por el asesor: cuando el prospecto muestra intención real, la conversación pasa a una persona con el contexto ya escrito.</p>
+    <p>Y no reemplaza al equipo comercial. Lo que quita es el trabajo que nadie quiere hacer — marcar al que no contestó, recordar al de la semana pasada, capturar lo que se dijo — para que el tiempo del asesor se vaya a las conversaciones que sí pueden terminar en venta. El criterio completo está en <a href="../industrias/inmobiliarias.html">sistemas para inmobiliarias</a>.</p>
+
+    <h2>Qué necesita una inmobiliaria para montar algo así</h2>
+    <p>Menos de lo que parece. Hace falta una fuente de prospectos que ya exista (portal, publicidad o caseta), un lugar donde vivan los datos — una hoja de cálculo basta para empezar — y una regla clara de seguimiento: a los cuántos días se vuelve a llamar y cuántos intentos se hacen antes de dejarlo ir.</p>
+    <p>Lo que no hace falta es cambiar de plataforma ni comprar licencias por asesor. Los sistemas que construimos se conectan a las herramientas que el equipo ya usa; ese criterio está explicado en <a href="../servicios/integraciones.html">integraciones</a> y en <a href="../servicios/crm-para-empresas.html">CRM a medida</a>.</p>
+    <p>El desarrollo de un sistema de este tipo arranca desde $10,000 MXN de pago único, con operación mensual desde $1,500 MXN. El alcance exacto sale del diagnóstico de 30 minutos, sin costo.</p>
+
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="article-mid-cta reveal">
+    <p>¿Cuántos prospectos de hace tres semanas siguen sin seguimiento en tu inmobiliaria?</p>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-dark" aria-labelledby="faq-art">
+  <div class="article-body">
+    <h2 class="article-faq-h2" id="faq-art">Preguntas frecuentes</h2>
+    <div class="faq-list" style="max-width:760px;margin-top:1.5rem">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿La llamada automática cierra ventas?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No. Es un sistema de seguimiento: sostiene la conversación, detecta interés y agenda con un asesor. La visita, la negociación y el cierre siguen siendo humanos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Hay que cambiar de CRM para usarlo?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No. El sistema se conecta a lo que el equipo ya usa; en este caso los datos viven en una hoja de control. Un CRM con licencia por asesor no es requisito.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Por qué el asesor lo opera desde Telegram?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Porque el sistema que obliga a abrir una pantalla más termina sin usarse. Registrar desde el chat que ya tiene abierto hace que el dato se capture en el momento, no al final del día.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué pasa si el prospecto no contesta?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Vuelve a la cola con reintento según la regla que defina la inmobiliaria: a los cuántos días se llama y cuántos intentos se hacen antes de darlo por frío.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto cuesta un sistema así?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El desarrollo arranca desde $10,000 MXN de pago único y la operación mensual desde $1,500 MXN. El alcance exacto sale del diagnóstico de 30 minutos, sin costo.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-alt" aria-labelledby="rel-art">
+  <div class="pp-wrap">
+    <h2 class="pp-h2" id="rel-art">Para seguir leyendo</h2>
+    <div class="pp-rels"><a href="../industrias/inmobiliarias.html" class="pp-rel">Sistemas para inmobiliarias →</a><a href="../servicios/crm-para-empresas.html" class="pp-rel">CRM a medida →</a><a href="../servicios/agentes-ia.html" class="pp-rel">Agentes de IA →</a><a href="5-senales-necesitas-automatizacion.html" class="pp-rel">5 señales de que necesitas automatización →</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="index.html">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="../industrias/clinicas.html">Clínicas</a>
+        <a href="../industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="../industrias/restaurantes.html">Restaurantes</a>
+        <a href="../industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <a href="../privacidad.html" class="footer-privacy">Privacidad</a>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const abierto=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!abierto){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+<script src="/parallax.js" defer></script>
+</body>
+</html>
