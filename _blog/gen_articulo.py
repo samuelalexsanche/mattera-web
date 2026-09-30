@@ -162,7 +162,14 @@ function toggleFaq(btn){
   if(!abierto){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
 }
 function toggleMobileNav()''')
-    destino = os.path.join(BASE, 'blog', s['slug'])
+    carpeta = s.get('destino') or os.path.join(BASE, 'blog')
+    os.makedirs(carpeta, exist_ok=True)
+    destino = os.path.join(carpeta, s['slug'])
     open(destino, 'w', encoding='utf-8').write(doc)
+    if s.get('ficha'):
+        json.dump({'slug': s['slug'], 'categoria': s['categoria'], 'fecha': s['fecha'],
+                   'titulo': s['h1'], 'resumen': s['ficha']},
+                  open(os.path.splitext(destino)[0] + '.json', 'w', encoding='utf-8'),
+                  ensure_ascii=False, indent=2)
     palabras = len(_limpio(s['lede'] + ' ' + s['cuerpo']).split())
     return destino, palabras

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Por qué mi página web no aparece en Google: diagnóstico en 5 causas</title>
+<meta name="description" content="Cómo comprobar si tu sitio está indexado y las cinco causas reales por las que no aparece en Google, ordenadas por frecuencia, con la forma de verificar cada una.">
+<link rel="canonical" href="https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html">
+<meta property="og:title" content="Por qué tu página web no aparece en Google">
+<meta property="og:description" content="Cómo comprobar si tu sitio está indexado y las cinco causas reales por las que no aparece en Google, ordenadas por frecuencia, con la forma de verificar cada una.">
+<meta property="og:url" content="https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://matterasystems.com/og/og-blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://matterasystems.com/og/og-blog.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:modified_time" content="2026-10-06">
+<meta property="article:author" content="Mattera Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Por qué tu página web no aparece en Google",
+      "description": "Cómo comprobar si tu sitio está indexado y las cinco causas reales por las que no aparece en Google, ordenadas por frecuencia, con la forma de verificar cada una.",
+      "author": {
+        "@type": "Organization",
+        "name": "Mattera Systems"
+      },
+      "image": "https://matterasystems.com/og/og-blog.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "url": "https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html",
+      "inLanguage": "es-MX",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://matterasystems.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://matterasystems.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Por qué no aparece mi página",
+            "item": "https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo sé si mi sitio está indexado en Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Busca site:tudominio.com en Google: lo que aparezca es aproximadamente lo indexado. El dato exacto está en Search Console, en el informe de indexación de páginas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa \"Descubierta: actualmente sin indexar\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Que Google conoce la dirección pero no la ha considerado suficientemente valiosa para leerla e indexarla. Suele deberse a falta de enlaces internos, contenido corto o duplicado, o poca autoridad del sitio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo pagarle a Google para que indexe mi sitio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los anuncios compran espacio publicitario, no indexación. La indexación depende de que el sitio sea accesible y su contenido valga la pena."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda Google en indexar una página nueva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De días a semanas. Se acelera pidiendo la indexación en Search Console y enlazando la página desde otras que ya estén indexadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mi sitio hecho con un constructor puede tener problemas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede, si el contenido se arma con JavaScript en el navegador. Compruébalo viendo el código fuente de la página: si tu texto no está ahí, los rastreadores podrían no verlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Y si aparezco pero no llega nadie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entonces el problema no es de indexación sino de demanda o de posición: tus páginas contestan preguntas que nadie hace, o están en resultados a los que no llega el usuario."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="index.html" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="../industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="../industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="../industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="../industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="../industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="index.html">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar diagnóstico →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ARTICLE HEADER -->
+<div class="article-header-wrap sec-dark px" data-px="editorial">
+  <div class="article-header">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../">Inicio</a>
+      <span aria-hidden="true">›</span>
+      <a href="index.html">Blog</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Por qué no aparece mi página</span>
+    </nav>
+    <div class="article-meta">
+      <span class="blog-card-cat">Visibilidad</span>
+      <time datetime="2026-10-06">Octubre 2026</time>
+      <span>·</span>
+      <span>Mattera Systems</span>
+    </div>
+    <h1 class="article-h1 reveal">Por qué tu página web no aparece en Google</h1>
+    <p class="article-deck reveal reveal-delay-1">Antes de contratar a nadie: hay una búsqueda de diez segundos que te dice si el problema es técnico o de contenido.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ARTICLE BODY -->
+<section class="section sec-paper">
+  <div class="article-body">
+
+    <p class="article-lede">Si tu página no aparece en Google, escribe en el buscador <code>site:tudominio.com</code>: lo que salga es lo que Google tiene indexado. A partir de ahí hay cinco causas posibles, y solo dos son técnicas. Estas son, en orden de frecuencia, con la forma de comprobar cada una.</p>
+
+    <h2>Primero: comprueba si estás o no estás</h2>
+    <p>Antes de diagnosticar, mide. Abre Google y escribe <code>site:tudominio.com</code> (sin espacio después de los dos puntos). Lo que salga es, aproximadamente, lo que Google tiene indexado de tu sitio.</p>
+    <p>Tres resultados posibles: no aparece nada — no estás indexado; aparecen algunas páginas — estás parcialmente indexado; aparecen todas pero nadie llega — el problema no es de indexación, es de posición o de demanda.</p>
+    <p>La herramienta que da la respuesta exacta es <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Search Console</a>, gratis, del propio Google. Ahí, en "Indexación de páginas", te dice cuántas están dentro y el motivo de cada exclusión.</p>
+
+    <h2>Causa 1: el sitio bloquea a Google sin querer</h2>
+    <p>Pasa más de lo que parece, sobre todo en sitios recién lanzados: quedó activa la instrucción de no indexar que se usa mientras se construye. Se ve en la etiqueta <code>noindex</code> del código o en un <code>robots.txt</code> que prohíbe el paso.</p>
+    <p>Cómo comprobarlo: abre <code>tudominio.com/robots.txt</code> y revisa que no diga <code>Disallow: /</code>. En Search Console, la inspección de URL te dirá literalmente si la página está excluida por una etiqueta.</p>
+
+    <h2>Causa 2: Google la descubrió y decidió no indexarla</h2>
+    <p>Es el motivo más frecuente y el más incómodo, porque no es un error técnico: es un juicio de valor. Search Console lo llama <strong>"Descubierta: actualmente sin indexar"</strong>. Significa que conoce la dirección y no ha considerado que valga la pena leerla.</p>
+    <p>Las causas habituales: la página no tiene enlaces internos que la sostengan, su contenido es muy corto o se parece demasiado al de otra, o el sitio es nuevo y todavía no tiene autoridad.</p>
+    <p>La solución no es pedir indexación otra vez: es darle razones. Enlázala desde páginas que sí estén indexadas, haz que su contenido sea único y suficiente, y quítale las variantes duplicadas.</p>
+
+    <h2>Causa 3: el contenido no existe hasta que el navegador lo arma</h2>
+    <p>Si tu sitio está hecho con un constructor moderno que carga el contenido con JavaScript, es posible que el robot vea una página casi vacía. Comprobación rápida: clic derecho, "ver código fuente de la página", y busca un párrafo que sepas que está publicado. Si no está ahí, tu contenido depende de JavaScript y eso complica tanto a Google como a las IA que responden preguntas.</p>
+
+    <h2>Causa 4: existe, pero nadie busca eso</h2>
+    <p>Un caso real y frecuente: el sitio está indexado, la empresa aparece si buscas su nombre, y aun así no llega nadie. El problema es que las páginas contestan preguntas que nadie hace — "bienvenidos a nuestra empresa", "calidad y compromiso" — en vez de las que sí se buscan.</p>
+    <p>El arreglo no es técnico, es de contenido: una página por cada cosa que vendes, escrita con las palabras que usa el cliente, no con las de tu folleto.</p>
+
+    <h2>Causa 5: estás, pero en la página cuatro</h2>
+    <p>Aquí ya es una competencia por posición. Influyen la antigüedad del dominio, los enlaces de otros sitios, la profundidad del contenido y qué tan bien responde a la intención de quien busca. Se mueve, pero con trabajo sostenido, no con un ajuste de una tarde.</p>
+
+    <h2>Lo que casi nadie revisa: las versiones duplicadas de tu sitio</h2>
+    <p>Un mismo sitio puede existir en cuatro direcciones distintas a la vez: con www y sin www, con http y con https. Si las cuatro responden, Google ve cuatro sitios parecidos y tiene que adivinar cuál es el bueno. La fuerza se reparte y ninguna versión llega lejos.</p>
+    <p>El arreglo es elegir una y redirigir las otras con una redirección permanente, además de declarar la dirección buena con la etiqueta canónica en cada página. Es media hora de trabajo y evita un problema que no se ve desde fuera.</p>
+    <p>El mismo cuidado aplica a páginas que existen dos veces por accidente, como <code>/servicios</code> y <code>/servicios/index.html</code>. Cada duplicado obliga a Google a escoger, y cada elección que hace por ti es una que pierdes tú.</p>
+
+    <h2>Tabla de diagnóstico</h2>
+<div class="tabla-wrap"><table class="tabla-comp"><thead><tr><th>Síntoma</th><th>Causa probable</th><th>Qué hacer</th></tr></thead><tbody><tr><td>No sale nada con site:</td><td>Bloqueo por noindex o robots.txt</td><td>Revisar etiqueta y robots.txt</td></tr><tr><td>Salen unas páginas, otras no</td><td>Descubierta sin indexar</td><td>Enlaces internos y contenido propio</td></tr><tr><td>Sale el inicio y nada más</td><td>Sitio sin estructura interna</td><td>Una página por servicio, enlazadas</td></tr><tr><td>Sale todo, no llega nadie</td><td>Contenido sin demanda</td><td>Escribir sobre lo que sí se busca</td></tr><tr><td>Sales pero en posiciones bajas</td><td>Falta de autoridad y profundidad</td><td>Contenido más completo y enlaces</td></tr></tbody></table></div>
+
+    <h2>Cuánto tarda en arreglarse</h2>
+    <p>Depende de la causa. Un bloqueo técnico se corrige el mismo día y Google suele responder en días. Una página sin enlaces que empieza a recibirlos puede tardar semanas. Ganar posiciones en una búsqueda competida es cuestión de meses, y quien prometa otra cosa está vendiendo humo.</p>
+    <p>Conviene decirlo claro: no existe forma de pagarle a Google para que indexe tu sitio. Los anuncios compran espacio publicitario, no indexación.</p>
+
+    <h2>El orden en que conviene atacarlo</h2>
+    <p>Primero lo técnico, que es barato: quitar bloqueos, comprobar que el contenido está en el código fuente, publicar un sitemap y conectarlo a Search Console. Después la estructura: una página por servicio y enlaces internos entre ellas. Al final, el contenido que responde preguntas reales.</p>
+    <p>Ese es exactamente el orden que seguimos en los proyectos que hacemos: lo explicamos en <a href="../servicios/paginas-web.html">sitios web con SEO y GEO</a>. Y si además quieres que las IA puedan citarte, el criterio está en <a href="que-es-geo-optimizacion-para-ia.html">qué es GEO</a>.</p>
+
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="article-mid-cta reveal">
+    <p>¿Quieres saber en qué punto se está atorando tu sitio? Lo revisamos contigo, sin costo.</p>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-dark" aria-labelledby="faq-art">
+  <div class="article-body">
+    <h2 class="article-faq-h2" id="faq-art">Preguntas frecuentes</h2>
+    <div class="faq-list" style="max-width:760px;margin-top:1.5rem">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cómo sé si mi sitio está indexado en Google?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Busca site:tudominio.com en Google: lo que aparezca es aproximadamente lo indexado. El dato exacto está en Search Console, en el informe de indexación de páginas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué significa "Descubierta: actualmente sin indexar"?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Que Google conoce la dirección pero no la ha considerado suficientemente valiosa para leerla e indexarla. Suele deberse a falta de enlaces internos, contenido corto o duplicado, o poca autoridad del sitio.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Puedo pagarle a Google para que indexe mi sitio?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No. Los anuncios compran espacio publicitario, no indexación. La indexación depende de que el sitio sea accesible y su contenido valga la pena.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto tarda Google en indexar una página nueva?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>De días a semanas. Se acelera pidiendo la indexación en Search Console y enlazando la página desde otras que ya estén indexadas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Mi sitio hecho con un constructor puede tener problemas?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Puede, si el contenido se arma con JavaScript en el navegador. Compruébalo viendo el código fuente de la página: si tu texto no está ahí, los rastreadores podrían no verlo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Y si aparezco pero no llega nadie?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Entonces el problema no es de indexación sino de demanda o de posición: tus páginas contestan preguntas que nadie hace, o están en resultados a los que no llega el usuario.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-alt" aria-labelledby="rel-art">
+  <div class="pp-wrap">
+    <h2 class="pp-h2" id="rel-art">Para seguir leyendo</h2>
+    <div class="pp-rels"><a href="que-es-geo-optimizacion-para-ia.html" class="pp-rel">¿Qué es GEO? →</a><a href="como-aparecer-en-google-maps-negocio.html" class="pp-rel">Cómo aparecer en Google Maps →</a><a href="../servicios/paginas-web.html" class="pp-rel">Sitios web con SEO y GEO →</a><a href="../faq.html" class="pp-rel">50 preguntas frecuentes →</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="index.html">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="../industrias/clinicas.html">Clínicas</a>
+        <a href="../industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="../industrias/restaurantes.html">Restaurantes</a>
+        <a href="../industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <a href="../privacidad.html" class="footer-privacy">Privacidad</a>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const abierto=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!abierto){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+<script src="/parallax.js" defer></script>
+</body>
+</html>

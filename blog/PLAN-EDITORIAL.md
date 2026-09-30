@@ -3,17 +3,22 @@
 Cola de temas para la rutina automática de contenido. Cada tema sale de
 **búsquedas reales** del autocompletado de Google México, no de intuición.
 
-**Cómo se usa:** la rutina toma el primer tema con estado `pendiente`, escribe
-el artículo, lo marca como `publicado` con la fecha, y hace commit. Si la cola
-se vacía, la rutina debe investigar temas nuevos y proponerlos aquí antes de
-escribir.
+**Cómo se usa (desde 2026-09-30):** los cinco temas de esta cola ya están
+escritos y revisados; viven en `_blog/pendientes/` (fuera de la web, no entran
+al sitemap). El flujo `.github/workflows/publicar-articulo.yml` corre martes y
+viernes, publica el siguiente cuando llega su fecha, le añade su tarjeta al
+índice, regenera el sitemap y avisa a IndexNow.
+
+Cuando la cola se vacíe hay que investigar temas nuevos con búsquedas reales,
+escribirlos con `_blog/gen_articulo.py` apuntando a `_blog/pendientes/` y
+fecharlos con al menos tres días de separación.
 
 ---
 
 ## Cola
 
 ### 1. Cómo aparecer en Google Maps con tu negocio
-- **Estado:** pendiente
+- **Estado:** escrito, en cola para 2026-10-02
 - **Slug:** `como-aparecer-en-google-maps-negocio.html`
 - **Cubre:** `como aparecer en google maps` · `maps gratis` · `maps mi negocio` · `como aparecer en google gratis`
 - **Ángulo:** paso a paso real de crear y verificar una ficha, incluyendo los
@@ -22,7 +27,7 @@ escribir.
 - **Enlaza a:** `/agencia-ia-guadalajara.html`, `/servicios/paginas-web.html`
 
 ### 2. Por qué tu página web no aparece en Google
-- **Estado:** pendiente
+- **Estado:** escrito, en cola para 2026-10-06
 - **Slug:** `por-que-mi-pagina-web-no-aparece-en-google.html`
 - **Cubre:** `por que no aparece mi pagina web en los buscadores` · `mi pagina web no aparece` · `como aparecer en google`
 - **Ángulo:** diagnóstico ordenado por frecuencia — sitemap incompleto, índice
@@ -31,20 +36,20 @@ escribir.
 - **Enlaza a:** `/servicios/paginas-web.html`, `/blog/que-es-geo-optimizacion-para-ia.html`
 
 ### 3. Cómo mejorar el SEO de tu página web
-- **Estado:** pendiente
+- **Estado:** escrito, en cola para 2026-10-09
 - **Slug:** `como-mejorar-el-seo-de-mi-pagina-web.html`
 - **Cubre:** `como mejorar el seo de mi pagina web` · `mejorar el rendimiento` · `mejorar el diseño`
 - **Ángulo:** qué mover primero según impacto real, y qué es pérdida de tiempo.
 
 ### 4. Cómo elegir un CRM para tu empresa
-- **Estado:** pendiente
+- **Estado:** escrito, en cola para 2026-10-13
 - **Slug:** `como-elegir-un-crm-para-mi-empresa.html`
 - **Cubre:** `como elegir un crm` · `crm para empresas pequeñas` · `crm para empresas medianas`
 - **Ángulo:** criterios de decisión, y por qué la mayoría de los CRM se abandonan.
 - **Enlaza a:** `/servicios/crm-para-empresas.html`
 
 ### 5. Inteligencia artificial para PyMEs: usos prácticos
-- **Estado:** pendiente
+- **Estado:** escrito, en cola para 2026-10-16
 - **Slug:** `inteligencia-artificial-para-pymes-usos-practicos.html`
 - **Cubre:** `inteligencia artificial para pymes uso práctico` · `y prompts` · `como automatizar procesos con chatgpt`
 - **Ángulo:** casos concretos por tamaño de empresa, con el criterio de cuándo

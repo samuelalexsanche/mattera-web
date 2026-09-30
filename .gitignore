@@ -1,6 +1,7 @@
 # secretos locales de wrangler — nunca se suben
-.dev.vars
 **/.dev.vars
-.wrangler/
-node_modules/
 .DS_Store
+.dev.vars
+.wrangler/
+__pycache__
+node_modules/
