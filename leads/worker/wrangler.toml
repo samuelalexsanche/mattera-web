@@ -1,0 +1,17 @@
+name = "mattera-leads"
+main = "worker.js"
+compatibility_date = "2026-05-01"
+
+# La llave para consultar los contactos NO va aquí. Se guarda cifrada:
+#   npx wrangler secret put PANEL_KEY
+#
+# Despliegue:
+#   cd leads/worker && npx wrangler deploy
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mattera-leads"
+database_id = "5582141b-9c70-4ac1-864b-0fa0cadaf2f0"
+
+[observability]
+enabled = true
