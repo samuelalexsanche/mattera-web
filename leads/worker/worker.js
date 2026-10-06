@@ -24,7 +24,16 @@ const ALLOWED_ORIGINS = [
 ];
 
 const MAX_BODY_BYTES = 8 * 1024;
-const LIMITES = { nombre: 80, telefono: 25, giro: 120, dolor: 400 };
+const LIMITES = { nombre: 80, telefono: 25, giro: 120, dolor: 400, cuenta: 60 };
+
+// Alfabeto sin 0/O ni 1/I/L: el folio se dicta en voz alta en el stand.
+const ALFABETO = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
+function nuevoFolio() {
+  const b = crypto.getRandomValues(new Uint8Array(4));
+  let f = '';
+  for (const n of b) f += ALFABETO[n % ALFABETO.length];
+  return 'MAT-' + f;
+}
 
 export default {
   async fetch(request, env) {
@@ -63,6 +72,7 @@ export default {
     const telefono = limpiaTel(d.telefono);
     const giro = limpia(d.giro, LIMITES.giro);
     const dolor = limpia(d.dolor, LIMITES.dolor);
+    const cuenta = limpia(d.cuenta, LIMITES.cuenta).replace(/^@+/, '');
 
     if (!nombre) return json({ error: 'Falta el nombre.' }, 400, cors);
     if (!telefono || telefono.replace(/\D/g, '').length < 10) {
@@ -73,24 +83,37 @@ export default {
     const personas = entero(d.personas, 0, 500);
     const origen = d.origen === 'expo' ? 'expo' : 'sitio';
 
+    let folio;
     try {
-      // Si la persona ya se registró, se actualiza su ficha en vez de duplicarla.
-      await env.DB.prepare(
-        `INSERT INTO leads (creado, nombre, telefono, giro, dolor, horas_anio, personas, origen)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-         ON CONFLICT(telefono) DO UPDATE SET
-           nombre     = excluded.nombre,
-           giro       = COALESCE(NULLIF(excluded.giro, ''), leads.giro),
-           dolor      = COALESCE(NULLIF(excluded.dolor, ''), leads.dolor),
-           horas_anio = COALESCE(excluded.horas_anio, leads.horas_anio),
-           personas   = COALESCE(excluded.personas, leads.personas)`
-      ).bind(new Date().toISOString(), nombre, telefono, giro, dolor, horas, personas, origen).run();
+      // Quien ya se registró conserva su folio: el del llavero que ya recogió.
+      // Se reintenta por si el folio generado ya existía.
+      for (let intento = 0; intento < 5; intento++) {
+        try {
+          const fila = await env.DB.prepare(
+            `INSERT INTO leads (creado, nombre, telefono, giro, dolor, horas_anio, personas, origen, cuenta, folio)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             ON CONFLICT(telefono) DO UPDATE SET
+               nombre     = excluded.nombre,
+               giro       = COALESCE(NULLIF(excluded.giro, ''), leads.giro),
+               dolor      = COALESCE(NULLIF(excluded.dolor, ''), leads.dolor),
+               cuenta     = COALESCE(NULLIF(excluded.cuenta, ''), leads.cuenta),
+               horas_anio = COALESCE(excluded.horas_anio, leads.horas_anio),
+               personas   = COALESCE(excluded.personas, leads.personas)
+             RETURNING folio`
+          ).bind(new Date().toISOString(), nombre, telefono, giro, dolor, horas, personas,
+                 origen, cuenta, nuevoFolio()).first();
+          folio = fila && fila.folio;
+          break;
+        } catch (e) {
+          if (!/folio/i.test(String(e)) || intento === 4) throw e;
+        }
+      }
     } catch (e) {
       console.error('No se pudo guardar el contacto', String(e));
       return json({ error: 'No se pudo guardar. Inténtalo otra vez.' }, 500, cors);
     }
 
-    return json({ ok: true }, 200, cors);
+    return json({ ok: true, folio: folio || null }, 200, cors);
   },
 };
 
@@ -104,14 +127,16 @@ async function contar(env, cors) {
 
 async function exportar(env, cors) {
   const { results } = await env.DB.prepare(
-    `SELECT creado, nombre, telefono, giro, dolor, horas_anio, personas, origen, nota
+    `SELECT creado, folio, nombre, telefono, cuenta, giro, dolor, horas_anio, personas,
+            origen, entregado, nota
        FROM leads ORDER BY creado DESC`
   ).all();
 
-  const cab = ['Fecha', 'Nombre', 'Teléfono', 'A qué se dedica', 'Qué le quita tiempo',
-               'Horas al año', 'Personas', 'Origen', 'Nota'];
+  const cab = ['Fecha', 'Folio', 'Nombre', 'Teléfono', 'Cuenta del negocio', 'A qué se dedica',
+               'Qué le quita tiempo', 'Horas al año', 'Personas', 'Origen', 'Llavero entregado', 'Nota'];
   const filas = (results || []).map((r) => [
-    r.creado, r.nombre, r.telefono, r.giro, r.dolor, r.horas_anio, r.personas, r.origen, r.nota,
+    r.creado, r.folio, r.nombre, r.telefono, r.cuenta, r.giro, r.dolor, r.horas_anio,
+    r.personas, r.origen, r.entregado ? 'sí' : '', r.nota,
   ]);
   // BOM para que Excel abra los acentos bien.
   const csv = '﻿' + [cab, ...filas].map((f) => f.map(celda).join(',')).join('\r\n');
