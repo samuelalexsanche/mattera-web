@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://matterasystems.com/blog/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -129,6 +129,12 @@
   <url>
     <loc>https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html</loc>
     <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://matterasystems.com/blog/como-mejorar-el-seo-de-mi-pagina-web.html</loc>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
