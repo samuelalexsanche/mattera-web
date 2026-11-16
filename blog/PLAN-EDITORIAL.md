@@ -17,44 +17,20 @@ fecharlos con al menos tres días de separación.
 
 ## Cola
 
-### 1. Cómo aparecer en Google Maps con tu negocio
-- **Estado:** escrito, en cola para 2026-10-02
-- **Slug:** `como-aparecer-en-google-maps-negocio.html`
-- **Cubre:** `como aparecer en google maps` · `maps gratis` · `maps mi negocio` · `como aparecer en google gratis`
-- **Ángulo:** paso a paso real de crear y verificar una ficha, incluyendo los
-  errores que cuestan tiempo (elegir mal la categoría principal, publicar una
-  dirección cuando no atiendes al público, horario que no coincide con el sitio).
-- **Enlaza a:** `/agencia-ia-guadalajara.html`, `/servicios/paginas-web.html`
+### 1. Cómo integrar WhatsApp con tu CRM o tu sistema
+- **Estado:** escrito, en cola para 2026-11-17
+- **Slug:** `como-integrar-whatsapp-con-tu-crm-o-sistema.html`
+- **Resumen:** Hay tres cosas que se llaman WhatsApp y solo una se conecta. Qué pide Meta, las tres formas de hacerlo con sus costos, y la trampa de la ventana de 24 horas.
 
-### 2. Por qué tu página web no aparece en Google
-- **Estado:** escrito, en cola para 2026-10-06
-- **Slug:** `por-que-mi-pagina-web-no-aparece-en-google.html`
-- **Cubre:** `por que no aparece mi pagina web en los buscadores` · `mi pagina web no aparece` · `como aparecer en google`
-- **Ángulo:** diagnóstico ordenado por frecuencia — sitemap incompleto, índice
-  desactualizado, falta de autoridad, contenido que nadie busca. Formato de
-  checklist con cómo verificar cada causa.
-- **Enlaza a:** `/servicios/paginas-web.html`, `/blog/que-es-geo-optimizacion-para-ia.html`
+### 2. Cómo automatizar una clínica dental o un consultorio
+- **Estado:** escrito, en cola para 2026-11-20
+- **Slug:** `como-automatizar-una-clinica-dental-o-consultorio.html`
+- **Resumen:** Primero las preguntas repetidas, después la agenda, al final el seguimiento. Qué no debe tocar nunca un asistente y cómo se cuidan los datos del paciente.
 
-### 3. Cómo mejorar el SEO de tu página web
-- **Estado:** escrito, en cola para 2026-10-09
-- **Slug:** `como-mejorar-el-seo-de-mi-pagina-web.html`
-- **Cubre:** `como mejorar el seo de mi pagina web` · `mejorar el rendimiento` · `mejorar el diseño`
-- **Ángulo:** qué mover primero según impacto real, y qué es pérdida de tiempo.
-
-### 4. Cómo elegir un CRM para tu empresa
-- **Estado:** escrito, en cola para 2026-10-13
-- **Slug:** `como-elegir-un-crm-para-mi-empresa.html`
-- **Cubre:** `como elegir un crm` · `crm para empresas pequeñas` · `crm para empresas medianas`
-- **Ángulo:** criterios de decisión, y por qué la mayoría de los CRM se abandonan.
-- **Enlaza a:** `/servicios/crm-para-empresas.html`
-
-### 5. Inteligencia artificial para PyMEs: usos prácticos
-- **Estado:** escrito, en cola para 2026-10-16
-- **Slug:** `inteligencia-artificial-para-pymes-usos-practicos.html`
-- **Cubre:** `inteligencia artificial para pymes uso práctico` · `y prompts` · `como automatizar procesos con chatgpt`
-- **Ángulo:** casos concretos por tamaño de empresa, con el criterio de cuándo
-  NO conviene.
-- **Enlaza a:** `/servicios/automatizacion-procesos.html`
+### 3. Cómo automatizar un restaurante sin descuidar el mostrador
+- **Estado:** escrito, en cola para 2026-11-24
+- **Slug:** `como-automatizar-un-restaurante.html`
+- **Resumen:** Reservas, pedidos por WhatsApp y clientes que vuelven. Qué automatizar primero, qué dejar en manos del equipo y por qué el menú va antes que el asistente.
 
 ---
 

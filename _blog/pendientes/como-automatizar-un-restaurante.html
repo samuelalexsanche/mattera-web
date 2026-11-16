@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo automatizar un restaurante: reservas, pedidos y WhatsApp | Mattera</title>
+<meta name="description" content="Qué automatizar en un restaurante y en qué orden: reservas, pedidos por WhatsApp, preguntas de siempre y clientes que vuelven. Qué debe seguir siendo humano.">
+<link rel="canonical" href="https://matterasystems.com/blog/como-automatizar-un-restaurante.html">
+<meta property="og:title" content="Cómo automatizar un restaurante sin descuidar el mostrador">
+<meta property="og:description" content="Qué automatizar en un restaurante y en qué orden: reservas, pedidos por WhatsApp, preguntas de siempre y clientes que vuelven. Qué debe seguir siendo humano.">
+<meta property="og:url" content="https://matterasystems.com/blog/como-automatizar-un-restaurante.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://matterasystems.com/og/og-blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://matterasystems.com/og/og-blog.png">
+<meta name="theme-color" content="#1E2318">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="article:published_time" content="2026-11-24">
+<meta property="article:modified_time" content="2026-11-24">
+<meta property="article:author" content="Mattera Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cómo automatizar un restaurante sin descuidar el mostrador",
+      "description": "Qué automatizar en un restaurante y en qué orden: reservas, pedidos por WhatsApp, preguntas de siempre y clientes que vuelven. Qué debe seguir siendo humano.",
+      "author": {
+        "@type": "Organization",
+        "name": "Mattera Systems"
+      },
+      "image": "https://matterasystems.com/og/og-blog.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "url": "https://matterasystems.com/blog/como-automatizar-un-restaurante.html",
+      "inLanguage": "es-MX",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://matterasystems.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://matterasystems.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Automatizar un restaurante",
+            "item": "https://matterasystems.com/blog/como-automatizar-un-restaurante.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Conviene automatizar los pedidos a domicilio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Conviene automatizar la toma del pedido y dejar la confirmación en manos de alguien, sobre todo si la cocina es chica: el límite real no es recibir pedidos, es poder cumplirlos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esto sustituye a las aplicaciones de reparto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No necesariamente. Lo que hace es que dejes de depender solo de ellas: el pedido que entra por tu WhatsApp no paga comisión y el cliente se queda contigo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito antes de poner un asistente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La carta publicada como texto en tu sitio (no una foto) y la ficha de Google al corriente. Sin eso, el asistente no tiene de dónde responder precios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El asistente puede tomar reservaciones de grupos grandes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede recibir la solicitud, pero conviene que un encargado confirme: los grupos grandes y los eventos privados son negociación, no trámite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Y si un cliente se queja por la comida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eso lo atiende una persona, rápido. El sistema debe detectar el reclamo y escalarlo de inmediato, no intentar resolverlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El sistema arranca desde $10,000 MXN de desarrollo y $1,500 MXN mensuales. Si primero necesitas el sitio con la carta, los planes están publicados desde $5,900 MXN."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menú">
+  <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Cerrar</button>
+  <a href="../#servicios" onclick="closeMobileNav()">Servicios</a>
+  <div class="mobile-nav-industrias">
+    <span class="mobile-nav-industrias-label">Industrias</span>
+    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clínicas</a>
+    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Inmobiliarias</a>
+    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurantes</a>
+    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Distribuidoras</a>
+  </div>
+  <a href="../#calculadora" onclick="closeMobileNav()">Cálculo</a>
+  <a href="index.html" onclick="closeMobileNav()">Blog</a>
+  <a href="../nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+</div>
+
+<header>
+  <nav aria-label="Navegación principal">
+    <a href="../" class="nav-logo" aria-label="Mattera Systems — Inicio">
+      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
+      <span class="nav-logo-word">Mattera</span>
+    </a>
+    <div class="nav-links" role="list">
+      <a href="../#servicios">Servicios</a>
+      <div class="nav-dropdown">
+        <a href="../industrias/" class="nav-dropdown-btn" aria-haspopup="true">
+          Industrias <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
+        </a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="../industrias/clinicas.html" role="menuitem">Clínicas</a>
+          <a href="../industrias/inmobiliarias.html" role="menuitem">Inmobiliarias</a>
+          <a href="../industrias/restaurantes.html" role="menuitem">Restaurantes</a>
+          <a href="../industrias/distribuidoras.html" role="menuitem">Distribuidoras</a>
+        </div>
+      </div>
+      <a href="../#calculadora">Cálculo</a>
+      <a href="index.html">Blog</a>
+      <a href="../nosotros.html">Nosotros</a>
+    </div>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Agendar llamada gratis →</span></a>
+    <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Abrir menú" aria-expanded="false" id="burgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ARTICLE HEADER -->
+<div class="article-header-wrap sec-dark px" data-px="editorial">
+  <div class="article-header">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../">Inicio</a>
+      <span aria-hidden="true">›</span>
+      <a href="index.html">Blog</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Automatizar un restaurante</span>
+    </nav>
+    <div class="article-meta">
+      <span class="blog-card-cat">Casos y giros</span>
+      <time datetime="2026-11-24">Noviembre 2026</time>
+      <span>·</span>
+      <span>Mattera Systems</span>
+    </div>
+    <h1 class="article-h1 reveal">Cómo automatizar un restaurante sin descuidar el mostrador</h1>
+    <p class="article-deck reveal reveal-delay-1">Regla primera: nada de lo que automatices puede quitarle atención a quien ya está sentado.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ARTICLE BODY -->
+<section class="section sec-paper">
+  <div class="article-body">
+
+    <p class="article-lede">En un restaurante conviene automatizar lo que pasa fuera del local: reservaciones con recordatorio, pedidos por WhatsApp, las preguntas de siempre y el mensaje al cliente que no vuelve. Lo que ocurre en el piso —el servicio y las quejas— sigue siendo humano. Este es el orden que funciona.</p>
+
+    <h2>El mostrador manda: qué se automatiza y qué no</h2>
+    <p>En un restaurante hay una regla que conviene fijar antes de cualquier herramienta: <strong>nada que automatices puede quitarle atención a quien ya está sentado</strong>. Por eso el orden correcto empieza por lo que ocurre fuera del local — el teléfono, el WhatsApp, las redes — y no por la operación del piso.</p>
+
+    <h2>1. Reservaciones</h2>
+    <p>Tomar una reserva por teléfono ocupa a alguien dos o tres minutos y obliga a coincidir. Un sistema de reservas muestra los horarios libres, el cliente elige y queda registrado, con confirmación automática y recordatorio el mismo día.</p>
+    <p>El recordatorio es lo que más rinde: la mesa que nadie avisó que no iba a usar es dinero perdido que nadie contabiliza.</p>
+
+    <h2>2. Pedidos por WhatsApp</h2>
+    <p>Para llevar y a domicilio, el patrón se repite: el cliente pregunta si hay tal platillo, cuánto cuesta, cuánto tarda, si llegan a su colonia. Un asistente conectado al menú responde eso y arma el pedido, y avisa a cocina o al encargado cuando está listo para confirmarse.</p>
+    <p>Aquí hay una decisión de negocio, no técnica: ¿quieres que el pedido se cierre solo o que una persona lo confirme? En restaurantes con cocina chica conviene lo segundo, porque el límite real no es tomar el pedido sino poder cumplirlo.</p>
+
+    <h2>3. Las preguntas de siempre</h2>
+    <p>Horario, dirección, estacionamiento, si aceptan tarjeta, si hay opciones sin gluten, si se puede llevar mascota, si hay mesa para diez. Son respuestas fijas, llegan todo el día y muchas de madrugada.</p>
+
+    <h2>4. Que el cliente vuelva</h2>
+    <p>Es lo que casi nadie hace y lo que más margen deja: quien ya comió contigo y quedó contento es el cliente más barato de recuperar. Un mensaje puntual con la promoción del mes a quien pidió hace seis semanas rinde más que anunciarse a desconocidos — siempre que la persona haya aceptado recibirlo.</p>
+
+    <h2>Lo que no conviene automatizar</h2>
+<div class="tabla-wrap"><table class="tabla-comp"><thead><tr><th>Situación</th><th>Quién la atiende</th><th>Por qué</th></tr></thead><tbody><tr><td>Reservar, confirmar, recordar</td><td>El sistema</td><td>Reglas claras y repetitivas</td></tr><tr><td>Preguntas de menú, horario y pago</td><td>El sistema</td><td>Respuesta fija</td></tr><tr><td>Pedido para llevar</td><td>El sistema, con confirmación humana</td><td>La cocina pone el límite real</td></tr><tr><td>Una queja por la comida</td><td>Una persona, rápido</td><td>Se juega la reseña y el cliente</td></tr><tr><td>Evento grande o privatización</td><td>El dueño o el encargado</td><td>Es negociación, no trámite</td></tr><tr><td>El servicio en mesa</td><td>El equipo, siempre</td><td>Es el producto</td></tr></tbody></table></div>
+
+    <h2>Lo que sí se puede medir desde la primera semana</h2>
+    <p>No hace falta un panel sofisticado. Cuatro números bastan para saber si valió la pena: cuántos mensajes entran al día, cuántos se respondieron sin que nadie los tocara, cuántas reservas se hicieron fuera de horario y cuántas mesas se liberaron a tiempo porque alguien avisó al recibir el recordatorio.</p>
+    <p>Esos cuatro se pueden contar a mano la primera semana, antes y después. Si no se mueven, el sistema no te estaba haciendo falta — y es mejor saberlo pronto.</p>
+
+    <h2>El error de automatizar la personalidad</h2>
+    <p>Un restaurante con historia tiene una forma de hablar: la de quien está en la caja desde hace veinte años. El asistente puede sonar parecido si se le enseña, pero no debe inventar bromas ni prometer cosas que la cocina no puede cumplir.</p>
+    <p>La regla que aplicamos: responde con lo que está escrito en la carta y en las políticas del negocio; si no lo sabe, lo dice y pasa la conversación. Un asistente que improvisa promete una mesa que no hay, y esa reseña la escribe el cliente, no el sistema.</p>
+
+    <h2>Las plataformas de reparto son otra cosa</h2>
+    <p>Conviene no confundir: una aplicación de reparto te trae pedidos y te cobra comisión por cada uno, y el cliente queda con ellos. Un pedido que entra por tu WhatsApp es tuyo, sin comisión, y el contacto se queda contigo.</p>
+    <p>No se trata de salir de las plataformas: se trata de no depender solo de ellas. El cliente que te descubrió ahí puede volver por tu canal si se lo pones fácil.</p>
+
+    <h2>Antes de automatizar: el menú tiene que estar publicado</h2>
+    <p>Un asistente no puede responder precios si el menú vive en una foto que se actualizó hace ocho meses. El orden que funciona: primero la carta publicada como texto en tu sitio — se lee en celular, se edita el mismo día y Google la entiende —, después la ficha de Google al corriente, y hasta entonces el asistente.</p>
+    <p>Eso está contado con un caso real en <a href="pagina-web-para-restaurantes.html">la página web de un restaurante</a> y el detalle del giro en <a href="../industrias/restaurantes.html">sistemas para restaurantes</a>.</p>
+
+    <h2>Cuánto cuesta</h2>
+    <p>El desarrollo arranca desde $10,000 MXN de pago único y la operación desde $1,500 MXN al mes; si lo que necesitas primero es el sitio con la carta, los planes tienen <a href="../planes.html">precio publicado desde $5,900 MXN</a>. La cuenta se hace contra lo que hoy cuestan las horas al teléfono y las mesas que se quedaron vacías sin aviso.</p>
+
+  </div>
+
+  <!-- MID-ARTICLE CTA -->
+  <div class="article-mid-cta reveal">
+    <p>¿Cuántas llamadas al día se van en reservas y en la misma pregunta de siempre?</p>
+    <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Agendar diagnóstico →</span></a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-dark" aria-labelledby="faq-art">
+  <div class="article-body">
+    <h2 class="article-faq-h2" id="faq-art">Preguntas frecuentes</h2>
+    <div class="faq-list" style="max-width:760px;margin-top:1.5rem">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Conviene automatizar los pedidos a domicilio?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Conviene automatizar la toma del pedido y dejar la confirmación en manos de alguien, sobre todo si la cocina es chica: el límite real no es recibir pedidos, es poder cumplirlos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Esto sustituye a las aplicaciones de reparto?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>No necesariamente. Lo que hace es que dejes de depender solo de ellas: el pedido que entra por tu WhatsApp no paga comisión y el cliente se queda contigo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Qué necesito antes de poner un asistente?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>La carta publicada como texto en tu sitio (no una foto) y la ficha de Google al corriente. Sin eso, el asistente no tiene de dónde responder precios.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿El asistente puede tomar reservaciones de grupos grandes?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Puede recibir la solicitud, pero conviene que un encargado confirme: los grupos grandes y los eventos privados son negociación, no trámite.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Y si un cliente se queja por la comida?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>Eso lo atiende una persona, rápido. El sistema debe detectar el reclamo y escalarlo de inmediato, no intentar resolverlo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">¿Cuánto cuesta?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-answer" role="region"><p>El sistema arranca desde $10,000 MXN de desarrollo y $1,500 MXN mensuales. Si primero necesitas el sitio con la carta, los planes están publicados desde $5,900 MXN.</p></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section sec-alt" aria-labelledby="rel-art">
+  <div class="pp-wrap">
+    <h2 class="pp-h2" id="rel-art">Para seguir leyendo</h2>
+    <div class="pp-rels"><a href="../industrias/restaurantes.html" class="pp-rel">Sistemas para restaurantes →</a><a href="pagina-web-para-restaurantes.html" class="pp-rel">Caso: página para un restaurante →</a><a href="como-aparecer-en-google-maps-negocio.html" class="pp-rel">Cómo aparecer en Google Maps →</a><a href="../servicios/chatbot-whatsapp.html" class="pp-rel">Asistente de WhatsApp →</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-wrap">
+          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <span class="footer-logo-word">Mattera</span>
+        </div>
+        <p class="footer-tagline">Elevamos la competitividad de las empresas sin consumir el tiempo de las personas.</p>
+        <p class="footer-addr">Guadalajara, Jalisco, México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../#servicios">Chatbots IA WhatsApp / Web</a>
+        <a href="../#servicios">Agentes IA personalizados</a>
+        <a href="../#servicios">CRMs a medida</a>
+        <a href="../#servicios">Integraciones y automatizaciones</a>
+        <a href="../#servicios">Reportes y analytics</a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <a href="../nosotros.html">Nosotros</a>
+        <a href="index.html">Blog</a>
+        <a href="../#como-funciona">Proceso</a>
+        <a href="../industrias/clinicas.html">Clínicas</a>
+        <a href="../industrias/inmobiliarias.html">Inmobiliarias</a>
+        <a href="../industrias/restaurantes.html">Restaurantes</a>
+        <a href="../industrias/distribuidoras.html">Distribuidoras</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Cotizar proyecto</a>
+        <a href="../#calculadora">Calcular ahorro</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Mattera Systems. Todos los derechos reservados.</span>
+      <a href="../privacidad.html" class="footer-privacy">Privacidad</a>
+      <span class="footer-build">este sitio lo operan los mismos sistemas que vendemos &nbsp;·&nbsp; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const abierto=btn.getAttribute('aria-expanded')==='true';
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+  if(!abierto){btn.setAttribute('aria-expanded','true');answer.classList.add('open');}
+}
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');const btn=document.getElementById('burgerBtn');
+  const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('burgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+<script src="/parallax.js" defer></script>
+</body>
+</html>
