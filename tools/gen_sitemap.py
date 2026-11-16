@@ -37,6 +37,8 @@ PRIORIDAD = {
 def meta(p):
     if p in PRIORIDAD:
         return PRIORIDAD[p]
+    if p == 'en/index.html':        return ('0.9', 'weekly')
+    if p.startswith('en/'):         return ('0.6', 'monthly')
     if p.startswith('servicios/'):  return ('0.8', 'monthly')
     if p.startswith('industrias/'): return ('0.7', 'monthly')
     if p.startswith('blog/'):       return ('0.6', 'monthly')
@@ -57,12 +59,27 @@ def url_de(p):
         return f'{BASE}/{p[:-10]}'
     return f'{BASE}/{p}'
 
+# Páginas que existen en los dos idiomas: español -> inglés
+PAREJAS = {
+    'index.html': 'en/index.html',
+}
+
+def pareja(p):
+    """Devuelve (url_es, url_en) si la página tiene versión en el otro idioma."""
+    if p in PAREJAS:
+        return url_de(p), url_de(PAREJAS[p])
+    inverso = {v: k for k, v in PAREJAS.items()}
+    if p in inverso:
+        return url_de(inverso[p]), url_de(p)
+    return None
+
 def indexable(p):
     html = open(p, encoding='utf-8').read()
     return not re.search(r'name=["\']robots["\'][^>]*noindex', html)
 
 def main():
-    patrones = ['*.html', 'servicios/*.html', 'industrias/*.html', 'blog/*.html']
+    patrones = ['*.html', 'servicios/*.html', 'industrias/*.html', 'blog/*.html',
+                'en/*.html', 'en/services/*.html', 'en/industries/*.html']
     paginas = sorted({p for pat in patrones for p in glob.glob(pat)})
     incluidas = [p for p in paginas if indexable(p)]
     excluidas = [p for p in paginas if p not in incluidas]
@@ -70,15 +87,22 @@ def main():
     incluidas.sort(key=lambda p: (-float(meta(p)[0]), p))
 
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
-           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
+           ' xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for p in incluidas:
         pr, cf = meta(p)
         out += ['  <url>',
                 f'    <loc>{url_de(p)}</loc>',
                 f'    <lastmod>{lastmod(p)}</lastmod>',
                 f'    <changefreq>{cf}</changefreq>',
-                f'    <priority>{pr}</priority>',
-                '  </url>']
+                f'    <priority>{pr}</priority>']
+        par = pareja(p)
+        if par:
+            es_u, en_u = par
+            out += [f'    <xhtml:link rel="alternate" hreflang="es-MX" href="{es_u}"/>',
+                    f'    <xhtml:link rel="alternate" hreflang="en" href="{en_u}"/>',
+                    f'    <xhtml:link rel="alternate" hreflang="x-default" href="{es_u}"/>']
+        out += ['  </url>']
     out.append('</urlset>')
     nuevo = '\n'.join(out) + '\n'
 

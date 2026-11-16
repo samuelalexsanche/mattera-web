@@ -43,7 +43,8 @@ function initChatDemo() {
   const sendBtn   = document.getElementById('chatSend');
   if (!body) return;
 
-  const msgs = [
+  // La versión en inglés define window.CHAT_DEMO antes de cargar este archivo.
+  const msgs = window.CHAT_DEMO || [
     { type: 'client',    text: '¿Tienen disponibilidad para mañana a las 10?',                           delay: 600  },
     { type: 'assistant', text: 'Sí. Mañana tenemos 10:00 y 12:30. ¿Te agendo a las 10:00 a nombre tuyo?', delay: 1800 },
     { type: 'system',    text: 'cita confirmada · CRM actualizado · 0 intervención humana',               delay: 3000 },
