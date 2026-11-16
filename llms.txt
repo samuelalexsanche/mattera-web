@@ -69,9 +69,23 @@ Ubicación: Guadalajara, Jalisco, México (atiende a todo el país de forma remo
 
 ## Blog
 
-- [¿Qué es GEO y por qué tu sitio ya no compite solo en Google?](https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html): diferencia entre SEO y GEO en lenguaje llano.
-- [Automatización vs. contratar personal](https://matterasystems.com/blog/automatizacion-vs-contratar-personal.html): cuándo conviene cada opción, con costos de referencia en México.
-- [Cómo funciona un chatbot de IA en la práctica](https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html): qué pasa en producción más allá de los demos.
+Artículos propios, del más reciente al más antiguo:
+
+- [Inteligencia artificial para PyMEs: usos prácticos, por tamaño de empresa](https://matterasystems.com/blog/inteligencia-artificial-para-pymes-usos-practicos.html) (2026-10-16): Qué usos de IA rinden en un negocio de 3 personas, en uno de 15 y en uno de 30, qué no conviene automatizar y cuánto cuesta cada ruta en México.
+- [Cómo elegir un CRM para tu empresa](https://matterasystems.com/blog/como-elegir-un-crm-para-mi-empresa.html) (2026-10-13): Las cinco preguntas que ordenan la decisión, la comparación entre CRM de catálogo, hoja de cálculo y desarrollo a medida, y por qué la mayoría de los CRM terminan abandonados.
+- [Cómo mejorar el SEO de tu página web, en orden de impacto](https://matterasystems.com/blog/como-mejorar-el-seo-de-mi-pagina-web.html) (2026-10-09): Qué hacer primero para mejorar el SEO de un sitio, ordenado por impacto y tiempo: indexación, estructura por servicio, títulos, enlaces internos y contenido.
+- [Por qué tu página web no aparece en Google](https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html) (2026-10-06): Cómo comprobar si tu sitio está indexado y las cinco causas reales por las que no aparece en Google, ordenadas por frecuencia, con la forma de verificar cada una.
+- [Cómo aparecer en Google Maps con tu negocio](https://matterasystems.com/blog/como-aparecer-en-google-maps-negocio.html) (2026-10-02): Guía real para crear, verificar y posicionar tu ficha de negocio en Google Maps: categoría, dirección, verificación por video, reseñas y los errores que provocan suspensiones.
+- [Seguimiento de prospectos inmobiliarios: el sistema que llama por ti](https://matterasystems.com/blog/seguimiento-automatico-de-prospectos-inmobiliarios.html) (2026-09-29): Cómo funciona un sistema que registra prospectos, programa llamadas de seguimiento con voz de IA y anota el resultado solo.
+- [Página web para wedding planners: cómo se vende una boda a distancia](https://matterasystems.com/blog/pagina-web-para-wedding-planners.html) (2026-09-29): Qué necesita el sitio de una organizadora de bodas de destino para que una pareja extranjera confíe: galería por boda, sitio bilingüe y seguimiento que no se olvida.
+- [Página web para un taller que fabrica a medida: catálogo, calculadora y cotizador](https://matterasystems.com/blog/pagina-web-para-talleres-de-manufactura.html) (2026-09-29): Cómo vende en línea un taller que fabrica bajo pedido: catálogo de lo que ya existe, calculadora que filtra y cotizador con datos.
+- [Página web para un restaurante: la carta no va en una foto](https://matterasystems.com/blog/pagina-web-para-restaurantes.html) (2026-09-29): Por qué el menú en imagen le cuesta clientes a un restaurante, qué debe tener su sitio y dónde entra la automatización.
+- [Página web para una constructora industrial: qué tiene que mostrar](https://matterasystems.com/blog/pagina-web-para-constructoras-industriales.html) (2026-09-29): Qué necesita el sitio de una constructora industrial para que un comprador la considere: obra por página, sector, región y versión en inglés.
+- [Asistente de WhatsApp para un negocio digital: atender, dar seguimiento y registrar](https://matterasystems.com/blog/asistente-whatsapp-para-negocios-digitales.html) (2026-09-29): Cómo atiende un asistente de IA las dudas previas a la compra de un producto digital, da seguimiento y deja registro en un panel.
+- [5 señales de que tu negocio necesita automatización](https://matterasystems.com/blog/5-senales-necesitas-automatizacion.html) (2026-09-29): Cómo saber si tu operación ya pide automatizarse: las cinco señales concretas, cuál resolver primero y cuándo automatizar no es la respuesta.
+- [Qué es GEO: la optimización para que las IA te mencionen](https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html) (2026-07-24): GEO es la optimización para motores generativos: el trabajo para que ChatGPT, Perplexity o Google te nombren en su respuesta.
+- [Cómo funciona un chatbot de IA en la práctica: lo que nadie explica](https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html) (2026-06-12): Más allá de los demos: qué pasa en producción, cómo se configura con tu operación y qué tipo de preguntas no puede responder — todavía.
+- [Automatización vs. contratar personal: cuándo cada opción tiene sentido](https://matterasystems.com/blog/automatizacion-vs-contratar-personal.html) (2026-06-01): Contratar es la respuesta obvia cuando el trabajo crece.
 
 ## Portafolio
 
