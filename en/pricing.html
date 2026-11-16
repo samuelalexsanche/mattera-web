@@ -324,46 +324,30 @@
 
 <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Menu">
   <button class="mobile-nav-close" onclick="closeMobileNav()">✕ Close</button>
-  <a href="#servicios-link" onclick="closeMobileNav()">Services</a>
-  <div class="mobile-nav-industrias">
-    <span class="mobile-nav-industrias-label">Industries</span>
-    <a href="../industrias/clinicas.html" onclick="closeMobileNav()">Clinics</a>
-    <a href="../industrias/inmobiliarias.html" onclick="closeMobileNav()">Real estate</a>
-    <a href="../industrias/restaurantes.html" onclick="closeMobileNav()">Restaurants</a>
-    <a href="../industrias/distribuidoras.html" onclick="closeMobileNav()">Wholesalers</a>
-  </div>
-  <a href="pricing.html" onclick="closeMobileNav()" style="color:var(--ink)">Websites</a>
-  <a href="#calculadora-link" onclick="closeMobileNav()">Savings</a>
-  <a href="../blog/" onclick="closeMobileNav()">Blog</a>
-  <a href="../nosotros.html" onclick="closeMobileNav()">About</a>
-  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Agendar</a>
+  <a href="./#servicios" onclick="closeMobileNav()">What we do</a>
+  <a href="./#portafolio" onclick="closeMobileNav()">Work</a>
+  <a href="pricing.html" onclick="closeMobileNav()">Pricing</a>
+  <a href="./#calculadora" onclick="closeMobileNav()">Savings</a>
+  <a href="./#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="https://matterasystems.com/planes.html" onclick="closeMobileNav()">Español</a>
+  <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()" style="color:var(--accent)">→ Book a free call</a>
 </div>
 
 <header>
   <nav aria-label="Main navigation">
-    <a href="/" class="nav-logo" aria-label="Mattera Systems — Inicio">
-      <img src="../mattera-logo-transparent.png" alt="Mattera Systems">
-      <span class="nav-logo-word">Mattera</span>
+    <a href="./" class="nav-logo" aria-label="Mattera Systems, home">
+      <img src="../mattera-logo-transparent.png" alt="" width="28" height="28">
+      <span>Mattera</span>
     </a>
-    <div class="nav-links" role="list">
-      <a href="/#servicios">Services</a>
-      <div class="nav-dropdown" id="navIndustrias">
-        <a href="../industrias/" class="nav-dropdown-btn" aria-haspopup="true">
-          Industries <span class="nav-dropdown-arrow" aria-hidden="true">↓</span>
-        </a>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="../industrias/clinicas.html" role="menuitem">Clinics</a>
-          <a href="../industrias/inmobiliarias.html" role="menuitem">Real estate</a>
-          <a href="../industrias/restaurantes.html" role="menuitem">Restaurants</a>
-          <a href="../industrias/distribuidoras.html" role="menuitem">Wholesalers</a>
-        </div>
-      </div>
-      <a href="pricing.html" style="color:var(--ink)">Websites</a>
-      <a href="/#calculadora">Savings</a>
-      <a href="../blog/">Blog</a>
-      <a href="../nosotros.html">About</a>
+    <div class="nav-links">
+      <a href="./#servicios">What we do</a>
+      <a href="./#portafolio">Work</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="./#calculadora">Savings</a>
+      <a href="./#faq">FAQ</a>
     </div>
     <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="nav-cta"><span>Book a free call →</span></a>
+    <a id="lang-toggle" class="lang-toggle" href="https://matterasystems.com/planes.html" hreflang="es-MX" aria-label="Ver en español">ES</a>
     <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Open menu" aria-expanded="false" id="burgerBtn">
       <span></span><span></span><span></span>
     </button>
@@ -699,7 +683,7 @@
 <section class="section sec-alt" aria-labelledby="rel-planes">
   <div class="pp-wrap">
     <h2 class="pp-h2" id="rel-planes">Before you decide</h2>
-    <div class="pp-rels"><a href="../blog/que-es-geo-optimizacion-para-ia.html" class="pp-rel">What is GEO? →</a><a href="../blog/por-que-mi-pagina-web-no-aparece-en-google.html" class="pp-rel">Why your page is not on Google →</a><a href="../blog/como-mejorar-el-seo-de-mi-pagina-web.html" class="pp-rel">How to improve your SEO →</a><a href="../blog/como-aparecer-en-google-maps-negocio.html" class="pp-rel">How to show up on Google Maps →</a></div>
+    <div class="pp-rels"><a href="https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html" class="pp-rel">What is GEO? (Spanish) →</a><a href="https://matterasystems.com/blog/por-que-mi-pagina-web-no-aparece-en-google.html" class="pp-rel">Why your page is not on Google (Spanish) →</a><a href="https://matterasystems.com/blog/como-mejorar-el-seo-de-mi-pagina-web.html" class="pp-rel">How to improve your SEO (Spanish) →</a><a href="https://matterasystems.com/blog/como-aparecer-en-google-maps-negocio.html" class="pp-rel">How to show up on Google Maps (Spanish) →</a></div>
   </div>
 </section>
 
@@ -710,34 +694,30 @@
     <div class="footer-top">
       <div>
         <div class="footer-logo-wrap">
-          <img src="../mattera-logo-transparent.png" alt="Logotipo de Mattera Systems">
+          <img src="../mattera-logo-transparent.png" alt="Mattera Systems logo">
           <span class="footer-logo-word">Mattera</span>
         </div>
-        <p class="footer-tagline">We make companies more competitive without eating up people’s time.</p>
+        <p class="footer-tagline">We make companies more competitive without eating up people's time.</p>
         <p class="footer-addr">Guadalajara, Jalisco, Mexico</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
-        <a href="/#servicios">WhatsApp / web AI chatbots</a>
-        <a href="/#servicios">Custom AI agents</a>
-        <a href="/#servicios">Custom CRMs</a>
-        <a href="/#servicios">Integrations and automations</a>
-        <a href="pricing.html">Websites with AI</a>
+        <h4>Pages</h4>
+        <a href="./">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="./#portafolio">Work</a>
+        <a href="./#faq">FAQ</a>
       </div>
       <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="../nosotros.html">About</a>
-        <a href="../blog/">Blog</a>
-        <a href="pricing.html">Planes y precios</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../que-es-automatizacion.html">¿Qué es automatización con IA?</a>
+        <h4>In Spanish</h4>
+        <a href="https://matterasystems.com/">Full site in Spanish</a>
+        <a href="https://matterasystems.com/blog/">Blog</a>
+        <a href="https://matterasystems.com/faq.html">50 questions</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:matterasystems@gmail.com">matterasystems@gmail.com</a>
         <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">+52 33 2787 4747</a>
-        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Request a quote</a>
-        <a href="/#calculadora">Calculate savings</a>
+        <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer">Book a free call</a>
       </div>
     </div>
     <div class="footer-bottom">
