@@ -13,11 +13,27 @@ import re, os, sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def traducir(html, dic):
-    # de la frase más larga a la más corta, para no partir frases dentro de otras
-    for es in sorted(dic, key=len, reverse=True):
-        en = dic[es]
-        if es and es != en:
-            html = html.replace(es, en)
+    """Traduce el documento.
+
+    Las frases largas se sustituyen tal cual. Las cortas (menos de 28
+    caracteres) solo se sustituyen cuando son el contenido completo de un
+    elemento o de un atributo: si no, 'Agenda' se comía 'Agendamiento'.
+    """
+    largas = {k: v for k, v in dic.items() if len(k) >= 28}
+    cortas = {k: v for k, v in dic.items() if len(k) < 28}
+
+    for es in sorted(largas, key=len, reverse=True):
+        if es != largas[es]:
+            html = html.replace(es, largas[es])
+
+    for es in sorted(cortas, key=len, reverse=True):
+        en = cortas[es]
+        if not es or es == en:
+            continue
+        esc = re.escape(es)
+        html = re.sub(r'(>\s*)' + esc + r'(\s*<)', lambda m, en=en: m.group(1) + en + m.group(2), html)
+        for attr in ('alt', 'aria-label', 'placeholder', 'title', 'content'):
+            html = re.sub(attr + r'="' + esc + r'"', f'{attr}="{en}"', html)
     return html
 
 def generar(origen, destino, dic, title, desc, es_url, en_url, profundidad=1):

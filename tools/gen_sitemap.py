@@ -61,7 +61,8 @@ def url_de(p):
 
 # Páginas que existen en los dos idiomas: español -> inglés
 PAREJAS = {
-    'index.html': 'en/index.html',
+    'index.html':  'en/index.html',
+    'planes.html': 'en/pricing.html',
 }
 
 def pareja(p):
