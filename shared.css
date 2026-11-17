@@ -879,6 +879,9 @@ strong,b,.key{color:var(--ink);font-weight:600}
    es el fragmento que las IA suelen citar. */
 .pp-lede{font-size:1.15rem;line-height:1.75;color:var(--ink-2);margin-bottom:2.25rem}
 .pp-wrap p{font-size:1.05rem;line-height:1.78;color:var(--ink-2);margin-bottom:1.1rem}
+.pp-h3{font-family:var(--serif);font-weight:600;font-size:clamp(19px,2vw,23px);line-height:1.3;
+  color:var(--ink);margin:2rem 0 .75rem}
+.sec-paper .pp-h3{color:var(--bt-p-ink)}
 .pp-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
 
 .lista-check,.lista-no{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin:1.25rem 0}
