@@ -66,6 +66,20 @@ def escribir(s):
             {"@type": "Question", "name": _limpio(p),
              "acceptedAnswer": {"@type": "Answer", "text": _limpio(r)}} for p, r in faqs]})
 
+    # Google corta el título alrededor de los 60 caracteres y la descripción
+    # alrededor de los 160: pasarse no es un detalle, es perder el gancho a
+    # media frase en el resultado de búsqueda. Se corta aquí, antes de
+    # publicar, en vez de descubrirlo auditando el sitio después.
+    if len(s['title']) > 60:
+        raise SystemExit(
+            f"El título mide {len(s['title'])} caracteres y el máximo son 60:\n"
+            f"  {s['title']}\n"
+            "Acórtalo (lo primero que sobra suele ser el ' | Mattera Systems').")
+    if len(s['desc']) > 155:
+        raise SystemExit(
+            f"La descripción mide {len(s['desc'])} caracteres y el máximo son 155:\n"
+            f"  {s['desc']}")
+
     cabeza = plantilla[:plantilla.index('</head>')]
     cuerpo_pie = plantilla[plantilla.index('<footer>'):]
 
