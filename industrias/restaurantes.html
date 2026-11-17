@@ -32,14 +32,28 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Restaurantes", "item": "https://matterasystems.com/industrias/restaurantes.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://matterasystems.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Restaurantes",
+          "item": "https://matterasystems.com/industrias/restaurantes.html"
+        }
       ]
     },
     {
       "@type": "Service",
       "name": "Automatización con IA para restaurantes",
-      "provider": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
+      "provider": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
       "description": "Sistemas de IA para restaurantes: pedidos y reservaciones automáticas por WhatsApp, menú disponible 24/7 y reactivación de clientes.",
       "areaServed": "México"
     },
@@ -49,22 +63,66 @@
         {
           "@type": "Question",
           "name": "¿El sistema puede manejar pedidos para entrega y para comer en el restaurante?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema diferencia entre pedidos para llevar, a domicilio y reservaciones de mesa. Cada tipo sigue un flujo distinto y registra la información que necesitas en cada caso."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El sistema diferencia entre pedidos para llevar, a domicilio y reservaciones de mesa — cada uno lleva su propio camino. Para llevar: confirma dirección y tiempo estimado. Para domicilio: valida zona de entrega y horario. Para reserva: confirma el número de comensales, horario y mesa si aplica. Todo sin que nadie en el salón o cocina tenga que contestar el teléfono."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Qué pasa cuando se acaba un platillo o hay cambios en el menú?",
-          "acceptedAnswer": {"@type": "Answer", "text": "El catálogo se actualiza fácilmente desde un Google Sheet o desde un panel sencillo. El sistema refleja los cambios en minutos y deja de ofrecer platillos no disponibles."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El catálogo se conecta a un Google Sheet que tu equipo controla — sin saber de tecnología. Cuando marcas un platillo como no disponible, el sistema lo refleja en minutos y deja de ofrecerlo en los pedidos. Para restaurantes que cambian el menú diariamente, también podemos configurar actualizaciones automáticas según el horario del día (menú del almuerzo vs. menú de cena)."
+          }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con plataformas de delivery como Rappi o DiDi?",
-          "acceptedAnswer": {"@type": "Answer", "text": "El sistema maneja pedidos directos por WhatsApp, que son los de mayor margen. La integración con plataformas de delivery se evalúa en el diagnóstico según el volumen y la plataforma específica."}
+          "name": "¿Funciona con plataformas de delivery como Rappi o DiDi Food?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El sistema está diseñado para manejar pedidos directos por WhatsApp, que son los de mayor margen (Rappi y DiDi se llevan entre 25-30% de comisión). La integración con plataformas de delivery se evalúa en el diagnóstico según el volumen y si la plataforma se deja conectar. Nuestra postura: los pedidos directos son más rentables y construyen la relación con el cliente directamente en tu canal."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Mi equipo necesita aprender a usar alguna herramienta nueva?",
-          "acceptedAnswer": {"@type": "Answer", "text": "No. Los pedidos y reservaciones llegan a donde ya los gestionas. El equipo sigue trabajando como siempre; el sistema hace la parte de recepción."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los pedidos y reservaciones llegan donde ya los gestionas — WhatsApp del restaurante, una pantalla de cocina conectada, o un sistema de POS existente. El equipo sigue trabajando como siempre; el sistema hace la parte de recepción y confirmación antes de que la orden llegue a cocina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El sistema puede enviar promociones o descuentos automáticamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Podemos programar envíos de promociones a clientes que ya compraron antes: \"Miércoles de 2x1 en pizzas — ¿te reservamos mesa?\" enviado el martes por la noche a tu base de clientes frecuentes. Los mensajes de marketing en WhatsApp tienen tasas de apertura de 85-90% vs. el 20% típico del correo electrónico. El calendario de promociones lo defines tú; el sistema los envía solo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa durante hora pico cuando hay muchos mensajes a la vez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El sistema atiende todas las conversaciones simultáneamente sin degradarse — no hay \"espera\". Esto es precisamente cuando más valor entrega: viernes a las 7pm cuando el personal tiene las manos llenas y los pedidos por WhatsApp se acumulan, el sistema los procesa todos al mismo tiempo y en segundos. En nuestra experiencia, los restaurantes pierden entre 15-30% de sus pedidos de hora pico por no poder contestar a tiempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El sistema puede manejar restricciones alimentarias o alérgenos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El agente puede preguntar sobre restricciones (vegetariano, sin gluten, sin nueces) y filtrar el menú en consecuencia, o advertir qué platillos contienen alérgenos específicos. Esta información también queda registrada en el pedido para que cocina la tenga al prepararlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El sistema puede manejar clientes frecuentes con preferencias guardadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Si el sistema identifica el número de WhatsApp de un cliente que ya ha pedido antes, puede recuperar su pedido habitual y preguntar \"¿Lo mismo de siempre?\" — reduciendo el tiempo de pedido a segundos. Los clientes frecuentes que sienten que el restaurante los recuerda tienen tasas de recompra significativamente más altas."
+          }
         }
       ]
     }

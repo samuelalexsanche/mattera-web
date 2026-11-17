@@ -32,8 +32,18 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
-        {"@type": "ListItem", "position": 2, "name": "¿Qué es automatización con IA?", "item": "https://matterasystems.com/que-es-automatizacion.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://matterasystems.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "¿Qué es automatización con IA?",
+          "item": "https://matterasystems.com/que-es-automatizacion.html"
+        }
       ]
     },
     {
@@ -57,9 +67,46 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"¿Qué es un agente de inteligencia artificial?","acceptedAnswer":{"@type":"Answer","text":"Un agente de IA es un sistema de software que puede recibir instrucciones en lenguaje natural, tomar decisiones, ejecutar acciones (consultar una base de datos, enviar un mensaje, agendar una cita) y responder de forma contextual. A diferencia de un chatbot con árbol de decisiones, el agente entiende variaciones del lenguaje y puede responder preguntas que no fueron preprogramadas."}},
-        {"@type":"Question","name":"¿Cuál es la diferencia entre automatización tradicional y automatización con IA?","acceptedAnswer":{"@type":"Answer","text":"La automatización tradicional (Zapier, Make, scripts) conecta aplicaciones y ejecuta reglas fijas: 'cuando pase A, haz B'. Funciona perfectamente para flujos estructurados y predecibles. La automatización con IA añade la capacidad de manejar variabilidad: entiende lenguaje natural, interpreta respuestas ambiguas, toma decisiones según contexto y aprende del comportamiento. En la práctica: Zapier puede mover datos de un formulario al CRM; el agente de IA puede entender un mensaje de WhatsApp, calificar si el prospecto es válido, buscar el asesor correcto en el CRM y agendar la cita — todo sin reglas predefinidas para cada escenario."}},
-        {"@type":"Question","name":"¿Qué procesos se pueden automatizar con IA en una empresa?","acceptedAnswer":{"@type":"Answer","text":"Los más comunes en México: atención de WhatsApp (responder preguntas, calificar leads, agendar), seguimiento de prospectos (mensajes automáticos según etapa del embudo), cotizaciones (consultar catálogo y generar propuesta en segundos), recordatorios de citas, registro en CRM, actualización de inventario, reportes automáticos, y clasificación de mensajes entrantes por urgencia o tipo."}}
+        {
+          "@type": "Question",
+          "name": "WhatsApp Cloud API (Meta)",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La API oficial de Meta para WhatsApp Business, diferente a la aplicación gratuita. Permite enviar y recibir mensajes programáticamente, integrar el agente de IA directamente en el número de WhatsApp del negocio, y manejar conversaciones a escala. Es el canal de comunicación preferido en México para negocios — el 90% de las conversaciones comerciales con clientes ocurren aquí. Para usar la API se requiere una cuenta Business en Meta y aprobación del número."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "N8N — Plataforma de automatización",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N8N es la plataforma que usamos para construir las automatizaciones que conectan WhatsApp con el agente de IA, el CRM, el calendario, y el resto de herramientas. Es de código abierto y puede instalarse en tu propio servidor, lo que significa que los datos se quedan en tu servidor. Lo preferimos sobre Zapier o Make para proyectos complejos por mayor flexibilidad y control. Para casos más simples, Zapier o Make también funcionan bien."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "OpenAI GPT-4 / Anthropic Claude / Google Gemini",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los tres modelos de IA que usamos según el caso de uso. GPT-4 de OpenAI es el más usado para conversaciones complejas. Claude de Anthropic tiene ventajas para procesar documentos largos y seguir instrucciones específicas con menos desviaciones. Gemini de Google funciona bien cuando el sistema se integra con el ecosistema de Google Workspace. La elección del modelo no es el factor más importante — el entrenamiento con los datos del negocio importa mucho más."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "HubSpot / Google Sheets / Notion — CRM y bases de datos",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dependiendo del tamaño y preferencia del cliente usamos HubSpot (el CRM más completo para equipos comerciales), Google Sheets bien estructurado (sorprendentemente efectivo para PyMEs con presupuesto ajustado), o Notion (flexible para operaciones con documentación variada). Para proyectos con mayor volumen de datos usamos Supabase (PostgreSQL en la nube). El CRM correcto no es el más caro — es el que tu equipo realmente usa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Google Calendar / Calendly — Agendamiento",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El agente de IA puede leer disponibilidad y crear eventos en Google Calendar o Calendly directamente desde la conversación de WhatsApp. El paciente o cliente elige el horario, el evento se crea automáticamente en el calendario del profesional correspondiente, y ambas partes reciben confirmación. Sin llamadas de coordinación, sin \"voy a verificar y te confirmo\"."
+          }
+        }
       ]
     }
   ]
@@ -123,7 +170,7 @@
   <div class="industria-hero">
     <p class="industria-hero-eyebrow reveal">Guía de referencia</p>
     <h1 class="industria-hero-h1 reveal reveal-delay-1">¿Qué es automatización<br>con inteligencia artificial?</h1>
-    <p class="industria-hero-sub reveal reveal-delay-2">Una guía práctica: qué es, cómo funciona, en qué se diferencia de un chatbot básico, y qué procesos puedes automatizar hoy en tu empresa. Escrito desde la experiencia de implementar más de 8,400 horas devueltas a empresas en México.</p>
+    <p class="industria-hero-sub reveal reveal-delay-2">Una guía práctica: qué es, cómo funciona, en qué se diferencia de un chatbot básico, y qué procesos puedes automatizar hoy en tu empresa. Escrito desde la experiencia de poner estos sistemas a operar en empresas mexicanas.</p>
     <div class="industria-hero-ctas reveal reveal-delay-3">
       <a href="https://wa.me/523327874747" target="_blank" rel="noopener noreferrer" class="btn-primary"><span>Diagnóstico gratuito →</span></a>
       <a href="faq.html" class="btn-outline">Ver FAQ completo</a>

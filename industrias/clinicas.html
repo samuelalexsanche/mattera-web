@@ -32,14 +32,28 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Clínicas", "item": "https://matterasystems.com/industrias/clinicas.html"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://matterasystems.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Clínicas",
+          "item": "https://matterasystems.com/industrias/clinicas.html"
+        }
       ]
     },
     {
       "@type": "Service",
       "name": "Automatización con IA para clínicas privadas",
-      "provider": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
+      "provider": {
+        "@type": "Organization",
+        "name": "Mattera Systems",
+        "url": "https://matterasystems.com/"
+      },
       "description": "Sistemas de IA para clínicas: agendamiento automático, recordatorios, atención por WhatsApp 24/7 e historial de pacientes.",
       "areaServed": "México"
     },
@@ -49,22 +63,82 @@
         {
           "@type": "Question",
           "name": "¿El sistema puede agendar en mi calendario actual?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Sí. El sistema se integra con Google Calendar, Calendly y otras herramientas de agenda. El paciente elige horario disponible directamente desde WhatsApp, sin que nadie tenga que confirmar manualmente."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Se integra con Google Calendar, Calendly y plataformas similares. El paciente elige horario disponible directamente desde WhatsApp, ve los slots en tiempo real y confirma sin que nadie de tu equipo intervenga. Si usas una agenda propia en Excel o Google Sheets, también podemos conectarla."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Qué pasa si un paciente reporta una urgencia médica?",
-          "acceptedAnswer": {"@type": "Answer", "text": "El sistema está configurado para detectar palabras de urgencia y escalar de inmediato al médico o al personal de turno. Ninguna urgencia queda sin respuesta humana. Tú defines los criterios de escalamiento."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El sistema detecta palabras de urgencia (dolor intenso, accidente, emergencia, entre otras que tú defines) y escala de inmediato al médico o al personal de turno — con el historial completo de la conversación. Tú defines los criterios y a quién se escala según la hora del día. Ninguna urgencia queda sin respuesta humana."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Los pacientes saben que están hablando con un sistema de IA?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Eso lo defines tú. Podemos configurarlo como asistente transparente o como extensión de tu equipo. Lo importante es que el paciente recibe respuesta útil en segundos."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eso lo defines tú. Podemos configurarlo como asistente transparente (\"Soy el asistente virtual de la Clínica X\") o como extensión de tu equipo con el nombre que prefieras. En nuestra experiencia, los pacientes se adaptan sin problema cuando el sistema responde rápido y con información útil — la velocidad de respuesta importa más que si saben o no que es IA."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Los datos de mis pacientes están protegidos?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Sí. Cumplimos con la LFPDPPP. Los datos se almacenan de forma segura y pueden residir en servidores en México si tu normativa lo requiere. El acceso está restringido a tu equipo."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cumplimos con la LFPDPPP (Ley Federal de Protección de Datos Personales en Posesión de los Particulares). Los datos se almacenan con cifrado en tránsito y en reposo. Si tu clínica requiere que los datos residan en servidores en México, lo implementamos así. El acceso está restringido exclusivamente a tu equipo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda en estar funcionando?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El promedio para una clínica es 11 días hábiles desde el diagnóstico hasta el lanzamiento. El proceso incluye 3 días para ver cómo trabaja hoy la clínica, 4 días de configuración y entrenamiento del agente con tus servicios y políticas, y 2-3 días de pruebas con el equipo antes de activar con pacientes reales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mi recepcionista tiene que aprender a usar algo nuevo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El sistema opera en segundo plano desde WhatsApp, que tu equipo ya conoce. Cuando el sistema escala a un humano, el recepcionista retoma la conversación exactamente desde donde quedó — sin aprender una plataforma nueva ni instalar nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si la IA da una respuesta incorrecta a un paciente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El agente está entrenado únicamente con la información que tú nos proporcionas — tus servicios, precios, horarios y políticas. Para preguntas fuera de ese ámbito, el sistema no improvisa: escala al humano con el contexto de la conversación. Nuestra postura es que es mejor decir \"te paso con alguien de la clínica\" que dar una respuesta incorrecta sobre salud."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el sistema no me da resultados en los primeros 30 días?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lo reconfiguramos sin costo adicional. En más de 18 meses de operación nunca hemos dejado un proyecto sin resolver. Si en los primeros 30 días el sistema no devuelve horas medibles a tu operación, lo ajustamos hasta que lo haga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El sistema también envía recordatorios para pacientes que no han vuelto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Podemos programar mensajes para recuperar pacientes: pacientes que no han tenido cita en X meses reciben un mensaje personalizado con una invitación a agendar. Muchas clínicas recuperan pacientes que simplemente olvidaron regresar, sin que nadie tenga que llamarlos manualmente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta y cómo funciona el pago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El desarrollo se paga una sola vez desde $10,000 MXN (modalidad 50% al iniciar, 50% al entregar). La operación mensual parte de $1,500 MXN e incluye tener el sistema prendido, las conexiones, la vigilancia de que funcione y los ajustes. El costo exacto lo entregamos en el diagnóstico gratuito antes de que decidas. Sin contrato mínimo de permanencia."
+          }
         }
       ]
     }
