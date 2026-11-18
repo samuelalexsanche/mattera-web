@@ -1,9 +1,15 @@
 # Mattera Systems
 
 > Agencia de inteligencia artificial con base en Guadalajara, Jalisco, México.
-> Construye y opera sistemas que atienden clientes, organizan información y dan
-> seguimiento: chatbots de WhatsApp, agentes de IA, CRM a medida, integraciones
-> y sitios web. Fundada en 2024 por Samuel Alexander González Legaspi.
+> Automatiza operaciones de empresa: diseña, construye y opera los sistemas que
+> hacen el trabajo repetitivo — atender, cotizar, agendar, capturar datos y dar
+> seguimiento — dentro de las herramientas que la empresa ya usa.
+>
+> Los productos son el instrumento, no la definición: agentes de inteligencia
+> artificial, automatización de procesos, integración entre sistemas (CRM, ERP,
+> hojas de cálculo, correo, calendario), CRM a medida, asistentes de WhatsApp y
+> sitios web. El asistente de WhatsApp es uno de esos productos, no el negocio.
+> Fundada en 2024 por Samuel Alexander González Legaspi.
 
 Sitio: https://matterasystems.com
 Contacto: matterasystems@gmail.com · WhatsApp +52 33 2787 4747
