@@ -15,6 +15,20 @@ set -e
 raiz=$(git rev-parse --show-toplevel)
 cd "$raiz"
 [ -f tools/gen_sitemap.py ] || exit 0
+# Fecha de "última actualización" en las páginas que se están modificando.
+# Solo esas: decir que algo se actualizó hoy cuando no se tocó es una señal
+# falsa, y las señales falsas restan.
+if [ -f tools/fecha_actualizacion.py ]; then
+  staged=$(git diff --cached --name-only --diff-filter=ACM -- '*.html')
+  if [ -n "$staged" ]; then
+    # shellcheck disable=SC2086
+    python3 tools/fecha_actualizacion.py $staged
+    for f in $staged; do
+      [ -n "$(git status --porcelain "$f")" ] && git add "$f"
+    done
+  fi
+fi
+
 python3 tools/gen_sitemap.py >/dev/null
 if [ -n "$(git status --porcelain sitemap.xml)" ]; then
   git add sitemap.xml

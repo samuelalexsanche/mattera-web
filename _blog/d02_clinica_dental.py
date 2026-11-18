@@ -50,10 +50,10 @@ cuerpo = f'''    <h2>Dónde se va el tiempo en una clínica</h2>
 
 spec = dict(
     slug='como-automatizar-una-clinica-dental-o-consultorio.html',
-    title='Cómo automatizar una clínica dental o consultorio | Mattera Systems',
+    title='Cómo automatizar una clínica dental o consultorio',
     h1='Cómo automatizar una clínica dental o un consultorio',
     titulo_corto='Automatizar una clínica',
-    desc='Qué automatizar en una clínica y en qué orden: preguntas repetidas, agenda y recordatorios. Qué NO debe tocar un asistente y cómo se manejan los datos del paciente en México.',
+    desc='Qué automatizar en una clínica y en qué orden: preguntas repetidas, agenda y recordatorios. Y qué no debe tocar nunca un asistente.',
     bajada='Tres cosas se llevan las horas de recepción. Las tres se resuelven, y en este orden.',
     lede='En una clínica conviene automatizar en este orden: primero las preguntas repetidas de WhatsApp, después la agenda con sus recordatorios, y al final el seguimiento al paciente que no volvió. Lo que no se automatiza nunca es el criterio clínico. Así se hace, y así se cuidan los datos del paciente.',
     fecha='2026-11-20',

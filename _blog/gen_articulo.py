@@ -45,10 +45,18 @@ def escribir(s):
     schema = {
         "@context": "https://schema.org",
         "@graph": [{
+            "@type": "Person",
+            "@id": "https://matterasystems.com/#founder",
+            "name": "Samuel Alexander Gonzalez Legaspi",
+            "jobTitle": "Fundador de Mattera Systems",
+            "worksFor": {"@id": "https://matterasystems.com/#organization"},
+            "knowsAbout": ["Automatización de procesos de negocio", "Agentes de inteligencia artificial",
+                           "Integración de sistemas", "Chatbots de WhatsApp Business", "CRM a medida"]
+        }, {
             "@type": "Article",
             "headline": s['h1'],
             "description": s['desc'],
-            "author": {"@type": "Organization", "name": "Mattera Systems"},
+            "author": {"@id": "https://matterasystems.com/#founder"},
             "image": "https://matterasystems.com/og/og-blog.png",
             "publisher": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
             "datePublished": s['fecha'],

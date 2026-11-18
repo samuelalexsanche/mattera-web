@@ -51,10 +51,10 @@ cuerpo = f'''    <h2>El mostrador manda: qué se automatiza y qué no</h2>
 
 spec = dict(
     slug='como-automatizar-un-restaurante.html',
-    title='Cómo automatizar un restaurante: reservas, pedidos y WhatsApp | Mattera',
+    title='Cómo automatizar un restaurante: reservas y pedidos',
     h1='Cómo automatizar un restaurante sin descuidar el mostrador',
     titulo_corto='Automatizar un restaurante',
-    desc='Qué automatizar en un restaurante y en qué orden: reservas, pedidos por WhatsApp, preguntas de siempre y clientes que vuelven. Qué debe seguir siendo humano.',
+    desc='Qué automatizar en un restaurante y en qué orden: reservas, pedidos por WhatsApp y clientes que vuelven. Y qué debe seguir siendo humano.',
     bajada='Regla primera: nada de lo que automatices puede quitarle atención a quien ya está sentado.',
     lede='En un restaurante conviene automatizar lo que pasa fuera del local: reservaciones con recordatorio, pedidos por WhatsApp, las preguntas de siempre y el mensaje al cliente que no vuelve. Lo que ocurre en el piso —el servicio y las quejas— sigue siendo humano. Este es el orden que funciona.',
     fecha='2026-11-24',
