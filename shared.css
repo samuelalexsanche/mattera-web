@@ -903,6 +903,24 @@ strong,b,.key{color:var(--ink);font-weight:600}
 .tabla-comp td:first-child{color:var(--ink);font-weight:500}
 .tabla-comp a{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:1px}
 
+/* Enlaces dentro de la prosa.
+   Sin esto heredan el color del párrafo y se quedan sin subrayado: el lector
+   no ve que son enlaces y no los sigue. Como los enlaces internos son de lo
+   poco que podemos mover para repartir autoridad entre páginas, un enlace
+   invisible es un enlace desperdiciado. Solo aplica a los que no traen ya su
+   propia clase o estilo, para no pisar botones ni enlaces de componente. */
+.pp-wrap p a:not([class]):not([style]),
+.pp-wrap li a:not([class]):not([style]),
+.article-body p a:not([class]):not([style]),
+.article-body li a:not([class]):not([style]){
+  color:inherit;border-bottom:1px solid var(--accent);padding-bottom:1px;
+  transition:color .2s,border-color .2s}
+.pp-wrap p a:not([class]):not([style]):hover,
+.pp-wrap li a:not([class]):not([style]):hover,
+.article-body p a:not([class]):not([style]):hover,
+.article-body li a:not([class]):not([style]):hover{
+  color:var(--accent-orange);border-bottom-color:var(--accent-orange)}
+
 .pp-rels{display:flex;flex-wrap:wrap;gap:.75rem}
 .pp-rel{display:inline-flex;align-items:center;font-family:var(--mono);font-size:.8rem;
   letter-spacing:.04em;color:var(--ink-2);border:1.5px solid var(--line-soft);border-radius:4px;

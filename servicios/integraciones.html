@@ -173,10 +173,51 @@
     <div class="reveal reveal-delay-1"><ul class="lista-check"><li>WhatsApp con el CRM: cada conversación queda registrada</li><li>Formulario web con WhatsApp: el interesado recibe respuesta al instante</li><li>Catálogo en Google Sheets con el asistente: precios siempre vigentes</li><li>Agenda con recordatorios automáticos</li><li>Correo y Drive con el expediente del cliente</li></ul></div>
   </div>
 </section>
+<section class="section sec-alt px" data-px="editorial" aria-labelledby="s-que">
+  <div class="pp-wrap">
+    <h2 class="pp-h2 reveal" id="s-que">Qué quiere decir "integrar WhatsApp"</h2>
+    <div class="reveal reveal-delay-1">
+      <p>Es la pregunta que más llega, y casi siempre con la misma confusión detrás. Hay <strong>tres cosas que se llaman WhatsApp</strong> y solo una se puede conectar a otro sistema:</p>
+      <ul class="lista-no">
+        <li><strong>WhatsApp normal.</strong> La del teléfono. No tiene forma oficial de conectarse a nada.</li>
+        <li><strong>WhatsApp Business, la app.</strong> La gratuita, con catálogo y respuestas rápidas. Tampoco se conecta: sigue viviendo en un teléfono.</li>
+      </ul>
+      <ul class="lista-check">
+        <li><strong>La API de WhatsApp Business.</strong> Esta sí. No es una app: es el permiso de Meta para que un sistema mande y reciba mensajes por tu número.</li>
+      </ul>
+      <p>Para usarla hacen falta tres cosas: un número que no esté dado de alta en ninguna de las dos apps, una cuenta de empresa verificada con Meta, y un sistema del otro lado que reciba los mensajes. Nada de eso lo hace el dueño del negocio a mano — es parte de lo que montamos.</p>
+      <p>Si quieres el detalle completo, con los costos de cada forma de hacerlo, está en la guía: <a href="../blog/como-integrar-whatsapp-con-tu-crm-o-sistema.html">cómo integrar WhatsApp con tu CRM o tu sistema</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-dark px" data-px="sistemas" aria-labelledby="s-crm-erp">
+  <div class="pp-wrap">
+    <h2 class="pp-h2 reveal" id="s-crm-erp">WhatsApp con un CRM, y WhatsApp con un ERP</h2>
+    <div class="reveal reveal-delay-1">
+      <p>Se piden igual pero no son lo mismo, y conviene saber en cuál estás.</p>
+      <p><strong>Con un CRM</strong> la información va hacia adentro: cada conversación, cada dato que da el cliente y cada seguimiento quedan en su ficha, sin que nadie los capture. Lo que resuelve es la memoria — que el vendedor que contesta el martes sepa lo que se habló el viernes.</p>
+      <p><strong>Con un ERP</strong> la información va hacia afuera: el cliente pregunta por existencias, por el estado de su pedido o por su saldo, y la respuesta sale del sistema que ya lleva esos números. Lo que resuelve es el tiempo de tu equipo — las preguntas que hoy obligan a alguien a abrir el sistema y teclear la respuesta.</p>
+      <p>En los dos casos la pregunta técnica es la misma: <strong>¿tu sistema permite que otro programa le hable?</strong> Si tiene API, se conecta directo. Si no la tiene pero deja exportar e importar, se construye una capa intermedia. Y si está cerrado del todo, te lo decimos antes de cobrarte nada — está escrito más abajo, en lo que no hacemos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section sec-alt px" data-px="industrias" aria-labelledby="s-ventana">
+  <div class="pp-wrap">
+    <h2 class="pp-h2 reveal" id="s-ventana">La regla que rompe la mitad de los seguimientos</h2>
+    <div class="reveal reveal-delay-1">
+      <p>Meta pone un límite que casi nadie conoce antes de toparse con él: <strong>desde el último mensaje del cliente tienes 24 horas para contestarle libremente</strong>. Pasadas esas horas, tu sistema ya no puede escribirle lo que quiera — solo puede usar una plantilla aprobada por Meta de antemano.</p>
+      <p>Esto no es un detalle administrativo, es lo que decide si tu seguimiento funciona. Un recordatorio de cita a tres días vista, un "tu pedido ya salió", un mensaje para recuperar a un cliente que se enfrió: todos caen fuera de la ventana y todos necesitan plantilla. Si quien te monta el sistema no te habló de esto, los seguimientos se le van a caer en silencio.</p>
+      <p>Las plantillas se escriben, se mandan a revisión y Meta las aprueba o las rechaza. Parte del trabajo es dejarlas aprobadas antes de arrancar, no descubrirlo el día que hace falta.</p>
+    </div>
+  </div>
+</section>
+
 <section class="section sec-alt px" data-px="industrias" aria-labelledby="s1">
   <div class="pp-wrap">
     <h2 class="pp-h2 reveal" id="s1">Dónde se pierde el dinero sin integraciones</h2>
-    <div class="reveal reveal-delay-1"><p>Cada traspaso manual entre herramientas es un punto donde algo se cae: un dato que se teclea mal, un aviso que nadie mandó, un seguimiento que no ocurrió. En las implementaciones que hemos hecho, conectar las herramientas quitó <strong>entre 3 y 7 pasos manuales</strong> por cada cliente nuevo.</p></div>
+    <div class="reveal reveal-delay-1"><p>Cada traspaso manual entre herramientas es un punto donde algo se cae: un dato que se teclea mal, un aviso que nadie mandó, un seguimiento que no ocurrió. Conectar las herramientas borra esos traspasos: el dato se captura una vez, donde el cliente lo dio, y aparece solo en los demás sistemas.</p></div>
   </div>
 </section>
 <section class="section sec-dark px" data-px="cierre" aria-labelledby="nh">
@@ -209,7 +250,7 @@
 <section class="section sec-dark" aria-labelledby="rel">
   <div class="pp-wrap">
     <h2 class="pp-h2" id="rel">Relacionado</h2>
-    <div class="pp-rels"><a href="../servicios/automatizacion-procesos.html" class="pp-rel">Automatización de procesos →</a><a href="../servicios/crm-para-empresas.html" class="pp-rel">CRM a medida →</a><a href="../servicios/agentes-ia.html" class="pp-rel">Agentes de IA →</a><a href="../blog/automatizacion-vs-contratar-personal.html" class="pp-rel">¿Automatizar o contratar? →</a><a href="../blog/que-es-geo-optimizacion-para-ia.html" class="pp-rel">¿Qué es GEO? →</a><a href="../blog/pagina-web-para-wedding-planners.html" class="pp-rel">Caso: wedding planner →</a></div>
+    <div class="pp-rels"><a href="../servicios/automatizacion-procesos.html" class="pp-rel">Automatización de procesos →</a><a href="../servicios/crm-para-empresas.html" class="pp-rel">CRM a medida →</a><a href="../servicios/agentes-ia.html" class="pp-rel">Agentes de IA →</a><a href="../blog/automatizacion-vs-contratar-personal.html" class="pp-rel">¿Automatizar o contratar? →</a><a href="../blog/como-integrar-whatsapp-con-tu-crm-o-sistema.html" class="pp-rel">Guía: integrar WhatsApp con tu CRM →</a><a href="../blog/que-es-geo-optimizacion-para-ia.html" class="pp-rel">¿Qué es GEO? →</a><a href="../blog/pagina-web-para-wedding-planners.html" class="pp-rel">Caso: wedding planner →</a></div>
   </div>
 </section>
 
