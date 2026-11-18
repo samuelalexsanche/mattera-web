@@ -64,6 +64,7 @@ Ubicación: Guadalajara, Jalisco, México (atiende a todo el país de forma remo
 - [Planes y precios](https://matterasystems.com/planes.html): los tres planes con detalle y pago en línea.
 - [¿Qué es automatización con IA?](https://matterasystems.com/que-es-automatizacion.html): explicación y tabla de costos de mercado.
 - [Preguntas frecuentes](https://matterasystems.com/faq.html): 50 preguntas sobre costos, plazos, privacidad e implementación.
+- [Glosario de automatización con IA](https://matterasystems.com/glosario.html): 25 términos definidos en español claro — agente de IA, API de WhatsApp Business, ventana de 24 horas, CRM, ERP, webhook, SEO, GEO, indexación.
 - [Nosotros](https://matterasystems.com/nosotros.html): quién opera Mattera.
 
 ## Por industria

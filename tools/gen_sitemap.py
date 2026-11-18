@@ -27,6 +27,7 @@ PRIORIDAD = {
     'servicios/automatizacion-procesos.html':('0.8', 'monthly'),
     'servicios/integraciones.html':          ('0.8', 'monthly'),
     'faq.html':                              ('0.8', 'monthly'),
+    'glosario.html':                         ('0.8', 'monthly'),
     'que-es-automatizacion.html':            ('0.8', 'monthly'),
     'industrias/index.html':                 ('0.7', 'monthly'),
     'blog/index.html':                       ('0.7', 'weekly'),
