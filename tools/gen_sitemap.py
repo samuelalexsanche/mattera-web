@@ -44,7 +44,33 @@ def meta(p):
     if p.startswith('blog/'):       return ('0.6', 'monthly')
     return ('0.5', 'monthly')
 
+def _pendientes():
+    """Archivos con cambios sin commitear (en el índice o en el árbol).
+
+    Hacen falta porque el hook pre-commit corre ANTES de que exista el commit:
+    `git log` todavía devolvería la fecha vieja para un archivo que se está
+    modificando ahora. Sin esto, el sitemap del hook nunca coincide con el que
+    CI calcula después del commit, CI lo vuelve a commitear, y ese segundo
+    commit dispara un segundo despliegue de Pages que cancela el primero.
+    """
+    try:
+        salida = subprocess.run(['git', 'status', '--porcelain'],
+                                capture_output=True, text=True, timeout=20).stdout
+    except Exception:
+        return set()
+    rutas = set()
+    for linea in salida.splitlines():
+        if len(linea) > 3:
+            ruta = linea[3:].strip().strip('"')
+            # los renombrados vienen como "viejo -> nuevo"
+            rutas.add(ruta.split(' -> ')[-1])
+    return rutas
+
+_SIN_COMMITEAR = _pendientes()
+
 def lastmod(p):
+    if p in _SIN_COMMITEAR:
+        return datetime.date.today().isoformat()
     try:
         d = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', p],
                            capture_output=True, text=True, timeout=20).stdout.strip()
