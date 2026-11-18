@@ -18,7 +18,7 @@ fecharlos con al menos tres días de separación.
 ## Cola
 
 ### 1. Cómo integrar WhatsApp con tu CRM o tu sistema
-- **Estado:** escrito, en cola para 2026-11-17
+- **Estado:** PUBLICADO el 2026-11-17 (el cron no corrió ese martes; se lanzó a mano con `gh workflow run`)
 - **Slug:** `como-integrar-whatsapp-con-tu-crm-o-sistema.html`
 - **Resumen:** Hay tres cosas que se llaman WhatsApp y solo una se conecta. Qué pide Meta, las tres formas de hacerlo con sus costos, y la trampa de la ventana de 24 horas.
 
@@ -31,6 +31,24 @@ fecharlos con al menos tres días de separación.
 - **Estado:** escrito, en cola para 2026-11-24
 - **Slug:** `como-automatizar-un-restaurante.html`
 - **Resumen:** Reservas, pedidos por WhatsApp y clientes que vuelven. Qué automatizar primero, qué dejar en manos del equipo y por qué el menú va antes que el asistente.
+
+### 4. Cuánto cuesta un CRM en México
+- **Estado:** escrito, en cola para 2026-11-27
+- **Slug:** `cuanto-cuesta-un-crm-en-mexico.html`
+- **Resumen:** Los dos modelos de cobro, precios de lista reales con fuente, los costos que nadie presupuesta y el CRM vacío, que es el gasto más caro de todos.
+- **Por qué este tema:** consulta comercial con intención de compra. Casi todo lo que hay publicado lo escribió quien vende el CRM; una comparación con los dos modelos y precios citados es el hueco.
+
+### 5. Respuestas automáticas de WhatsApp: hasta dónde llegan
+- **Estado:** escrito, en cola para 2026-12-01
+- **Slug:** `respuestas-automaticas-whatsapp-negocio.html`
+- **Resumen:** Cómo activarlas gratis en la app, qué resuelven de verdad, las tres señales de que ya no alcanzan y el error que quema el número.
+- **Por qué este tema:** búsqueda masiva de nivel principiante, con decenas de guías publicadas que se quedan en el "cómo se configura". La puerta natural hacia el asistente, y nadie dice que el número no puede estar en los dos lados.
+
+### 6. Cómo automatizar una inmobiliaria
+- **Estado:** escrito, en cola para 2026-12-04
+- **Slug:** `como-automatizar-una-inmobiliaria.html`
+- **Resumen:** Qué automatizar y en qué orden, cómo calificar sin interrogar, qué sigue siendo del asesor y el seguimiento largo, que es donde se pierden las operaciones.
+- **Por qué este tema:** Search Console muestra impresiones reales en "automatización procesos inmobiliarios", "automatización inmobiliaria" y "automatización comercial inmobiliaria", todas entre la posición 49 y la 82. Había caso publicado, pero no guía.
 
 ---
 
