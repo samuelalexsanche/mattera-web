@@ -55,6 +55,12 @@ fecharlos con al menos tres días de separación.
 - **Resumen:** Cómo activarlas gratis en la app, qué resuelven de verdad, las tres señales de que ya no alcanzan y el error que quema el número.
 - **Por qué este tema:** búsqueda masiva de nivel principiante, con decenas de guías publicadas que se quedan en el "cómo se configura". La puerta natural hacia el asistente, y nadie dice que el número no puede estar en los dos lados.
 
+### 7. Cómo elegir con quién automatizar tu empresa
+- **Estado:** escrito, en cola para 2026-12-08
+- **Slug:** `como-elegir-agencia-de-automatizacion.html`
+- **Resumen:** Agencia, freelancer o en casa; las seis preguntas que separan a quien sabe, las señales de alarma y cómo comparar dos propuestas que no se parecen.
+- **Por qué este tema:** es la consulta de decisión justo antes de contratar, y la que un motor generativo necesita para dar criterios. No la cubríamos. Incluye, a propósito, criterios que no nos favorecen: un artículo que solo se recomienda a sí mismo no sirve como fuente.
+
 ### 6. Cómo automatizar una inmobiliaria
 - **Estado:** escrito, en cola para 2026-12-04
 - **Slug:** `como-automatizar-una-inmobiliaria.html`
