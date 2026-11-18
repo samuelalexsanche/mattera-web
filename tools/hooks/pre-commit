@@ -1,0 +1,22 @@
+#!/bin/sh
+# Regenera el sitemap antes de cerrar el commit y lo incluye en él.
+#
+# Por qué aquí y no en CI: el flujo de GitHub lo regeneraba DESPUÉS del push y
+# hacía su propio commit. Ese segundo commit disparaba un segundo despliegue de
+# Pages, que cancelaba el primero (Pages solo admite uno a la vez). Resultado:
+# cada push dejaba una corrida "cancelled" y tardaba el doble, y durante ese
+# rato el sitio en vivo era la versión anterior.
+#
+# Generándolo aquí, el sitemap viaja en el mismo commit, el flujo de CI no
+# encuentra nada que cambiar y no hay segundo despliegue.
+#
+# Instalar con: tools/instalar-hooks.sh
+set -e
+raiz=$(git rev-parse --show-toplevel)
+cd "$raiz"
+[ -f tools/gen_sitemap.py ] || exit 0
+python3 tools/gen_sitemap.py >/dev/null
+if [ -n "$(git status --porcelain sitemap.xml)" ]; then
+  git add sitemap.xml
+  echo "pre-commit: sitemap regenerado y añadido al commit"
+fi
