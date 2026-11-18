@@ -47,7 +47,7 @@
         "url": "https://matterasystems.com/"
       },
       "datePublished": "2026-07-24",
-      "dateModified": "2026-11-17",
+      "dateModified": "2026-11-18",
       "url": "https://matterasystems.com/blog/que-es-geo-optimizacion-para-ia.html",
       "inLanguage": "es-MX",
       "breadcrumb": {
@@ -264,6 +264,23 @@
     <p>ChatGPT, Perplexity, Claude y Gemini no tienen una consola para dueños de sitios. No existe forma oficial de saber cuántas veces te citaron. Cualquier herramienta que prometa ese número lo está estimando, y conviene preguntar cómo.</p>
     <p>Lo que sí funciona es medirlo a mano, y es más barato de lo que parece: arma una lista de diez preguntas tal como las haría un cliente — "quién hace X en mi ciudad", "cuánto cuesta X" —, hazlas una vez por semana en una sesión sin historial, y anota en una hoja si te mencionan y con qué página. En un mes ya tienes una tendencia; en tres, una respuesta.</p>
     <p>La prueba más barata es la primera: pregúntale ahora mismo a ChatGPT quién ofrece tu servicio en tu ciudad. Si no apareces, le está dando a tus clientes el nombre de tu competencia.</p>
+
+    <h2>Dos cosas que la evidencia contradice</h2>
+    <p>El consejo que circula sobre GEO se repite mucho y se comprueba poco. Dos puntos donde los datos públicos apuntan al revés de lo que se recomienda.</p>
+
+    <h3>El archivo llms.txt casi no se lee</h3>
+    <p>La recomendación más repetida del último año es publicar un archivo <code>llms.txt</code> con un resumen de tu sitio para que las IA lo lean. La idea es buena. El problema es que los rastreadores apenas lo piden.</p>
+    <p>Un análisis de <a href="https://limy.ai/blog/llms-txt-in-2026-the-full-guide" target="_blank" rel="noopener">alrededor de 515 millones de eventos de bots de IA</a> contó 408 peticiones al archivo: una cifra irrelevante frente al total. Otro estudio citado en el mismo espacio, sobre más de 137,000 dominios, encontró que <a href="https://www.geoly.ai/blog/does-llms-txt-work" target="_blank" rel="noopener">el 97% de los archivos llms.txt publicados no recibió ni una petición en un mes</a>. Y al día de hoy ninguna empresa grande de IA se ha comprometido públicamente a leerlo.</p>
+    <p>La conclusión práctica no es quitarlo — cuesta nada y no estorba — sino dejar de tratarlo como la pieza central. Lo que sí se lee es el HTML de tus páginas. Ahí es donde tienen que estar los hechos.</p>
+
+    <h3>Lo que más decide que te citen es que te encuentren</h3>
+    <p>La otra idea cómoda es que basta con escribir contenido "citable" para que las IA te nombren. Los estudios de medición apuntan a algo menos agradable: pesa más la recuperación que la redacción.</p>
+    <p>Un trabajo que midió el comportamiento de ChatGPT, Gemini y Perplexity atribuye alrededor del <a href="https://arxiv.org/abs/2604.25707" target="_blank" rel="noopener">27% de la elección de fuente a la posición en el ranking de búsqueda</a>, y sumar características de la página apenas lo sube a cerca del 32%. Dicho en corto: una página que no aparece no se cita, por bien escrita que esté.</p>
+    <p>Eso ordena el trabajo. Primero hacer que la página pueda encontrarse — que se rastree, que se indexe, que responda a una búsqueda real. Después, y solo después, pulir el formato para que sea fácil de extraer.</p>
+
+    <h3>Y lo que sí parece funcionar</h3>
+    <p>El estudio de referencia en el tema, de un equipo de Princeton (<a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener">arXiv 2311.09735</a>), es el que acuñó el término GEO y midió qué cambios en una página alteran su visibilidad en respuestas generadas. Lo que sale mejor parado en sus pruebas y en los trabajos posteriores es poco glamoroso: <strong>datos con fuente, citas atribuidas y estructura</strong> — tablas, listas, definiciones cortas. Lo que sale peor es repetir palabras clave.</p>
+    <p>Las cifras exactas de mejora que circulan en blogs no coinciden entre sí, así que conviene tomarlas como dirección y no como promesa. La dirección, eso sí, es consistente: se cita lo que se puede verificar y extraer.</p>
 
     <h2>Lo que GEO no es</h2>
     <p>No es pagar por aparecer: no existe publicidad dentro de esas respuestas. No es meter tu marca cien veces en el texto; los modelos no premian repetición. No es un servicio que garantice menciones, porque nadie controla lo que responde un modelo. Y no sustituye al SEO: si Google no te encuentra, las IA tampoco.</p>
