@@ -1,8 +1,14 @@
 name: Sitemap + IndexNow
 
-# En cada push: regenera el sitemap desde los archivos reales y avisa a Bing
-# (que es de donde ChatGPT toma resultados). Al agregar una página nueva no
-# hay que tocar nada: entra sola.
+# En cada push: avisa a Bing (que es de donde ChatGPT toma resultados) y, como
+# red de seguridad, regenera el sitemap por si llegó algo sin pasar por un clon
+# con los hooks instalados — por ejemplo una edición desde la web de GitHub.
+#
+# Lo normal es que aquí NO haya nada que commitear: el sitemap se regenera en
+# el hook pre-commit (tools/hooks/pre-commit) y viaja en el mismo commit que
+# las páginas. Antes se regeneraba aquí, y el commit del bot disparaba un
+# segundo despliegue de Pages que cancelaba el primero: cada push dejaba una
+# corrida "cancelled" y el sitio en vivo tardaba el doble en actualizarse.
 #
 # El commit del bot usa GITHUB_TOKEN, y GitHub NO dispara workflows con
 # eventos originados por ese token, así que no se hace un bucle.
@@ -28,9 +34,11 @@ jobs:
       - name: Regenerar sitemap
         run: python3 tools/gen_sitemap.py
 
-      - name: Publicar sitemap si cambió
+      # Si esto llega a commitear algo, es señal de que un cambio entró sin el hook.
+      - name: Publicar sitemap si cambió (no debería)
         run: |
           if [ -n "$(git status --porcelain sitemap.xml)" ]; then
+            echo "::warning::Sitemap desactualizado al llegar: ese clon no tiene el hook pre-commit. Corre tools/instalar-hooks.sh"
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add sitemap.xml
