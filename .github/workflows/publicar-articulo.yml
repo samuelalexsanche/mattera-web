@@ -13,8 +13,17 @@ name: Publicar artículo de la cola
 
 on:
   schedule:
-    - cron: '0 15 * * 2'   # martes 15:00 UTC = 9:00 en Guadalajara
-    - cron: '0 15 * * 5'   # viernes
+    # Diario, y a un minuto impar a propósito. Dos razones:
+    #
+    # 1) GitHub encola los cron de todo el mundo y los de la hora en punto son
+    #    los que más tarde salen. Con '0 15' las corridas reales llegaron con
+    #    entre 5 y 8 horas de retraso, y el retraso iba creciendo.
+    # 2) Diario no significa publicar diario: tools/publicar_pendiente.py
+    #    publica como mucho un artículo y solo si ya llegó su fecha. El ritmo
+    #    lo fijan las fechas de la cola (mínimo tres días de separación), no
+    #    el cron. Así, si GitHub se salta un día, el artículo sale al
+    #    siguiente en vez de perderse una semana entera.
+    - cron: '23 13 * * *'
   workflow_dispatch:        # también se puede lanzar a mano
 
 permissions:

@@ -3,11 +3,22 @@
 Cola de temas para la rutina automática de contenido. Cada tema sale de
 **búsquedas reales** del autocompletado de Google México, no de intuición.
 
-**Cómo se usa (desde 2026-09-30):** los cinco temas de esta cola ya están
-escritos y revisados; viven en `_blog/pendientes/` (fuera de la web, no entran
-al sitemap). El flujo `.github/workflows/publicar-articulo.yml` corre martes y
-viernes, publica el siguiente cuando llega su fecha, le añade su tarjeta al
-índice, regenera el sitemap y avisa a IndexNow.
+**Cómo se usa (desde 2026-09-30):** los temas de esta cola ya están escritos y
+revisados; viven en `_blog/pendientes/` (fuera de la web, no entran al
+sitemap). El flujo `.github/workflows/publicar-articulo.yml` publica el
+siguiente cuando llega su fecha, le añade su tarjeta al índice, regenera el
+sitemap y avisa a IndexNow.
+
+**El cron corre a diario desde 2026-11-17, y eso no cambia el ritmo.** El
+publicador saca como mucho un artículo por corrida y solo si ya llegó su fecha,
+así que quien fija el ritmo son las fechas de la cola, no el cron. Antes corría
+martes y viernes a las 15:00 UTC y las corridas reales llegaban con 5 a 8 horas
+de retraso — GitHub encola los cron de la hora en punto de todo el mundo. Con
+una corrida diaria a un minuto impar, si GitHub se salta un día el artículo
+sale al siguiente en vez de perderse la semana.
+
+**Separación mínima entre fechas: tres días.** Es lo que mantiene el máximo de
+dos por semana ahora que el cron ya no lo limita.
 
 Cuando la cola se vacíe hay que investigar temas nuevos con búsquedas reales,
 escribirlos con `_blog/gen_articulo.py` apuntando a `_blog/pendientes/` y
