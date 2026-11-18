@@ -30,22 +30,53 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Cómo funciona un chatbot de IA en la práctica: lo que nadie explica",
-  "description": "Más allá de los demos: qué pasa en producción, cómo se configura con tu operación y qué tipo de preguntas no puede responder.",
-  "author": {"@type": "Organization", "name": "Mattera Systems"},
-  "image": "https://matterasystems.com/og/og-blog.png",
-  "publisher": {"@type": "Organization", "name": "Mattera Systems", "url": "https://matterasystems.com/"},
-  "datePublished": "2026-06-12",
-  "url": "https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://matterasystems.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://matterasystems.com/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "Cómo funciona un chatbot de IA en la práctica", "item": "https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html"}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://matterasystems.com/#organization",
+      "name": "Mattera Systems",
+      "url": "https://matterasystems.com/",
+      "description": "Agencia de inteligencia artificial en Guadalajara que automatiza operaciones de empresa: agentes de IA, automatización de procesos, integración entre sistemas, CRM a medida, asistentes de WhatsApp y sitios web."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo funciona un chatbot de IA en la práctica: lo que nadie explica",
+      "description": "Más allá de los demos: qué pasa en producción, cómo se configura con tu operación y qué tipo de preguntas no puede responder.",
+      "author": {
+        "@id": "https://matterasystems.com/#organization"
+      },
+      "image": "https://matterasystems.com/og/og-blog.png",
+      "publisher": {
+        "@id": "https://matterasystems.com/#organization"
+      },
+      "datePublished": "2026-06-12",
+      "url": "https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://matterasystems.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://matterasystems.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cómo funciona un chatbot de IA en la práctica",
+            "item": "https://matterasystems.com/blog/como-funciona-un-chatbot-de-ia-en-la-practica.html"
+          }
+        ]
+      }
+    }
+  ]
 }
 </script>
 </head>

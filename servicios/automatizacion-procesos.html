@@ -29,15 +29,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://matterasystems.com/#organization",
+      "name": "Mattera Systems",
+      "url": "https://matterasystems.com/",
+      "description": "Agencia de inteligencia artificial en Guadalajara que automatiza operaciones de empresa: agentes de IA, automatización de procesos, integración entre sistemas, CRM a medida, asistentes de WhatsApp y sitios web."
+    },
+    {
       "@type": "Service",
       "@id": "https://matterasystems.com/servicios/automatizacion-procesos.html#servicio",
       "name": "Automatización de procesos con IA",
       "serviceType": "Automatización de procesos con IA",
       "description": "Automatizamos las tareas repetitivas de tu operación con IA: captura, seguimiento, reportes y traspasos entre sistemas. Diagnóstico gratuito en México.",
       "provider": {
-        "@type": "Organization",
-        "name": "Mattera Systems",
-        "url": "https://matterasystems.com/"
+        "@id": "https://matterasystems.com/#organization"
       },
       "areaServed": [
         {

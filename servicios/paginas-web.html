@@ -29,15 +29,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://matterasystems.com/#organization",
+      "name": "Mattera Systems",
+      "url": "https://matterasystems.com/",
+      "description": "Agencia de inteligencia artificial en Guadalajara que automatiza operaciones de empresa: agentes de IA, automatización de procesos, integración entre sistemas, CRM a medida, asistentes de WhatsApp y sitios web."
+    },
+    {
       "@type": "Service",
       "@id": "https://matterasystems.com/servicios/paginas-web.html#servicio",
       "name": "Diseño y desarrollo de sitios web con IA",
       "serviceType": "Diseño y desarrollo de sitios web con IA",
       "description": "Precios reales de una página web profesional en México: desde $5,900 MXN, en línea en 5 a 14 días, con asistente de IA, SEO y GEO incluidos. Sin cotización.",
       "provider": {
-        "@type": "Organization",
-        "name": "Mattera Systems",
-        "url": "https://matterasystems.com/"
+        "@id": "https://matterasystems.com/#organization"
       },
       "areaServed": [
         {

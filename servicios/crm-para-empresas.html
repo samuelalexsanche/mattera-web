@@ -29,15 +29,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://matterasystems.com/#organization",
+      "name": "Mattera Systems",
+      "url": "https://matterasystems.com/",
+      "description": "Agencia de inteligencia artificial en Guadalajara que automatiza operaciones de empresa: agentes de IA, automatización de procesos, integración entre sistemas, CRM a medida, asistentes de WhatsApp y sitios web."
+    },
+    {
       "@type": "Service",
       "@id": "https://matterasystems.com/servicios/crm-para-empresas.html#servicio",
       "name": "CRM a medida",
       "serviceType": "CRM a medida",
       "description": "CRM a medida para empresas pequeñas y medianas, conectado a WhatsApp: cada cliente, conversación y seguimiento en un solo lugar. Sin licencias por usuario. México.",
       "provider": {
-        "@type": "Organization",
-        "name": "Mattera Systems",
-        "url": "https://matterasystems.com/"
+        "@id": "https://matterasystems.com/#organization"
       },
       "areaServed": [
         {
