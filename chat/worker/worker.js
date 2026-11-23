@@ -18,7 +18,6 @@
 const ALLOWED_ORIGINS = [
   'https://matterasystems.com',
   'https://www.matterasystems.com',
-  'https://demo.matterasystems.com',
   'https://samuelalexsanche.github.io',
   'http://localhost:4321',
   'http://127.0.0.1:4321',
