@@ -22,7 +22,8 @@ Qué hace:
 import glob, json, re, sys
 
 ID = 'https://matterasystems.com/#organization'
-PATRONES = ['*.html', 'servicios/*.html', 'industrias/*.html', 'blog/*.html']
+PATRONES = ['*.html', 'servicios/*.html', 'industrias/*.html', 'blog/*.html',
+            'en/*.html', 'en/services/*.html', 'en/industries/*.html']
 # Estas ya definen la entidad completa; tocarlas sería duplicarla.
 COMPLETAS = {'index.html', 'agencia-ia-guadalajara.html'}
 
